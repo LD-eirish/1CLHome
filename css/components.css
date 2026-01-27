@@ -649,7 +649,7 @@ body.Derp-mode{
   width:100vw;
   height:100vh;
   overflow:hidden;
-  animation:rotate 30s linear infinite;
+  animation:rotate 30s linear infinite reverse;
   transform-origin:50% 50%;
   top:0;
   left:0;
@@ -658,7 +658,7 @@ body.Derp-mode{
 body.Derp-mode #Derp-toggle,
 body.Derp-mode #Gog-toggle,
 body.Derp-mode #Schmemil-toggle{
-  animation:rotate 30s linear infinite reverse;
+  animation:rotate 30s linear infinite;
 }
 
 @keyframes rotate{
