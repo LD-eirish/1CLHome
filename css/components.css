@@ -97,6 +97,34 @@
   color:var(--gold);
 }
 
+.discord-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:12px 24px;
+  margin-top:16px;
+  background:#5865F2;
+  color:#fff;
+  border:none;
+  border-radius:4px;
+  font-weight:700;
+  font-size:15px;
+  text-decoration:none;
+  cursor:pointer;
+  transition:all 0.2s;
+}
+
+.discord-btn:hover{
+  background:#4752C4;
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(88,101,242,0.4);
+}
+
+.discord-btn svg{
+  width:24px;
+  height:24px;
+}
+
 .export-btn{
   background:rgba(0,0,0,0.3);
   border:none;
