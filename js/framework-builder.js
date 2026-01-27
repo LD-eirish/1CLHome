@@ -14,10 +14,13 @@ class FrameworkBuilder {
       // Determine base path based on current location
       const basePath = window.location.pathname.includes('/resolutions/') ? '../' : '';
       
+      // Add cache-busting parameter
+      const cacheBust = `?v=${Date.now()}`;
+      
       // Load both data files
       const [frameworkResponse, resolutionsResponse] = await Promise.all([
-        fetch(`${basePath}data/framework-data.json`),
-        fetch(`${basePath}data/resolutions.json`)
+        fetch(`${basePath}data/framework-data.json${cacheBust}`),
+        fetch(`${basePath}data/resolutions.json${cacheBust}`)
       ]);
       
       this.frameworkData = await frameworkResponse.json();
