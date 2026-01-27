@@ -36,7 +36,7 @@
   </header>
 
   <button id="Schmemil-toggle" style="position:fixed;bottom:20px;right:20px;background:rgba(0,0,0,0.7);border:1px solid var(--gold);color:var(--gold);padding:8px 12px;border-radius:4px;cursor:pointer;font-size:0.85rem;z-index:1000;transition:all 0.2s;" title="Toggle Schmemil Mode">Schmemil Mode: OFF</button>
-  <button id="Goggy-toggle" style="position:fixed;bottom:60px;right:20px;background:rgba(0,0,0,0.7);border:1px solid var(--gold);color:var(--gold);padding:8px 12px;border-radius:4px;cursor:pointer;font-size:0.85rem;z-index:1000;transition:all 0.2s;" title="Toggle Goggy Mode">Goggy Mode: OFF</button>
+  <button id="Gog-toggle" style="position:fixed;bottom:60px;right:20px;background:rgba(0,0,0,0.7);border:1px solid var(--gold);color:var(--gold);padding:8px 12px;border-radius:4px;cursor:pointer;font-size:0.85rem;z-index:1000;transition:all 0.2s;" title="Toggle Gog Mode">Gog Mode: OFF</button>
 
   <div class="faction-selector">
     <a href="central-group.html" class="faction-panel faction-central">
@@ -100,34 +100,38 @@
       const badge = document.querySelector('.divider-badge');
       let SchmemilMode = false;
 
-      SchmemilToggle.addEventListener('click', () => {
-        SchmemilMode = !SchmemilMode;
-        if (SchmemilMode) {
-          badge.classList.add('Schmemil-mode');
-          SchmemilToggle.textContent = 'Schmemil Mode: ON';
-          SchmemilToggle.style.background = 'rgba(201,168,79,0.2)';
-        } else {
-          badge.classList.remove('Schmemil-mode');
-          SchmemilToggle.textContent = 'Schmemil Mode: OFF';
-          SchmemilToggle.style.background = 'rgba(0,0,0,0.7)';
-        }
-      });
+      if (SchmemilToggle && badge) {
+        SchmemilToggle.addEventListener('click', () => {
+          SchmemilMode = !SchmemilMode;
+          if (SchmemilMode) {
+            badge.classList.add('Schmemil-mode');
+            SchmemilToggle.textContent = 'Schmemil Mode: ON';
+            SchmemilToggle.style.background = 'rgba(201,168,79,0.2)';
+          } else {
+            badge.classList.remove('Schmemil-mode');
+            SchmemilToggle.textContent = 'Schmemil Mode: OFF';
+            SchmemilToggle.style.background = 'rgba(0,0,0,0.7)';
+          }
+        });
+      }
 
-      const GoggyToggle = document.getElementById('Goggy-toggle');
-      let GoggyMode = false;
+      const GogToggle = document.getElementById('Gog-toggle');
+      let GogMode = false;
 
-      GoggyToggle.addEventListener('click', () => {
-        GoggyMode = !GoggyMode;
-        if (GoggyMode) {
-          document.body.classList.add('Goggy-mode');
-          GoggyToggle.textContent = 'Goggy Mode: ON';
-          GoggyToggle.style.background = 'rgba(201,168,79,0.2)';
-        } else {
-          document.body.classList.remove('Goggy-mode');
-          GoggyToggle.textContent = 'Goggy Mode: OFF';
-          GoggyToggle.style.background = 'rgba(0,0,0,0.7)';
-        }
-      });
+      if (GogToggle) {
+        GogToggle.addEventListener('click', () => {
+          GogMode = !GogMode;
+          if (GogMode) {
+            document.body.classList.add('Gog-mode');
+            GogToggle.textContent = 'Gog Mode: ON';
+            GogToggle.style.background = 'rgba(201,168,79,0.2)';
+          } else {
+            document.body.classList.remove('Gog-mode');
+            GogToggle.textContent = 'Gog Mode: OFF';
+            GogToggle.style.background = 'rgba(0,0,0,0.7)';
+          }
+        });
+      }
     });
   </script>
 </body>

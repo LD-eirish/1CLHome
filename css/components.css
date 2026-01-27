@@ -579,13 +579,20 @@ input[type="search"]:focus{
   animation:rotate 20s linear infinite;
 }
 
-body.Goggy-mode{
+body.Gog-mode{
+  position:fixed;
+  width:100vw;
+  height:100vh;
   overflow:hidden;
+  animation:rotate 30s linear infinite;
+  transform-origin:50% 50%;
+  top:0;
+  left:0;
 }
 
-body.Goggy-mode > *:not(#Goggy-toggle):not(#Schmemil-toggle){
-  animation:rotate 30s linear infinite;
-  transform-origin:center center;
+body.Gog-mode #Gog-toggle,
+body.Gog-mode #Schmemil-toggle{
+  animation:rotate 30s linear infinite reverse;
 }
 
 @keyframes rotate{
