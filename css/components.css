@@ -639,7 +639,25 @@ body.Gog-mode{
 }
 
 body.Gog-mode #Gog-toggle,
-body.Gog-mode #Schmemil-toggle{
+body.Gog-mode #Schmemil-toggle,
+body.Gog-mode #Derp-toggle{
+  animation:rotate 30s linear infinite reverse;
+}
+
+body.Derp-mode{
+  position:fixed;
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+  animation:rotate 30s linear infinite;
+  transform-origin:50% 50%;
+  top:0;
+  left:0;
+}
+
+body.Derp-mode #Derp-toggle,
+body.Derp-mode #Gog-toggle,
+body.Derp-mode #Schmemil-toggle{
   animation:rotate 30s linear infinite reverse;
 }
 

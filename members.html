@@ -37,6 +37,7 @@
 
   <button id="Schmemil-toggle" class="mode-toggle hidden" style="position:fixed;bottom:20px;right:20px;background:rgba(40,20,60,0.9);border:none;color:#b0b0b0;padding:10px 16px;border-radius:4px;cursor:pointer;font-size:0.85rem;z-index:1000;transition:all 0.3s;opacity:0;pointer-events:none;" title="Toggle Schmemil Mode">Schmemil Mode</button>
   <button id="Gog-toggle" class="mode-toggle hidden" style="position:fixed;bottom:60px;right:20px;background:rgba(40,20,60,0.9);border:none;color:#b0b0b0;padding:10px 16px;border-radius:4px;cursor:pointer;font-size:0.85rem;z-index:1000;transition:all 0.3s;opacity:0;pointer-events:none;" title="Toggle Gog Mode">Gog Mode</button>
+  <button id="Derp-toggle" class="mode-toggle hidden" style="position:fixed;bottom:100px;right:20px;background:rgba(40,20,60,0.9);border:none;color:#b0b0b0;padding:10px 16px;border-radius:4px;cursor:pointer;font-size:0.85rem;z-index:1000;transition:all 0.3s;opacity:0;pointer-events:none;" title="Toggle Derp Mode">Derp Mode</button>
 
   <div class="faction-selector">
     <a href="central-group.html" class="faction-panel faction-central">
@@ -148,6 +149,22 @@
           } else {
             document.body.classList.remove('Gog-mode');
             GogToggle.style.background = 'rgba(40,20,60,0.9)';
+          }
+        });
+      }
+
+      const DerpToggle = document.getElementById('Derp-toggle');
+      let DerpMode = false;
+
+      if (DerpToggle) {
+        DerpToggle.addEventListener('click', () => {
+          DerpMode = !DerpMode;
+          if (DerpMode) {
+            document.body.classList.add('Derp-mode');
+            DerpToggle.style.background = 'rgba(80,40,120,0.95)';
+          } else {
+            document.body.classList.remove('Derp-mode');
+            DerpToggle.style.background = 'rgba(40,20,60,0.9)';
           }
         });
       }
