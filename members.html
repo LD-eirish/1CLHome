@@ -119,18 +119,24 @@
       let GogMode = false;
 
       if (GogToggle) {
+        console.log('Gog toggle button found');
         GogToggle.addEventListener('click', () => {
           GogMode = !GogMode;
+          console.log('Gog mode toggled:', GogMode);
           if (GogMode) {
             document.body.classList.add('Gog-mode');
+            console.log('Added Gog-mode class to body');
             GogToggle.textContent = 'Gog Mode: ON';
             GogToggle.style.background = 'rgba(201,168,79,0.2)';
           } else {
             document.body.classList.remove('Gog-mode');
+            console.log('Removed Gog-mode class from body');
             GogToggle.textContent = 'Gog Mode: OFF';
             GogToggle.style.background = 'rgba(0,0,0,0.7)';
           }
         });
+      } else {
+        console.error('Gog toggle button not found!');
       }
     });
   </script>
