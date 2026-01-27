@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>1CL Library</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/accessibility.css">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <a href="hub.html" class="brand-link" aria-label="Return to Hub"><img src="1CLLogo.png" alt="1CL" class="brand-logo"></a>
+        <div class="brand-text">
+          <h1>1CL Hub</h1>
+          <p class="subtitle">1st Combined Legion Library</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a href="hub.html" class="compact-nav-item">Hub</a>
+        <a href="resolutions/framework.html" class="compact-nav-item">Framework</a>
+        <a href="members.html" class="compact-nav-item">Members</a>
+      </div>
+    </div>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="hub.html">Hub</a></li>
+        <li aria-current="page">Library</li>
+      </ol>
+    </nav>
+  </header>
+
+  <div class="top-panel">
+    <div class="top-inner container">
+      <div class="left">
+        <div class="search-controls">
+          <input id="res-search" type="search" placeholder="Search resolutions..." aria-label="Search resolutions" />
+          <button id="clear-search" class="clear-search-btn" aria-label="Clear search" title="Clear search">✕</button>
+        </div>
+        <button id="toggle-resolutions" class="toggle-btn" aria-expanded="true" aria-controls="res-list">
+          <span class="toggle-text">Resolutions (<span id="res-count">0</span>)</span>
+          <span class="toggle-icon" aria-hidden="true">▼</span>
+        </button>
+        <ul id="res-list" class="res-nav-top" aria-label="Resolutions list" role="navigation"></ul>
+      </div>
+      <div class="right">
+        <a href="resolutions/framework.html" class="framework-btn primary" tabindex="0">Framework</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="container main-area">
+    <section class="viewer card">
+      <iframe id="viewer" frameborder="0" title="Resolution viewer"></iframe>
+    </section>
+  </main>
+
+  <script src="js/framework-builder.js"></script>
+  <script>
+    async function loadResolutions(){
+      const builder = new FrameworkBuilder();
+      const success = await builder.initialize();
+      
+      if (!success) {
+        console.error('Failed to load resolutions');
+        return;
+      }
+
+      const list = builder.getResolutionsList();
+      const ul = document.getElementById('res-list'); 
+      ul.innerHTML = '';
+
+      list.forEach(item => {
+        const li = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = '#';
+        link.textContent = item.id;
+        link.title = item.summary;
+        link.setAttribute('data-id', item.id);
+        link.setAttribute('aria-label', `${item.title} - ${item.summary}`);
+        link.setAttribute('role', 'button');
+        link.setAttribute('tabindex', '0');
+        
+        const handleSelect = (e) => {
+          e.preventDefault();
+          document.getElementById('viewer').src = `resolutions/view.html?id=${item.id}`;
+          document.querySelectorAll('#res-list a').forEach(a => {
+            a.classList.remove('active');
+            a.setAttribute('aria-current', 'false');
+          });
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        };
+        
+        link.addEventListener('click', handleSelect);
+        link.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            handleSelect(e);
+          }
+        });
+        
+        li.appendChild(link); 
+        ul.appendChild(li);
+      });
+      
+      document.getElementById('res-count').textContent = list.length;
+    }
+
+    function filterList(q){ 
+      q = (q||'').toLowerCase(); 
+      document.querySelectorAll('#res-list li').forEach(li=>{ 
+        const txt = li.textContent.toLowerCase(); 
+        li.style.display = txt.includes(q) ? '' : 'none'; 
+      }); 
+    }
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+      loadResolutions();
+      
+      const search = document.getElementById('res-search');
+      const clearBtn = document.getElementById('clear-search');
+      const toggleBtn = document.getElementById('toggle-resolutions');
+      const resList = document.getElementById('res-list');
+      
+      let t;
+      
+      if(search) {
+        search.addEventListener('input', ()=>{ 
+          clearTimeout(t); 
+          t = setTimeout(()=> {
+            filterList(search.value);
+            clearBtn.style.display = search.value ? 'block' : 'none';
+          }, 160); 
+        });
+      }
+      
+      if(clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          search.value = '';
+          filterList('');
+          clearBtn.style.display = 'none';
+          search.focus();
+        });
+      }
+      
+      if(toggleBtn && resList) {
+        toggleBtn.addEventListener('click', () => {
+          const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+          toggleBtn.setAttribute('aria-expanded', !isExpanded);
+          resList.classList.toggle('collapsed');
+          toggleBtn.querySelector('.toggle-icon').textContent = isExpanded ? '▶' : '▼';
+        });
+      }
+    });
+  </script>
+</body>
+</html>

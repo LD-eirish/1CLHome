@@ -1,0 +1,80 @@
+{
+  "baseFramework": {
+    "introduction": {
+      "title": "Introduction",
+      "content": "The 1st Combined Legion (1CL) is an alliance of independent regiments created to enable coordinated operations, shared logistics, and clear leadership while preserving each regiment's distinct identity."
+    },
+    "membership": {
+      "title": "Membership & Structure",
+      "intro": "Membership is by nomination and approval of the appropriate command. The Legion uses a two-tier structure to balance integration and autonomy.",
+      "sections": [
+        {
+          "title": "Legion Central Group (LCG)",
+          "content": "Regiments that opt into fuller integration: they participate in centralized HR/recruitment, contribute to shared logistics, and take on broader governance responsibilities."
+        },
+        {
+          "title": "Legion Associate Group (LAG)",
+          "content": "Regiments that maintain greater independence: they coordinate on joint operations and strategic objectives but may decline centralized HR participation and retain lighter governance duties."
+        }
+      ]
+    },
+    "governance": {
+      "title": "Governance",
+      "intro": "Governance rests with two complementary command bodies that divide strategic oversight and operational coordination.",
+      "sections": [
+        {
+          "title": "Legion Central Command (LCC)",
+          "content": "LCC consists of representatives from regiments that adopt deeper integration (Legion Central Group). LCC sets core policy, approves central-group membership, and elects CQL and Secretary."
+        },
+        {
+          "title": "Legion Associate Command (LAC)",
+          "content": "LAC includes representatives from both central and associate regiments. LAC focuses on campaign-level and operational planning."
+        },
+        {
+          "title": "Decision Rules",
+          "content": "Each regiment in a command holds one vote. Structural changes require the unanimous consensus; routine operational and allocation decisions use a simple majority unless otherwise stated."
+        }
+      ]
+    },
+    "officers": {
+      "title": "Officers & Responsibilities",
+      "items": [
+        "<strong>Chief in Command of the Legion (CCL)</strong> — Provides leadership continuity and resolves critical deadlocks; the office rotates between regiments each month.",
+        "<strong>Chief Quartermaster of the Legion (CQL)</strong> — Oversees the operational stockpile, coordinates logistics, and ensures equitable distribution during operations.",
+        "<strong>Secretary</strong> — Manages administrative workflows, operates central recruitment channels, and issues official operational schedules and notices."
+      ]
+    },
+    "recruitment": {
+      "title": "Recruitment & HR",
+      "content": "A central recruitment process supports consistent onboarding and placement. Recruits enter via central channels and select a regiment during onboarding. HR tasks (promotions, transfers, disciplinary matters) are coordinated centrally to maintain consistency; transfers between regiments preserve recognised ranks and qualifications where feasible."
+    },
+    "operations": {
+      "title": "Joint Operations & Logistics",
+      "content": "Operations are planned and announced in advance. The CQL publishes stockpile targets and distribution plans; participating regiments supply resources per agreement. Logistics are managed to ensure readiness, fairness, and minimal redundancy."
+    },
+    "strategy": {
+      "title": "Strategy & Resources",
+      "content": "Commands set strategic objectives and prioritise production to support shared goals. Shared facilities or pooled resources may be established when they improve effectiveness and efficiency."
+    },
+    "communication": {
+      "title": "Communication",
+      "content": "Public channels serve coordination; private or secure channels support formal deliberation. Commanders keep regiments informed and ensure representation during planning and briefings."
+    },
+    "amendments": {
+      "title": "Amendments",
+      "content": "Framework amendments are proposed within the commands and follow the decision rules of the relevant command body. Structural modifications require the voting thresholds set by those bodies."
+    },
+    "members": {
+      "title": "Member Regiments",
+      "list": [
+        {"name": "The Colonial Shadows (TCS)", "joined": "Nov 17, 2025"},
+        {"name": "Public Operations Group (P.O.G.)", "joined": "Nov 17, 2025"},
+        {"name": "Solution 9 (S9)", "joined": "Nov 17, 2025"},
+        {"name": "882nd Regiment (882nd)", "joined": "Nov 17, 2025"},
+        {"name": "War Machine (WM)", "joined": "Nov 20, 2025"},
+        {"name": "Colonial Assault Team (CAT)", "joined": "Dec 8, 2025"}
+      ]
+    }
+  },
+  "resolutions": []
+}

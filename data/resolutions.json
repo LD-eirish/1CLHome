@@ -1,0 +1,87 @@
+[
+  {
+    "id": "CCR10",
+    "number": 10,
+    "title": "Commander Council Resolution 10",
+    "shortTitle": "CCR10",
+    "date": "2025-11-17",
+    "status": "passed",
+    "summary": "Multi-layered alliance: LCG & LAG; LCC & LAC governance",
+    "description": "The 1st Combined Legion now operates with two membership tracks and two governance bodies to separate framework governance from war operations.",
+    "sections": [
+      {
+        "title": "Membership Tracks",
+        "content": [
+          {
+            "subtitle": "Legion Central Group (LCG)",
+            "description": "Deeper integration, centralised coordination.",
+            "points": [
+              "Participate in joint HR & recruitment",
+              "Follow the core framework",
+              "Required: unified tag program",
+              "All regiment members may join Discord"
+            ]
+          },
+          {
+            "subtitle": "Legion Associate Group (LAG)",
+            "description": "Greater independence, operational collaboration.",
+            "points": [
+              "Coordinate for operations & strategic goals",
+              "May opt out of central HR or tag program",
+              "Regiment-level autonomy for recruitment"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Governance Bodies",
+        "content": [
+          {
+            "subtitle": "Legion Central Command (LCC)",
+            "description": "Framework policy & governance authority.",
+            "points": [
+              "Representatives from LCG regiments only",
+              "Elects CQL & Secretary",
+              "Approves LCG membership applications",
+              "Makes core policy decisions"
+            ]
+          },
+          {
+            "subtitle": "Legion Associate Command (LAC)",
+            "description": "War operations & campaign coordination.",
+            "points": [
+              "Representatives from all regiments (LCG + LAG)",
+              "Chooses campaigns & sets operational priorities",
+              "Coordinates joint operations & logistics",
+              "Plans war-level strategy"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Decision Rules",
+        "content": [
+          {
+            "description": "Each regiment in a command holds one vote.",
+            "points": [
+              "<strong>Structural changes:</strong> Unanimous consensus required",
+              "<strong>Routine decisions:</strong> Simple majority unless otherwise stated"
+            ]
+          }
+        ]
+      }
+    ],
+    "frameworkUpdates": {
+      "membership": {
+        "append": [
+          "As established by CCR10, the Legion operates with two membership tracks to balance integration levels and autonomy preferences among member regiments."
+        ]
+      },
+      "governance": {
+        "append": [
+          "Following CCR10, governance is divided between LCC (framework policy) and LAC (operational coordination) to ensure both strategic oversight and tactical flexibility."
+        ]
+      }
+    }
+  }
+]

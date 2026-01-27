@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>1st Combined Legion — Framework</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/components.css">
+	<link rel="stylesheet" href="../css/navigation.css">
+	<link rel="stylesheet" href="../css/accessibility.css">
+	<meta name="robots" content="noindex">
+</head>
+<body class="resolution-page">
+	<header class="site-header">
+		<div class="header-inner container">
+			<div class="brand">
+				<a href="../hub.html" class="brand-link" aria-label="Return to Hub"><img src="../1CLLogo.png" alt="1CL" class="brand-logo"></a>
+				<div class="brand-text">
+					<h1>1CL Framework</h1>
+					<p class="subtitle">Official governance & operations framework</p>
+				</div>
+			</div>
+			<div class="header-actions">
+				<a href="../hub.html" class="compact-nav-item">Hub</a>
+				<a href="../library.html" class="compact-nav-item">Library</a>
+				<a href="../members.html" class="compact-nav-item">Members</a>
+			</div>
+		</div>
+	</header>
+
+	<nav class="breadcrumb" aria-label="Breadcrumb">
+		<ol>
+			<li><a href="../hub.html">Hub</a></li>
+			<li><a href="../library.html">Library</a></li>
+			<li aria-current="page">Framework</li>
+		</ol>
+	</nav>
+
+	<div class="page-actions">
+		<a href="../library.html" class="back-btn" aria-label="Back to Library">← Back to Library</a>
+	</div>
+
+	<section class="hero card">
+		<div class="hero-left">
+			<h2>1CL Framework</h2>
+			<p class="lead">The official framework of the 1st Combined Legion, automatically updated with passed resolutions.</p>
+		</div>
+		<div class="hero-right">
+			<a href="../hub.html" class="brand-link" aria-label="Return to Hub"><img src="../1CLLogo.png" alt="1CL Logo" class="hero-logo"/></a>
+		</div>
+	</section>
+
+	<aside class="toc card">
+		<h3>Table of Contents</h3>
+		<nav id="framework-toc" aria-label="Framework sections"></nav>
+	</aside>
+
+	<main class="container" id="framework-content">
+		<div class="loading">Loading framework...</div>
+	</main>
+
+	<div class="container page-export">
+		<button id="exportFw" class="no-export export-btn">Export Framework</button>
+	</div>
+	
+	<button id="jump-to-top" class="jump-to-top" aria-label="Jump to top" title="Jump to top">↑</button>
+
+	<script src="../js/framework-builder.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+	<script>
+		async function loadFramework() {
+			const builder = new FrameworkBuilder();
+			const success = await builder.initialize();
+			
+			if (success) {
+				const content = builder.generateFramework();
+				document.getElementById('framework-content').innerHTML = content;
+				
+				// Generate table of contents
+				generateTOC();
+				
+				// Setup jump to top button
+				setupJumpToTop();
+			} else {
+				document.getElementById('framework-content').innerHTML = '<p class="error">Failed to load framework data.</p>';
+			}
+		}
+		
+		function generateTOC() {
+			const toc = document.getElementById('framework-toc');
+			const tocList = document.createElement('ul');
+			tocList.className = 'toc-list';
+			
+			const sections = document.querySelectorAll('#framework-content .card');
+			
+			sections.forEach((card, sectionIndex) => {
+				const h3 = card.querySelector('h3');
+				if (!h3) return;
+				
+				const mainId = `section-${sectionIndex}`;
+				h3.id = mainId;
+				h3.setAttribute('tabindex', '-1');
+				
+				const mainLi = document.createElement('li');
+				const mainLink = document.createElement('a');
+				mainLink.href = `#${mainId}`;
+				mainLink.textContent = h3.textContent;
+				mainLink.setAttribute('aria-label', `Jump to ${h3.textContent}`);
+				
+				mainLink.addEventListener('click', (e) => {
+					e.preventDefault();
+					h3.scrollIntoView({ behavior: 'smooth', block: 'start' });
+					h3.focus();
+				});
+				
+				mainLi.appendChild(mainLink);
+				
+				const subsections = card.querySelectorAll('h4');
+				if (subsections.length > 0) {
+					const subList = document.createElement('ul');
+					
+					subsections.forEach((h4, subIndex) => {
+						const subId = `section-${sectionIndex}-${subIndex}`;
+						h4.id = subId;
+						h4.setAttribute('tabindex', '-1');
+						
+						const subLi = document.createElement('li');
+						const subLink = document.createElement('a');
+						subLink.href = `#${subId}`;
+						subLink.textContent = h4.textContent;
+						subLink.setAttribute('aria-label', `Jump to ${h4.textContent}`);
+						
+						subLink.addEventListener('click', (e) => {
+							e.preventDefault();
+							h4.scrollIntoView({ behavior: 'smooth', block: 'start' });
+							h4.focus();
+						});
+						
+						subLi.appendChild(subLink);
+						subList.appendChild(subLi);
+					});
+					
+					mainLi.appendChild(subList);
+				}
+				
+				tocList.appendChild(mainLi);
+			});
+			
+			toc.appendChild(tocList);
+		}
+		
+		function setupJumpToTop() {
+			const jumpBtn = document.getElementById('jump-to-top');
+			
+			window.addEventListener('scroll', () => {
+				if (window.scrollY > 300) {
+					jumpBtn.classList.add('visible');
+				} else {
+					jumpBtn.classList.remove('visible');
+				}
+			});
+			
+			jumpBtn.addEventListener('click', () => {
+				window.scrollTo({ top: 0, behavior: 'smooth' });
+			});
+		}
+
+		function updateTOCPosition() {
+			const toc = document.querySelector('.toc');
+			const framework = document.getElementById('framework-content');
+			const header = document.querySelector('.site-header');
+			if (!toc || !framework) return;
+			const headerHeight = header ? header.offsetHeight + 16 : 84;
+			const firstHeader = framework.querySelector('.card h3, .card h2');
+			const anchorTop = firstHeader ? (firstHeader.getBoundingClientRect().top + window.scrollY) : (framework.getBoundingClientRect().top + window.scrollY);
+			if (window.scrollY + headerHeight >= anchorTop) {
+				toc.style.position = 'fixed';
+				toc.style.top = headerHeight + 'px';
+				toc.style.left = getComputedStyle(toc).left;
+				toc.style.width = toc.offsetWidth + 'px';
+			} else {
+				toc.style.position = 'absolute';
+				toc.style.top = anchorTop + 'px';
+				toc.style.left = getComputedStyle(toc).left;
+				toc.style.width = toc.offsetWidth + 'px';
+			}
+		}
+
+		window.addEventListener('load', updateTOCPosition);
+		window.addEventListener('scroll', updateTOCPosition);
+		window.addEventListener('resize', () => {
+			document.querySelectorAll('.toc').forEach(t=> t.style.left = 'calc((100vw - 1100px) / 2 - 260px)');
+			updateTOCPosition();
+		});
+
+		async function exportElementToJpeg(el, filename){
+			const hidden = [];
+			document.querySelectorAll('.no-export').forEach(n => { hidden.push(n); n.style.visibility = 'hidden'; });
+			try{
+				const canvas = await html2canvas(el, {backgroundColor: null, scale: 2, useCORS: true});
+				return new Promise(resolve => canvas.toBlob(function(blob){
+					const url = URL.createObjectURL(blob);
+					const a = document.createElement('a');
+					a.href = url; a.download = filename;
+					document.body.appendChild(a); a.click(); a.remove();
+					URL.revokeObjectURL(url);
+					resolve();
+				}, 'image/jpeg', 0.92));
+			}catch(e){
+				console.error('Export failed', e);
+				alert('Export failed. Serve the site via a local server (http) to avoid CORS issues.');
+			}finally{
+				hidden.forEach(n => n.style.visibility = 'visible');
+			}
+		}
+
+		document.addEventListener('DOMContentLoaded', ()=>{
+			loadFramework();
+			const btn = document.getElementById('exportFw');
+			if(btn) btn.addEventListener('click', ()=>{ 
+				const el = document.querySelector('main.container'); 
+				exportElementToJpeg(el, '1CL_Framework.jpg'); 
+			});
+		});
+	</script>
+</body>
+</html>

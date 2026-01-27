@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Resolution Viewer — 1CL</title>
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/layout.css">
+	<link rel="stylesheet" href="../css/components.css">
+	<link rel="stylesheet" href="../css/navigation.css">
+	<link rel="stylesheet" href="../css/accessibility.css">
+  <meta name="robots" content="noindex">
+</head>
+<body class="resolution-page">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="../hub.html">Hub</a></li>
+      <li><a href="../library.html">Library</a></li>
+      <li aria-current="page" id="breadcrumb-current">Resolution</li>
+    </ol>
+  </nav>
+  
+  <div class="page-actions">
+    <a href="../library.html" class="back-btn" aria-label="Back to Library">← Back to Library</a>
+  </div>
+  
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <a href="../hub.html" class="brand-link" aria-label="Return to Hub"><img src="../1CLLogo.png" alt="1CL" class="brand-logo"></a>
+        <div class="brand-text">
+          <h1 id="page-title">Resolution</h1>
+          <p class="subtitle">1st Combined Legion</p>
+        </div>
+        <div class="badge" id="resolution-badge">...</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="resolution-content">
+    <div class="loading">Loading resolution...</div>
+  </main>
+  
+  <button id="jump-to-top" class="jump-to-top" aria-label="Jump to top" title="Jump to top">↑</button>
+
+  <script src="../js/framework-builder.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    // Get resolution ID from URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const resolutionId = urlParams.get('id');
+
+    async function loadResolution() {
+      if (!resolutionId) {
+        document.getElementById('resolution-content').innerHTML = '<p class="error">No resolution ID specified.</p>';
+        return;
+      }
+
+      const builder = new FrameworkBuilder();
+      const success = await builder.initialize();
+      
+      if (success) {
+        const content = builder.generateResolution(resolutionId);
+        document.getElementById('resolution-content').innerHTML = content;
+        
+        // Update page title
+        const resolution = builder.resolutions.find(r => r.id === resolutionId);
+        if (resolution) {
+          document.getElementById('page-title').textContent = resolution.title;
+          document.getElementById('resolution-badge').textContent = resolution.shortTitle;
+          document.getElementById('breadcrumb-current').textContent = resolution.shortTitle;
+          document.title = `${resolution.shortTitle} — 1CL`;
+        }
+
+        // Setup export button
+        const exportBtn = document.getElementById('exportMain');
+        if (exportBtn) {
+          exportBtn.addEventListener('click', () => {
+            exportElementToJpeg(document.querySelector('main.container'), `1CL_${resolutionId}.jpg`);
+          });
+        }
+        
+        // Setup jump to top
+        setupJumpToTop();
+      } else {
+        document.getElementById('resolution-content').innerHTML = '<p class="error">Failed to load resolution data.</p>';
+      }
+    }
+    
+    function setupJumpToTop() {
+      const jumpBtn = document.getElementById('jump-to-top');
+      
+      // Show/hide on scroll
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          jumpBtn.classList.add('visible');
+        } else {
+          jumpBtn.classList.remove('visible');
+        }
+      });
+      
+      // Jump to top
+      jumpBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    async function exportElementToJpeg(el, filename){
+      const hidden = [];
+      document.querySelectorAll('.no-export').forEach(n => { hidden.push(n); n.style.visibility = 'hidden'; });
+      try{
+        const canvas = await html2canvas(el, {backgroundColor: null, scale: 2, useCORS: true});
+        return new Promise(resolve => canvas.toBlob(function(blob){
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url; a.download = filename;
+          document.body.appendChild(a); a.click(); a.remove();
+          URL.revokeObjectURL(url);
+          resolve();
+        }, 'image/jpeg', 0.92));
+      }catch(e){
+        console.error('Export failed', e);
+        alert('Export failed. Serve via http:// to avoid CORS issues.');
+      }finally{
+        hidden.forEach(n => n.style.visibility = 'visible');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadResolution);
+  </script>
+</body>
+</html>

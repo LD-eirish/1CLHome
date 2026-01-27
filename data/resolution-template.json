@@ -1,0 +1,37 @@
+{
+  "id": "CCRXX",
+  "number": XX,
+  "title": "Commander Council Resolution XX",
+  "shortTitle": "CCRXX",
+  "date": "YYYY-MM-DD",
+  "status": "passed",
+  "summary": "One-line summary of the resolution",
+  "description": "Longer description that appears at the top of the resolution page",
+  "sections": [
+    {
+      "title": "Main Section Title",
+      "content": [
+        {
+          "subtitle": "Subsection Title (optional)",
+          "description": "Brief description (optional)",
+          "points": [
+            "Bullet point 1",
+            "Bullet point 2",
+            "Bullet point 3"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Another Section",
+      "content": "Or just use simple text content instead of structured subsections"
+    }
+  ],
+  "frameworkUpdates": {
+    "sectionName": {
+      "append": [
+        "Text to append to this framework section. Will be marked with (CCRXX) automatically."
+      ]
+    }
+  }
+}

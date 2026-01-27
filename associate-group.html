@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>1CL — Legion Associate Group</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/accessibility.css">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <a href="hub.html" class="brand-link" aria-label="Return to Hub"><img src="1CLLogo.png" alt="1CL" class="brand-logo"></a>
+        <div class="brand-text">
+          <h1>Legion Associate Group</h1>
+          <p class="subtitle">Independent coordination regiments</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a href="hub.html" class="compact-nav-item">Hub</a>
+        <a href="library.html" class="compact-nav-item">Library</a>
+        <a href="members.html" class="compact-nav-item">Members</a>
+      </div>
+    </div>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="hub.html">Hub</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li aria-current="page">Associate Group</li>
+      </ol>
+    </nav>
+  </header>
+
+  <div class="page-actions">
+    <a href="members.html" class="back-btn" aria-label="Back to Members">← Back to Members</a>
+  </div>
+
+  <main class="container">
+    <section class="hero card" style="background:linear-gradient(135deg, rgba(53,80,49,0.05), rgba(53,80,49,0.02));">
+      <div class="hero-left">
+        <h2>Legion Associate Group (LAG)</h2>
+        <p class="lead">Regiments that maintain greater independence: they coordinate on joint operations and strategic objectives but may decline centralized HR participation and retain lighter governance duties.</p>
+      </div>
+      <div class="hero-right">
+        <svg viewBox="0 0 100 100" width="100" height="100" style="opacity:0.7;">
+          <polygon points="50,10 90,35 90,65 50,90 10,65 10,35" fill="none" stroke="var(--olive)" stroke-width="3"/>
+          <path d="M50 30 L50 70 M35 50 L65 50" stroke="var(--olive)" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Associate Group Regiments</h3>
+      <div class="regiment-grid">
+        <article class="regiment-card">
+          <div class="regiment-header">
+            <h4>882nd Regiment (882nd)</h4>
+            <span class="regiment-badge associate">Associate</span>
+          </div>
+          <p class="regiment-joined">Joined: Nov 17, 2025</p>
+          <p class="regiment-desc">Regiment description coming soon.</p>
+        </article>
+
+        <article class="regiment-card">
+          <div class="regiment-header">
+            <h4>Solution 9 (S9)</h4>
+            <span class="regiment-badge associate">Associate</span>
+          </div>
+          <p class="regiment-joined">Joined: Nov 17, 2025</p>
+          <p class="regiment-desc">Regiment description coming soon.</p>
+        </article>
+
+        <article class="regiment-card">
+          <div class="regiment-header">
+            <h4>Colonial Assault Team (CAT)</h4>
+            <span class="regiment-badge associate">Associate</span>
+          </div>
+          <p class="regiment-joined">Joined: Dec 8, 2025</p>
+          <p class="regiment-desc">Regiment description coming soon.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <button id="jump-to-top" class="jump-to-top" aria-label="Jump to top" title="Jump to top">↑</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const jumpBtn = document.getElementById('jump-to-top');
+      
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          jumpBtn.classList.add('visible');
+        } else {
+          jumpBtn.classList.remove('visible');
+        }
+      });
+      
+      jumpBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      const cards = document.querySelectorAll('.regiment-card');
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>1CL — Legion Central Group</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/accessibility.css">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <a href="hub.html" class="brand-link" aria-label="Return to Hub"><img src="1CLLogo.png" alt="1CL" class="brand-logo"></a>
+        <div class="brand-text">
+          <h1>Legion Central Group</h1>
+          <p class="subtitle">Partial integration regiments</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a href="hub.html" class="compact-nav-item">Hub</a>
+        <a href="library.html" class="compact-nav-item">Library</a>
+        <a href="members.html" class="compact-nav-item">Members</a>
+      </div>
+    </div>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="hub.html">Hub</a></li>
+        <li><a href="members.html">Members</a></li>
+        <li aria-current="page">Central Group</li>
+      </ol>
+    </nav>
+  </header>
+
+  <div class="page-actions">
+    <a href="members.html" class="back-btn" aria-label="Back to Members">← Back to Members</a>
+  </div>
+
+  <main class="container">
+    <section class="hero card" style="background:linear-gradient(135deg, rgba(201,168,79,0.05), rgba(201,168,79,0.02));">
+      <div class="hero-left">
+        <h2>Legion Central Group (LCG)</h2>
+        <p class="lead">Regiments that opt into fuller integration: they participate in centralized HR/recruitment, contribute to shared logistics, and take on broader governance responsibilities.</p>
+      </div>
+      <div class="hero-right">
+        <img src="1CLLogo.png" alt="1CL Logo" class="hero-logo" style="opacity:0.8;">
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Central Group Regiments</h3>
+      <div class="regiment-grid">
+        <article class="regiment-card">
+          <div class="regiment-header">
+            <h4>The Colonial Shadows (TCS)</h4>
+            <span class="regiment-badge">Central</span>
+          </div>
+          <p class="regiment-joined">Joined: Nov 17, 2025</p>
+          <p class="regiment-desc">Regiment description coming soon.</p>
+        </article>
+
+        <article class="regiment-card">
+          <div class="regiment-header">
+            <h4>Public Operations Group (P.O.G.)</h4>
+            <span class="regiment-badge">Central</span>
+          </div>
+          <p class="regiment-joined">Joined: Nov 17, 2025</p>
+          <p class="regiment-desc">Regiment description coming soon.</p>
+        </article>
+
+        <article class="regiment-card">
+          <div class="regiment-header">
+            <h4>War Machine (WM)</h4>
+            <span class="regiment-badge">Central</span>
+          </div>
+          <p class="regiment-joined">Joined: Nov 20, 2025</p>
+          <p class="regiment-desc">Regiment description coming soon.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <button id="jump-to-top" class="jump-to-top" aria-label="Jump to top" title="Jump to top">↑</button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const jumpBtn = document.getElementById('jump-to-top');
+      
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          jumpBtn.classList.add('visible');
+        } else {
+          jumpBtn.classList.remove('visible');
+        }
+      });
+      
+      jumpBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      const cards = document.querySelectorAll('.regiment-card');
+      cards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+      });
+    });
+  </script>
+</body>
+</html>

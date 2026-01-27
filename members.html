@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>1CL — Members</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/accessibility.css">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <div class="brand">
+        <a href="hub.html" class="brand-link" aria-label="Return to Hub"><img src="1CLLogo.png" alt="1CL" class="brand-logo"></a>
+        <div class="brand-text">
+          <h1>Members</h1>
+          <p class="subtitle">Regiments, onboarding, and contacts</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a href="hub.html" class="compact-nav-item">Hub</a>
+        <a href="library.html" class="compact-nav-item">Library</a>
+      </div>
+    </div>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="hub.html">Hub</a></li>
+        <li aria-current="page">Members</li>
+      </ol>
+    </nav>
+  </header>
+
+  <div class="faction-selector">
+    <a href="central-group.html" class="faction-panel faction-central">
+      <div class="faction-overlay"></div>
+      <div class="faction-content">
+        <div class="faction-icon">
+          <img src="1CLLogo.png" alt="1CL Logo" style="width:140px;height:auto;filter:drop-shadow(0 4px 12px rgba(201,168,79,0.6));">
+        </div>
+        <h2 class="faction-title">Legion Central Group</h2>
+        <p class="faction-description">
+          Partial integration regiments. Centralized HR and shared logistics.
+        </p>
+        <div class="faction-cta">Click to view regiments →</div>
+      </div>
+    </a>
+
+    <div class="faction-divider">
+      <div class="divider-line"></div>
+      <div class="divider-badge">1CL</div>
+    </div>
+
+    <a href="associate-group.html" class="faction-panel faction-associate">
+      <div class="faction-overlay"></div>
+      <div class="faction-content">
+        <div class="faction-icon">
+          <svg viewBox="0 0 100 100" width="120" height="120">
+            <polygon points="50,10 90,35 90,65 50,90 10,65 10,35" fill="none" stroke="currentColor" stroke-width="3"/>
+            <path d="M50 30 L50 70 M35 50 L65 50" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h2 class="faction-title">Legion Associate Group</h2>
+        <p class="faction-description">
+          Independent coordination. Joint operations and strategic alignment. No 1CL interference.
+        </p>
+        <div class="faction-cta">Click to view regiments →</div>
+      </div>
+    </a>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const panels = document.querySelectorAll('.faction-panel');
+      
+      panels.forEach(panel => {
+        panel.addEventListener('mouseenter', () => {
+          panel.style.transform = 'scale(1.02)';
+        });
+        
+        panel.addEventListener('mouseleave', () => {
+          panel.style.transform = 'scale(1)';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
