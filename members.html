@@ -35,8 +35,8 @@
     </nav>
   </header>
 
-  <button id="Schmemil-toggle" style="position:fixed;bottom:20px;right:20px;background:rgba(0,0,0,0.7);border:1px solid var(--gold);color:var(--gold);padding:8px 12px;border-radius:4px;cursor:pointer;font-size:0.85rem;z-index:1000;transition:all 0.2s;" title="Toggle Schmemil Mode">Schmemil Mode: OFF</button>
-  <button id="Gog-toggle" style="position:fixed;bottom:60px;right:20px;background:rgba(0,0,0,0.7);border:1px solid var(--gold);color:var(--gold);padding:8px 12px;border-radius:4px;cursor:pointer;font-size:0.85rem;z-index:1000;transition:all 0.2s;" title="Toggle Gog Mode">Gog Mode: OFF</button>
+  <button id="Schmemil-toggle" class="mode-toggle hidden" style="position:fixed;bottom:20px;right:20px;background:rgba(40,20,60,0.9);border:none;color:#b0b0b0;padding:10px 16px;border-radius:4px;cursor:pointer;font-size:0.85rem;z-index:1000;transition:all 0.3s;opacity:0;pointer-events:none;" title="Toggle Schmemil Mode">Schmemil Mode</button>
+  <button id="Gog-toggle" class="mode-toggle hidden" style="position:fixed;bottom:60px;right:20px;background:rgba(40,20,60,0.9);border:none;color:#b0b0b0;padding:10px 16px;border-radius:4px;cursor:pointer;font-size:0.85rem;z-index:1000;transition:all 0.3s;opacity:0;pointer-events:none;" title="Toggle Gog Mode">Gog Mode</button>
 
   <div class="faction-selector">
     <a href="central-group.html" class="faction-panel faction-central">
@@ -55,7 +55,7 @@
 
     <div class="faction-divider">
       <div class="divider-line"></div>
-      <div class="divider-badge">
+      <div class="divider-badge" id="hexagon-button" style="cursor:pointer;" title="Click to reveal mode toggles">
         <div class="hexagon">
           <div class="hexagon-inner">
             <span class="badge-text">1CL</span>
@@ -96,6 +96,29 @@
         });
       });
 
+      // Hexagon button to reveal mode toggles
+      const hexagonButton = document.getElementById('hexagon-button');
+      const modeToggles = document.querySelectorAll('.mode-toggle');
+      let togglesVisible = false;
+
+      if (hexagonButton) {
+        hexagonButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          togglesVisible = !togglesVisible;
+          
+          modeToggles.forEach(toggle => {
+            if (togglesVisible) {
+              toggle.style.opacity = '1';
+              toggle.style.pointerEvents = 'auto';
+            } else {
+              toggle.style.opacity = '0';
+              toggle.style.pointerEvents = 'none';
+            }
+          });
+        });
+      }
+
       const SchmemilToggle = document.getElementById('Schmemil-toggle');
       const badge = document.querySelector('.divider-badge');
       let SchmemilMode = false;
@@ -105,12 +128,10 @@
           SchmemilMode = !SchmemilMode;
           if (SchmemilMode) {
             badge.classList.add('Schmemil-mode');
-            SchmemilToggle.textContent = 'Schmemil Mode: ON';
-            SchmemilToggle.style.background = 'rgba(201,168,79,0.2)';
+            SchmemilToggle.style.background = 'rgba(80,40,120,0.95)';
           } else {
             badge.classList.remove('Schmemil-mode');
-            SchmemilToggle.textContent = 'Schmemil Mode: OFF';
-            SchmemilToggle.style.background = 'rgba(0,0,0,0.7)';
+            SchmemilToggle.style.background = 'rgba(40,20,60,0.9)';
           }
         });
       }
@@ -119,24 +140,16 @@
       let GogMode = false;
 
       if (GogToggle) {
-        console.log('Gog toggle button found');
         GogToggle.addEventListener('click', () => {
           GogMode = !GogMode;
-          console.log('Gog mode toggled:', GogMode);
           if (GogMode) {
             document.body.classList.add('Gog-mode');
-            console.log('Added Gog-mode class to body');
-            GogToggle.textContent = 'Gog Mode: ON';
-            GogToggle.style.background = 'rgba(201,168,79,0.2)';
+            GogToggle.style.background = 'rgba(80,40,120,0.95)';
           } else {
             document.body.classList.remove('Gog-mode');
-            console.log('Removed Gog-mode class from body');
-            GogToggle.textContent = 'Gog Mode: OFF';
-            GogToggle.style.background = 'rgba(0,0,0,0.7)';
+            GogToggle.style.background = 'rgba(40,20,60,0.9)';
           }
         });
-      } else {
-        console.error('Gog toggle button not found!');
       }
     });
   </script>

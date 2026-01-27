@@ -434,21 +434,23 @@ input[type="search"]:focus{
 }
 
 .faction-cta{
-  font-size:1.1rem;
-  font-weight:600;
-  color:var(--gold);
+  font-size:0.9rem;
+  font-weight:500;
+  color:rgba(201,168,79,0.6);
   text-align:center;
-  padding:1rem;
-  border:2px solid var(--gold);
+  padding:0.75rem;
+  border:1px solid rgba(201,168,79,0.2);
   border-radius:4px;
-  background:rgba(201,168,79,0.1);
+  background:rgba(201,168,79,0.03);
   transition:all 0.3s ease;
 }
 
 .faction-panel:hover .faction-cta{
-  background:rgba(201,168,79,0.2);
+  color:var(--gold);
+  background:rgba(201,168,79,0.08);
+  border-color:rgba(201,168,79,0.4);
   transform:translateY(-2px);
-  box-shadow:0 4px 12px rgba(201,168,79,0.3);
+  box-shadow:0 2px 8px rgba(201,168,79,0.2);
 }
 
 .regiment-list{
