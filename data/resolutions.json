@@ -6,8 +6,8 @@
     "shortTitle": "CCR10",
     "date": "2025-11-17",
     "status": "passed",
-    "summary": "Multi-layered alliance: LCG & LAG; LCC & LAC governance",
-    "description": "The 1st Combined Legion now operates with two membership tracks and two governance bodies to separate framework governance from war operations.",
+    "summary": "Multi-layered alliance: LCG & LAG; LCC & LAC command structure",
+    "description": "The 1st Combined Legion now operates with two membership tracks and two command bodies to separate framework policy from war operations.",
     "sections": [
       {
         "title": "Membership Tracks",
@@ -34,14 +34,14 @@
         ]
       },
       {
-        "title": "Governance Bodies",
+        "title": "Command Bodies",
         "content": [
           {
             "subtitle": "Legion Central Command (LCC)",
-            "description": "Framework policy & governance authority.",
+            "description": "Framework policy & command authority.",
             "points": [
               "Representatives from LCG regiments only",
-              "Elects CQL & Secretary",
+              "Elects CQ & Secretary",
               "Approves LCG membership applications",
               "Makes core policy decisions"
             ]
@@ -79,7 +79,7 @@
       },
       "governance": {
         "append": [
-          "Following CCR10, governance is divided between LCC (framework policy) and LAC (operational coordination) to ensure both strategic oversight and tactical flexibility."
+          "Following CCR10, command structure is divided between LCC (framework policy) and LAC (operational coordination) to ensure both strategic oversight and tactical flexibility."
         ]
       }
     }

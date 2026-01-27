@@ -44,7 +44,7 @@ class FrameworkBuilder {
     html += this.generateComplexSection(base.membership);
     html += this.applyFrameworkUpdates('membership');
 
-    // Governance
+    // Command Structure
     html += this.generateComplexSection(base.governance);
     html += this.applyFrameworkUpdates('governance');
 

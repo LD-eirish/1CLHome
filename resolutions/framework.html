@@ -18,7 +18,7 @@
 				<a href="../hub.html" class="brand-link" aria-label="Return to Hub"><img src="../1CLLogo.png" alt="1CL" class="brand-logo"></a>
 				<div class="brand-text">
 					<h1>1CL Framework</h1>
-					<p class="subtitle">Official governance & operations framework</p>
+				<p class="subtitle">Official command & operations framework</p>
 				</div>
 			</div>
 			<div class="header-actions">
@@ -37,22 +37,17 @@
 		</ol>
 	</nav>
 
-	<div class="page-actions">
-		<a href="../library.html" class="back-btn" aria-label="Back to Library">← Back to Library</a>
-	</div>
-
-	<section class="hero card">
+	<section class="hero card" style="background:linear-gradient(135deg, rgba(201,168,79,0.08), rgba(201,168,79,0.02));">
 		<div class="hero-left">
-			<h2>1CL Framework</h2>
-			<p class="lead">The official framework of the 1st Combined Legion, automatically updated with passed resolutions.</p>
+			<h2 style="font-size:2rem;margin-bottom:0.5rem;">Official Framework</h2>
+			<p class="lead" style="font-size:1.1rem;color:var(--text-secondary);">Command structure, operational guidelines, and organizational principles of the 1st Combined Legion.</p>
 		</div>
 		<div class="hero-right">
-			<a href="../hub.html" class="brand-link" aria-label="Return to Hub"><img src="../1CLLogo.png" alt="1CL Logo" class="hero-logo"/></a>
+			<img src="../1CLLogo.png" alt="1CL Logo" class="hero-logo" style="opacity:0.9;"/>
 		</div>
 	</section>
-
 	<aside class="toc card">
-		<h3>Table of Contents</h3>
+		<h3 style="font-size:1rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--gold);margin-bottom:1rem;">Contents</h3>
 		<nav id="framework-toc" aria-label="Framework sections"></nav>
 	</aside>
 
@@ -60,8 +55,8 @@
 		<div class="loading">Loading framework...</div>
 	</main>
 
-	<div class="container page-export">
-		<button id="exportFw" class="no-export export-btn">Export Framework</button>
+	<div class="container page-export" style="text-align:center;margin-top:3rem;padding:2rem 0;">
+		<button id="exportFw" class="no-export export-btn" style="font-size:0.95rem;">Download as Image</button>
 	</div>
 	
 	<button id="jump-to-top" class="jump-to-top" aria-label="Jump to top" title="Jump to top">↑</button>
@@ -77,14 +72,51 @@
 				const content = builder.generateFramework();
 				document.getElementById('framework-content').innerHTML = content;
 				
-				// Generate table of contents
+				enhanceFrameworkReadability();
 				generateTOC();
-				
-				// Setup jump to top button
 				setupJumpToTop();
 			} else {
 				document.getElementById('framework-content').innerHTML = '<p class="error">Failed to load framework data.</p>';
 			}
+		}
+		
+		function enhanceFrameworkReadability() {
+			const cards = document.querySelectorAll('#framework-content .card');
+			cards.forEach((card, index) => {
+				card.style.marginBottom = '2rem';
+				
+				const h3 = card.querySelector('h3');
+				if (h3) {
+					h3.style.fontSize = '1.5rem';
+					h3.style.marginBottom = '1rem';
+					h3.style.paddingBottom = '0.5rem';
+				}
+				
+				const h4s = card.querySelectorAll('h4');
+				h4s.forEach(h4 => {
+					h4.style.fontSize = '1.15rem';
+					h4.style.marginTop = '1.5rem';
+					h4.style.marginBottom = '0.75rem';
+					h4.style.color = 'var(--khaki)';
+				});
+				
+				const paragraphs = card.querySelectorAll('p');
+				paragraphs.forEach(p => {
+					p.style.lineHeight = '1.7';
+					p.style.marginBottom = '1rem';
+					p.style.fontSize = '0.95rem';
+				});
+				
+				const lists = card.querySelectorAll('ul');
+				lists.forEach(ul => {
+					ul.style.marginBottom = '1rem';
+					ul.style.lineHeight = '1.8';
+					const items = ul.querySelectorAll('li');
+					items.forEach(li => {
+						li.style.marginBottom = '0.5rem';
+					});
+				});
+			});
 		}
 		
 		function generateTOC() {

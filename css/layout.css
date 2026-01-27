@@ -121,7 +121,7 @@
   width:100%;
   height:calc(100vh - 280px);
   min-height:600px;
-  border-radius:8px;
+  border-radius:4px;
   border:0;
   background:var(--card);
 }
