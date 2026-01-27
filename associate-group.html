@@ -56,33 +56,8 @@
 
     <section class="card">
       <h3>Associate Group Regiments</h3>
-      <div class="regiment-grid">
-        <article class="regiment-card">
-          <div class="regiment-header">
-            <h4>882nd Regiment (882nd)</h4>
-            <span class="regiment-badge associate">Associate</span>
-          </div>
-          <p class="regiment-joined">Joined: Nov 17, 2025</p>
-          <p class="regiment-desc">Regiment description coming soon.</p>
-        </article>
-
-        <article class="regiment-card">
-          <div class="regiment-header">
-            <h4>Solution 9 (S9)</h4>
-            <span class="regiment-badge associate">Associate</span>
-          </div>
-          <p class="regiment-joined">Joined: Nov 17, 2025</p>
-          <p class="regiment-desc">Regiment description coming soon.</p>
-        </article>
-
-        <article class="regiment-card">
-          <div class="regiment-header">
-            <h4>Colonial Assault Team (CAT)</h4>
-            <span class="regiment-badge associate">Associate</span>
-          </div>
-          <p class="regiment-joined">Joined: Dec 8, 2025</p>
-          <p class="regiment-desc">Regiment description coming soon.</p>
-        </article>
+      <div class="regiment-grid" id="regiment-list">
+        <div class="loading">Loading regiments...</div>
       </div>
     </section>
   </main>
@@ -90,7 +65,39 @@
   <button id="jump-to-top" class="jump-to-top" aria-label="Jump to top" title="Jump to top">↑</button>
 
   <script>
+    async function loadRegiments() {
+      try {
+        const response = await fetch('data/regiments.json');
+        const regiments = await response.json();
+        
+        const associateRegiments = regiments.filter(r => r.group === 'associate');
+        const container = document.getElementById('regiment-list');
+        
+        if (associateRegiments.length === 0) {
+          container.innerHTML = '<p class="error">No regiments found.</p>';
+          return;
+        }
+        
+        container.innerHTML = associateRegiments.map((regiment, index) => `
+          <article class="regiment-card" style="animation-delay: ${index * 0.1}s">
+            <div class="regiment-header">
+              <h4>${regiment.name} (${regiment.abbreviation})</h4>
+              <span class="regiment-badge associate">Associate</span>
+            </div>
+            <p class="regiment-joined">Joined: ${new Date(regiment.joinedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</p>
+            <p class="regiment-desc">${regiment.description}</p>
+            ${regiment.tags ? `<div class="regiment-tags">${regiment.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : ''}
+          </article>
+        `).join('');
+      } catch (error) {
+        console.error('Failed to load regiments:', error);
+        document.getElementById('regiment-list').innerHTML = '<p class="error">Failed to load regiments.</p>';
+      }
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
+      loadRegiments();
+      
       const jumpBtn = document.getElementById('jump-to-top');
       
       window.addEventListener('scroll', () => {
@@ -103,11 +110,6 @@
       
       jumpBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-
-      const cards = document.querySelectorAll('.regiment-card');
-      cards.forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.1}s`;
       });
     });
   </script>

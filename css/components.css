@@ -500,6 +500,23 @@ input[type="search"]:focus{
   color:rgba(201,178,122,0.6);
 }
 
+.regiment-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:10px;
+}
+
+.regiment-tags .tag{
+  display:inline-block;
+  padding:4px 8px;
+  background:rgba(0,0,0,0.4);
+  border-radius:3px;
+  font-size:0.7rem;
+  color:rgba(201,168,79,0.75);
+  font-weight:500;
+}
+
 .faction-divider{
   width:120px;
   position:relative;

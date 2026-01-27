@@ -83,5 +83,88 @@
         ]
       }
     }
+  },
+  {
+    "id": "CMD-INST",
+    "number": null,
+    "title": "1CL 2.0 Commander Instructions",
+    "shortTitle": "Commander Instructions",
+    "date": "2026-01-27",
+    "status": "active",
+    "summary": "Operational guidelines and instructions for 1CL Central Group commanders",
+    "description": "Following the division of 1CL into the Legion Central Group and the Legion Associate Group, these instructions provide Central Group Commanders with essential guidance on how to proceed under the new framework.",
+    "sections": [
+      {
+        "title": "Important Disclaimer",
+        "content": [
+          {
+            "description": "It is critical to understand that the Legion Central Group is not a full regiment merger. [A/1CL] refers to this arrangement as a 'pseudo-merge.' Your regiment retains complete operational independence and the unconditional right to leave at any time. You will maintain your in-game regiment identity and your personal Discord server, ensuring that departing 1CL remains entirely within your control whenever you choose. The Legion should be viewed as a 'Battalion'; a coordinated unit comprising multiple regiments working together while preserving individual autonomy."
+          }
+        ]
+      },
+      {
+        "title": "Joint Recruitment and HR",
+        "content": [
+          {
+            "description": "1CL will assume responsibility for much of the administrative and HR workload that previously fell to individual regiments. We are implementing a centralized recruitment system within the 1CL Discord, where prospective members can join any 1CL regiment. The system will naturally favor Central Group regiments while remaining open to all member regiments."
+          },
+          {
+            "subtitle": "Onboarding and Verification Process",
+            "description": "The 1CL Discord onboarding and verification system is being completely revised to accommodate the new structure. During the onboarding process, new members will indicate their gameplay preferences, specializations, and interests. The system will then analyze these inputs and suggest the best-fitting regiment as their primary assignment. However, it is essential to emphasize that members retain complete freedom to join any regiment they prefer and to switch between regiments at any time. No member will ever be forced to remain in a specific regiment against their will."
+          },
+          {
+            "subtitle": "Recruitment Policy and Messaging",
+            "description": "Moving forward, all recruitment efforts must present 1CL as a unified force. When recruiting, members should represent 1CL as a whole rather than individual regiments such as TCS, P.O.G., or WM. This unified approach is crucial for establishing 1CL as one cohesive and well-working organization rather than appearing as a loose alliance of independent groups. This messaging strengthens our collective reputation and makes us more attractive to quality recruits."
+          }
+        ]
+      },
+      {
+        "title": "Command Structure and Groups",
+        "content": [
+          {
+            "subtitle": "Associate Group Leadership",
+            "description": "All Associate Group commanders have been removed from Central Group decision-making processes. While Associate regiments remain valued partners for operational coordination, they do not participate in framework policy decisions, which are reserved exclusively for the Legion Central Command (LCC) as established by CCR10."
+          },
+          {
+            "subtitle": "The [A/1CL] Administrative Regiment",
+            "description": "[A/1CL] serves as the administrative and HR division of 1CL, handling all non-in-game matters including Discord management, recruitment coordination, and administrative oversight. This group is intentionally regiment-neutral, meaning it does not belong to any member regiment and operates without bias toward any specific regiment's interests. [A/1CL] exists solely to support the collective success of all Central Group regiments through fair and professional administration."
+          }
+        ]
+      },
+      {
+        "title": "Commander Expectations",
+        "content": [
+          {
+            "description": "Central Group commanders are expected to uphold high standards of leadership, professionalism, and cooperation. As representatives of your regiments within the broader 1CL framework, your conduct and decisions directly impact the Legion's reputation and effectiveness.",
+            "points": [
+              "Actively participate in Legion Central Command meetings and decision-making processes",
+              "Ensure your regiment's voice is heard while remaining open to compromise for the collective good",
+              "Uphold the reputation and integrity of 1CL in all interactions"
+            ]
+          },
+          {
+            "subtitle": "Collaborative Leadership",
+            "description": "Work collaboratively with peers from other Central Group regiments.",
+            "points": [
+              "Share resources when appropriate",
+              "Coordinate joint operations effectively",
+              "Maintain open lines of communication with fellow commanders",
+              "Keep healthy competition from compromising Legion cohesion",
+              "Remember that 1CL's success benefits every member regiment"
+            ]
+          },
+          {
+            "subtitle": "Communication Standards",
+            "description": "Maintain regular communication with administration and fellow commanders.",
+            "points": [
+              "Respond promptly to important messages",
+              "Attend scheduled meetings or provide advance notice of absence",
+              "Keep command structure informed of significant regiment developments",
+              "Practice transparency to build trust and enable quick responses"
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

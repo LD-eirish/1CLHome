@@ -1,0 +1,50 @@
+[
+  {
+    "name": "The Colonial Shadows",
+    "abbreviation": "TCS",
+    "group": "central",
+    "joinedDate": "2025-11-17",
+    "description": "TCS is a Reconnaissance and Partisan-focused regiment, specializing in Spec-Ops and deep backline operations.",
+    "tags": ["Reconnaissance", "Spec-Ops", "Partisan"]
+  },
+  {
+    "name": "Public Operations Group",
+    "abbreviation": "P.O.G.",
+    "group": "central",
+    "joinedDate": "2025-11-17",
+    "description": "P.O.G is a generalist public regiment open to all respectful players. We organize and host operations and frequently collaborate with other groups. We cover all in-game roles and have a place for everyone. P.O.G is a great introduction to the game.",
+    "tags": ["Generalist", "Armored Infantry", "Mortar Support"]
+  },
+  {
+    "name": "War Machine",
+    "abbreviation": "WM",
+    "group": "central",
+    "joinedDate": "2025-11-20",
+    "description": "Regiment description coming soon.",
+    "tags": ["", "", ""]
+  },
+  {
+    "name": "882nd Regiment",
+    "abbreviation": "882nd",
+    "group": "associate",
+    "joinedDate": "2025-11-17",
+    "description": "Regiment description coming soon.",
+    "tags": ["", "", ""]
+  },
+  {
+    "name": "Solution 9",
+    "abbreviation": "S9",
+    "group": "associate",
+    "joinedDate": "2025-11-17",
+    "description": "Regiment description coming soon.",
+    "tags": ["Logistics", "", ""]
+  },
+  {
+    "name": "Colonial Assault Team",
+    "abbreviation": "CAT",
+    "group": "associate",
+    "joinedDate": "2025-12-08",
+    "description": "Regiment description coming soon.",
+    "tags": ["", "", ""]
+  }
+]
