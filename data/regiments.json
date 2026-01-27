@@ -13,7 +13,7 @@
     "group": "central",
     "joinedDate": "2025-11-17",
     "description": "TCS is a Reconnaissance and Partisan-focused regiment, specializing in Spec-Ops and deep backline operations.",
-    "tags": ["Reconnaissance", "Spec-Ops", "Partisan"]
+    "tags": ["Partisan", "Tomfoolery", "Shenanigans"]
   },
   {
     "name": "[3/1CL] War Machine",
@@ -36,8 +36,8 @@
     "abbreviation": "S9",
     "group": "associate",
     "joinedDate": "2025-11-17",
-    "description": "Regiment description coming soon.",
-    "tags": ["Logistics", "", ""]
+    "description": "We focus on logistics and helping out our colleagues and friends. We do any type of logistics, either producing gear at a factory or transporting it to where it'll be used. We also do frontline stuff with whatever we manage to produce to help out more directly.",
+    "tags": ["Logistics", "Facility", "Frontline Support"]
   },
   {
     "name": "Colonial Assault Team",
