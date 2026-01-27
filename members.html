@@ -35,7 +35,8 @@
     </nav>
   </header>
 
-  <button id="emil-toggle" style="position:fixed;bottom:20px;right:20px;background:rgba(0,0,0,0.7);border:1px solid var(--gold);color:var(--gold);padding:8px 12px;border-radius:4px;cursor:pointer;font-size:0.85rem;z-index:1000;transition:all 0.2s;" title="Toggle Emil Mode">Emil Mode: OFF</button>
+  <button id="Schmemil-toggle" style="position:fixed;bottom:20px;right:20px;background:rgba(0,0,0,0.7);border:1px solid var(--gold);color:var(--gold);padding:8px 12px;border-radius:4px;cursor:pointer;font-size:0.85rem;z-index:1000;transition:all 0.2s;" title="Toggle Schmemil Mode">Schmemil Mode: OFF</button>
+  <button id="Goggy-toggle" style="position:fixed;bottom:60px;right:20px;background:rgba(0,0,0,0.7);border:1px solid var(--gold);color:var(--gold);padding:8px 12px;border-radius:4px;cursor:pointer;font-size:0.85rem;z-index:1000;transition:all 0.2s;" title="Toggle Goggy Mode">Goggy Mode: OFF</button>
 
   <div class="faction-selector">
     <a href="central-group.html" class="faction-panel faction-central">
@@ -55,10 +56,11 @@
     <div class="faction-divider">
       <div class="divider-line"></div>
       <div class="divider-badge">
-        <svg class="hexagon-bg" viewBox="0 0 100 100" width="80" height="80">
-          <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="rgba(0,0,0,0.8)" stroke="#c9a84f" stroke-width="2"/>
-        </svg>
-        <span class="badge-text">1CL</span>
+        <div class="hexagon">
+          <div class="hexagon-inner">
+            <span class="badge-text">1CL</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -94,20 +96,36 @@
         });
       });
 
-      const emilToggle = document.getElementById('emil-toggle');
+      const SchmemilToggle = document.getElementById('Schmemil-toggle');
       const badge = document.querySelector('.divider-badge');
-      let emilMode = false;
+      let SchmemilMode = false;
 
-      emilToggle.addEventListener('click', () => {
-        emilMode = !emilMode;
-        if (emilMode) {
-          badge.classList.add('emil-mode');
-          emilToggle.textContent = 'Emil Mode: ON';
-          emilToggle.style.background = 'rgba(201,168,79,0.2)';
+      SchmemilToggle.addEventListener('click', () => {
+        SchmemilMode = !SchmemilMode;
+        if (SchmemilMode) {
+          badge.classList.add('Schmemil-mode');
+          SchmemilToggle.textContent = 'Schmemil Mode: ON';
+          SchmemilToggle.style.background = 'rgba(201,168,79,0.2)';
         } else {
-          badge.classList.remove('emil-mode');
-          emilToggle.textContent = 'Emil Mode: OFF';
-          emilToggle.style.background = 'rgba(0,0,0,0.7)';
+          badge.classList.remove('Schmemil-mode');
+          SchmemilToggle.textContent = 'Schmemil Mode: OFF';
+          SchmemilToggle.style.background = 'rgba(0,0,0,0.7)';
+        }
+      });
+
+      const GoggyToggle = document.getElementById('Goggy-toggle');
+      let GoggyMode = false;
+
+      GoggyToggle.addEventListener('click', () => {
+        GoggyMode = !GoggyMode;
+        if (GoggyMode) {
+          document.body.classList.add('Goggy-mode');
+          GoggyToggle.textContent = 'Goggy Mode: ON';
+          GoggyToggle.style.background = 'rgba(201,168,79,0.2)';
+        } else {
+          document.body.classList.remove('Goggy-mode');
+          GoggyToggle.textContent = 'Goggy Mode: OFF';
+          GoggyToggle.style.background = 'rgba(0,0,0,0.7)';
         }
       });
     });
