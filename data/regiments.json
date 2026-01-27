@@ -1,14 +1,6 @@
 [
   {
-    "name": "The Colonial Shadows",
-    "abbreviation": "TCS",
-    "group": "central",
-    "joinedDate": "2025-11-17",
-    "description": "TCS is a Reconnaissance and Partisan-focused regiment, specializing in Spec-Ops and deep backline operations.",
-    "tags": ["Reconnaissance", "Spec-Ops", "Partisan"]
-  },
-  {
-    "name": "Public Operations Group",
+    "name": "[1/1CL] Public Operations Group",
     "abbreviation": "P.O.G.",
     "group": "central",
     "joinedDate": "2025-11-17",
@@ -16,7 +8,15 @@
     "tags": ["Generalist", "Armored Infantry", "Mortar Support"]
   },
   {
-    "name": "War Machine",
+    "name": "[2/1CL] The Colonial Shadows",
+    "abbreviation": "TCS",
+    "group": "central",
+    "joinedDate": "2025-11-17",
+    "description": "TCS is a Reconnaissance and Partisan-focused regiment, specializing in Spec-Ops and deep backline operations.",
+    "tags": ["Reconnaissance", "Spec-Ops", "Partisan"]
+  },
+  {
+    "name": "[3/1CL] War Machine",
     "abbreviation": "WM",
     "group": "central",
     "joinedDate": "2025-11-20",
