@@ -580,7 +580,12 @@ input[type="search"]:focus{
 }
 
 body.Goggy-mode{
+  overflow:hidden;
+}
+
+body.Goggy-mode > *:not(#Goggy-toggle):not(#Schmemil-toggle){
   animation:rotate 30s linear infinite;
+  transform-origin:center center;
 }
 
 @keyframes rotate{
