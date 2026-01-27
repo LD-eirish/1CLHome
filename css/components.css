@@ -579,6 +579,10 @@ input[type="search"]:focus{
   animation:rotate 20s linear infinite;
 }
 
+body.Goggy-mode{
+  animation:rotate 30s linear infinite;
+}
+
 @keyframes rotate{
   from{
     transform:rotate(0deg);
