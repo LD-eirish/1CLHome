@@ -5,7 +5,8 @@
     "group": "central",
     "joinedDate": "2025-11-17",
     "description": "P.O.G is a generalist public regiment open to all respectful players. We organize and host operations and frequently collaborate with other groups. We cover all in-game roles and have a place for everyone. P.O.G is a great introduction to the game.",
-    "tags": ["Generalist", "Armored Infantry", "Mortar Support"]
+    "tags": ["Generalist", "Armored Infantry", "Mortar Support"],
+    "discord": "https://discord.gg/HCt3FgTBu4"
   },
   {
     "name": "[2/1CL] The Colonial Shadows",
@@ -13,7 +14,8 @@
     "group": "central",
     "joinedDate": "2025-11-17",
     "description": "TCS is a Reconnaissance and Partisan-focused regiment, specializing in Spec-Ops and deep backline operations.",
-    "tags": ["Partisan", "Tomfoolery", "Shenanigans"]
+    "tags": ["Partisan", "Tomfoolery", "Shenanigans"],
+    "discord": "https://discord.gg/JSnZUVqY6D"
   },
   {
     "name": "[3/1CL] War Machine",
@@ -21,7 +23,8 @@
     "group": "central",
     "joinedDate": "2025-11-20",
     "description": "WM specializes building and driving tanks and other vehicles. We also have an unhealthy addiction to facilities.",
-    "tags": ["Scrooping", "Facilities", "Armor"]
+    "tags": ["Scrooping", "Facilities", "Armor"],
+    "discord": "https://discord.gg/NBRDQdsfWy"
   },
   {
     "name": "882nd Regiment",
@@ -29,7 +32,8 @@
     "group": "associate",
     "joinedDate": "2025-11-17",
     "description": "Regiment description coming soon.",
-    "tags": ["", "", ""]
+    "tags": ["", "", ""],
+    "discord": "https://discord.gg/wdZdu9TZsG"
   },
   {
     "name": "Solution 9",
@@ -37,7 +41,8 @@
     "group": "associate",
     "joinedDate": "2025-11-17",
     "description": "We focus on logistics and helping out our colleagues and friends. We do any type of logistics, either producing gear at a factory or transporting it to where it'll be used. We also do frontline stuff with whatever we manage to produce to help out more directly.",
-    "tags": ["Logistics", "Facility", "Frontline Support"]
+    "tags": ["Logistics", "Facility", "Frontline Support"],
+    "discord": "https://discord.gg/DsRZJ9ZnRQ"
   },
   {
     "name": "Colonial Assault Team",
