@@ -24,7 +24,7 @@
       "sections": [
         {
           "title": "Legion Central Command (LCC)",
-          "content": "LCC consists of representatives from regiments that adopt deeper integration (Legion Central Group). LCC sets core policy, approves central-group membership, and elects CC and Secretary."
+          "content": "LCC consists of representatives from regiments that adopt deeper integration (Legion Central Group). LCC sets core policy, approves central-group membership, and elects CQM."
         },
         {
           "title": "Legion Associate Command (LAC)",
@@ -40,7 +40,7 @@
       "title": "Officers & Responsibilities",
       "items": [
         "<strong>Chief Commander (CC)</strong> — Provides leadership continuity and resolves critical deadlocks; the office rotates between regiments each month.",
-        "<strong>Chief Quartermaster (CQ)</strong> — Oversees the operational stockpile, coordinates logistics, and ensures equitable distribution during operations."
+        "<strong>Chief Quartermaster (CQM)</strong> — Oversees the operational stockpile, coordinates logistics, and ensures equitable distribution during operations."
       ]
     },
     "recruitment": {
@@ -49,7 +49,7 @@
     },
     "operations": {
       "title": "Joint Operations & Logistics",
-      "content": "Operations are planned and announced in advance. The CQ publishes stockpile targets and distribution plans; participating regiments supply resources per agreement. Logistics are managed to ensure readiness, fairness, and minimal redundancy."
+      "content": "Operations are planned and announced in advance. The CQM publishes stockpile targets and distribution plans; participating regiments supply resources per agreement. Logistics are managed to ensure readiness, fairness, and minimal redundancy."
     },
     "strategy": {
       "title": "Strategy & Resources",
