@@ -1,9 +1,0 @@
-# GitHub Pages Jekyll configuration
-# This tells GitHub Pages not to process the site with Jekyll
-
-include:
-  - data
-  - js
-  - resolutions
-  - src
-  - dist
