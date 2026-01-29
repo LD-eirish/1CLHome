@@ -32,7 +32,7 @@ export function LibraryPage() {
       
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <ol>
-          <li><Link to="/hub">Hub</Link></li>
+          <li><Link to="hub">Hub</Link></li>
           <li aria-current="page">Library</li>
         </ol>
       </nav>

@@ -108,8 +108,8 @@ export function FrameworkPage() {
       
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <ol>
-          <li><Link to="/hub">Hub</Link></li>
-          <li><Link to="/library">Library</Link></li>
+          <li><Link to="hub">Hub</Link></li>
+          <li><Link to="library">Library</Link></li>
           <li aria-current="page">Framework</li>
         </ol>
       </nav>

@@ -32,14 +32,14 @@ export function CentralGroupPage() {
       
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <ol>
-          <li><Link to="/hub">Hub</Link></li>
-          <li><Link to="/members">Members</Link></li>
+          <li><Link to="hub">Hub</Link></li>
+          <li><Link to="members">Members</Link></li>
           <li aria-current="page">Central Group</li>
         </ol>
       </nav>
 
       <div className="page-actions">
-        <Link to="/members" className="back-btn" aria-label="Back to Members">← Back to Members</Link>
+        <Link to="members" className="back-btn" aria-label="Back to Members">← Back to Members</Link>
       </div>
 
       <main className="container">

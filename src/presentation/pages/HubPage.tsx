@@ -36,19 +36,19 @@ export function HubPage() {
             <article className="feature-card">
               <h4>Library</h4>
               <p className="small">Browse all resolutions and documents.</p>
-              <Link to="/library" className="btn btn-ghost">View Library</Link>
+              <Link to="library" className="btn btn-ghost">View Library</Link>
             </article>
 
             <article className="feature-card">
               <h4>Framework</h4>
               <p className="small">Operational guidance, structure, and leadership.</p>
-              <Link to="/framework" className="btn btn-ghost">View Framework</Link>
+              <Link to="framework" className="btn btn-ghost">View Framework</Link>
             </article>
 
             <article className="feature-card">
               <h4>Members</h4>
               <p className="small">Regiment list and onboarding resources.</p>
-              <Link to="/members" className="btn btn-ghost">View Members</Link>
+              <Link to="members" className="btn btn-ghost">View Members</Link>
             </article>
           </div>
         </section>
