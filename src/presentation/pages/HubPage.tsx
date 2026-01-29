@@ -42,7 +42,7 @@ export function HubPage() {
             <article className="feature-card">
               <h4>Framework</h4>
               <p className="small">Operational guidance, structure, and leadership.</p>
-              <Link to="framework" className="btn btn-ghost">View Framework</Link>
+              <Link to="/framework" className="btn btn-ghost">View Framework</Link>
             </article>
 
             <article className="feature-card">
