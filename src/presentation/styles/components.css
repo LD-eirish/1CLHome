@@ -265,7 +265,8 @@
 }
 
 .toc.collapsed{
-  /* Compact collapsed appearance on desktop */
+  /* Compact collapsed appearance on desktop. Keep absolute positioning
+     so the toggle stays at the same screen location even after collapse. */
   width:56px;
   height:56px;
   max-height:none;
@@ -273,7 +274,7 @@
   overflow:hidden; /* prevent inner content from spilling out */
   border-radius:8px;
   display:block;
-  position:relative;
+  position:absolute; /* keep same positioning behavior as expanded */
 }
 
 .toc.collapsed .toc-title{
