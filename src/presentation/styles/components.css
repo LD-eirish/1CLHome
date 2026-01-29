@@ -217,7 +217,7 @@
   right:2rem;
   width:220px;
   /* Start the TOC lower by default so it aligns with framework content top */
-  top:450px;
+  top:600px;
   transition:all 0.25s ease;
   z-index:40;
 }
@@ -225,13 +225,11 @@
 .toc .toc-header{
   display:flex;
   align-items:center;
-  justify-content:flex-start;
+  justify-content:space-between; /* put toggle at right edge of header */
   gap:8px;
   margin-bottom:0.5rem;
+  position: relative;
 }
-
-/* Ensure the header is the positioning context for the toggle */
-.toc .toc-header{ position: relative; }
 
 /* Make the toggle participate in the header's flex layout so it aligns with the title */
 .toc .toc-toggle{
@@ -293,8 +291,16 @@
 
 /* Remove focus outline for the toggle to match design */
 .toc .toc-toggle:focus{
-  outline: none;
-  box-shadow: none;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Ensure toggle button has no border or outline inside the TOC */
+.toc .toggle-btn,
+.toc .toc-toggle{
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 .toc.expanded{
