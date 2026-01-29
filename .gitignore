@@ -31,3 +31,6 @@ desktop.ini
 # Build outputs (if any future build tools added)
 dist/
 build/
+
+# Node modules
+node_modules/
