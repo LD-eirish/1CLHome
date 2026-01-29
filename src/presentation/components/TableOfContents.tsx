@@ -148,53 +148,51 @@ export function TableOfContents({ contentId }: Readonly<TableOfContentsProps>) {
   if (sections.length === 0) return null;
 
   return (
-    <>
-      <aside className={`toc card ${collapsed ? 'collapsed' : 'expanded'}`} aria-hidden={collapsed}>
-        <div className="toc-header">
-          <h3 className="toc-title">Contents</h3>
-          <button
-            className="toggle-btn toc-toggle"
-            aria-expanded={!collapsed}
-            aria-controls="framework-toc"
-            onClick={() => setCollapsed((s) => !s)}
-          >
-            <span className="toggle-icon" aria-hidden>
-              {collapsed ? '\u25BA' : '\u25C4'}
-            </span>
-            <span className="toggle-label">{collapsed ? 'Open' : 'Close'}</span>
-          </button>
-        </div>
-        <nav id="framework-toc" aria-label="Framework sections">
-          <ul className="toc-list">
-            {sections.map((section) => (
-              <li key={section.id}>
-                <a
-                  href={`#${section.id}`}
-                  onClick={(e) => { handleLinkClick(e, section.id); if (window.innerWidth <= 900) setCollapsed(true); }}
-                  aria-label={`Jump to ${section.title}`}
-                >
-                  {section.title}
-                </a>
-                {section.subsections && section.subsections.length > 0 && (
-                  <ul>
-                    {section.subsections.map((sub) => (
-                      <li key={sub.id}>
-                        <a
-                          href={`#${sub.id}`}
-                          onClick={(e) => { handleLinkClick(e, sub.id); if (window.innerWidth <= 900) setCollapsed(true); }}
-                          aria-label={`Jump to ${sub.title}`}
-                        >
-                          {sub.title}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </aside>
-    </>
+    <aside className={`toc card ${collapsed ? 'collapsed' : 'expanded'}`} aria-hidden={collapsed}>
+      <div className="toc-header">
+        <h3 className="toc-title">Contents</h3>
+        <button
+          className="toggle-btn toc-toggle"
+          aria-expanded={!collapsed}
+          aria-controls="framework-toc"
+          onClick={() => setCollapsed((s) => !s)}
+        >
+          <span className="toggle-icon" aria-hidden>
+            {collapsed ? '\u25BA' : '\u25C4'}
+          </span>
+          <span className="toggle-label">{collapsed ? 'Open' : 'Close'}</span>
+        </button>
+      </div>
+      <nav id="framework-toc" aria-label="Framework sections">
+        <ul className="toc-list">
+          {sections.map((section) => (
+            <li key={section.id}>
+              <a
+                href={`#${section.id}`}
+                onClick={(e) => { handleLinkClick(e, section.id); if (window.innerWidth <= 900) setCollapsed(true); }}
+                aria-label={`Jump to ${section.title}`}
+              >
+                {section.title}
+              </a>
+              {section.subsections && section.subsections.length > 0 && (
+                <ul>
+                  {section.subsections.map((sub) => (
+                    <li key={sub.id}>
+                      <a
+                        href={`#${sub.id}`}
+                        onClick={(e) => { handleLinkClick(e, sub.id); if (window.innerWidth <= 900) setCollapsed(true); }}
+                        aria-label={`Jump to ${sub.title}`}
+                      >
+                        {sub.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </aside>
   );
 }

@@ -1,6 +1,8 @@
 /**
  * Infrastructure Layer - Logger Utility
- * Cross-cutting logging functionality
+ *
+ * Logging disabled: this module intentionally provides no-op methods so that
+ * imports of `Logger` do not emit any console output in any environment.
  */
 
 export enum LogLevel {
@@ -11,33 +13,23 @@ export enum LogLevel {
 }
 
 export class Logger {
-  private static logLevel: LogLevel = LogLevel.INFO;
-
-  static setLogLevel(level: LogLevel): void {
-    this.logLevel = level;
+  static setLogLevel(_level: LogLevel): void {
+    // no-op
   }
 
-  static error(message: string, error?: unknown): void {
-    if (this.logLevel <= LogLevel.ERROR) {
-      console.error(`[ERROR] ${message}`, error);
-    }
+  static error(_message: string, _error?: unknown): void {
+    // no-op
   }
 
-  static warn(message: string, ...args: unknown[]): void {
-    if (this.logLevel <= LogLevel.WARN) {
-      console.warn(`[WARN] ${message}`, ...args);
-    }
+  static warn(_message: string, ..._args: unknown[]): void {
+    // no-op
   }
 
-  static info(message: string, ...args: unknown[]): void {
-    if (this.logLevel <= LogLevel.INFO) {
-      console.info(`[INFO] ${message}`, ...args);
-    }
+  static info(_message: string, ..._args: unknown[]): void {
+    // no-op
   }
 
-  static debug(message: string, ...args: unknown[]): void {
-    if (this.logLevel <= LogLevel.DEBUG) {
-      console.debug(`[DEBUG] ${message}`, ...args);
-    }
+  static debug(_message: string, ..._args: unknown[]): void {
+    // no-op
   }
 }

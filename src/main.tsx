@@ -8,7 +8,7 @@ import './presentation/styles/components.css';
 import './presentation/styles/navigation.css';
 import './presentation/styles/accessibility.css';
 
-const rawBase = import.meta.env.BASE_URL as string;
+const rawBase = import.meta.env.BASE_URL || '/';
 const basename = rawBase.replace(/\/$/, '') || '/';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
