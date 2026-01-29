@@ -224,7 +224,8 @@
 .toc .toc-header{
   display:flex;
   align-items:center;
-  justify-content:space-between;
+  justify-content:flex-start;
+  gap:8px;
   margin-bottom:0.5rem;
 }
 
@@ -234,10 +235,20 @@
 /* Make the toggle participate in the header's flex layout so it aligns with the title */
 .toc .toc-toggle{
   position: static;
-  margin-left: 8px;
+  margin-left: 0;
   z-index: 60;
   padding:6px 8px;
   align-self: center;
+  min-width:40px;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* Make the title and toggle align visually */
+.toc .toc-title{
+  margin:0;
+  line-height:1;
 }
 
 .toc.collapsed{

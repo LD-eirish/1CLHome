@@ -155,12 +155,12 @@ export function TableOfContents({ contentId }: Readonly<TableOfContentsProps>) {
           className="toggle-btn toc-toggle"
           aria-expanded={!collapsed}
           aria-controls="framework-toc"
+          aria-label={collapsed ? 'Open table of contents' : 'Close table of contents'}
           onClick={() => setCollapsed((s) => !s)}
         >
           <span className="toggle-icon" aria-hidden>
             {collapsed ? '\u25BA' : '\u25C4'}
           </span>
-          <span className="toggle-label">{collapsed ? 'Open' : 'Close'}</span>
         </button>
       </div>
       <nav id="framework-toc" aria-label="Framework sections">
