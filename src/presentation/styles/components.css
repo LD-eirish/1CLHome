@@ -345,6 +345,18 @@
   .toc.collapsed nav > ul {
     display: none !important;
   }
+
+/* Ensure all inner content is hidden when collapsed, but keep the toggle visible */
+.toc.collapsed * {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.toc.collapsed .toc-toggle,
+.toc.collapsed .toggle-icon {
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
 }
 
 /* Badges */

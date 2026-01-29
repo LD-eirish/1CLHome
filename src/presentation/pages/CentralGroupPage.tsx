@@ -13,9 +13,9 @@ export function CentralGroupPage() {
   useEffect(() => {
     const loadRegiments = async () => {
       try {
-        const response = await fetch('/src/data/regiments.json');
-        if (!response.ok) throw new Error('Failed to load regiments');
-        const data: Regiment[] = await response.json();
+        const resp = await fetch((await import('../../infrastructure/utils/asset.utils')).assetPath('src/data/regiments.json'));
+        if (!resp.ok) throw new Error('Failed to load regiments');
+        const data: Regiment[] = await resp.json();
         setRegiments(data.filter(r => r.group === 'central'));
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load regiments');

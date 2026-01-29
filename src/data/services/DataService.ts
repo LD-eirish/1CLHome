@@ -18,7 +18,18 @@ export class DataService {
   static async fetchFrameworkData(): Promise<FrameworkModel> {
     try {
       const path = PathUtils.resolvePath(API_ENDPOINTS.FRAMEWORK_DATA);
-      const response = await fetch(path);
+      let response = await fetch(path);
+
+      // Fallback: if the absolute path fails (GitHub Pages base mismatches), try assetPath-based resolve
+      if (!response.ok) {
+        try {
+          const { assetPath } = await import('../../infrastructure/utils/asset.utils');
+          const fallback = assetPath('src/data/framework-data.json');
+          response = await fetch(fallback);
+        } catch (e) {
+          // ignore
+        }
+      }
       
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: Failed to fetch framework data`);
@@ -39,7 +50,18 @@ export class DataService {
   static async fetchResolutions(): Promise<ResolutionModel[]> {
     try {
       const path = PathUtils.resolvePath(API_ENDPOINTS.RESOLUTIONS);
-      const response = await fetch(path);
+      let response = await fetch(path);
+
+      // Fallback for deployments where base path differs
+      if (!response.ok) {
+        try {
+          const { assetPath } = await import('../../infrastructure/utils/asset.utils');
+          const fallback = assetPath('src/data/resolutions.json');
+          response = await fetch(fallback);
+        } catch (e) {
+          // ignore
+        }
+      }
       
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: Failed to fetch resolutions`);

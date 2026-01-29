@@ -114,6 +114,53 @@
             "points": []
           }
         ]
+      },
+      {
+        "title": "Command Structure and Groups",
+        "content": [
+          {
+            "subtitle": "Associate Group Leadership",
+            "description": "All Associate Group commanders have been removed from Central Group decision-making processes. While Associate regiments remain valued partners for operational coordination, they do not participate in framework policy decisions, which are reserved exclusively for the Legion Central Command (LCC) as established by CCR10."
+          },
+          {
+            "subtitle": "The [A/1CL] Administrative Regiment",
+            "description": "[A/1CL] serves as the administrative and HR division of 1CL, handling all non-in-game matters including Discord management, recruitment coordination, and administrative oversight. This group is intentionally regiment-neutral, meaning it does not belong to any member regiment and operates without bias toward any specific regiment's interests. [A/1CL] exists solely to support the collective success of all Central Group regiments through fair and professional administration."
+          }
+        ]
+      },
+      {
+        "title": "Commander Expectations",
+        "content": [
+          {
+            "description": "",
+            "points": [
+              "Actively participate in Legion Central Command meetings and decision-making processes",
+              "Ensure your regiment's voice is heard while remaining open to compromise for the collective good",
+              "Uphold the reputation and integrity of 1CL in all interactions"
+            ]
+          },
+          {
+            "subtitle": "Collaborative Leadership",
+            "description": "Work collaboratively with peers from other Central Group regiments.",
+            "points": [
+              "Share resources when appropriate",
+              "Coordinate joint operations effectively",
+              "Maintain open lines of communication with fellow commanders",
+              "Keep healthy competition from compromising Legion cohesion",
+              "Remember that 1CL's success benefits every member regiment"
+            ]
+          },
+          {
+            "subtitle": "Communication Standards",
+            "description": "Maintain regular communication with administration and fellow commanders.",
+            "points": [
+              "Respond promptly to important messages",
+              "Attend scheduled meetings or provide advance notice of absence",
+              "Keep command structure informed of significant regiment developments",
+              "Practice transparency to build trust and enable quick responses"
+            ]
+          }
+        ]
       }
     ]
   }
