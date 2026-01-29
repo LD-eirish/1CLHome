@@ -270,15 +270,21 @@
   height:56px;
   max-height:none;
   padding:6px;
-  overflow:visible;
+  overflow:hidden; /* prevent inner content from spilling out */
   border-radius:8px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display:block;
+  position:relative;
 }
 
 .toc.collapsed .toc-title{
   display:none;
+}
+
+/* Hide the navigation and list content when collapsed to avoid mangling */
+.toc.collapsed nav,
+.toc.collapsed .toc-list,
+.toc.collapsed nav > ul {
+  display:none !important;
 }
 
 /* When TOC is collapsed, fix toggle to right edge of panel */
