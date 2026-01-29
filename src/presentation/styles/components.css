@@ -217,7 +217,7 @@
   right:2rem;
   width:220px;
   /* Start the TOC lower by default so it aligns with framework content top */
-  top:300px;
+  top:450px;
   transition:all 0.25s ease;
   z-index:40;
 }
@@ -239,7 +239,7 @@
   margin-left: 0;
   z-index: 60;
   padding:6px 8px;
-  align-self: center;
+  align-self: flex-end;
   min-width:40px;
   display:inline-flex;
   justify-content:center;
