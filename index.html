@@ -1,23 +1,36 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>1CL — Hub</title>
-  <meta http-equiv="refresh" content="0; url=hub.html">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/navigation.css">
-  <link rel="stylesheet" href="css/accessibility.css">
-  <meta name="robots" content="noindex">
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/1CLLogo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1st Combined Legion</title>
+  <meta name="robots" content="noindex" />
+  <style>
+    #root {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+  <script>
+    (function(){
+      try {
+        var p = sessionStorage.getItem('redirectPath');
+        if (p) {
+          var origin = location.origin || (location.protocol + '//' + location.host);
+          if (p.indexOf(origin) === 0) p = p.substring(origin.length);
+          history.replaceState({}, '', p);
+          sessionStorage.removeItem('redirectPath');
+        }
+      } catch(e){
+        console.warn('Route restore failed', e);
+      }
+    })();
+  </script>
 </head>
 <body>
-  <main class="container">
-    <section class="card">
-      <h2>Redirecting to the Hub…</h2>
-      <p class="lead">If your browser doesn't redirect automatically, <a href="hub.html">click here to open the Hub</a>.</p>
-    </section>
-  </main>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>

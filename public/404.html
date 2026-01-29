@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>404 Not Found</title>
+  <script>
+    // Save the full path so the SPA can restore it after redirect, then navigate
+    try {
+      sessionStorage.setItem('redirectPath', location.pathname + location.search + location.hash);
+    } catch (e) {
+      console.warn('Unable to save redirect path', e);
+    }
+    (function(){
+      try {
+        // Use replace to avoid creating extra history entry
+        location.replace('/');
+      } catch(e) {
+        console.warn('Redirect failed', e);
+      }
+    })();
+  </script>
+</head>
+<body>
+</body>
+</html>

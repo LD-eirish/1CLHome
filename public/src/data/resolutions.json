@@ -1,0 +1,120 @@
+[
+  {
+    "id": "CCR10",
+    "number": 10,
+    "title": "Commander Council Resolution 10",
+    "shortTitle": "CCR10",
+    "date": "2025-11-17",
+    "status": "passed",
+    "summary": "Multi-layered alliance: LCG & LAG; LCC & LAC command structure",
+    "description": "The 1st Combined Legion now operates with two membership tracks and two command bodies to separate framework policy from war operations.",
+    "sections": [
+      {
+        "title": "Membership Tracks",
+        "content": [
+          {
+            "subtitle": "Legion Central Group (LCG)",
+            "description": "Deeper integration, centralised coordination.",
+            "points": [
+              "Participate in joint HR & recruitment",
+              "Follow the core framework",
+              "Required: unified tag program",
+              "All regiment members may join Discord"
+            ]
+          },
+          {
+            "subtitle": "Legion Associate Group (LAG)",
+            "description": "Greater independence, operational collaboration.",
+            "points": [
+              "Coordinate for operations & strategic goals",
+              "May opt out of central HR or tag program",
+              "Regiment-level autonomy for recruitment"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Command Bodies",
+        "content": [
+          {
+            "subtitle": "Legion Central Command (LCC)",
+            "description": "Framework policy & command authority.",
+            "points": [
+              "Representatives from LCG regiments only",
+              "Elects CQM",
+              "Approves LCG membership applications",
+              "Makes core policy decisions"
+            ]
+          },
+          {
+            "subtitle": "Legion Associate Command (LAC)",
+            "description": "War operations & campaign coordination.",
+            "points": [
+              "Representatives from all regiments (LCG + LAG)",
+              "Chooses campaigns & sets operational priorities",
+              "Coordinates joint operations & logistics",
+              "Plans war-level strategy"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Decision Rules",
+        "content": [
+          {
+            "description": "Each regiment in a command holds one vote.",
+            "points": [
+              "<strong>Structural changes:</strong> Unanimous consensus required",
+              "<strong>Routine decisions:</strong> Simple majority unless otherwise stated"
+            ]
+          }
+        ]
+      }
+    ],
+    "frameworkUpdates": {
+      "membership": {
+        "append": [
+          "As established by CCR10, the Legion operates with two membership tracks to balance integration levels and autonomy preferences among member regiments."
+        ]
+      },
+      "governance": {
+        "append": [
+          "Following CCR10, command structure is divided between LCC (framework policy) and LAC (operational coordination) to ensure both strategic oversight and tactical flexibility."
+        ]
+      }
+    }
+  },
+  {
+    "id": "CMD-INST",
+    "number": null,
+    "title": "1CL 2.0 Commander Instructions",
+    "shortTitle": "Commander Instructions",
+    "date": "2026-01-27",
+    "status": "active",
+    "summary": "Operational guidelines and instructions for 1CL Central Group commanders",
+    "description": "Following the division of 1CL into the Legion Central Group and the Legion Associate Group, these instructions provide Central Group Commanders with essential guidance on how to proceed under the new framework.",
+    "sections": [
+      {
+        "title": "Important Disclaimer",
+        "content": [
+          {
+            "description": "It is critical to understand that the Legion Central Group is not a full regiment merger. [A/1CL] refers to this arrangement as a 'pseudo-merge.' Your regiment retains complete operational independence and the unconditional right to leave at any time. You will maintain your in-game regiment identity and your personal Discord server, ensuring that departing 1CL remains entirely within your control whenever you choose. The Legion should be viewed as a 'Battalion'; a coordinated unit comprising multiple regiments working together while preserving individual autonomy."
+          }
+        ]
+      },
+      {
+        "title": "Joint Recruitment and HR",
+        "content": [
+          {
+            "description": "1CL will assume responsibility for much of the administrative and HR workload that previously fell to individual regiments. We are implementing a centralized recruitment system within the 1CL Discord, where prospective members can join any 1CL regiment. The system will naturally favor Central Group regiments while remaining open to all member regiments."
+          },
+          {
+            "subtitle": "Onboarding and Verification Process",
+            "description": "The 1CL Discord onboarding and verification system is being completely revised to accommodate the new structure. During the onboarding process, new members will indicate their gameplay preferences, specializations, and interests. The system will then analyze these inputs and suggest the best-fitting regiment as their primary assignment. However, it is essential to emphasize that members retain complete freedom to join any regiment they prefer and to switch between regiments at any time. No member will ever be forced to remain in a specific regiment against their will.",
+            "points": []
+          }
+        ]
+      }
+    ]
+  }
+]
