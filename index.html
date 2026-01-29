@@ -15,39 +15,56 @@
   </style>
   <script>
     (function(){
-      try {
-        var p = sessionStorage.getItem('redirectPath');
-        if (p) {
-          // Determine the app base at runtime by inspecting the built module script or favicon.
-          var base = '/';
-          try {
-            var moduleScript = document.querySelector('script[type="module"][src]');
-            if (moduleScript && moduleScript.src) {
-              var m = moduleScript.src;
-              var idx = m.indexOf('/assets/');
-              if (idx !== -1) {
-                base = new URL(m.substring(0, idx + 1), location.origin).pathname;
-              }
-            }
-            if (base === '/') {
-              var icon = document.querySelector('link[rel="icon"][href]');
-              if (icon && icon.href) {
-                var ih = new URL(icon.href, location.origin).pathname;
-                base = ih.substring(0, ih.lastIndexOf('/') + 1) || '/';
-              }
-            }
-          } catch(_e){}
+      function getSavedPath() {
+        try { return sessionStorage.getItem('redirectPath'); } catch (err) { console.warn('Unable to read redirectPath', err); return null; }
+      }
 
-          // If the saved path doesn't already include the base, prefix it.
-          if (p.indexOf(base) !== 0) {
-            p = (base + p.replace(/^\/+/, '')).replace(/\/+/g, '/');
+      function detectBaseFromModule() {
+        try {
+          var moduleScript = document.querySelector('script[type="module"][src]');
+          if (moduleScript && moduleScript.src) {
+            var m = moduleScript.src;
+            var idx = m.indexOf('/assets/');
+            if (idx !== -1) return new URL(m.substring(0, idx + 1), location.origin).pathname;
           }
+        } catch (error_) { console.warn('detectBaseFromModule failed', error_); }
+        return '/';
+      }
 
-          history.replaceState({}, '', p);
-          sessionStorage.removeItem('redirectPath');
+      function detectBaseFromIcon() {
+        try {
+          var icon = document.querySelector('link[rel="icon"][href]');
+          if (icon && icon.href) {
+            var ih = new URL(icon.href, location.origin).pathname;
+            var last = ih.lastIndexOf('/') + 1;
+            return ih.substring(0, last) || '/';
+          }
+        } catch (error_) { console.warn('detectBaseFromIcon failed', error_); }
+        return '/';
+      }
+
+      function normalizePrefixedPath(base, p) {
+        // Remove leading slashes from saved path then join path segments to avoid regex replace complexity
+        var trimmed = p.replace(/^\/+/, '');
+        var parts = (base + trimmed).split('/').filter(Boolean);
+        return '/' + parts.join('/') + (p.endsWith('#') || p.endsWith('#/') ? '/' : '');
+      }
+
+      try {
+        var p = getSavedPath();
+        if (!p) return;
+
+        var base = detectBaseFromModule();
+        if (base === '/') base = detectBaseFromIcon();
+
+        if (p.indexOf(base) !== 0) {
+          p = normalizePrefixedPath(base, p);
         }
-      } catch(e){
-        console.warn('Route restore failed', e);
+
+        history.replaceState({}, '', p);
+        try { sessionStorage.removeItem('redirectPath'); } catch (err) { console.warn('Failed to remove redirectPath', err); }
+      } catch (error_) {
+        console.warn('Route restore failed', error_);
       }
     })();
   </script>

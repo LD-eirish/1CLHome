@@ -43,9 +43,11 @@ export function ResolutionViewPage() {
 
   useEffect(() => {
     // Setup export button handler after content is loaded
+    let cleanup: () => void = () => {};
     if (!loading && !error && content && id) {
-      return setupExportButton('exportMain', 'resolution-content', `resolution-${id}.jpg`);
+      cleanup = setupExportButton('exportMain', 'resolution-content', `resolution-${id}.jpg`);
     }
+    return cleanup;
   }, [loading, error, content, id]);
 
   return (
