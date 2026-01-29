@@ -228,6 +228,18 @@
   margin-bottom:0.5rem;
 }
 
+/* Ensure the header is the positioning context for the toggle */
+.toc .toc-header{ position: relative; }
+
+/* Position toggle top-right of the TOC panel so it's always accessible */
+.toc .toc-toggle{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 60;
+  padding:6px 8px;
+}
+
 .toc.collapsed{
   max-height:40px;
   overflow:hidden;
