@@ -18,8 +18,31 @@
       try {
         var p = sessionStorage.getItem('redirectPath');
         if (p) {
-          var origin = location.origin || (location.protocol + '//' + location.host);
-          if (p.indexOf(origin) === 0) p = p.substring(origin.length);
+          // Determine the app base at runtime by inspecting the built module script or favicon.
+          var base = '/';
+          try {
+            var moduleScript = document.querySelector('script[type="module"][src]');
+            if (moduleScript && moduleScript.src) {
+              var m = moduleScript.src;
+              var idx = m.indexOf('/assets/');
+              if (idx !== -1) {
+                base = new URL(m.substring(0, idx + 1), location.origin).pathname;
+              }
+            }
+            if (base === '/') {
+              var icon = document.querySelector('link[rel="icon"][href]');
+              if (icon && icon.href) {
+                var ih = new URL(icon.href, location.origin).pathname;
+                base = ih.substring(0, ih.lastIndexOf('/') + 1) || '/';
+              }
+            }
+          } catch(_e){}
+
+          // If the saved path doesn't already include the base, prefix it.
+          if (p.indexOf(base) !== 0) {
+            p = (base + p.replace(/^\/+/, '')).replace(/\/+/g, '/');
+          }
+
           history.replaceState({}, '', p);
           sessionStorage.removeItem('redirectPath');
         }
