@@ -32,6 +32,3 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          # specify environment name for Pages deployment API
-          environment: github-pages
