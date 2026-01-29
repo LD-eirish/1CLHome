@@ -217,7 +217,7 @@
   right:2rem;
   width:220px;
   /* Start the TOC lower by default so it aligns with framework content top */
-  top:220px;
+  top:300px;
   transition:all 0.25s ease;
   z-index:40;
 }
@@ -244,6 +244,8 @@
   display:inline-flex;
   justify-content:center;
   align-items:center;
+  background:transparent;
+  border:none; /* remove outline border for TOC button */
 }
 
 /* Make the title and toggle align visually */
@@ -265,9 +267,34 @@
 }
 
 .toc.collapsed{
-  max-height:40px;
-  overflow:hidden;
-  padding-bottom:8px;
+  /* Compact collapsed appearance on desktop */
+  width:56px;
+  height:56px;
+  max-height:none;
+  padding:6px;
+  overflow:visible;
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.toc.collapsed .toc-title{
+  display:none;
+}
+
+/* When TOC is collapsed, fix toggle to right edge of panel */
+.toc.collapsed .toc-toggle{
+  position:absolute;
+  right:8px;
+  top:8px;
+  margin:0;
+}
+
+/* Remove focus outline for the toggle to match design */
+.toc .toc-toggle:focus{
+  outline: none;
+  box-shadow: none;
 }
 
 .toc.expanded{
