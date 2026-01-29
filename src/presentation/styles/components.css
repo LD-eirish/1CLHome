@@ -216,7 +216,8 @@
   position:absolute;
   right:2rem;
   width:220px;
-  top:160px;
+  /* Start the TOC lower by default so it aligns with framework content top */
+  top:220px;
   transition:all 0.25s ease;
   z-index:40;
 }
@@ -249,6 +250,18 @@
 .toc .toc-title{
   margin:0;
   line-height:1;
+}
+
+/* Ensure any vestigial label markup is hidden (defensive) */
+.toc .toggle-label{
+  display:none !important;
+}
+
+/* Nudge the toggle up a tiny bit so it visually aligns with title */
+@media (min-width: 600px) {
+  .toc .toc-toggle{
+    transform: translateY(-3px);
+  }
 }
 
 .toc.collapsed{
