@@ -338,6 +338,13 @@
 
   .toc .toc-title{ display:none; }
   .toc .toc-list{ display:block; }
+
+  /* Ensure collapsed state hides navigation on small screens */
+  .toc.collapsed nav,
+  .toc.collapsed .toc-list,
+  .toc.collapsed nav > ul {
+    display: none !important;
+  }
 }
 
 /* Badges */

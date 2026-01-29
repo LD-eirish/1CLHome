@@ -56,14 +56,14 @@ export function ResolutionViewPage() {
       
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <ol>
-          <li><Link to="hub">Hub</Link></li>
-          <li><Link to="library">Library</Link></li>
+            <li><Link to="/hub">Hub</Link></li>
+            <li><Link to="/library">Library</Link></li>
           <li aria-current="page">Resolution {id}</li>
         </ol>
       </nav>
 
       <div className="page-actions">
-        <Link to="library" className="back-btn" aria-label="Back to Library">← Back to Library</Link>
+        <Link to="/library" className="back-btn" aria-label="Back to Library">← Back to Library</Link>
       </div>
 
       <main className="container" id="resolution-content">
@@ -71,7 +71,7 @@ export function ResolutionViewPage() {
         {error && (
           <section className="card">
             <p className="error">{error}</p>
-            <Link to="library">Return to Library</Link>
+            <Link to="/library">Return to Library</Link>
           </section>
         )}
         {!loading && !error && <div dangerouslySetInnerHTML={{ __html: content }} />}

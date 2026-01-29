@@ -85,7 +85,7 @@ export function MembersPage() {
       
       <nav className="breadcrumb" aria-label="Breadcrumb">
         <ol>
-          <li><Link to="hub">Hub</Link></li>
+          <li><Link to="/hub">Hub</Link></li>
           <li aria-current="page">Members</li>
         </ol>
       </nav>
@@ -116,7 +116,7 @@ export function MembersPage() {
       </button>
 
       <div className="faction-selector">
-        <Link to="central-group" className="faction-panel faction-central">
+        <Link to="/central-group" className="faction-panel faction-central">
           <div className="faction-overlay"></div>
           <div className="faction-content">
             <div className="faction-icon">
@@ -140,7 +140,7 @@ export function MembersPage() {
           </div>
         </div>
 
-        <Link to="associate-group" className="faction-panel faction-associate">
+        <Link to="/associate-group" className="faction-panel faction-associate">
           <div className="faction-overlay"></div>
           <div className="faction-content">
             <div className="faction-icon">
