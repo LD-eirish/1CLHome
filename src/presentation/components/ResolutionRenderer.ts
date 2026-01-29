@@ -25,6 +25,7 @@ export class ResolutionRenderer extends HtmlRenderer {
    * Render hero section
    */
   private static renderHeroSection(resolution: ResolutionModel): string {
+    const base = (import.meta as any)?.env?.BASE_URL ?? '/';
     return `
       <section class="hero card">
         <div class="hero-left">
@@ -33,7 +34,7 @@ export class ResolutionRenderer extends HtmlRenderer {
           <div class="pass-indicator ${resolution.status}">${resolution.status.toUpperCase()}</div>
         </div>
         <div class="hero-right">
-          <img src="/1CLLogo.png" alt="1CL Logo" class="hero-logo"/>
+          <img src="${base}1CLLogo.png" alt="1CL Logo" class="hero-logo"/>
           <button id="exportMain" class="no-export export-btn">Export to JPEG</button>
         </div>
       </section>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
+import { assetPath } from '../../infrastructure/utils/asset.utils';
 
 export function HubPage() {
   return (
@@ -25,7 +26,7 @@ export function HubPage() {
             </a>
           </div>
           <div className="hero-right">
-            <img src="/1CLLogo.png" alt="1CL logo" className="hero-logo" />
+            <img src={assetPath('1CLLogo.png')} alt="1CL logo" className="hero-logo" />
           </div>
         </section>
 

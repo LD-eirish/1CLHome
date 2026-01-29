@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
+import { assetPath } from '../../infrastructure/utils/asset.utils';
 import { RegimentCard } from '../components/RegimentCard';
 import type { Regiment } from '../../data/types/regiment.types';
 
@@ -51,7 +52,7 @@ export function CentralGroupPage() {
             </p>
           </div>
           <div className="hero-right">
-            <img src="/1CLLogo.png" alt="1CL Logo" className="hero-logo" style={{opacity: 0.8}} />
+            <img src={assetPath('1CLLogo.png')} alt="1CL Logo" className="hero-logo" style={{opacity: 0.8}} />
           </div>
         </section>
 

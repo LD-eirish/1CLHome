@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
+import { assetPath } from '../../infrastructure/utils/asset.utils';
 import { useEffect } from 'react';
 
 export function MembersPage() {
@@ -119,7 +120,7 @@ export function MembersPage() {
           <div className="faction-overlay"></div>
           <div className="faction-content">
             <div className="faction-icon">
-              <img src="/1CLLogo.png" alt="1CL Logo" style={{width: '140px', height: 'auto', filter: 'drop-shadow(0 4px 12px rgba(201,168,79,0.6))'}} />
+              <img src={assetPath('1CLLogo.png')} alt="1CL Logo" style={{width: '140px', height: 'auto', filter: 'drop-shadow(0 4px 12px rgba(201,168,79,0.6))'}} />
             </div>
             <h2 className="faction-title">Legion Central Group</h2>
             <p className="faction-description">
@@ -143,7 +144,7 @@ export function MembersPage() {
           <div className="faction-overlay"></div>
           <div className="faction-content">
             <div className="faction-icon">
-              <img src="/1CLLogo.png" alt="1CL Logo" style={{width: '140px', height: 'auto', filter: 'drop-shadow(0 4px 12px rgba(85,116,163,0.6))'}} />
+              <img src={assetPath('1CLLogo.png')} alt="1CL Logo" style={{width: '140px', height: 'auto', filter: 'drop-shadow(0 4px 12px rgba(85,116,163,0.6))'}} />
             </div>
             <h2 className="faction-title">Legion Associate Group</h2>
             <p className="faction-description">

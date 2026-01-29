@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
+import { assetPath } from '../../infrastructure/utils/asset.utils';
 import { FrameworkService } from '../../business/services/FrameworkService';
 import { FrameworkRenderer } from '../components/FrameworkRenderer';
 import { setupExportButton } from '../../infrastructure/utils/export.utils';
@@ -121,7 +122,7 @@ export function FrameworkPage() {
           </p>
         </div>
         <div className="hero-right">
-          <img src="/1CLLogo.png" alt="1CL Logo" className="hero-logo" style={{opacity: 0.9}} />
+          <img src={assetPath('1CLLogo.png')} alt="1CL Logo" className="hero-logo" style={{opacity: 0.9}} />
         </div>
       </section>
 
