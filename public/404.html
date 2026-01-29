@@ -12,8 +12,8 @@
     }
     (function(){
       try {
-        // Use replace to avoid creating extra history entry
-        location.replace('/');
+        // Redirect to repository base so index.html can restore the original path
+        location.replace('/1CLHome/');
       } catch(e) {
         console.warn('Redirect failed', e);
       }
