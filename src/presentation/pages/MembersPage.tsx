@@ -143,9 +143,9 @@ export function MembersPage() {
         <Link to="/associate-group" className="faction-panel faction-associate">
           <div className="faction-overlay"></div>
           <div className="faction-content">
-            <div className="faction-icon">
-              <img src={assetPath('1CLLogo.png')} alt="1CL Logo" style={{width: '140px', height: 'auto', filter: 'drop-shadow(0 4px 12px rgba(85,116,163,0.6))'}} />
-            </div>
+              <div className="faction-icon">
+                <img src={assetPath('1CLALogo.png')} alt="1CLA Logo" style={{width: '140px', height: 'auto', filter: 'drop-shadow(0 4px 12px rgba(85,116,163,0.6))'}} />
+              </div>
             <h2 className="faction-title">Legion Associate Group</h2>
             <p className="faction-description">
               Independent regiments coordinating on operations while maintaining greater autonomy.
