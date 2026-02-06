@@ -40,7 +40,8 @@
       "title": "Officers & Responsibilities",
       "items": [
         "<strong>Chief Commander (CC)</strong> — Provides leadership continuity and resolves critical deadlocks; the office rotates between regiments each month.",
-        "<strong>Chief Quartermaster (CQM)</strong> — Oversees the operational stockpile, coordinates logistics, and ensures equitable distribution during operations."
+        "<strong>Chief Logistics Officer (CLO)</strong> — Oversees the operational stockpile, coordinates logistics, and ensures equitable distribution during operations.",
+        "<strong>Chief Facility Officer (CFO)</strong> — Manages facilities and their maintenance."
       ]
     },
     "recruitment": {
@@ -71,7 +72,8 @@
         {"name": "Solution 9 (S9)", "joined": "Nov 17, 2025"},
         {"name": "882nd Regiment (882nd)", "joined": "Nov 17, 2025"},
         {"name": "War Machine (WM)", "joined": "Nov 20, 2025"},
-        {"name": "Colonial Assault Team (CAT)", "joined": "Dec 8, 2025"}
+        {"name": "Colonial Assault Team (CAT)", "joined": "Dec 8, 2025"},
+        {"name": "Colonial Revolutionary Steel Guard (CRSG)", "joined": "Jan 6, 2025"}
       ]
     }
   },
