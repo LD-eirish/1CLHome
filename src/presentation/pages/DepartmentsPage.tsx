@@ -10,12 +10,12 @@ export function DepartmentsPage() {
     },
     {
       id: 'it',
-      title: '1CL IT Department',
-      description: 'Develops tools for 1CL: bots, web tools, integrations and small internal utilities (e.g. Discord bot, 1CLHun webpage).'
+      title: '1CL IT Company',
+      description: 'Develops tools for 1CL: bots, web tools, integrations and small internal utilities (e.g. Discord bot, 1CLHub webpage).'
     },
     {
       id: 'recruit',
-      title: '1CL Recruitment',
+      title: '1CL Recruitment Company',
       description: 'Handles recruitment pipelines, candidate screening, and placement into Central Group sub‑regiments.'
     },
     {
