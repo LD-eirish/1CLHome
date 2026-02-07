@@ -6,6 +6,7 @@ import { LibraryPage } from '../presentation/pages/LibraryPage';
 import { MembersPage } from '../presentation/pages/MembersPage';
 import { CentralGroupPage } from '../presentation/pages/CentralGroupPage';
 import { AssociateGroupPage } from '../presentation/pages/AssociateGroupPage';
+import { DepartmentsPage } from '../presentation/pages/DepartmentsPage';
 
 export function App() {
   return (
@@ -18,6 +19,7 @@ export function App() {
       <Route path="/members" element={<MembersPage />} />
       <Route path="/central-group" element={<CentralGroupPage />} />
       <Route path="/associate-group" element={<AssociateGroupPage />} />
+      <Route path="/departments" element={<DepartmentsPage />} />
       <Route path="*" element={<Navigate to="/hub" replace />} />
     </Routes>
   );

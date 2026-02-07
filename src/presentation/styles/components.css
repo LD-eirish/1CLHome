@@ -125,6 +125,24 @@
   height:24px;
 }
 
+/* Compact variant used for central-group cards to fit tighter layouts */
+.discord-btn--small{
+  padding:8px 10px;
+  margin-top:8px;
+  gap:8px;
+  font-size:13px;
+  border-radius:6px;
+}
+
+.discord-btn--small svg{
+  width:16px;
+  height:16px;
+}
+
+.regiment-card .discord-btn{
+  vertical-align: middle;
+}
+
 .export-btn{
   background:rgba(0,0,0,0.3);
   border:none;

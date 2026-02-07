@@ -22,6 +22,7 @@ export function Header({ subtitle = 'Welcome — 1CL Hub & Library' }: Readonly<
           <Link to="/library" className="compact-nav-item">Library</Link>
           <Link to="/framework" className="compact-nav-item">Framework</Link>
           <Link to="/members" className="compact-nav-item">Members</Link>
+          <Link to="/departments" className="compact-nav-item">Departments</Link>
         </div>
       </div>
     </header>
