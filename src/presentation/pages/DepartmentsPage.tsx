@@ -6,27 +6,27 @@ export function DepartmentsPage() {
     {
       id: 'a1cl',
       title: 'A/1CL — Administrative 1CL',
-      description: 'A special purpose regiment handling administration, public relations, policy, and Legion‑level organisation.'
+      description: 'A special purpose regiment handling administration, public relations, policy, and 1CL‑level organisation.'
     },
     {
       id: 'it',
       title: '1CL IT Company',
-      description: 'Develops tools for 1CL: bots, web tools, integrations and small internal utilities (e.g. Discord bot, 1CLHub webpage).'
+      description: 'Develops tools for 1CL: e.g. 1CL Discord bot, 1CLHub webpage.'
     },
     {
       id: 'recruit',
       title: '1CL Recruitment Company',
-      description: 'Handles recruitment pipelines, candidate screening, and placement into Central Group sub‑regiments.'
+      description: 'Handles recruitment and verification for all Central Group sub‑regiments.'
     },
     {
       id: 'logistics',
       title: '1CL Logistics Company',
-      description: 'A logistics company comprising logistics players across all Central Group regiments; coordinates supply, transport and resourcing.'
+      description: 'A logistics company comprising logistics players across all Central Group regiments; coordinates supply, transport and resource gathering.'
     },
     {
       id: 'facility',
       title: '1CL Facility Company',
-      description: 'Responsible for construction, maintenance and operation of production facilities and defensive structures.'
+      description: 'Responsible for construction, maintenance and operation of facilities and defensive structures.'
     }
   ];
 
