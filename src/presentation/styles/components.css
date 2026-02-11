@@ -143,6 +143,13 @@
   vertical-align: middle;
 }
 
+.regiment-card-footer .discord-btn,
+.regiment-card-footer .discord-btn--small{
+  margin-top:0;
+  max-width:50%;
+  align-self:flex-start;
+}
+
 .export-btn{
   background:rgba(0,0,0,0.3);
   border:none;
@@ -703,6 +710,10 @@ input[type="search"]:focus{
   margin-top:10px;
 }
 
+.regiment-card-footer .regiment-tags{
+  margin-top:0;
+}
+
 .regiment-tags .tag{
   display:inline-block;
   padding:4px 8px;
@@ -905,6 +916,23 @@ body.Derp-mode #Schmemil-toggle{
   border:1px solid rgba(201,168,79,0.2);
   transition:all 0.3s ease;
   animation:fadeInUp 0.6s ease-out backwards;
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+}
+
+.regiment-card-content{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+}
+
+.regiment-card-footer{
+  margin-top:auto;
+  padding-top:1rem;
+  display:flex;
+  flex-direction:column;
+  gap:0.75rem;
 }
 
 .regiment-card:hover{
@@ -1194,5 +1222,177 @@ body.Derp-mode #Schmemil-toggle{
   
   .stat-value{
     font-size:0.9rem;
+  }
+}
+
+/* Modal Overlay */
+.modal-overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background:rgba(0,0,0,0.85);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  padding:20px;
+  backdrop-filter:blur(4px);
+}
+
+.modal-content{
+  background:var(--card);
+  border-radius:6px;
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 12px 40px rgba(0,0,0,0.8);
+  max-width:700px;
+  width:100%;
+  max-height:90vh;
+  overflow-y:auto;
+  position:relative;
+}
+
+.modal-close{
+  position:absolute;
+  top:16px;
+  right:16px;
+  background:rgba(0,0,0,0.4);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:4px;
+  width:32px;
+  height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  color:var(--muted);
+  font-size:20px;
+  line-height:1;
+  transition:all 0.2s;
+  z-index:1;
+}
+
+.modal-close:hover{
+  background:rgba(255,255,255,0.1);
+  color:var(--gold);
+  border-color:var(--gold);
+}
+
+.regiment-modal .modal-header{
+  padding:24px 24px 16px;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.regiment-modal .modal-title-row{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-bottom:12px;
+}
+
+.regiment-modal .modal-logo{
+  width:64px;
+  height:64px;
+  object-fit:contain;
+}
+
+.regiment-modal .modal-title-text h2{
+  margin:0 0 4px;
+  color:var(--gold);
+  font-size:24px;
+}
+
+.regiment-modal .modal-title-text .modal-subtitle{
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.regiment-modal .modal-badges{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.regiment-modal .modal-body{
+  padding:20px 24px;
+}
+
+.regiment-modal .modal-description{
+  color:var(--text);
+  line-height:1.7;
+  margin-bottom:24px;
+}
+
+.regiment-modal .modal-details{
+  background:rgba(0,0,0,0.2);
+  border-radius:4px;
+  padding:16px;
+  margin-bottom:20px;
+}
+
+.regiment-modal .modal-details dt{
+  color:var(--muted);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+  margin:0 0 4px;
+}
+
+.regiment-modal .modal-details dd{
+  color:var(--text);
+  margin:0 0 12px;
+  font-size:15px;
+}
+
+.regiment-modal .modal-details dd:last-child{
+  margin-bottom:0;
+}
+
+.regiment-modal .modal-tags{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+
+.regiment-modal .modal-discord{
+  margin-top:24px;
+  padding-top:20px;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+
+.regiment-modal .modal-extra-logos{
+  display:flex;
+  gap:10px;
+  margin-top:8px;
+}
+
+.regiment-modal .modal-extra-logo{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+  opacity:0.9;
+}
+
+@media (max-width: 768px){
+  .modal-content{
+    max-width:100%;
+    max-height:100vh;
+    border-radius:0;
+  }
+
+  .regiment-modal .modal-header,
+  .regiment-modal .modal-body{
+    padding:16px;
+  }
+
+  .regiment-modal .modal-logo{
+    width:48px;
+    height:48px;
+  }
+
+  .regiment-modal .modal-title-text h2{
+    font-size:20px;
   }
 }

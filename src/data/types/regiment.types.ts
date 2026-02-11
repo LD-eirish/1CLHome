@@ -2,6 +2,13 @@
  * Data Layer - Regiment Types
  */
 
+export interface ActivityTime {
+  startTime: string; // 24-hour format, e.g., "18:00"
+  endTime: string;   // 24-hour format, e.g., "23:00"
+  timezone: string;  // IANA timezone or abbreviation, e.g., "CET" or "Europe/Berlin"
+  description?: string; // Optional custom description
+}
+
 export interface Regiment {
   name: string;
   abbreviation: string;
@@ -14,4 +21,6 @@ export interface Regiment {
   logo?: string;
   // Optional extra logos to display for central group regiments
   extraLogos?: string[];
+  // Optional activity time - supports both string (legacy) and structured format
+  activityTime?: string | ActivityTime;
 }

@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { assetPath } from '../../infrastructure/utils/asset.utils';
 import { RegimentCard } from '../components/RegimentCard';
+import { RegimentModal } from '../components/RegimentModal';
 import type { Regiment } from '../../data/types/regiment.types';
 
 export function CentralGroupPage() {
   const [regiments, setRegiments] = useState<Regiment[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [selectedRegiment, setSelectedRegiment] = useState<Regiment | null>(null);
 
   useEffect(() => {
     const loadRegiments = async () => {
@@ -62,11 +64,23 @@ export function CentralGroupPage() {
             {loading && <div className="loading">Loading regiments...</div>}
             {error && <p className="error">{error}</p>}
             {!loading && !error && regiments.map((regiment, index) => (
-              <RegimentCard key={regiment.abbreviation} regiment={regiment} index={index} />
+              <RegimentCard 
+                key={regiment.abbreviation} 
+                regiment={regiment} 
+                index={index} 
+                onClick={() => setSelectedRegiment(regiment)}
+              />
             ))}
           </div>
         </section>
       </main>
+
+      {selectedRegiment && (
+        <RegimentModal 
+          regiment={selectedRegiment} 
+          onClose={() => setSelectedRegiment(null)} 
+        />
+      )}
     </>
   );
 }
