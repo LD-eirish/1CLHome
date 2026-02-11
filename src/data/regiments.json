@@ -7,7 +7,12 @@
     "description": "P.O.G is a public-focused regiment open to all respectful players. We organize and host air operations, provide logistics and support for frontline flights, and frequently collaborate with other groups. From pilots and spotters to fuel crews and ground support. We cover every role needed to keep the skies active and deadly. Whether you're brand new or experienced P.O.G is a great introduction to Foxhole air operations.",
     "tags": ["Airborne", "New Player Friendly", "Logistics"],
     "discord": "https://discord.gg/HCt3FgTBu4",
-    "logo": "POGLogo.png"
+    "logo": "POGLogo.png",
+    "activityTime": {
+      "startTime": "16:00",
+      "endTime": "23:00",
+      "timezone": "CET"
+    }
   },
   {
     "name": "[2/1CL] The Colonial Shadows",
@@ -17,7 +22,12 @@
     "description": "TCS is a Reconnaissance and Partisan-focused regiment, specializing in Spec-Ops and deep backline operations.",
     "tags": ["Partisan", "Tomfoolery", "Shenanigans"],
     "discord": "https://discord.gg/JSnZUVqY6D",
-    "logo": "TCSLogo.png"
+    "logo": "TCSLogo.png",
+    "activityTime": {
+      "startTime": "16:00",
+      "endTime": "23:00",
+      "timezone": "CET"
+    }
   },
   {
     "name": "[3/1CL] War Machine",
@@ -27,7 +37,12 @@
     "description": "WM specializes in manufacturing and driving tanks or other vehicles. We also have an unhealthy addiction to facilities.",
     "tags": ["Scrooping", "Facilities", "Armor"],
     "discord": "https://discord.gg/NBRDQdsfWy",
-    "logo": "WMLogo.png"
+    "logo": "WMLogo.png",
+    "activityTime": {
+      "startTime": "16:00",
+      "endTime": "23:00",
+      "timezone": "CET"
+    }
   },
   {
     "name": "882nd Regiment",
@@ -36,7 +51,8 @@
     "joinedDate": "2025-11-17",
     "description": "Regiment description coming soon.",
     "tags": ["", "", ""],
-    "logo": "1CLALogo.png"
+    "logo": "1CLALogo.png",
+    "activityTime": "UNKNOWN"
   },
   {
     "name": "Solution 9",
@@ -45,7 +61,8 @@
     "joinedDate": "2025-11-17",
     "description": "We focus on logistics and helping out our colleagues and friends. We do any type of logistics, either producing gear at a factory or transporting it to where it'll be used. We also do frontline stuff with whatever we manage to produce to help out more directly.",
     "tags": ["Logistics", "Facility", "Frontline Support"],
-    "logo": "1CLALogo.png"
+    "logo": "1CLALogo.png",
+    "activityTime": "UNKNOWN"
   },
   {
     "name": "Colonial Assault Team",
@@ -54,7 +71,8 @@
     "joinedDate": "2025-12-08",
     "description": "Regiment description coming soon.",
     "tags": ["", "", ""],
-    "logo": "1CLALogo.png"
+    "logo": "1CLALogo.png",
+    "activityTime": "UNKNOWN"
   }
   ,
   {
@@ -64,6 +82,7 @@
     "joinedDate": "2026-02-06",
     "description": "Regiment description coming soon.",
     "tags": ["Recon", "Support"],
-    "logo": "1CLALogo.png"
+    "logo": "1CLALogo.png",
+    "activityTime": "UNKNOWN"
   }
 ]
