@@ -148,7 +148,7 @@ export function MembersPage() {
               </div>
             <h2 className="faction-title">Legion Associate Group</h2>
             <p className="faction-description">
-              Independent regiments coordinating on operations while maintaining greater autonomy.
+              Regiments coordinating on operations while remaining fully independent.
             </p>
           </div>
         </Link>
