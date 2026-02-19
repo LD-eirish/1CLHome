@@ -66,7 +66,7 @@ export function RegimentCard({ regiment, index, onClick, hideDetails = false }: 
         {!hideDetails && <p className="regiment-desc">{truncatedDescription}</p>}
       </div>
       <div className="regiment-card-footer">
-        {regiment.tags && regiment.tags.length > 0 && regiment.tags[0] !== '' && (
+        {!hideDetails && regiment.tags && regiment.tags.length > 0 && regiment.tags[0] !== '' && (
           <div className="regiment-tags">
             {regiment.tags.filter((tag: string) => tag !== '').map((tag: string) => (
               <span key={tag} className="tag">{tag}</span>
