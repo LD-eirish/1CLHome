@@ -6,9 +6,10 @@ interface RegimentCardProps {
   readonly regiment: Regiment;
   readonly index: number;
   readonly onClick?: () => void;
+  readonly hideDetails?: boolean;
 }
 
-export function RegimentCard({ regiment, index, onClick }: Readonly<RegimentCardProps>) {
+export function RegimentCard({ regiment, index, onClick, hideDetails = false }: Readonly<RegimentCardProps>) {
   const truncatedDescription = regiment.description.length > 120 
     ? `${regiment.description.substring(0, 120)}...` 
     : regiment.description;
@@ -57,12 +58,12 @@ export function RegimentCard({ regiment, index, onClick }: Readonly<RegimentCard
             day: 'numeric' 
           })}
         </p>
-        {regiment.activityTime && (
+        {!hideDetails && regiment.activityTime && (
           <p className="regiment-activity">
             <strong>Peak Activity:</strong> {formatActivityTime(regiment.activityTime, false)}
           </p>
         )}
-        <p className="regiment-desc">{truncatedDescription}</p>
+        {!hideDetails && <p className="regiment-desc">{truncatedDescription}</p>}
       </div>
       <div className="regiment-card-footer">
         {regiment.tags && regiment.tags.length > 0 && regiment.tags[0] !== '' && (

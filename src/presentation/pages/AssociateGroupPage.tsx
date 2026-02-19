@@ -69,6 +69,7 @@ export function AssociateGroupPage() {
                 regiment={regiment} 
                 index={index}
                 onClick={() => setSelectedRegiment(regiment)}
+                hideDetails={true}
               />
             ))}
           </div>
