@@ -57,12 +57,17 @@
   {
     "name": "Solution 9",
     "abbreviation": "S9",
-    "group": "associate",
+    "group": "central",
     "joinedDate": "2025-11-17",
     "description": "We focus on logistics and helping out our colleagues and friends. We do any type of logistics, either producing gear at a factory or transporting it to where it'll be used. We also do frontline stuff with whatever we manage to produce to help out more directly.",
     "tags": ["Logistics", "Facility", "Frontline Support"],
-    "logo": "1CLALogo.png",
-    "activityTime": "UNKNOWN"
+    "discord": "https://discord.gg/DsRZJ9ZnRQ",
+    "logo": "S9Logo.png",
+    "activityTime": {
+      "startTime": "16:00",
+      "endTime": "23:00",
+      "timezone": "CET"
+    }
   },
   {
     "name": "Colonial Assault Team",

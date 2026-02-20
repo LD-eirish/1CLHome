@@ -921,6 +921,15 @@ body.Derp-mode #Schmemil-toggle{
   min-height:100%;
 }
 
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .regiment-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .regiment-card-content{
   flex:1;
   display:flex;
