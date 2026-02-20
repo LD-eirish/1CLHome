@@ -35,7 +35,7 @@
     "group": "central",
     "joinedDate": "2025-11-20",
     "description": "WM specializes in manufacturing and driving tanks or other vehicles. We also have an unhealthy addiction to facilities.",
-    "tags": ["Scrooping", "Facilities", "Armor"],
+    "tags": ["Armor", "Facility", "Scrooping"],
     "discord": "https://discord.gg/NBRDQdsfWy",
     "logo": "WMLogo.png",
     "activityTime": {
@@ -55,7 +55,7 @@
     "activityTime": "UNKNOWN"
   },
   {
-    "name": "Solution 9",
+    "name": "[9/1CL] Solution 9",
     "abbreviation": "S9",
     "group": "central",
     "joinedDate": "2025-11-17",
