@@ -49,14 +49,16 @@ export function HubPage() {
           </div>
         </section>
         {/* Train image as immersive banner below features */}
-        <div className="train-banner">
-          <img 
-            src={assetPath('1CLTrain.jpg')} 
-            alt="1CL train, symbol of the Combined Legion" 
-            className="train-banner-image" 
-          />
-          <div className="train-banner-subtitle">
-            Real edited footage of a 1CL Scout Plane escorting a 1CL train.
+        <div className="train-banner-card">
+          <div className="train-banner">
+            <img 
+              src={assetPath('1CLTrain.jpg')} 
+              alt="1CL train, symbol of the Combined Legion" 
+              className="train-banner-image" 
+            />
+            <div className="train-banner-subtitle">
+              Real edited footage of a 1CL Scout Plane escorting a 1CL train.
+            </div>
           </div>
         </div>
       </main>
