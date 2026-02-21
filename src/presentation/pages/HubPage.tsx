@@ -57,7 +57,7 @@ export function HubPage() {
               className="train-banner-image" 
             />
             <div className="train-banner-subtitle">
-              Real edited footage of a 1CL Scout Plane escorting a 1CL train.
+              Real edited footage of a 1CL Scout Plane escorting a 1CL train back home.
             </div>
           </div>
         </div>
