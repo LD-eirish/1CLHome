@@ -6,7 +6,6 @@ export function HubPage() {
   return (
     <>
       <Header subtitle="Welcome — 1CL Hub & Library" />
-      
       <main className="container">
         <section className="card hub-hero">
           <div className="hero-left">
@@ -29,7 +28,6 @@ export function HubPage() {
             <img src={assetPath('1CLLogo.png')} alt="1CL logo" className="hero-logo" />
           </div>
         </section>
-
         <section className="card">
           <h3>Features</h3>
           <div className="feature-grid">
@@ -38,13 +36,11 @@ export function HubPage() {
               <p className="small">Browse all resolutions and documents.</p>
               <Link to="/library" className="btn btn-ghost">View Library</Link>
             </article>
-
             <article className="feature-card">
               <h4>Framework</h4>
               <p className="small">Operational guidance, structure, and leadership.</p>
               <Link to="/framework" className="btn btn-ghost">View Framework</Link>
             </article>
-
             <article className="feature-card">
               <h4>Members</h4>
               <p className="small">Regiment list and onboarding resources.</p>
@@ -52,6 +48,17 @@ export function HubPage() {
             </article>
           </div>
         </section>
+        {/* Train image as immersive banner below features */}
+        <div className="train-banner">
+          <img 
+            src={assetPath('1CLTrain.jpg')} 
+            alt="1CL train, symbol of the Combined Legion" 
+            className="train-banner-image" 
+          />
+          <div className="train-banner-subtitle">
+            Real edited footage of a 1CL Scout Plane escorting a 1CL train.
+          </div>
+        </div>
       </main>
     </>
   );
