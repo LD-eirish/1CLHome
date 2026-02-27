@@ -98,5 +98,15 @@
     "tags": ["", "", ""],
     "logo": "1CLALogo.png",
     "activityTime": "UNKNOWN"
+  },
+  {
+    "name": "NightWatch",
+    "abbreviation": "NWCTH",
+    "group": "associate",
+    "joinedDate": "2026-02-27",
+    "description": "Regiment description coming soon.",
+    "tags": ["", "", ""],
+    "logo": "1CLALogo.png",
+    "activityTime": "UNKNOWN"
   }
 ]
