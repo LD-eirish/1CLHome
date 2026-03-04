@@ -55,6 +55,16 @@
     "activityTime": "UNKNOWN"
   },
   {
+    "name": "[4/1CL] Ultramar Auxilia",
+    "abbreviation": "ULTRA",
+    "group": "associate",
+    "joinedDate": "2026-02-17",
+    "description": "Regiment description coming soon.",
+    "tags": ["", "", ""],
+    "logo": "1CLALogo.png",
+    "activityTime": "UNKNOWN"
+  },
+  {
     "name": "[9/1CL] Solution 9",
     "abbreviation": "S9",
     "group": "central",
@@ -84,16 +94,6 @@
     "abbreviation": "CRSG",
     "group": "associate",
     "joinedDate": "2026-02-06",
-    "description": "Regiment description coming soon.",
-    "tags": ["", "", ""],
-    "logo": "1CLALogo.png",
-    "activityTime": "UNKNOWN"
-  },
-  {
-    "name": "Ultramar Auxilia",
-    "abbreviation": "ULTRA",
-    "group": "associate",
-    "joinedDate": "2026-02-17",
     "description": "Regiment description coming soon.",
     "tags": ["", "", ""],
     "logo": "1CLALogo.png",
