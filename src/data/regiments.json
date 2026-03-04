@@ -57,12 +57,17 @@
   {
     "name": "[4/1CL] Ultramar Auxilia",
     "abbreviation": "ULTRA",
-    "group": "associate",
+    "group": "central",
     "joinedDate": "2026-02-17",
     "description": "Regiment description coming soon.",
     "tags": ["", "", ""],
-    "logo": "1CLALogo.png",
-    "activityTime": "UNKNOWN"
+    "discord": "https://discord.gg/mEpeMtxafK",
+    "logo": "UltraLogo.png",
+    "activityTime": {
+      "startTime": "16:00",
+      "endTime": "23:00",
+      "timezone": "CET"
+    }
   },
   {
     "name": "[9/1CL] Solution 9",
@@ -102,15 +107,11 @@
   {
     "name": "NightWatch",
     "abbreviation": "NWCTH",
-    "group": "central",
+    "group": "associate",
     "joinedDate": "2026-02-27",
     "description": "Regiment description coming soon.",
     "tags": ["Infantry", "Logistics", "Frontline Support"],
     "logo": "1CLALogo.png",
-    "activityTime": {
-      "startTime": "16:00",
-      "endTime": "23:00",
-      "timezone": "CET"
-    }
+    "activityTime": "UNKNOWN"
   }
 ]
