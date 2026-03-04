@@ -98,7 +98,7 @@
         "title": "Important Disclaimer",
         "content": [
           {
-            "description": "It is critical to understand that the Legion Central Group is not a full regiment merger. [A/1CL] refers to this arrangement as a 'pseudo-merge.' Your regiment retains complete operational independence and the unconditional right to leave at any time. You will maintain your in-game regiment identity and your personal Discord server, ensuring that departing 1CL remains entirely within your control whenever you choose. The Legion should be viewed as a 'Battalion'; a coordinated unit comprising multiple regiments working together while preserving individual autonomy."
+            "description": "It is critical to understand that the Legion Central Group is not a full regiment merger. [A/1CL] refers to this arrangement as a 'pseudo-merge.' Your regiment retains complete operational independence and the unconditional right to leave at any time. You will maintain your in-game regiment identity and your personal Discord server, ensuring that departing 1CL remains entirely within your control whenever you choose. The Legion should be viewed as a 'Federation'; a coordinated unit comprising multiple regiments working together while preserving individual autonomy."
           }
         ]
       },
@@ -110,7 +110,7 @@
           },
           {
             "subtitle": "Onboarding and Verification Process",
-            "description": "The 1CL Discord onboarding and verification system is being completely revised to accommodate the new structure. During the onboarding process, new members will indicate their gameplay preferences, specializations, and interests. The system will then analyze these inputs and suggest the best-fitting regiment as their primary assignment. However, it is essential to emphasize that members retain complete freedom to join any regiment they prefer and to switch between regiments at any time. No member will ever be forced to remain in a specific regiment against their will.",
+            "description": "The 1CL Discord onboarding and verification system is being completely revised to accommodate the new structure. During the onboarding process, new members will indicate their gameplay preferences, specializations, and interests. It is essential to emphasize that members retain complete freedom to join any regiment they prefer and to switch between regiments at any time. No member will ever be forced to remain in a specific regiment against their will.",
             "points": []
           }
         ]
@@ -134,7 +134,7 @@
           {
             "description": "",
             "points": [
-              "Actively participate in Legion Central Command meetings and decision-making processes",
+              "Actively participate in Legion Central Command decision-making processes",
               "Ensure your regiment's voice is heard while remaining open to compromise for the collective good",
               "Uphold the reputation and integrity of 1CL in all interactions"
             ]
@@ -155,7 +155,7 @@
             "description": "Maintain regular communication with administration and fellow commanders.",
             "points": [
               "Respond promptly to important messages",
-              "Attend scheduled meetings or provide advance notice of absence",
+              "Attend scheduled meetings, provide advance notice of absence or assign a representative for yourself",
               "Keep command structure informed of significant regiment developments",
               "Practice transparency to build trust and enable quick responses"
             ]
