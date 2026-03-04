@@ -65,7 +65,7 @@
       "content": "Framework amendments are proposed within the commands and follow the decision rules of the relevant command body. Structural modifications require the voting thresholds set by those bodies."
     },
     "members": {
-      "title": "Member Regiments",
+      "title": "Member Regiments", 
       "list": [
         {"name": "The Colonial Shadows (TCS)", "joined": "Nov 17, 2025"},
         {"name": "Public Operations Group (P.O.G.)", "joined": "Nov 17, 2025"},
