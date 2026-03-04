@@ -102,11 +102,15 @@
   {
     "name": "NightWatch",
     "abbreviation": "NWCTH",
-    "group": "associate",
+    "group": "central",
     "joinedDate": "2026-02-27",
     "description": "Regiment description coming soon.",
-    "tags": ["", "", ""],
+    "tags": ["Infantry", "Logistics", "Frontline Support"],
     "logo": "1CLALogo.png",
-    "activityTime": "UNKNOWN"
+    "activityTime": {
+      "startTime": "16:00",
+      "endTime": "23:00",
+      "timezone": "CET"
+    }
   }
 ]
