@@ -8,7 +8,6 @@ export function HubPage() {
       <Header subtitle="Welcome — 1CL Hub & Library" />
       <main className="container">
         <section className="card hub-hero">
-          <hr className="section-divider" />
           <div className="hero-left">
             <h2 className="lead-title">1st Combined Legion - Info Hub</h2>
             <p className="lead">A single place for all 1CL information.</p>
