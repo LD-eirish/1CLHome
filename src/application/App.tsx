@@ -8,6 +8,7 @@ import { MembersPage } from '../presentation/pages/MembersPage';
 import { CentralGroupPage } from '../presentation/pages/CentralGroupPage';
 import { AssociateGroupPage } from '../presentation/pages/AssociateGroupPage';
 import { DepartmentsPage } from '../presentation/pages/DepartmentsPage';
+import BotDocumentationPage from '../presentation/pages/BotDocumentationPage';
 
 export function App() {
   return (
@@ -22,6 +23,7 @@ export function App() {
       <Route path="/associate-group" element={<AssociateGroupPage />} />
       <Route path="/departments" element={<DepartmentsPage />} />
       <Route path="/central-group-info" element={<CentralLegionInfoPage />} />
+      <Route path="/bot-documentation" element={<BotDocumentationPage />} />
       <Route path="*" element={<Navigate to="/hub" replace />} />
     </Routes>
   );
