@@ -19,10 +19,10 @@ export function Header({ subtitle = 'Welcome — 1CL Hub & Library' }: Readonly<
           </div>
         </div>
         <div className="header-actions">
-          <Link to="/library" className="compact-nav-item">Library</Link>
-          <Link to="/framework" className="compact-nav-item">Framework</Link>
-          <Link to="/members" className="compact-nav-item">Members</Link>
-          <Link to="/departments" className="compact-nav-item">Departments</Link>
+          <Link to="/framework" className="back-btn">Framework</Link>
+          <Link to="/members" className="back-btn">Members</Link>
+          <Link to="/central-group-info" className="back-btn">Central Group</Link>
+          <Link to="/departments" className="back-btn">Departments</Link>
         </div>
       </div>
     </header>

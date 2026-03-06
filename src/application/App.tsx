@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { HubPage } from '../presentation/pages/HubPage';
+import { CentralLegionInfoPage } from '../presentation/pages/CentralLegionInfoPage';
 import { FrameworkPage } from '../presentation/pages/FrameworkPage';
 import { ResolutionViewPage } from '../presentation/pages/ResolutionViewPage';
 import { LibraryPage } from '../presentation/pages/LibraryPage';
@@ -20,6 +21,7 @@ export function App() {
       <Route path="/central-group" element={<CentralGroupPage />} />
       <Route path="/associate-group" element={<AssociateGroupPage />} />
       <Route path="/departments" element={<DepartmentsPage />} />
+      <Route path="/central-group-info" element={<CentralLegionInfoPage />} />
       <Route path="*" element={<Navigate to="/hub" replace />} />
     </Routes>
   );

@@ -1,3 +1,11 @@
+/* Subtle section divider for long content */
+.section-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  margin: 32px 0 24px 0;
+  opacity: 0.7;
+}
 /* Component Styles */
 /* Train banner card backdrop (matches features card) */
 .train-banner-card {
@@ -277,23 +285,30 @@
 }
 
 .back-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:6px;
-  padding:8px 14px;
-  background:rgba(255,255,255,0.02);
-  border:1px solid rgba(255,255,255,0.03);
-  border-radius:6px;
-  color:var(--gold);
-  text-decoration:none;
-  font-weight:600;
-  transition:all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  transition: color 0.18s cubic-bezier(.4,0,.2,1), text-decoration 0.18s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
 }
 
 .back-btn:hover{
-  background:rgba(201,168,79,0.08);
-  border-color:rgba(201,168,79,0.2);
-  transform:translateX(-2px);
+  background: transparent;
+  color: var(--gold);
+  text-decoration: underline;
+  box-shadow: none;
+  transform: none;
 }
 
 .toggle-btn{
@@ -671,7 +686,7 @@ input[type="search"]:focus{
 .faction-icon{
   margin:0 auto 1.5rem;
   color:var(--gold);
-  animation:pulse 3s ease-in-out infinite;
+  /* animation removed for static banner */
 }
 
 @keyframes pulse{
@@ -1111,6 +1126,7 @@ body.Derp-mode #Schmemil-toggle{
   border-radius:4px;
   color:var(--khaki);
   transition:all 0.2s ease;
+  font-size:clamp(0.92rem, 1.2vw, 1rem);
 }
 
 .benefits-list li:hover{

@@ -85,7 +85,8 @@ export function FrameworkPage() {
           sections.push(FrameworkRenderer.renderMembersSection(framework.members));
         }
 
-        setContent(sections.join(''));
+        // Insert section dividers between sections
+        setContent(sections.join('<hr class="section-divider" />'));
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An error occurred');
       } finally {

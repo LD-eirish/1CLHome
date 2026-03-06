@@ -85,6 +85,21 @@
     }
   },
   {
+    "name": "[I/1CL] 1st Trash Panda Regiment",
+    "abbreviation": "1TPR",
+    "group": "central",
+    "joinedDate": "2026-03-06",
+    "description": "1TPR is an elite intelligence and special operations unit dedicated to serving the Mesean Republic and its interests. We specialize in reconnaissance and sabotage missions, both close to the front and deep behind enemy lines. We use combined-arms tactics, employing light aircraft, watercraft and ground vehicles along with infantry to conduct reconnaissance, area denial, sabotage and other missions. We are no strangers to being surrounded, and death is treated more as an eventuality in our ranks, not just a risk.",
+    "tags": ["Intelligence", "Sabotage", "Combined Arms"],
+    "discord": "https://discord.gg/5UTYdKgcGe",
+    "logo": "1TPRLogo.png",
+    "activityTime": {
+      "startTime": "23:00",
+      "endTime": "06:00",
+      "timezone": "CET"
+    }
+  },
+  {
     "name": "Colonial Assault Team",
     "abbreviation": "CAT",
     "group": "associate",

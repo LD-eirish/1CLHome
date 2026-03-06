@@ -8,6 +8,7 @@ export function HubPage() {
       <Header subtitle="Welcome — 1CL Hub & Library" />
       <main className="container">
         <section className="card hub-hero">
+          <hr className="section-divider" />
           <div className="hero-left">
             <h2 className="lead-title">1st Combined Legion - Info Hub</h2>
             <p className="lead">A single place for all 1CL information.</p>
@@ -29,22 +30,23 @@ export function HubPage() {
           </div>
         </section>
         <section className="card">
+          <hr className="section-divider" />
           <h3>Features</h3>
           <div className="feature-grid">
             <article className="feature-card">
               <h4>Library</h4>
               <p className="small">Browse all resolutions and documents.</p>
-              <Link to="/library" className="btn btn-ghost">View Library</Link>
+              <Link to="/library" className="back-btn">View Library</Link>
             </article>
             <article className="feature-card">
               <h4>Framework</h4>
               <p className="small">Operational guidance, structure, and leadership.</p>
-              <Link to="/framework" className="btn btn-ghost">View Framework</Link>
+              <Link to="/framework" className="back-btn">View Framework</Link>
             </article>
             <article className="feature-card">
               <h4>Members</h4>
               <p className="small">Regiment list and onboarding resources.</p>
-              <Link to="/members" className="btn btn-ghost">View Members</Link>
+              <Link to="/members" className="back-btn">View Members</Link>
             </article>
           </div>
         </section>
