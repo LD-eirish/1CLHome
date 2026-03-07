@@ -438,7 +438,7 @@ export default function BotDocumentationPage() {
           {/* --- Administrative Tools --- */}
           <section className="docs-section" id="administrative-tools">
             <h2>Administrative Tools</h2>
-            <p><b>Note:</b> These admin commands can only be run by users who have been set as admins directly in the bot's <code>.env</code> file. Assigning Discord roles or permissions is not sufficient—only users explicitly listed as admins in the environment configuration can use these commands.</p>
+            <p><b>Note:</b> These admin commands can only be run by users who have been set as admins directly in the bot's <code>.env</code> file. Assigning Discord roles or permissions is not sufficient, only users explicitly listed as admins in the environment configuration can use these commands.</p>
             <h3>Bot Health and Diagnostics</h3>
             <ul>
               <li><b>/admin health</b> — Shows the current health status of the bot: whether it is ready, uptime, memory usage (heap used and total), WebSocket ping to Discord, and the number of servers the bot is active in.</li>
