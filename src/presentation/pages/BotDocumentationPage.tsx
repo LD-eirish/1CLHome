@@ -12,7 +12,7 @@ export default function BotDocumentationPage() {
         <section className="docs-content docs-dark-bg">
           <section className="docs-hero">
             <h1 className="docs-title">1CL Bot — Full Feature Documentation</h1>
-            <p className="docs-lead">This document describes every feature available in the 1CL Bot. It is written for server administrators, managers, and members, and intentionally avoids technical implementation details. For setup instructions see the individual quickstart guides in the <code>docs/</code> folder.</p>
+            <p className="docs-lead">This document describes every feature available in the 1CL Bot.</p>
           </section>
           <div className="docs-toc-top-full">
             <nav>
@@ -37,8 +37,8 @@ export default function BotDocumentationPage() {
           {/* --- Overview --- */}
           <section className="docs-section" id="overview">
             <h2>Overview</h2>
-            <p>The 1CL Bot is a full-featured Discord bot designed for military-style gaming communities. It provides end-to-end tools for managing logistics operations, planning and running events, issuing awards and certifications, processing member applications, synchronising roles across multiple servers, and moderating specific channels. All major systems are self-contained — each is configured separately in its own dedicated forum or channel, and each can be set up or removed independently without affecting the others.</p>
-            <p>The bot stores all its data locally and persists it across restarts. Most commands are restricted by configurable manager roles, meaning you can delegate day-to-day moderation without granting full administrator access.</p>
+            <p>The 1CL Bot is a full-featured Discord bot designed for the 1CL Discord Community. It provides tools for managing logistics, planning and running events, issuing awards and certifications, processing member applications, synchronising roles across multiple servers, and moderating specific channels. All major systems are self-contained, each is configured separately in its own dedicated forum or channel, and each can be set up or removed independently without affecting the others.</p>
+            <p>The bot stores all its data locally and persists it within a database. Most commands are restricted by configurable manager roles, meaning you can delegate moderation without granting full administrator access.</p>
           </section>
           <hr className="docs-divider" />
           {/* --- Logistics System --- */}
