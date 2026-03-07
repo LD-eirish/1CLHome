@@ -374,7 +374,7 @@ export default function BotDocumentationPage() {
           {/* --- Channel Protection --- */}
           <section className="docs-section" id="channel-protection">
             <h2>Channel Protection</h2>
-            <p>The channel protection system allows designating specific channels as protected zones where posting is not permitted. This is useful for announcement-only channels, read-only channels, or channels where only certain content should appear. The bot automatically deletes any message posted in a protected channel by an unauthorized member and takes further action depending on the configured mode.</p>
+            <p>The channel protection system allows designating specific channels as protected zones where posting is not permitted. This is useful for channels that are used to trap harmful bots and scammers. The bot automatically deletes any message posted in a protected channel by an unauthorized member and takes further action depending on the configured mode.</p>
             <h3>Adding and Removing Protection</h3>
             <ul>
               <li><b>/protect add</b> — Protects a channel.</li>
