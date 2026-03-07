@@ -102,6 +102,23 @@
   box-shadow:0 8px 18px rgba(0,0,0,0.6);
 }
 
+/* Remove top margin from first card in CentralGroupPage */
+.container > .card:first-of-type,
+.container > .hero.card:first-of-type {
+  margin-top: 0 !important;
+}
+
+/* Reduce space between cards in CentralGroupPage */
+.container > .card,
+.container > .hero.card {
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+.container > .card:first-of-type,
+.container > .hero.card:first-of-type {
+  margin-top: 0 !important;
+}
+
 .content.card{
   font-size:15px;
   line-height:1.65;
