@@ -39,8 +39,8 @@
     "discord": "https://discord.gg/NBRDQdsfWy",
     "logo": "WMLogo.png",
     "activityTime": {
-      "startTime": "16:00",
-      "endTime": "23:00",
+      "startTime": "19:00",
+      "endTime": "02:00",
       "timezone": "CET"
     }
   },
@@ -79,8 +79,8 @@
     "discord": "https://discord.gg/DsRZJ9ZnRQ",
     "logo": "S9Logo.png",
     "activityTime": {
-      "startTime": "16:00",
-      "endTime": "23:00",
+      "startTime": "18:00",
+      "endTime": "02:00",
       "timezone": "CET"
     }
   },
@@ -94,8 +94,8 @@
     "discord": "https://discord.gg/5UTYdKgcGe",
     "logo": "1TPRLogo.png",
     "activityTime": {
-      "startTime": "23:00",
-      "endTime": "06:00",
+      "startTime": "01:00",
+      "endTime": "10:00",
       "timezone": "CET"
     }
   },
