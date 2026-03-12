@@ -301,7 +301,7 @@ export function formatActivityTime(activityTime: string | ActivityTime | undefin
     const userTzShort = new Intl.DateTimeFormat(undefined, {
       timeZone: userTimezone,
       timeZoneName: 'short'
-    }).formatToParts(startUtc).find(part => part.type === 'timeZoneName')?.value || userTimezone;
+    }).formatToParts(now).find(part => part.type === 'timeZoneName')?.value || userTimezone;
 
     if (!showOriginal) {
       return `${localStart}-${localEnd} ${userTzShort}`;
