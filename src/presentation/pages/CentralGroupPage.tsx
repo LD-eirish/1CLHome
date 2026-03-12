@@ -47,7 +47,7 @@ export function CentralGroupPage() {
       <main className="container">
         <section className="hero card" style={{background: 'linear-gradient(135deg, rgba(201,168,79,0.05), rgba(201,168,79,0.02))'}}>
           <div className="hero-left">
-            <h2>Legion Central Group (LCG)</h2>
+            <h2>Central Group (LCG)</h2>
             <p className="lead">
               Regiments that opt into fuller integration: they participate in centralized HR/recruitment, 
               contribute to shared logistics, and take on broader command responsibilities.

@@ -47,7 +47,7 @@ export function AssociateGroupPage() {
       <main className="container">
         <section className="hero card" style={{background: 'linear-gradient(135deg, rgba(85,116,163,0.05), rgba(85,116,163,0.02))'}}>
           <div className="hero-left">
-            <h2>Legion Associate Group (LAG)</h2>
+            <h2>Associate Group (LAG)</h2>
             <p className="lead">
               Regiments that maintain greater independence: they coordinate on joint operations and strategic objectives 
               but may decline centralized HR participation and retain lighter command duties.

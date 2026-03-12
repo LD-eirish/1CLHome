@@ -122,7 +122,7 @@ export function MembersPage() {
             <div className="faction-icon">
               <img src={assetPath('1CLLogo.png')} alt="1CL Logo" style={{width: '140px', height: 'auto', filter: 'drop-shadow(0 4px 12px rgba(201,168,79,0.6))'}} />
             </div>
-            <h2 className="faction-title">Legion Central Group</h2>
+            <h2 className="faction-title">Central Group</h2>
             <p className="faction-description">
               Deeper integration regiments with centralized HR, shared logistics, and broader command responsibilities.
             </p>
@@ -146,7 +146,7 @@ export function MembersPage() {
               <div className="faction-icon">
                 <img src={assetPath('1CLALogo.png')} alt="1CLA Logo" style={{width: '140px', height: 'auto', filter: 'drop-shadow(0 4px 12px rgba(85,116,163,0.6))'}} />
               </div>
-            <h2 className="faction-title">Legion Associate Group</h2>
+            <h2 className="faction-title">Associate Group</h2>
             <p className="faction-description">
               Regiments coordinating on operations while remaining fully independent.
             </p>
