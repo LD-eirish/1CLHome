@@ -97,7 +97,7 @@ export function RegimentModal({ regiment, onClose }: Readonly<RegimentModalProps
               {regiment.activityTime && (
                 <>
                   <dt style={{fontWeight: 600, color: 'var(--gold)'}}>Peak Activity:</dt>
-                  <dd style={{margin: 0}}>{formatActivityTime(regiment.activityTime)}</dd>
+                  <dd style={{margin: 0}}>{formatActivityTime(regiment.activityTime, false)}</dd>
                 </>
               )}
 
