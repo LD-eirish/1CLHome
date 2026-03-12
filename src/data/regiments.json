@@ -59,13 +59,13 @@
     "abbreviation": "ULTRA",
     "group": "central",
     "joinedDate": "2026-02-17",
-    "description": "ULTRA is a regiment that specializes in heavy weaponry and is welcome to all players.",
+    "description": "Ultra is an Infantry Regiment that focuses on using professional infantry tactics at a squad, platoon, and company level.",
     "tags": ["", "", ""],
     "discord": "https://discord.gg/mEpeMtxafK",
     "logo": "UltraLogo.png",
     "activityTime": {
-      "startTime": "16:00",
-      "endTime": "23:00",
+      "startTime": "12:00",
+      "endTime": "18:00",
       "timezone": "CET"
     }
   },
@@ -114,8 +114,8 @@
     "abbreviation": "ETRNL",
     "group": "central",
     "joinedDate": "2026-02-06",
-    "description": "Formerly known as the CRSG, we were created by a former merger between the CRA and STG, and we are a regiment of focused frontline bunker building and backline facility enjoyers with a mix of frontline combat that has a solid foundation, good command structure, and great connections — Now we just need dedicated players to help us build the great machine!",
-    "tags": ["FOB Engineering", "Public Logistics", "Armor"],
+    "description": "The Eternal Combat Engineer Corps is a regiment of focused frontline bunker building and backline facility enjoyers with a mix of frontline combat that has a solid foundation, good command structure, and great connections — Now we just need dedicated players to help us build the great machine!",
+    "tags": ["FOB Construction", "Public Logistics", "Frontline Combat"],
     "logo": "1CLALogo.png",
     "activityTime": {
       "startTime": "16:00",
