@@ -38,20 +38,12 @@ export function LibraryPage() {
       </nav>
 
       <div className="container">
-        <section className="card" style={{marginTop: '1rem', marginBottom: '1rem'}}>
-          <div style={{display: 'flex', alignItems: 'center', gap: '2rem', flexWrap: 'wrap'}}>
-            <div style={{flex: 1, minWidth: '250px'}}>
-              <h2 style={{marginBottom: '0.5rem', color: 'var(--gold)'}}>Document Library</h2>
-              <p className="lead" style={{marginBottom: '1rem'}}>
-                Browse all official 1CL documents.
-              </p>
-              <div style={{display: 'flex', gap: '2rem', fontSize: '0.9rem', color: 'var(--muted)'}}>
-                <div>
-                  <strong style={{color: 'var(--gold)', fontSize: '1.5rem', display: 'block'}}>{resolutions.length}</strong>
-                  <span>Total Documents</span>
-                </div>
-              </div>
-            </div>
+        <section className="card">
+          <h2>Document Library</h2>
+          <p className="lead">Browse all official 1CL documents.</p>
+          <div className="lib-stat-row">
+            <span className="stat-value">{resolutions.length}</span>
+            <span className="stat-label">Total Documents</span>
           </div>
         </section>
       </div>
@@ -118,11 +110,9 @@ export function LibraryPage() {
 
       <main className="container main-area">
         <section className="viewer card">
-            <div style={{padding: '3rem 2rem', textAlign: 'center'}}>
-              <h3 style={{color: 'var(--muted)', marginBottom: '1rem'}}>No Document Selected</h3>
-              <p className="lead" style={{color: 'var(--muted)', marginBottom: '2rem'}}>
-                Select a document from the list above to view details
-              </p>
+            <div className="viewer-empty">
+              <p className="viewer-empty-title">No Document Selected</p>
+              <p className="lead">Select a document from the list above to view details</p>
             </div>
         </section>
       </main>

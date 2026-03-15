@@ -45,7 +45,7 @@ export function AssociateGroupPage() {
       </div>
 
       <main className="container">
-        <section className="hero card" style={{background: 'linear-gradient(135deg, rgba(85,116,163,0.05), rgba(85,116,163,0.02))'}}>
+        <section className="hero card">
           <div className="hero-left">
             <h2>Associate Group (LAG)</h2>
             <p className="lead">
@@ -54,7 +54,7 @@ export function AssociateGroupPage() {
             </p>
           </div>
           <div className="hero-right">
-            <img src={assetPath('1CLLogo.png')} alt="1CL Logo" className="hero-logo" style={{opacity: 0.8}} />
+            <img src={assetPath('1CLLogo.png')} alt="1CL Logo" className="hero-logo" />
           </div>
         </section>
 

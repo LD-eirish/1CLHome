@@ -1,32 +1,37 @@
+import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
-import { assetPath } from '../../infrastructure/utils/asset.utils';
 
 export function DepartmentsPage() {
   const departments = [
     {
       id: 'a1cl',
-      title: 'A/1CL — Administrative 1CL',
-      description: 'A special purpose regiment handling administration, public relations, policy, and 1CL‑level organisation.'
+      code: 'A/1CL',
+      title: 'Administrative 1CL',
+      description: 'Special purpose regiment handling administration, public relations, policy, and 1CL‑level organisation.'
     },
     {
       id: 'it',
+      code: 'IT CO',
       title: '1CL IT Company',
-      description: 'Develops tools for 1CL: e.g. 1CL Discord bot, 1CLHub webpage.'
+      description: 'Develops and maintains tools for 1CL — including the Discord bot and this website.'
     },
     {
       id: 'recruit',
+      code: 'RCR CO',
       title: '1CL Recruitment Company',
       description: 'Handles recruitment and verification for all Central Group sub‑regiments.'
     },
     {
       id: 'logistics',
+      code: 'LOG CO',
       title: '1CL Logistics Company',
-      description: 'A logistics company comprising logistics players across all Central Group regiments; coordinates supply, transport and resource gathering.'
+      description: 'Logistics players across Central Group regiments. Coordinates supply, transport, and resource gathering.'
     },
     {
       id: 'facility',
+      code: 'FAC CO',
       title: '1CL Facility Company',
-      description: 'Responsible for construction, maintenance and operation of facilities and defensive structures.'
+      description: 'Responsible for construction, maintenance, and operation of facilities and defensive structures.'
     }
   ];
 
@@ -37,26 +42,24 @@ export function DepartmentsPage() {
       <main className="container">
         <nav className="breadcrumb" aria-label="Breadcrumb">
           <ol>
-            <li>Home</li>
-            <li aria-current="page">1CL Departments</li>
+            <li><Link to="/hub">Home</Link></li>
+            <li aria-current="page">Departments</li>
           </ol>
         </nav>
 
         <section className="card">
           <h2>1CL Departments</h2>
-          <p className="lead">Organisational and specialist departments that support the Legion and its Central Group sub‑regiments.</p>
+          <p className="lead">Organisational and specialist departments supporting the Legion and its Central Group sub‑regiments.</p>
 
-          <div className="departments-grid">
+          <div className="dept-list">
             {departments.map((d) => (
-              <article key={d.id} className="card" style={{marginBottom: '12px'}}>
-                <div style={{display: 'flex', gap: '12px', alignItems: 'center'}}>
-                  <img src={assetPath('1CLLogo.png')} alt="1CL" style={{width: 56, height: 56, opacity: 0.9}} />
-                  <div>
-                    <h3 style={{margin: 0}}>{d.title}</h3>
-                    <p style={{margin: '6px 0 0'}}>{d.description}</p>
-                  </div>
+              <div key={d.id} className="dept-row">
+                <div className="dept-code">{d.code}</div>
+                <div className="dept-info">
+                  <h3 className="dept-title">{d.title}</h3>
+                  <p className="dept-desc">{d.description}</p>
                 </div>
-              </article>
+              </div>
             ))}
           </div>
         </section>

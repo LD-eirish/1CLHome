@@ -115,15 +115,15 @@ export function FrameworkPage() {
         </ol>
       </nav>
 
-      <section className="hero card" style={{background: 'linear-gradient(135deg, rgba(201,168,79,0.08), rgba(201,168,79,0.02))'}}>
+      <section className="hero card">
         <div className="hero-left">
-          <h2 style={{fontSize: '2rem', marginBottom: '0.5rem'}}>Official Framework</h2>
-          <p className="lead" style={{fontSize: '1.1rem', color: 'var(--text-secondary)'}}>
+          <h2>Official Framework</h2>
+          <p className="lead">
             Command structure, operational guidelines, and organization of the 1st Combined Legion.
           </p>
         </div>
         <div className="hero-right">
-          <img src={assetPath('1CLLogo.png')} alt="1CL Logo" className="hero-logo" style={{opacity: 0.9}} />
+          <img src={assetPath('1CLLogo.png')} alt="1CL Logo" className="hero-logo" />
         </div>
       </section>
 
