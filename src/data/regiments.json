@@ -5,6 +5,7 @@
     "group": "central",
     "joinedDate": "2025-11-17",
     "description": "P.O.G is a public-focused regiment open to all respectful players. We organize and host air operations, provide logistics and support for frontline flights, and frequently collaborate with other groups. From pilots and spotters to fuel crews and ground support. We cover every role needed to keep the skies active and deadly. Whether you're brand new or experienced P.O.G is a great introduction to Foxhole air operations.",
+    "leader": "TomTheTank",
     "tags": ["Airborne", "New Player Friendly", "Logistics"],
     "discord": "https://discord.gg/QFKvhnkbcb",
     "logo": "POGLogo.png",
@@ -20,6 +21,7 @@
     "group": "central",
     "joinedDate": "2025-11-17",
     "description": "TCS is a Reconnaissance and Partisan-focused regiment, specializing in Spec-Ops and deep backline operations.",
+    "leader": "The Derp Master",
     "tags": ["Partisan", "Tomfoolery", "Shenanigans"],
     "discord": "https://discord.gg/JSnZUVqY6D",
     "logo": "TCSLogo.png",
@@ -35,6 +37,7 @@
     "group": "central",
     "joinedDate": "2025-11-20",
     "description": "WM specializes in manufacturing and driving tanks or other vehicles. We also have an unhealthy addiction to facilities.",
+    "leader": "zanthosranger",
     "tags": ["Armor", "Facility", "Scrooping"],
     "discord": "https://discord.gg/NBRDQdsfWy",
     "logo": "WMLogo.png",
@@ -50,6 +53,7 @@
     "group": "associate",
     "joinedDate": "2025-11-17",
     "description": "Regiment description coming soon.",
+    "leader": "Muffin",
     "tags": ["", "", ""],
     "logo": "1CLALogo.png",
     "activityTime": "UNKNOWN"
@@ -60,6 +64,7 @@
     "group": "central",
     "joinedDate": "2026-02-17",
     "description": "Ultra is an Infantry Regiment that focuses on using professional infantry tactics at a squad, platoon, and company level.",
+    "leader": "Jeremiah",
     "tags": ["", "", ""],
     "discord": "https://discord.gg/mEpeMtxafK",
     "logo": "UltraLogo.png",
@@ -75,6 +80,7 @@
     "group": "central",
     "joinedDate": "2025-11-17",
     "description": "We focus on logistics and helping out our colleagues and friends. We do any type of logistics, either producing gear at a factory or transporting it to where it'll be used. We also do frontline stuff with whatever we manage to produce to help out more directly.",
+    "leader": "Dwight Do Pix",
     "tags": ["Logistics", "Facility", "Frontline Support"],
     "discord": "https://discord.gg/DsRZJ9ZnRQ",
     "logo": "S9Logo.png",
@@ -90,6 +96,7 @@
     "group": "central",
     "joinedDate": "2026-03-06",
     "description": "1TPR is an elite intelligence and special operations unit dedicated to serving the Mesean Republic and its interests. We specialize in reconnaissance and sabotage missions, both close to the front and deep behind enemy lines. We use combined-arms tactics, employing light aircraft, watercraft and ground vehicles along with infantry to conduct reconnaissance, area denial, sabotage and other missions. We are no strangers to being surrounded, and death is treated more as an eventuality in our ranks, not just a risk.",
+    "leader": "Tactical Raccoon",
     "tags": ["Intelligence", "Sabotage", "Combined Arms"],
     "discord": "https://discord.gg/5UTYdKgcGe",
     "logo": "1TPRLogo.png",
@@ -100,11 +107,12 @@
     }
   },
   {
-    "name": "Colonial Assault Team",
+    "name": "Colonial Assembly Team",
     "abbreviation": "CAT",
     "group": "associate",
     "joinedDate": "2025-12-08",
     "description": "Regiment description coming soon.",
+    "leader": "DonutBurger",
     "tags": ["Infantry", "Artillery", "Logistics"],
     "logo": "1CLALogo.png",
     "activityTime": "UNKNOWN"
@@ -115,6 +123,7 @@
     "group": "central",
     "joinedDate": "2026-02-06",
     "description": "The Eternal Combat Engineer Corps is a regiment of focused frontline bunker building and backline facility enjoyers with a mix of frontline combat that has a solid foundation, good command structure, and great connections — Now we just need dedicated players to help us build the great machine!",
+    "leader": "GoldenBarrel",
     "tags": ["FOB Construction", "Public Logistics", "Frontline Combat"],
     "discord": "https://discord.gg/QZXYn5UAf5",
     "logo": "1CLALogo.png",
@@ -123,15 +132,5 @@
       "endTime": "23:00",
       "timezone": "CET"
     }
-  },
-  {
-    "name": "NightWatch",
-    "abbreviation": "NWCTH",
-    "group": "associate",
-    "joinedDate": "2026-02-27",
-    "description": "Regiment description coming soon.",
-    "tags": ["Infantry", "Logistics", "Frontline Support"],
-    "logo": "1CLALogo.png",
-    "activityTime": "UNKNOWN"
   }
 ]
