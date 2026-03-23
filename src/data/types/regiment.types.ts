@@ -15,6 +15,8 @@ export interface Regiment {
   group: 'central' | 'associate';
   joinedDate: string;
   description: string;
+  // Optional regiment leader display name
+  leader?: string;
   tags: string[];
   discord?: string;
   // Optional path to a primary logo asset (stored in public/), e.g. 'TCSLogo.png'

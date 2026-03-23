@@ -52,12 +52,17 @@ export function RegimentCard({ regiment, index, onClick, hideDetails = false }: 
           )}
         </div>
         <p className="regiment-joined">
-          Joined: {new Date(regiment.joinedDate).toLocaleDateString('en-US', { 
+          <strong>Joined:</strong> {new Date(regiment.joinedDate).toLocaleDateString('en-US', { 
             year: 'numeric', 
             month: 'short', 
             day: 'numeric' 
           })}
         </p>
+        {!hideDetails && (
+          <p className="regiment-leader">
+            <strong>Leader:</strong> {regiment.leader ?? 'TBD'}
+          </p>
+        )}
         {!hideDetails && regiment.activityTime && (
           <p className="regiment-activity">
             <strong>Peak Activity:</strong> {formatActivityTime(regiment.activityTime, false)}

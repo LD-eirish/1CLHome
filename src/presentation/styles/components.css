@@ -783,6 +783,14 @@ input[type="search"]:focus{
   letter-spacing:0.08em;
 }
 
+.regiment-leader{
+  font-size:0.72rem;
+  color:rgba(201,178,122,0.72);
+  margin:0 0 0.4rem;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+}
+
 .regiment-activity{
   font-size:0.72rem;
   color:rgba(201,178,122,0.7);
