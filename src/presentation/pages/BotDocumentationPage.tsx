@@ -60,6 +60,7 @@ export default function BotDocumentationPage() {
                 <tr><td>delivery location</td><td>Yes</td><td>Where the items should be delivered</td></tr>
                 <tr><td>description</td><td>Yes</td><td>Notes or details about the request</td></tr>
                 <tr><td>priority</td><td>Yes</td><td>High, Medium, or Low</td></tr>
+                <tr><td>use_crates</td><td>No</td><td>When enabled, quantities are interpreted as crate counts instead of individual items</td></tr>
                 <tr><td>ping</td><td>No</td><td>Whether to ping the configured logistics role on creation</td></tr>
                 <tr><td>time limit</td><td>No</td><td>Optional, in days — if set, the request expires after that many days</td></tr>
               </tbody>
@@ -76,6 +77,7 @@ export default function BotDocumentationPage() {
                 <tr><td>delivery location</td><td>Yes</td><td>Where the items should be delivered</td></tr>
                 <tr><td>description</td><td>Yes</td><td>Notes or details about the request</td></tr>
                 <tr><td>priority</td><td>Yes</td><td>High, Medium, or Low</td></tr>
+                <tr><td>use_crates</td><td>No</td><td>When enabled, quantities are interpreted as crate counts instead of individual items</td></tr>
                 <tr><td>ping</td><td>No</td><td>Whether to ping the configured logistics role on creation</td></tr>
                 <tr><td>time limit</td><td>No</td><td>Optional, in days — if set, the request expires after that many days</td></tr>
               </tbody>
@@ -147,11 +149,12 @@ export default function BotDocumentationPage() {
                 <tr><td>pingrole</td><td>Yes</td><td>Whether to ping the configured event role on creation</td></tr>
                 <tr><td>squadlead</td><td>Yes</td><td>Whether to enable squad lead tracking for this event</td></tr>
                 <tr><td>customrole1–customrole12</td><td>No</td><td>Up to 12 sign-up roles</td></tr>
-                <tr><td>customrole1_limit–customrole6_limit</td><td>No</td><td>Optional per-role signup caps (roles 1–6 only)</td></tr>
+                <tr><td>customrole1_limit–customrole3_limit</td><td>No</td><td>Optional per-role signup caps (roles 1–3 only)</td></tr>
+                <tr><td>war</td><td>No</td><td>Optional war identifier/label to associate with the event</td></tr>
                 <tr><td>campaign</td><td>No</td><td>The campaign this event belongs to (autocompletes from saved campaigns)</td></tr>
               </tbody>
             </table>
-            <p>Roles 1–6 can have individual signup limits; when a role is full its button is disabled and a message is shown to latecomers. Roles 7–12 have no limit option due to Discord's command option cap.</p>
+            <p>Roles 1–3 can have individual signup limits; when a role is full its button is disabled and a message is shown to latecomers. Roles 4–12 have no limit option due to Discord's command option cap.</p>
             <p>When the event is created, the bot automatically does three additional things:</p>
             <ol>
               <li><b>Creates a Discord Scheduled Event</b> on the server, set to start at the timestamp provided and end four hours later. The location links directly to the event thread. Members can click "Interested" on the Scheduled Event in Discord's event tab.</li>
