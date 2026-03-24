@@ -154,6 +154,8 @@ export default function BotDocumentationPage() {
                 <tr><td>campaign</td><td>No</td><td>The campaign this event belongs to (autocompletes from saved campaigns)</td></tr>
               </tbody>
             </table>
+            <p></p>
+            <p><b>INFO:</b></p>
             <p>Roles 1–3 can have individual signup limits; when a role is full its button is disabled and a message is shown to latecomers. Roles 4–12 have no limit option due to Discord's command option cap.</p>
             <p>When the event is created, the bot automatically does three additional things:</p>
             <ol>
