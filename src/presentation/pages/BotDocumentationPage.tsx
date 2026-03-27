@@ -440,6 +440,19 @@ export default function BotDocumentationPage() {
             </ul>
           </section>
           <hr className="docs-divider" />
+          {/* --- War System --- */}
+          <section className="docs-section" id="administrative-tools">
+            <h2>War System</h2>
+            <p>War tracking is an optional but helpful tool to help you organise and label Logistics-Requests and Events.</p>
+            <h3>War Management</h3>
+            <ul>
+              <li><b>/war start</b> — Starts a new war within the systm. Automatically disables the previously active war. There can only be one active war at the same time. This will also reset the Logistics-Request number.</li>
+              <li><b>/war end</b> — End the current war without starting a new one. Closes and archives all currently active Logistics-Requests.</li>
+              <li><b>/war list</b> — List all recorded wars.</li>
+              <li><b>/war current</b> — Show the currently active war and request stats.</li>
+            </ul>
+          </section>
+          <hr className="docs-divider" />
           {/* --- Administrative Tools --- */}
           <section className="docs-section" id="administrative-tools">
             <h2>Administrative Tools</h2>
