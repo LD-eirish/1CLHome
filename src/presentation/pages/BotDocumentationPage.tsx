@@ -26,6 +26,7 @@ export default function BotDocumentationPage() {
                 <li><a href="#role-synchronization">Role Synchronization</a></li>
                 <li><a href="#channel-protection">Channel Protection</a></li>
                 <li><a href="#recruitment-tracking">Recruitment Tracking</a></li>
+                <li><a href="#war-system">War System</a></li>
                 <li><a href="#administrative-tools">Administrative Tools</a></li>
                 <li><a href="#dashboard">Dashboard</a></li>
                 <li><a href="#help-statistics">Help & Statistics</a></li>
@@ -441,7 +442,7 @@ export default function BotDocumentationPage() {
           </section>
           <hr className="docs-divider" />
           {/* --- War System --- */}
-          <section className="docs-section" id="administrative-tools">
+          <section className="docs-section" id="war-system">
             <h2>War System</h2>
             <p>War tracking is an optional but helpful tool to help you organise and label Logistics-Requests and Events.</p>
             <h3>War Management</h3>
