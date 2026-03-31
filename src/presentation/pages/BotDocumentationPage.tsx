@@ -47,7 +47,7 @@ export default function BotDocumentationPage() {
             <h2>Logistics System</h2>
             <p>The logistics system provides a structured workflow for submitting, tracking, and fulfilling supply requests and transport jobs. Everything happens inside a configured Discord forum channel. Each request becomes a forum thread that the bot actively manages.</p>
             <h3>Setting Up</h3>
-            <p>Before any logistics commands work, an administrator must run <code>/logisetup configure</code> in the forum channel where requests should appear. This command requires specifying the target forum channel and optionally a ping role (the role that gets notified on new requests) and up to five manager roles (members with those roles can manage requests they did not create).</p>
+            <p>Before any logistics commands work, an administrator must run <code>/logisetup configure</code> in the forum channel where requests should appear. This command requires specifying the target forum channel and optionally separae ping roles for Logistic-Requests and Transport-Requests (the role that gets notified on new requests) and up to five manager roles (members with those roles can manage requests they did not create).</p>
             <p>The configuration can be reviewed at any time with <code>/logisetup view</code>, and removed with <code>/logisetup remove</code> (requires confirmation). To post or re-post the How to Use guide inside the forum, use <code>/logiguide</code>.</p>
             <h3>Creating Requests</h3>
             <p><b>/request</b> — Creates a standard supply request.</p>
