@@ -45,8 +45,8 @@ export function RegimentCard({ regiment, index, onClick, hideDetails = false }: 
           </div>
           {regiment.group === 'central' && regiment.extraLogos && regiment.extraLogos.length > 0 && (
             <div style={{display: 'flex', gap: '6px', alignItems: 'center'}}>
-              {regiment.extraLogos.map((logo, i) => (
-                <img key={i} src={assetPath(logo)} alt={`extra logo ${i}`} style={{width: 36, height: 36, objectFit: 'contain'}} />
+              {regiment.extraLogos.map((logo, key) => (
+                <img key={key} src={assetPath(logo)} alt={`extra logo ${key}`} style={{width: 36, height: 36, objectFit: 'contain'}} />
               ))}
             </div>
           )}
