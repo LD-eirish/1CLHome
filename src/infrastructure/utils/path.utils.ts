@@ -31,12 +31,12 @@ const TIMEZONE_ALIAS_MAP: Record<string, string> = {
 const SUPPORTED_TIMEZONE_LOOKUP: Map<string, string> = (() => {
   const lookup = new Map<string, string>();
 
-  if (typeof Intl.supportedValuesOf !== 'function') {
+  if (typeof (Intl as any).supportedValuesOf !== 'function') {
     return lookup;
   }
 
   try {
-    const zones = Intl.supportedValuesOf('timeZone');
+    const zones = (Intl as any).supportedValuesOf('timeZone');
     for (const zone of zones) {
       lookup.set(zone.toUpperCase(), zone);
     }
@@ -93,7 +93,7 @@ function normalizeTimeZoneInput(rawTimeZone: string | undefined): string | null 
   const trimmed = rawTimeZone.trim();
   if (!trimmed) return null;
 
-  const canonicalKey = trimmed.replaceAll(' ', '_').toUpperCase();
+  const canonicalKey = trimmed.split(' ').join('_').toUpperCase();
   const canonicalTimeZone = SUPPORTED_TIMEZONE_LOOKUP.get(canonicalKey);
   if (canonicalTimeZone) return canonicalTimeZone;
 

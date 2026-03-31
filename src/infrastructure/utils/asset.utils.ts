@@ -31,7 +31,8 @@ export const assetPath = (p: string) => {
       }
     }
   } catch (e) {
-    // continue to fallback
+    console.log(e);
+    
   }
 
   // 4) fallback to Vite BASE_URL at build time
