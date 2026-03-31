@@ -80,7 +80,7 @@ export default function BotDocumentationPage() {
                 <tr><td>description</td><td>Yes</td><td>Notes or details about the request</td></tr>
                 <tr><td>priority</td><td>Yes</td><td>High, Medium, or Low</td></tr>
                 <tr><td>use_crates</td><td>No</td><td>When enabled, quantities are interpreted as crate counts instead of individual items</td></tr>
-                <tr><td>ping</td><td>No</td><td>Whether to ping the configured logistics role on creation</td></tr>
+                <tr><td>ping</td><td>No</td><td>Whether to ping the configured transport role on creation</td></tr>
                 <tr><td>time limit</td><td>No</td><td>Optional, in days — if set, the request expires after that many days</td></tr>
               </tbody>
             </table>
