@@ -6,6 +6,7 @@ import { FrameworkService } from '../../business/services/FrameworkService';
 import { FrameworkRenderer } from '../components/FrameworkRenderer';
 import { setupExportButton } from '../../infrastructure/utils/export.utils';
 import { TableOfContents } from '../components/TableOfContents';
+import { PageBreadcrumb } from '../components/PageBreadcrumb';
 
 export function FrameworkPage() {
   const [content, setContent] = useState<string>('');
@@ -106,14 +107,7 @@ export function FrameworkPage() {
   return (
     <>
       <Header subtitle="Official command & operations framework" />
-      
-      <nav className="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-            <li><Link to="/hub">Hub</Link></li>
-          <li><Link to="/library">Library</Link></li>
-          <li aria-current="page">Framework</li>
-        </ol>
-      </nav>
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Library', to: '/library' }, { label: 'Framework' }]} />
 
       <section className="hero card">
         <div className="hero-left">

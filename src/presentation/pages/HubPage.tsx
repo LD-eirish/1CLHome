@@ -30,14 +30,14 @@ export function HubPage() {
         </div>
 
         <nav className="hub-nav" aria-label="Section navigation">
-          <Link to="/framework" className="hub-nav-item">
-            <span className="hub-nav-label">Framework</span>
-          </Link>
           <Link to="/members" className="hub-nav-item">
             <span className="hub-nav-label">Members</span>
           </Link>
           <Link to="/departments" className="hub-nav-item">
             <span className="hub-nav-label">Departments</span>
+          </Link>
+          <Link to="/newspaper" className="hub-nav-item">
+            <span className="hub-nav-label">Newspaper</span>
           </Link>
           <Link to="/bot-documentation" className="hub-nav-item">
             <span className="hub-nav-label">Bot Docs</span>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
+import { PageBreadcrumb } from '../components/PageBreadcrumb';
 
 export function DepartmentsPage() {
   const departments = [
@@ -39,14 +40,9 @@ export function DepartmentsPage() {
     <>
       <Header subtitle="1CL Departments & Organisational Units" />
 
-      <main className="container">
-        <nav className="breadcrumb" aria-label="Breadcrumb">
-          <ol>
-            <li><Link to="/hub">Home</Link></li>
-            <li aria-current="page">Departments</li>
-          </ol>
-        </nav>
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Departments' }]} />
 
+      <main className="container">
         <section className="card">
           <h2>1CL Departments</h2>
           <p className="lead">Organisational and specialist departments supporting the Legion and its Central Group sub‑regiments.</p>

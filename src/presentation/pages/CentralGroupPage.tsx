@@ -5,6 +5,7 @@ import { assetPath } from '../../infrastructure/utils/asset.utils';
 import { RegimentCard } from '../components/RegimentCard';
 import { RegimentModal } from '../components/RegimentModal';
 import type { Regiment } from '../../data/types/regiment.types';
+import { PageBreadcrumb } from '../components/PageBreadcrumb';
 
 export function CentralGroupPage() {
   const [regiments, setRegiments] = useState<Regiment[]>([]);
@@ -31,14 +32,7 @@ export function CentralGroupPage() {
   return (
     <>
       <Header subtitle="Partial integration regiments" />
-      
-      <nav className="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-          <li><Link to="/hub">Hub</Link></li>
-          <li><Link to="/members">Members</Link></li>
-          <li aria-current="page">Central Group</li>
-        </ol>
-      </nav>
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Members', to: '/members' }, { label: 'Central Group' }]} />
 
       <div className="page-actions">
         <Link to="/members" className="back-btn" aria-label="Back to Members">← Back to Members</Link>

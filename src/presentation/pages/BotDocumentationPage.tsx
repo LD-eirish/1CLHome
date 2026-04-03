@@ -1,6 +1,7 @@
 
 
 import { Header } from '../components/Header';
+import { PageBreadcrumb } from '../components/PageBreadcrumb';
 import '../styles/components.css';
 import '../../styles/documentation.css';
 
@@ -8,6 +9,7 @@ export default function BotDocumentationPage() {
   return (
     <>
       <Header subtitle="1CL Bot — Full Feature Documentation" />
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Bot Documentation' }]} />
       <main className="documentation-layout docs-centered">
         <section className="docs-content docs-dark-bg">
           <section className="docs-hero">

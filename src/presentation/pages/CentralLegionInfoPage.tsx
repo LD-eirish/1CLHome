@@ -1,9 +1,11 @@
 import { Header } from '../components/Header';
+import { PageBreadcrumb } from '../components/PageBreadcrumb';
 
 export function CentralLegionInfoPage() {
   return (
     <>
       <Header subtitle="About the Central Group & 1CL Membership" />
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Central Group Info' }]} />
       <main className="container central-legion-info">
         <section className="card info-card">
           <h2>What is the Central Group?</h2>

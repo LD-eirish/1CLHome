@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { assetPath } from '../../infrastructure/utils/asset.utils';
 import { useEffect } from 'react';
+import { PageBreadcrumb } from '../components/PageBreadcrumb';
 
 export function MembersPage() {
   useEffect(() => {
@@ -82,13 +83,7 @@ export function MembersPage() {
   return (
     <>
       <Header subtitle="1CL Groups & Member Regiments" />
-      
-      <nav className="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-          <li><Link to="/hub">Hub</Link></li>
-          <li aria-current="page">Members</li>
-        </ol>
-      </nav>
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Members' }]} />
 
       <button 
         id="Schmemil-toggle" 

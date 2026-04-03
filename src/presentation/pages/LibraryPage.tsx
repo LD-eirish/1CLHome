@@ -3,6 +3,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { FrameworkService } from '../../business/services/FrameworkService';
 import type { ResolutionListItem } from '../../data/types/resolution.types';
+import { PageBreadcrumb } from '../components/PageBreadcrumb';
 
 export function LibraryPage() {
   const [resolutions, setResolutions] = useState<ResolutionListItem[]>([]);
@@ -29,13 +30,7 @@ export function LibraryPage() {
   return (
     <>
       <Header subtitle="1st Combined Legion Library" />
-      
-      <nav className="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-          <li><Link to="/hub">Hub</Link></li>
-          <li aria-current="page">Library</li>
-        </ol>
-      </nav>
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Library' }]} />
 
       <div className="container">
         <section className="card">

@@ -4,6 +4,7 @@ import { Header } from '../components/Header';
 import { FrameworkService } from '../../business/services/FrameworkService';
 import { ResolutionRenderer } from '../components/ResolutionRenderer';
 import { setupExportButton } from '../../infrastructure/utils/export.utils';
+import { PageBreadcrumb } from '../components/PageBreadcrumb';
 
 export function ResolutionViewPage() {
   const { id } = useParams<{ id: string }>();
@@ -53,14 +54,7 @@ export function ResolutionViewPage() {
   return (
     <>
       <Header subtitle="Resolution View" />
-      
-      <nav className="breadcrumb" aria-label="Breadcrumb">
-        <ol>
-            <li><Link to="/hub">Hub</Link></li>
-            <li><Link to="/library">Library</Link></li>
-          <li aria-current="page">Resolution {id}</li>
-        </ol>
-      </nav>
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Library', to: '/library' }, { label: `Resolution ${id}` }]} />
 
       <div className="page-actions">
         <Link to="/library" className="back-btn" aria-label="Back to Library">← Back to Library</Link>
