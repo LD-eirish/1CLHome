@@ -3,6 +3,12 @@
     "id": "issue-001",
     "title": "OPERATION THUNDERCLAP INFLICTS HEAVY DAMAGE ON WARDEN DEFENSES",
     "imageSrc": "FoxholeNewIssue1.png",
-    "uploadedAt": "Apr 1, 2026"
+    "uploadedAt": "Apr 2, 2026"
+  },
+  {
+    "id": "issue-002",
+    "title": "THE WAR IS OVER!",
+    "imageSrc": "FoxholeNewIssue2.png",
+    "uploadedAt": "Apr 5, 2026"
   }
 ]
