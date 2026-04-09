@@ -269,6 +269,7 @@ export default function BotDocumentationPage() {
             <ul>
               <li><b>/awards add_prestige</b> — Adds one prestige level</li>
               <li><b>/awards remove_prestige</b> — Removes one prestige level</li>
+              <li><b>/awards mass_prestige</b> — Adds one prestige level to all users which have a specific role</li>
             </ul>
             <h3>Viewing and Removing Awards</h3>
             <ul>

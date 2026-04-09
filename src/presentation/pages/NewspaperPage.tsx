@@ -32,7 +32,7 @@ export function NewspaperPage() {
 
         const data = (await response.json()) as NewspaperArticle[];
         if (!Array.isArray(data)) {
-          throw new Error('Invalid newspaper archive format.');
+          throw new TypeError('Invalid newspaper archive format.');
         }
 
         setArticles(data);
