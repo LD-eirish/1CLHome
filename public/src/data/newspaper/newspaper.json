@@ -16,5 +16,17 @@
     "title": "BRACKISH POINT HAS BEEN CAPTURED",
     "imageSrc": "FoxholeNewIssue3.png",
     "uploadedAt": "Apr 08, 2026"
+  },
+  {
+    "id": "issue-004",
+    "title": "COLONIALS SURVIVE THREE HOURS UNDER FIRE",
+    "imageSrc": "Foxhole_News_4.png",
+    "uploadedAt": "Apr 09, 2026"
+  },
+  {
+    "id": "issue-005",
+    "title": "COLONIALS FORCES SEIZE PLANA FADA",
+    "imageSrc": "Foxhole_News_5.png",
+    "uploadedAt": "Apr 10, 2026"
   }
 ]
