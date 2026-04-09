@@ -45,12 +45,8 @@ export function HubPage() {
         </nav>
 
         <div className="hub-image-block">
-          <img
-            src={assetPath('1CLTrain.jpg')}
-            alt="1CL train, symbol of the Combined Legion"
-            className="hub-train-image"
-          />
-          <p className="hub-image-caption">Real edited footage of a 1CL Scout Plane escorting a 1CL train back home.</p>
+          <img src={assetPath('1CLTrain.jpg')} alt="LOADING..." className="hub-train-image"/>
+          <p className="hub-image-caption">Actual edited footage of a 1CL Scout Plane escorting a 1CL train back home.</p>
         </div>
       </main>
     </>
