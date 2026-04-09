@@ -3,7 +3,7 @@
 import { Header } from '../components/Header';
 import { PageBreadcrumb } from '../components/PageBreadcrumb';
 import '../styles/components.css';
-import '../../styles/documentation.css';
+import '../styles/documentation.css';
 
 export default function BotDocumentationPage() {
   return (
