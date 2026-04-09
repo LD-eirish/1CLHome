@@ -28,6 +28,8 @@ export default function BotDocumentationPage() {
                 <li><a href="#role-synchronization">Role Synchronization</a></li>
                 <li><a href="#channel-protection">Channel Protection</a></li>
                 <li><a href="#recruitment-tracking">Recruitment Tracking</a></li>
+                <li><a href="#role-system">Role-Selection System</a></li>
+                <li><a href="#loa-system">Leave-of-Absence System</a></li>
                 <li><a href="#war-system">War System</a></li>
                 <li><a href="#administrative-tools">Administrative Tools</a></li>
                 <li><a href="#dashboard">Dashboard</a></li>
@@ -441,6 +443,63 @@ export default function BotDocumentationPage() {
               <li><b>/recruitdata remove</b> — Removes a specific recruitment entry. Requires confirmation.</li>
               <li><b>/recruitdata manual</b> — Manually assigns recruitment credit to a member, useful for cases where the automatic detection could not determine the inviter.</li>
               <li><b>/recruitdata backfill</b> — Analyses all currently active invite links and creates aggregate placeholder entries based on how many times each link has been used. This is a best-effort import for historical data — it cannot attribute individual joins to specific dates, but it does allow the recruiter leaderboard to reflect historical invite usage even before the bot was active.</li>
+            </ul>
+          </section>
+          <hr className="docs-divider" />
+          {/* --- Role-Selection System --- */}
+          <section className="docs-section" id="role-system">
+            <h2>Role-Selection System</h2>
+            <p>The Role-Selection System allows members to manage their roles through a simple embed with toggle-buttons.</p>
+            <h3>Setting Up the Role-Selection System</h3>
+            <ul>
+              <li><b>/selectrole</b> — Prepare the Role-Selection Embed for use on your Discord server.</li>
+            </ul>
+            <table className="docs-table">
+              <thead>
+                <tr><th>Option</th><th>Required</th><th>Description</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>description</td><td>Yes</td><td>Description of the Role-Selection embed</td></tr>
+                <tr><td>role1</td><td>Yes</td><td>First selectable role on the Select-Role embed with separate button</td></tr>
+                <tr><td>role2-role15</td><td>No</td><td>Additonal selectable roles on the Select-Role embed with separate buttons for each</td></tr>
+              </tbody>
+            </table>
+            <h3>How the Role-Selection System works</h3>
+            <ul>
+              <li>When a user clicks a Select-Role button on the Select-Role embed they will be granted the role defined by <code>role[n]</code>.</li>
+              <li>The Select-Role buttons act as a toggle. A user who has selected a specific role before can click it again to remove the role from their account.</li>
+            </ul>
+          </section>
+          <hr className="docs-divider" />
+          {/* --- LOA-System --- */}
+          <section className="docs-section" id="loa-system">
+            <h2>Leave-of-Abesence System</h2>
+            <p>The Leave-of-Absence System (short:LOA) enables members to indicate their absence through a simple button click.</p>
+            <p>It acts very similar to the Role-Selection System, with one big difference: it temporarily removes most of a user's roles while the user has the <code>loa_role</code> assigned.</p>
+            <p>It's useful for one specific scenario: when a member needs to take a break from active participation, and when they want to prevent any specified server pings from reaching them.</p>
+            <h3>Setting Up the LOA-System</h3>
+            <ul>
+              <li><b>/loa</b> — Prepare the Leave-of-Absence Embed for use on your Discord server.</li>
+            </ul>
+            <table className="docs-table">
+              <thead>
+                <tr><th>Option</th><th>Required</th><th>Description</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>loa_role</td><td>Yes</td><td>Role applied while a member is on loa</td></tr>
+                <tr><td>verified_role</td><td>Yes</td><td>Baseline verified role kept while a member is on loa</td></tr>
+                <tr><td>unverified_role</td><td>Yes</td><td>Baseline unverified role kept while a member is on loa</td></tr>
+                <tr><td>title</td><td>No</td><td>Title of the LOA embed posted by the bot</td></tr>
+                <tr><td>description</td><td>No</td><td>Description of the LOA embed posted by the bot</td></tr>
+                <tr><td>channel</td><td>No</td><td>Channel where the LOA embed is posted</td></tr>
+                <tr><td>log_channel</td><td>No</td><td>Channel where LOA actions are logged</td></tr>
+              </tbody>
+            </table>
+            <h3>How the LOA System works</h3>
+            <ul>
+              <li>When a user clicks the LOA button on the LOA embed they will be temporarily stripped of their roles, except the <code>verified_role</code> and <code>unverified_role</code>. Their previous roles are stored as a snapshot within the bot's database.</li>
+              <li>The LOA button acts as a toggle. A user who is on LOA can click it again to remove the LOA status and restore their original roles.</li>
+              <li>If your Discord server repeatedly pings different roles, a user on LOA will not receive those pings due to the temporaryrole removal.</li>
             </ul>
           </section>
           <hr className="docs-divider" />
