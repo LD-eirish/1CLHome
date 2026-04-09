@@ -12,25 +12,25 @@ export function DepartmentsPage() {
     },
     {
       id: 'it',
-      code: 'IT CO',
+      code: 'ITC',
       title: '1CL IT Company',
       description: 'Develops and maintains tools for 1CL — including the Discord bot and this website.'
     },
     {
       id: 'recruit',
-      code: 'RCR CO',
+      code: 'RCR',
       title: '1CL Recruitment Company',
       description: 'Handles recruitment and verification for all Central Group sub‑regiments.'
     },
     {
       id: 'logistics',
-      code: 'LOG CO',
+      code: 'LOG',
       title: '1CL Logistics Company',
       description: 'Logistics players across Central Group regiments. Coordinates supply, transport, and resource gathering.'
     },
     {
       id: 'facility',
-      code: 'FAC CO',
+      code: 'FAC',
       title: '1CL Facility Company',
       description: 'Responsible for construction, maintenance, and operation of facilities and defensive structures.'
     }
