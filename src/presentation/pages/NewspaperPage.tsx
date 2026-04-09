@@ -7,7 +7,6 @@ interface NewspaperArticle {
   id: string;
   title: string;
   imageSrc: string;
-  // Human-friendly date string, for example: "Apr 3, 2026"
   uploadedAt: string;
 }
 
@@ -141,7 +140,6 @@ export function NewspaperPage() {
                 style={{ transform: `scale(${zoom})` }}
               />
             </div>
-            <p className="newspaper-lightbox-hint">Tip: Use +/- controls to zoom.</p>
             <p className="newspaper-lightbox-title">{selected.title}</p>
           </div>
         </div>
