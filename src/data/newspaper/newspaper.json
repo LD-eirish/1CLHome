@@ -10,5 +10,11 @@
     "title": "THE WAR IS OVER!",
     "imageSrc": "FoxholeNewIssue2.png",
     "uploadedAt": "Apr 5, 2026"
+  },
+  {
+    "id": "issue-003",
+    "title": "BRACKISH POINT HAS BEEN CAPTURED",
+    "imageSrc": "FoxholeNewIssue3.png",
+    "uploadedAt": "Apr 08, 2026"
   }
 ]
