@@ -5,6 +5,9 @@ import { PageBreadcrumb } from '../components/PageBreadcrumb';
 import '../styles/components.css';
 import '../styles/documentation.css';
 
+const CURRENT_BOT_VERSION = 'v0.7.4 - "Management" Update';
+const DOCS_LAST_UPDATED = 'April 13, 2026';
+const BOT_MOTD = 'DOCUMENTATION IS CURRENTLY NOT UP-TO-DATE WITH THE LATEST BOT CHANGES!';
 export default function BotDocumentationPage() {
   return (
     <>
@@ -14,7 +17,18 @@ export default function BotDocumentationPage() {
         <section className="docs-content docs-dark-bg">
           <section className="docs-hero">
             <h1 className="docs-title">1CL Bot — Full Feature Documentation</h1>
-            <p className="docs-lead">This document describes every feature available in the 1CL Bot.</p>
+            <p className="docs-lead">This document describes every feature available in the 1CL Bot. A full version changelog can be found on the 1CL Discord!</p>
+            <p className="docs-version-value docs-version-value--motd">WARNING: {BOT_MOTD}</p>
+            <div className="docs-version-banner" role="status" aria-live="polite">
+              <div className="docs-version-row">
+                <span className="docs-version-label">Current Bot Release:</span>
+                <span className="docs-version-value">{CURRENT_BOT_VERSION}</span>
+              </div>
+              <div className="docs-version-row">
+                <span className="docs-version-label">Docs Last Updated:</span>
+                <span className="docs-version-value">{DOCS_LAST_UPDATED}</span>
+              </div>
+            </div>
           </section>
           <div className="docs-toc-top-full">
             <nav>

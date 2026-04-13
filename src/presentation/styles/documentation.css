@@ -122,6 +122,45 @@
   margin-bottom: 1.2rem;
   text-align: left;
 }
+
+.docs-version-banner {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  padding: 0.45rem 0.75rem;
+  margin-top: 0.1rem;
+  border: 1px solid rgba(201,168,79,0.22);
+  background: rgba(0,0,0,0.28);
+  border-radius: 2px;
+  box-shadow: none;
+}
+
+.docs-version-row {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.docs-version-label {
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: rgba(212,206,186,0.76);
+}
+
+.docs-version-value {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--gold);
+  text-shadow: none;
+}
+
+.docs-version-value--motd {
+  color: #d36161;
+}
 /* --- Docs Table Styles --- */
 .docs-table {
   width: 100%;
