@@ -54,6 +54,7 @@
     "joinedDate": "2025-11-17",
     "description": "Regiment description coming soon.",
     "leader": "Muffin",
+    "inactive": true,
     "tags": ["", "", ""],
     "logo": "1CLALogo.png",
     "activityTime": "UNKNOWN"
@@ -65,7 +66,7 @@
     "joinedDate": "2026-02-17",
     "description": "Ultra is an Infantry Regiment that focuses on using professional infantry tactics at a squad, platoon, and company level.",
     "leader": "Jeremiah",
-    "tags": ["", "", ""],
+    "tags": ["Infantry", "Logistics", "Transport"],
     "discord": "https://discord.gg/mEpeMtxafK",
     "logo": "UltraLogo.png",
     "activityTime": {
@@ -81,6 +82,7 @@
     "joinedDate": "2025-11-17",
     "description": "We focus on logistics and helping out our colleagues and friends. We do any type of logistics, either producing gear at a factory or transporting it to where it'll be used. We also do frontline stuff with whatever we manage to produce to help out more directly.",
     "leader": "Dwight Do Pix",
+    "inactive": true,
     "tags": ["Logistics", "Facility", "Frontline Support"],
     "discord": "https://discord.gg/DsRZJ9ZnRQ",
     "logo": "S9Logo.png",
@@ -97,6 +99,7 @@
     "joinedDate": "2026-03-06",
     "description": "1TPR is an elite intelligence and special operations unit dedicated to serving the Mesean Republic and its interests. We specialize in reconnaissance and sabotage missions, both close to the front and deep behind enemy lines. We use combined-arms tactics, employing light aircraft, watercraft and ground vehicles along with infantry to conduct reconnaissance, area denial, sabotage and other missions. We are no strangers to being surrounded, and death is treated more as an eventuality in our ranks, not just a risk.",
     "leader": "Tactical Raccoon",
+    "inactive": true,
     "tags": ["Intelligence", "Sabotage", "Combined Arms"],
     "discord": "https://discord.gg/5UTYdKgcGe",
     "logo": "1TPRLogo.png",
@@ -107,7 +110,7 @@
     }
   },
   {
-    "name": "Colonial Assembly Team",
+    "name": "Colonial Air Team",
     "abbreviation": "CAT",
     "group": "associate",
     "joinedDate": "2025-12-08",

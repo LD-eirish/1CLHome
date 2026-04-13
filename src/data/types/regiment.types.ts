@@ -17,6 +17,8 @@ export interface Regiment {
   description: string;
   // Optional regiment leader display name
   leader?: string;
+  // Optional inactive state used for visual card treatment
+  inactive?: boolean;
   tags: string[];
   discord?: string;
   // Optional path to a primary logo asset (stored in public/), e.g. 'TCSLogo.png'

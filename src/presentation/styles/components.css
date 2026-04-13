@@ -1033,6 +1033,8 @@ body.Derp-mode #Schmemil-toggle{
   display:flex;
   flex-direction:column;
   min-height:100%;
+  position:relative;
+  overflow:hidden;
 }
 
 /* Respect user's motion preferences */
@@ -1061,6 +1063,84 @@ body.Derp-mode #Schmemil-toggle{
 .regiment-card:hover{
   border-color:rgba(201,168,79,0.4);
   box-shadow:0 4px 16px rgba(0,0,0,0.5);
+}
+
+.regiment-card--inactive::before{
+  content:'Inactive';
+  position:absolute;
+  left:0;
+  right:0;
+  top:50%;
+  height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transform:translateY(-50%);
+  background:linear-gradient(180deg, rgba(226,190,108,0.78), rgba(150,116,52,0.82));
+  border:none;
+  border-radius:0;
+  color:rgba(255,247,224,0.98);
+  font-family:'Rajdhani', sans-serif;
+  font-size:0.92rem;
+  font-weight:800;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  text-shadow:0 2px 6px rgba(0,0,0,0.72);
+  box-shadow:0 0 0 1px rgba(66,46,14,0.55), 0 6px 16px rgba(0,0,0,0.35);
+  pointer-events:none;
+  z-index:2;
+}
+
+.regiment-card--inactive::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(0,0,0,0.18), transparent 54%),
+    linear-gradient(165deg, rgba(0,0,0,0.26), rgba(0,0,0,0.5));
+  backdrop-filter:brightness(0.68) saturate(0.56);
+  pointer-events:none;
+  z-index:1;
+}
+
+.regiment-card--inactive .regiment-card-content,
+.regiment-card--inactive .regiment-card-footer{
+  position:relative;
+  z-index:3;
+}
+
+.regiment-card--inactive .regiment-header > :not(.regiment-name-wrap):not(.regiment-logo-wrap),
+.regiment-card--inactive .regiment-joined,
+.regiment-card--inactive .regiment-leader,
+.regiment-card--inactive .regiment-activity,
+.regiment-card--inactive .regiment-desc,
+.regiment-card--inactive .regiment-tags,
+.regiment-card--inactive .discord-btn,
+.regiment-card--inactive .discord-btn--disabled{
+  filter:blur(1.25px) saturate(0.45) brightness(0.62);
+  opacity:0.58;
+}
+
+.regiment-name-wrap,
+.regiment-name{
+  position:relative;
+  z-index:4;
+}
+
+.regiment-card--inactive .regiment-name{
+  color:var(--gold);
+  opacity:1;
+  text-shadow:0 0 10px rgba(201,168,79,0.18);
+}
+
+.discord-btn--disabled,
+.discord-btn--disabled:hover{
+  background:linear-gradient(180deg, rgba(140,140,140,0.32), rgba(96,96,96,0.28));
+  color:rgba(226,226,226,0.88);
+  box-shadow:none;
+  cursor:not-allowed;
+  pointer-events:none;
+  border:1px solid rgba(190,190,190,0.24);
 }
 
 .regiment-header{
