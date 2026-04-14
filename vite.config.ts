@@ -18,7 +18,7 @@ export default defineConfig({
     port: 3000,
     open: true
   },
-    base: '/1CLHome/',
+    base: '/',
     build: {
     outDir: 'dist',
     sourcemap: true
