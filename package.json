@@ -1,7 +1,7 @@
 {
   "name": "1cl-home",
   "version": "2.0.0",
-  "description": "1st Combined Legion Information Hub - 5-Layer Architecture",
+  "description": "1st Combined Legion Information Hub",
   "type": "module",
   "scripts": {
     "dev": "vite",
