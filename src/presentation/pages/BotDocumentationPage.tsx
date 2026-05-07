@@ -7,7 +7,7 @@ import '../styles/documentation.css';
 
 const CURRENT_BOT_VERSION = 'v0.7.4 - "Management" Update';
 const DOCS_LAST_UPDATED = 'April 13, 2026';
-const BOT_MOTD = 'DOCUMENTATION IS CURRENTLY NOT UP-TO-DATE WITH THE LATEST BOT CHANGES!';
+const BOT_MOTD = 'WARNING: DOCUMENTATION IS CURRENTLY NOT UP-TO-DATE WITH THE LATEST BOT CHANGES!';
 export default function BotDocumentationPage() {
   return (
     <>
@@ -18,7 +18,7 @@ export default function BotDocumentationPage() {
           <section className="docs-hero">
             <h1 className="docs-title">1CL Bot — Full Feature Documentation</h1>
             <p className="docs-lead">This document describes every feature available in the 1CL Bot. A full version changelog can be found on the 1CL Discord!</p>
-            <p className="docs-version-value docs-version-value--motd">WARNING: {BOT_MOTD}</p>
+            <p className="docs-version-value docs-version-value--motd">{BOT_MOTD}</p>
             <div className="docs-version-banner" role="status" aria-live="polite">
               <div className="docs-version-row">
                 <span className="docs-version-label">Current Bot Release:</span>
