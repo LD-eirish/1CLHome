@@ -31,18 +31,19 @@
       "timezone": "CET"
     }
   },
-  {
-    "name": "[3/1CL] War Machine",
-    "abbreviation": "WM",
+    {
+    "name": "[3/1CL] 33rd Field Artillery Corps",
+    "abbreviation": "33FAC",
     "group": "central",
-    "joinedDate": "2025-11-20",
-    "description": "WM specializes in manufacturing and driving tanks or other vehicles. We also have an unhealthy addiction to facilities.",
-    "leader": "zanthosranger",
-    "tags": ["Armor", "Facility", "Scrooping"],
-    "discord": "https://discord.gg/NBRDQdsfWy",
-    "logo": "WMLogo.png",
+    "joinedDate": "2026-05-12",
+    "description": "The 33rd Field Artillery Corps was founded on one belief: when the line begins to break, artillery decides the battle. Born as a rapid-response unit against Warden bombardments, the 33rd has stood where the fighting was fiercest—from the long defense of Treasury Bridge to the fire missions of Weephome and the armored assaults of Third Chapter. We are not just another artillery regiment. We are the force that answers when allies call for support. With precision 120mm fire, relentless bombardments, anti-armor operations, and naval landing support, the 33rd exists to turn chaos into victory. During a single mission at Third Chapter, over 300 rounds were fired in defense of the front, destroying enemy armor, infantry, and bunker positions. We fight beside our allies. We hold the line when others cannot. And when our guns begin to fire, the enemy already knows what comes next.",
+    "leader": "SovietBvando",
+    "inactive": false,
+    "tags": ["Artillery", "Infantry", "Combined Arms"],
+    "discord": "https://discord.gg/aZywd66JZw",
+    "logo": "1CL33FAC.png",
     "activityTime": {
-      "startTime": "19:00",
+      "startTime": "18:00",
       "endTime": "02:00",
       "timezone": "CET"
     }
@@ -75,6 +76,22 @@
       "timezone": "CET"
     }
   },
+    {
+    "name": "[5/1CL] War Machine",
+    "abbreviation": "WM",
+    "group": "central",
+    "joinedDate": "2025-11-20",
+    "description": "WM specializes in manufacturing and driving tanks or other vehicles. We also have an unhealthy addiction to facilities.",
+    "leader": "zanthosranger",
+    "tags": ["Armor", "Facility", "Scrooping"],
+    "discord": "https://discord.gg/NBRDQdsfWy",
+    "logo": "WMLogo.png",
+    "activityTime": {
+      "startTime": "19:00",
+      "endTime": "02:00",
+      "timezone": "CET"
+    }
+  },
   {
     "name": "[E/1CL] Eternal Combat Engineer Corps",
     "abbreviation": "ETRNL",
@@ -88,23 +105,6 @@
     "activityTime": {
       "startTime": "16:00",
       "endTime": "23:00",
-      "timezone": "CET"
-    }
-  },
-  {
-    "name": "[?/1CL] 33rd Field Artillery Corps",
-    "abbreviation": "33FAC",
-    "group": "central",
-    "joinedDate": "2026-05-12",
-    "description": "The 33rd Field Artillery Corps was founded on one belief: when the line begins to break, artillery decides the battle. Born as a rapid-response unit against Warden bombardments, the 33rd has stood where the fighting was fiercest—from the long defense of Treasury Bridge to the fire missions of Weephome and the armored assaults of Third Chapter. We are not just another artillery regiment. We are the force that answers when allies call for support. With precision 120mm fire, relentless bombardments, anti-armor operations, and naval landing support, the 33rd exists to turn chaos into victory. During a single mission at Third Chapter, over 300 rounds were fired in defense of the front, destroying enemy armor, infantry, and bunker positions. We fight beside our allies. We hold the line when others cannot. And when our guns begin to fire, the enemy already knows what comes next.",
-    "leader": "SovietBvando",
-    "inactive": false,
-    "tags": ["Artillery", "Infantry", "Combined Arms"],
-    "discord": "https://discord.gg/aZywd66JZw",
-    "logo": "1CL33FAC.png",
-    "activityTime": {
-      "startTime": "18:00",
-      "endTime": "02:00",
       "timezone": "CET"
     }
   },
