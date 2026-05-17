@@ -92,6 +92,21 @@
       "timezone": "CET"
     }
   },
+    {
+    "name": "[C/1CL] Colonial Air Team",
+    "abbreviation": "CAT",
+    "group": "central",
+    "joinedDate": "2025-05-17",
+    "description": "The Colonial Air Team is a regiment of focused backline facility managers and precise logistics enjoyers with a veteran mix of high-end naval, armour, and air combat. Featuring a rock-solid command structure, optimized systems integration, and proven super-heavy production capacity, we just need dedicated players to help us deliver the firepower!",
+    "leader": "DonutBurger",
+    "tags": ["Facility", "Airborne", "Logistics"],
+    "logo": "1CLALogo.png",
+    "activityTime": {
+      "startTime": "14:00",
+      "endTime": "23:00",
+      "timezone": "CET"
+    }
+  },
   {
     "name": "[E/1CL] Eternal Combat Engineer Corps",
     "abbreviation": "ETRNL",
@@ -141,16 +156,5 @@
       "endTime": "10:00",
       "timezone": "CET"
     }
-  },
-  {
-    "name": "Colonial Air Team",
-    "abbreviation": "CAT",
-    "group": "associate",
-    "joinedDate": "2025-12-08",
-    "description": "Regiment description coming soon.",
-    "leader": "DonutBurger",
-    "tags": ["Infantry", "Artillery", "Logistics"],
-    "logo": "1CLALogo.png",
-    "activityTime": "UNKNOWN"
   }
 ]
