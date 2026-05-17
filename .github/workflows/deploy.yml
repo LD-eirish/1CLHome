@@ -23,9 +23,12 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build --if-present
-      - name: Deploy to gh-pages (fallback)
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
+          path: ./dist
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
