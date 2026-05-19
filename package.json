@@ -19,11 +19,10 @@
   },
   "keywords": [
     "1CL",
-    "framework",
     "typescript",
     "5-layer-architecture"
   ],
-  "author": "1CL Team",
+  "author": "1CL - eirish",
   "license": "MIT",
   "dependencies": {
     "html2canvas": "^1.4.1",
