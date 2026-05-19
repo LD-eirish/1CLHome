@@ -3,7 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { FrameworkService } from '../../business/services/FrameworkService';
 import { ResolutionRenderer } from '../components/ResolutionRenderer';
-import { setupExportButton } from '../../infrastructure/utils/export.utils';
 import { PageBreadcrumb } from '../components/PageBreadcrumb';
 
 export function ResolutionViewPage() {
@@ -41,15 +40,6 @@ export function ResolutionViewPage() {
 
     loadResolution();
   }, [id]);
-
-  useEffect(() => {
-    // Setup export button handler after content is loaded
-    let cleanup: () => void = () => {};
-    if (!loading && !error && content && id) {
-      cleanup = setupExportButton('exportMain', 'resolution-content', `resolution-${id}.jpg`);
-    }
-    return cleanup;
-  }, [loading, error, content, id]);
 
   return (
     <>

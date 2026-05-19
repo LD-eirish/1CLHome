@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { assetPath } from '../../infrastructure/utils/asset.utils';
 import { FrameworkService } from '../../business/services/FrameworkService';
 import { FrameworkRenderer } from '../components/FrameworkRenderer';
-import { setupExportButton } from '../../infrastructure/utils/export.utils';
 import { TableOfContents } from '../components/TableOfContents';
 import { PageBreadcrumb } from '../components/PageBreadcrumb';
 
@@ -97,12 +95,6 @@ export function FrameworkPage() {
 
     loadFramework();
   }, []);
-
-  useEffect(() => {
-    // Setup export button handler after content is loaded
-    if (loading || error || !content) return;
-    return setupExportButton('exportFw', 'framework-content', '1CL-Framework.jpg');
-  }, [loading, error, content]);
 
   return (
     <>
