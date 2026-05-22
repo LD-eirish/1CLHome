@@ -398,6 +398,90 @@
 }
 
 /* Grid layouts */
+
+/* Mobile / small-screen adjustments for layout and header stacking */
+@media (max-width: 900px) {
+  .header-inner{
+    padding-left:16px;
+    padding-right:16px;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+  }
+
+  .site-header .brand{
+    position:static;
+    transform:none;
+    left:auto;
+    top:auto;
+    padding:0;
+  }
+
+  .site-header .header-actions{
+    position:static;
+    transform:none;
+    right:auto;
+    margin:0;
+    width:100%;
+    justify-content:flex-end;
+    gap:8px;
+    flex-wrap:wrap;
+    /* hidden by default on small screens in favor of burger menu */
+    display: none;
+  }
+
+  .site-header .header-actions.open{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:6px;
+    background:var(--card);
+    padding:10px;
+    border-radius:6px;
+    box-shadow:0 8px 26px rgba(0,0,0,0.5);
+    width:100%;
+  }
+
+  .site-header .header-actions.open .compact-nav-item{
+    padding:10px 12px;
+    border-radius:4px;
+    color:var(--muted);
+    background:transparent;
+    text-align:left;
+  }
+
+  .brand-text h1{ font-size:16px; }
+  .subtitle{ font-size:10px; }
+
+  .compact-nav-item{ padding:8px 10px; font-size:0.95rem; }
+
+  .hub-page.container{ padding:60px 12px 0; }
+
+  .hub-masthead{ flex-direction:column; align-items:flex-start; gap:12px; padding:18px 0; }
+  .hub-masthead-title{ font-size:clamp(2.2rem, 6.5vw, 3.2rem); }
+  .hub-masthead-sub{ margin-left:0; max-width:100%; }
+  .hub-masthead-seal{ display:none; }
+
+  .hub-nav{ grid-template-columns:repeat(2,1fr); }
+
+  .hero{ flex-direction:column; align-items:flex-start; gap:12px; }
+  .hero-logo{ width:64px; }
+}
+
+@media (max-width: 560px) {
+  .header-inner{ padding-left:12px; padding-right:12px; }
+  .compact-nav-item{ font-size:0.9rem; padding:8px 8px; }
+  .header-actions{ width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; gap:6px; }
+
+  .hub-nav{ grid-template-columns:1fr; }
+  .hub-masthead-title{ font-size:clamp(1.8rem, 8vw, 2.6rem); }
+  .hub-page.container{ padding:40px 10px 0; }
+  .hero-logo{ width:56px; }
+
+  /* Ensure large images don't overflow viewport on very small screens */
+  .hub-train-image, .hero-logo, .hub-seal-img{ max-width:100%; height:auto; }
+}
+
 .tiers{
   display:grid;
   grid-template-columns:repeat(2,1fr);
