@@ -9,10 +9,18 @@
 
 /* Header */
 .site-header{
-  padding:12px 0 8px;
-  background:rgba(0,0,0,0.6);
-  border-bottom:1px solid rgba(201,168,79,0.25);
-  border-top:2px solid rgba(201,168,79,0.35);
+  position:relative;
+  padding:16px 0 8px;
+  background:linear-gradient(180deg, rgba(8,10,8,0.36), rgba(8,10,8,0.2));
+  backdrop-filter:blur(6px) saturate(1.05);
+  border-bottom:1px solid rgba(201,168,79,0.14);
+  border-top:0;
+  width:100vw;
+  left:50%;
+  margin-left:-50vw;
+  box-sizing:content-box;
+  /* ensure header retains vertical space when child items are absolutely positioned */
+  min-height:64px;
 }
 
 .header-inner{
@@ -22,7 +30,28 @@
   max-width:1100px;
   margin:0 auto;
   padding:0 8px;
+  padding-left:84px;
+  padding-right:140px;
 }
+
+/* Pin brand (logo + title) to the viewport left and page actions to the viewport right */
+.site-header .brand{
+  position:absolute;
+  left:18px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:60;
+}
+
+.site-header .header-actions{
+  position:absolute;
+  right:18px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:60;
+}
+
+/* Ensure the centered header content doesn't overlap pinned items */
 
 .brand{
   display:flex;
@@ -69,9 +98,11 @@
 .compact-nav-item{
   color:var(--muted);
   text-decoration:none;
-  padding:8px 12px;
-  border-radius:2px;
-  transition:all 0.2s;
+  padding:10px 14px;
+  border-radius:3px;
+  transition:all 0.18s;
+  font-size:0.95rem;
+  font-weight:600;
 }
 
 .compact-nav-item:hover{
@@ -186,6 +217,45 @@
   padding:18px;
 }
 
+.hub-page{
+  position:relative;
+  overflow:hidden;
+  min-height:calc(100vh - 120px);
+}
+
+.hub-page.container{
+  max-width:none;
+  width:100%;
+  margin:0;
+  padding:80px 0 0; /* nudged down slightly to create more space above the masthead */
+}
+
+.hub-page .hub-masthead{
+  padding-left:clamp(64px, 10vw, 160px);
+  padding-right:8px;
+}
+
+.hub-page-background{
+  position:absolute;
+  inset:0;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  filter:grayscale(1) contrast(0.78) brightness(0.66) blur(1px);
+  opacity:0.16;
+  pointer-events:none;
+}
+
+.hub-page-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at top left, rgba(201,168,79,0.18), transparent 42%),
+    radial-gradient(circle at bottom right, rgba(0,0,0,0.5), transparent 55%),
+    linear-gradient(180deg, rgba(8,14,10,0.2), rgba(8,14,10,0.58));
+  pointer-events:none;
+}
+
 /* Hub page — masthead */
 .hub-masthead{
   display:flex;
@@ -201,6 +271,7 @@
   display:flex;
   flex-direction:column;
   align-items:flex-start;
+  margin-left: 0;
 }
 
 .hub-eyebrow{
@@ -214,20 +285,24 @@
 
 .hub-masthead-title{
   font-family:'Rajdhani', sans-serif;
-  font-size:2.4rem;
-  font-weight:700;
+  font-size:clamp(3.2rem, 7vw, 4.2rem);
+  font-weight:400;
   text-transform:uppercase;
-  letter-spacing:0.07em;
-  color:var(--khaki);
+  letter-spacing:0.05em;
+  color:#ffcf33;
   margin:0 0 8px;
   line-height:1.05;
+  text-shadow:0 0 18px rgba(230, 209, 24, 0.22);
 }
 
 .hub-masthead-sub{
-  color:rgba(191,185,161,0.85);
-  font-size:0.88rem;
-  margin:0 0 18px;
+  color:rgba(220,220,220,0.92);
+  font-size:1rem;
+  margin:8px 0 18px;
   letter-spacing:0.01em;
+  max-width:62ch;
+  line-height:1.6;
+  margin-left: clamp(8px, 3.5vw, 38px);
 }
 
 .hub-masthead-seal{
@@ -414,6 +489,19 @@
   .hub-masthead{
     flex-direction:column;
     align-items:flex-start;
+  }
+
+  .site-header .brand{
+    left:12px;
+  }
+
+  .site-header .header-actions{
+    right:12px;
+  }
+
+  .header-inner{
+    padding-left:64px;
+    padding-right:110px;
   }
 
   .hub-seal-img{

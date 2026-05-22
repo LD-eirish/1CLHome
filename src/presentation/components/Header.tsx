@@ -5,7 +5,7 @@ interface HeaderProps {
   readonly subtitle?: string;
 }
 
-export function Header({ subtitle = 'Welcome — 1CL Hub & Library' }: Readonly<HeaderProps>) {
+export function Header({ subtitle = 'Welcome — 1CL Hub' }: Readonly<HeaderProps>) {
   return (
     <header className="site-header">
       <div className="header-inner container">
@@ -18,13 +18,12 @@ export function Header({ subtitle = 'Welcome — 1CL Hub & Library' }: Readonly<
             <p className="subtitle">{subtitle}</p>
           </div>
         </div>
-        <div className="header-actions">
-          <Link to="/members" className="back-btn">Members</Link>
-          <Link to="/central-group-info" className="back-btn">Central Group</Link>
-          <Link to="/departments" className="back-btn">Departments</Link>
-          <Link to="/newspaper" className="back-btn">Newspaper</Link>
-          <Link to="/bot-documentation" className="back-btn">Bot Documentation</Link>
-        </div>
+        <nav className="header-actions" aria-label="Main navigation">
+          <Link to="/central-group" className="compact-nav-item">Members</Link>
+          <Link to="/central-group-info" className="compact-nav-item">Central Group</Link>
+          <Link to="/newspaper" className="compact-nav-item">Newspaper</Link>
+          <Link to="/bot-documentation" className="compact-nav-item">Bot Documentation</Link>
+        </nav>
       </div>
     </header>
   );

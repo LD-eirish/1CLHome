@@ -31,12 +31,8 @@ export function CentralGroupPage() {
 
   return (
     <>
-      <Header subtitle="Partial integration regiments" />
-      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Members', to: '/members' }, { label: 'Central Group' }]} />
-
-      <div className="page-actions">
-        <Link to="/members" className="back-btn" aria-label="Back to Members">← Back to Members</Link>
-      </div>
+      <Header subtitle="Federated Regiments" />
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Central Group' }]} />
 
       <main className="container">
         <section className="hero card">

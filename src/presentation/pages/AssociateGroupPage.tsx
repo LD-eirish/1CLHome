@@ -32,10 +32,10 @@ export function AssociateGroupPage() {
   return (
     <>
       <Header subtitle="Independent coordination regiments" />
-      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Members', to: '/members' }, { label: 'Associate Group' }]} />
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Members', to: '/central-group' }, { label: 'Associate Group' }]} />
 
       <div className="page-actions">
-        <Link to="/members" className="back-btn" aria-label="Back to Members">← Back to Members</Link>
+        <Link to="/central-group" className="back-btn" aria-label="Back to Members">← Back to Members</Link>
       </div>
 
       <main className="container">
