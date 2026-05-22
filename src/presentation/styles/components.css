@@ -178,6 +178,9 @@
   color:var(--gold);
 }
 
+/* Hide mobile burger by default; shown in mobile media query */
+.header-burger{ display:none; }
+
 .discord-btn{
   display:inline-flex;
   align-items:center;
