@@ -18,7 +18,7 @@ export function HubPage() {
               1st Combined Legion
             </h2>
             <p className="hub-masthead-sub">
-              1CL is a federation of Colonial regiments that work together to maximize efficiency and impact in the war effort. A core goal of 1CL is to serve as a hub for public contribution, collaboration, and resources for the wider Colonial community—not just our own group. Each regiment remains independent and may leave at any time; members benefit from deep cooperation, shared resources, and a strong, unified presence on the battlefield.
+              1CL is a federation of Colonial regiments that works together to maximize efficiency and impact in the war effort. The core goals of 1CL are to embrace collaboration between Colonial regiments, provide public contributions, and help regiments grow together. 1CL doesn't just focus on its own; but on the wider Colonial community. Each regiment remains independent and may leave at any time; while they benefit from deep cooperation, shared resources and logistics, and a strong, unified presence on the battlefield.
             </p>
           </div>
           <a
