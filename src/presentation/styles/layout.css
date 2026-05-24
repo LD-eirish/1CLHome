@@ -209,6 +209,88 @@
   opacity:0.85;
 }
 
+/* Shared page intro shell used by Central Group, Central Group Info, and Newspaper */
+.page-intro{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:22px 20px;
+  background:linear-gradient(135deg, rgba(201,168,79,0.06), rgba(201,168,79,0.02));
+  border:1px solid rgba(201,168,79,0.12);
+}
+
+.page-intro--stacked{
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.page-intro-copy{
+  flex:1;
+  min-width:0;
+}
+
+.page-intro-kicker{
+  margin:0 0 8px;
+  font-family:'Rajdhani', sans-serif;
+  font-size:0.68rem;
+  text-transform:uppercase;
+  letter-spacing:0.2em;
+  color:rgba(201,168,79,0.72);
+  font-weight:700;
+}
+
+.page-intro-title{
+  margin:0 0 8px;
+  font-family:'Rajdhani', sans-serif;
+  font-size:clamp(2rem, 4vw, 3rem);
+  font-weight:400;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  color:#ffcf33;
+  line-height:1.08;
+  text-shadow:0 0 14px rgba(230,209,24,0.16);
+}
+
+.page-intro-lead{
+  margin:0;
+  max-width:70ch;
+  color:rgba(220,220,220,0.9);
+  line-height:1.6;
+  font-size:1rem;
+}
+
+/* Shared content rhythm for aligned pages */
+.page-section{
+  margin-top:18px;
+}
+
+.page-section + .page-section{
+  margin-top:16px;
+}
+
+.page-section .card,
+.page-intro.card{
+  box-shadow:0 8px 24px rgba(0,0,0,0.38);
+  border:1px solid rgba(201,168,79,0.1);
+}
+
+.page-section h3,
+.page-section h2{
+  margin-top:0;
+}
+
+.page-intro-visual{
+  flex:0 0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.page-intro-visual .hero-logo{
+  width:78px;
+}
+
 .hub-hero{
   display:flex;
   align-items:center;
@@ -462,6 +544,11 @@
   .hub-masthead-sub{ margin-left:0; max-width:100%; }
   .hub-masthead-seal{ display:none; }
 
+  .page-intro{ flex-direction:column; align-items:flex-start; padding:18px 16px; }
+  .page-intro-title{ font-size:clamp(1.8rem, 5.5vw, 2.4rem); }
+  .page-intro-lead{ max-width:100%; }
+  .page-intro-visual{ width:100%; justify-content:flex-start; }
+
   .hub-nav{ grid-template-columns:repeat(2,1fr); }
 
   .hero{ flex-direction:column; align-items:flex-start; gap:12px; }
@@ -477,6 +564,10 @@
   .hub-masthead-title{ font-size:clamp(1.8rem, 8vw, 2.6rem); }
   .hub-page.container{ padding:40px 10px 0; }
   .hero-logo{ width:56px; }
+
+  .page-intro{ padding:16px 14px; }
+  .page-intro-title{ font-size:clamp(1.6rem, 6vw, 2.1rem); }
+  .page-intro-lead{ font-size:0.95rem; }
 
   /* Ensure large images don't overflow viewport on very small screens */
   .hub-train-image, .hero-logo, .hub-seal-img{ max-width:100%; height:auto; }

@@ -3,7 +3,7 @@
 /* Breadcrumb */
 .breadcrumb{
   background:rgba(0,0,0,0.3);
-  padding:10px 0;
+  padding:8px 0;
   margin:0;
   border-bottom:1px solid rgba(201,168,79,0.1);
   /* full-bleed breadcrumb bar pinned to viewport edges */
@@ -28,7 +28,7 @@
 .breadcrumb li{
   display:flex;
   align-items:center;
-  font-size:14px;
+  font-size:13px;
 }
 
 .breadcrumb li:not(:last-child)::after{
@@ -231,8 +231,8 @@
 
 @media (max-width:768px){
   .breadcrumb ol{
-    font-size:13px;
-    padding:0 12px;
+    font-size:12px;
+    padding:0 12px 0 12px;
   }
   
   /* Convert TOC to relative positioning on mobile */
@@ -266,8 +266,9 @@
 
 @media (max-width:560px){
   .breadcrumb ol{
-    font-size:12px;
-    gap:6px;
+    font-size:11px;
+    gap:5px;
+    padding:0 10px;
   }
   
   .breadcrumb li:not(:last-child)::after{

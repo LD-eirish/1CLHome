@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { assetPath } from '../../infrastructure/utils/asset.utils';
 import { RegimentCard } from '../components/RegimentCard';
@@ -32,22 +31,19 @@ export function AssociateGroupPage() {
   return (
     <>
       <Header subtitle="Independent coordination regiments" />
-      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Members', to: '/central-group' }, { label: 'Associate Group' }]} />
-
-      <div className="page-actions">
-        <Link to="/central-group" className="back-btn" aria-label="Back to Members">← Back to Members</Link>
-      </div>
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Associate Group' }]} />
 
       <main className="container">
-        <section className="hero card">
-          <div className="hero-left">
-            <h2>Associate Group (LAG)</h2>
-            <p className="lead">
-              Regiments that maintain greater independence: they coordinate on joint operations and strategic objectives 
+        <section className="hero card page-intro page-intro--split">
+          <div className="page-intro-copy">
+            <p className="page-intro-kicker">Independent Regiments</p>
+            <h2 className="page-intro-title">Associate Group (LAG)</h2>
+            <p className="page-intro-lead">
+              Regiments that maintain greater independence: they coordinate on joint operations and strategic objectives
               but may decline centralized HR participation and retain lighter command duties.
             </p>
           </div>
-          <div className="hero-right">
+          <div className="page-intro-visual">
             <img src={assetPath('1CLLogo.png')} alt="1CL Logo" className="hero-logo" />
           </div>
         </section>

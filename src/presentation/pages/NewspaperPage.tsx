@@ -71,9 +71,10 @@ export function NewspaperPage() {
       <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: '1CL Newspaper' }]} />
 
       <main className="container">
-        <section className="card newspaper-upload-card no-export">
-          <h2>1CL Newspaper</h2>
-          <p className="lead">1CL sponsored news from the Charlie Shard frontlines.</p>
+        <section className="card page-intro page-intro--stacked newspaper-upload-card no-export">
+          <p className="page-intro-kicker">Press Archive</p>
+          <h2 className="page-intro-title">1CL Newspaper</h2>
+          <p className="page-intro-lead">1CL sponsored news from the Charlie Shard frontlines.</p>
         </section>
 
         <section className="newspaper-board" aria-label="Newspaper article board">
@@ -120,10 +121,14 @@ export function NewspaperPage() {
       </main>
 
       {selected && (
-        <div className="newspaper-lightbox" role="dialog" aria-modal="true" onClick={closeArticle}>
-          <div className="newspaper-lightbox-inner" onClick={(e) => e.stopPropagation()}>
+        <dialog
+          className="newspaper-lightbox"
+          open
+          aria-label={selected.title}
+        >
+          <div className="newspaper-lightbox-inner">
             <div className="newspaper-lightbox-toolbar">
-              <div className="newspaper-zoom-controls" role="group" aria-label="Zoom controls">
+              <div className="newspaper-zoom-controls" aria-label="Zoom controls">
                 <button type="button" className="newspaper-zoom-btn" onClick={zoomOut} aria-label="Zoom out">−</button>
                 <button type="button" className="newspaper-zoom-btn" onClick={resetZoom} aria-label="Reset zoom">{Math.round(zoom * 100)}%</button>
                 <button type="button" className="newspaper-zoom-btn" onClick={zoomIn} aria-label="Zoom in">+</button>
@@ -142,7 +147,7 @@ export function NewspaperPage() {
             </div>
             <p className="newspaper-lightbox-title">{selected.title}</p>
           </div>
-        </div>
+        </dialog>
       )}
     </>
   );

@@ -538,9 +538,9 @@
 }
 
 .pass-indicator.pending{
-  background:linear-gradient(180deg, rgba(201,168,79,0.2), rgba(201,168,79,0.12));
-  color:#fffaed;
-  border:1px solid rgba(201,168,79,0.3);
+  background:linear-gradient(180deg, rgba(201,168,79,0.38), rgba(201,168,79,0.26));
+  color:#221606;
+  border:1px solid rgba(201,168,79,0.42);
 }
 
 .pass-indicator.rejected{
@@ -551,11 +551,11 @@
 
 /* Forms */
 input[type="search"]{
-  background:rgba(255,255,255,0.02);
-  border:1px solid rgba(255,255,255,0.02);
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.14);
   padding:8px 32px 8px 12px;
   border-radius:2px;
-  color:#d4ceba;
+  color:#111111;
   font-size:14px;
   width:100%;
   max-width:300px;
@@ -762,12 +762,12 @@ input[type="search"]:focus{
 .faction-cta{
   font-size:0.85rem;
   font-weight:600;
-  color:rgba(201,178,122,0.8);
+  color:#161009;
   text-align:center;
   padding:0.65rem;
   border:1px solid rgba(201,168,79,0.18);
   border-radius:2px;
-  background:rgba(201,168,79,0.03);
+  background:rgba(201,168,79,0.26);
   text-transform:uppercase;
   letter-spacing:0.08em;
   transition:color 0.2s, background 0.2s, border-color 0.2s;
@@ -849,7 +849,7 @@ input[type="search"]:focus{
 .regiment-tags{
   display:flex;
   flex-wrap:wrap;
-  gap:6px;
+  gap:10px;
   margin-top:10px;
 }
 
@@ -859,15 +859,20 @@ input[type="search"]:focus{
 
 .regiment-tags .tag{
   display:inline-block;
-  padding:3px 7px;
-  background:rgba(201,168,79,0.05);
-  border:1px solid rgba(201,168,79,0.2);
-  border-radius:2px;
-  font-size:0.65rem;
-  color:rgba(201,168,79,0.8);
+  padding:0;
+  background:transparent;
+  border:none;
+  border-radius:0;
+  font-size:0.72rem;
+  color:var(--gold);
   font-weight:600;
   text-transform:uppercase;
   letter-spacing:0.07em;
+}
+
+.regiment-tags .tag::before,
+.regiment-tags .tag::after{
+  content:none;
 }
 
 .faction-divider{
@@ -1111,7 +1116,7 @@ body.Derp-mode #Schmemil-toggle{
   background:linear-gradient(180deg, rgba(226,190,108,0.78), rgba(150,116,52,0.82));
   border:none;
   border-radius:0;
-  color:rgba(255,247,224,0.98);
+  color:#070503;
   font-family:'Rajdhani', sans-serif;
   font-size:0.92rem;
   font-weight:800;
@@ -1265,8 +1270,8 @@ body.Derp-mode #Schmemil-toggle{
 /* Newspaper page */
 .newspaper-upload-card{
   margin-bottom:16px;
-  background:linear-gradient(180deg, rgba(53,80,49,0.16), rgba(53,80,49,0.08));
-  border:1px solid rgba(53,80,49,0.35);
+  background:linear-gradient(135deg, rgba(201,168,79,0.06), rgba(201,168,79,0.02));
+  border:1px solid rgba(201,168,79,0.12);
 }
 
 .newspaper-board{

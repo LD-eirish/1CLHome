@@ -7,9 +7,10 @@ export function CentralLegionInfoPage() {
       <Header subtitle="About the Central Group & 1CL Membership" />
       <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Central Group Info' }]} />
       <main className="container central-legion-info">
-        <section className="card info-card">
-          <h2>What is the Central Group?</h2>
-          <p className="info-subtitle">Federation of Regiments</p>
+        <section className="card page-intro page-intro--stacked info-card">
+          <p className="page-intro-kicker">Orientation & Membership</p>
+          <h2 className="page-intro-title">What is the Central Group?</h2>
+          <p className="page-intro-lead">Federation of regiments, shared systems, and independent command identity.</p>
           <p>
             <strong>The Central Group of 1CL</strong> is a federation of regiments working together to maximize efficiency and impact in the war effort.
             A core goal of 1CL is to serve as a hub for public contribution, collaboration, and resources for the wider Colonial community, not just for our own group.

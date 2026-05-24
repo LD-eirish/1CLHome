@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { assetPath } from '../../infrastructure/utils/asset.utils';
 import { RegimentCard } from '../components/RegimentCard';
@@ -35,15 +34,16 @@ export function CentralGroupPage() {
       <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Central Group' }]} />
 
       <main className="container">
-        <section className="hero card">
-          <div className="hero-left">
-            <h2>Central Group (LCG)</h2>
-            <p className="lead">
-              Regiments that opt into fuller integration: they participate in centralized HR/recruitment, 
+        <section className="hero card page-intro page-intro--split">
+          <div className="page-intro-copy">
+            <p className="page-intro-kicker">Federated Regiment Directory</p>
+            <h2 className="page-intro-title">1CL Member Regiments</h2>
+            <p className="page-intro-lead">
+              Regiments that opt into fuller integration: they participate in centralized HR/recruitment,
               contribute to shared logistics, and take on broader command responsibilities.
             </p>
           </div>
-          <div className="hero-right">
+          <div className="page-intro-visual">
             <img src={assetPath('1CLLogo.png')} alt="1CL Logo" className="hero-logo" />
           </div>
         </section>
