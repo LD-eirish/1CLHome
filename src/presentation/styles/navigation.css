@@ -6,12 +6,11 @@
   padding:8px 0;
   margin:0;
   border-bottom:1px solid rgba(201,168,79,0.1);
-  /* full-bleed breadcrumb bar pinned to viewport edges */
   position:relative;
-  width:100vw;
-  left:50%;
-  margin-left:-50vw;
-  box-sizing:content-box;
+  width:100%;
+  left:auto;
+  margin-left:0;
+  box-sizing:border-box;
 }
 
 .breadcrumb ol{
