@@ -92,6 +92,22 @@
       "timezone": "CET"
     }
   },
+  {
+    "name": "[B/1CL] Barrack Bunnies",
+    "abbreviation": "BUNNI",
+    "group": "central",
+    "joinedDate": "2025-05-27",
+    "description": "The Barrack Bunnies focus on engaging each independent member of the regiment in other activities, ensuring they become as well-versed in different groups as possible. We maintain a lax rank structure (or none at all), with an emphasis on helping new players find roles where they can learn on the field and transition into proper regiments they find most enjoyable. The highlight of the regiment is our focus on squad-centric fire missions.",
+    "leader": "Styx0rfer",
+    "tags": ["Training", "Infantry", "Logistics"],
+    "discord": "https://discord.gg/ZxfhxFmCX",
+    "logo": "1CLLogo.png",
+    "activityTime": {
+      "startTime": "14:00",
+      "endTime": "23:00",
+      "timezone": "CET"
+    }
+  },
     {
     "name": "[C/1CL] Colonial Air Team",
     "abbreviation": "CAT",
@@ -125,6 +141,40 @@
     }
   },
   {
+    "name": "[I/1CL] 1st Trash Panda Regiment",
+    "abbreviation": "1TPR",
+    "group": "central",
+    "joinedDate": "2026-03-06",
+    "description": "1TPR is an elite intelligence and special operations unit dedicated to serving the Mesean Republic and its interests. We specialize in reconnaissance and sabotage missions, both close to the front and deep behind enemy lines. We use combined-arms tactics, employing light aircraft, watercraft and ground vehicles along with infantry to conduct reconnaissance, area denial, sabotage and other missions. We are no strangers to being surrounded, and death is treated more as an eventuality in our ranks, not just a risk.",
+    "leader": "Tactical Raccoon",
+    "inactive": false,
+    "tags": ["Intelligence", "Sabotage", "Combined Arms"],
+    "discord": "https://discord.gg/5UTYdKgcGe",
+    "logo": "1TPRLogo.png",
+    "activityTime": {
+      "startTime": "01:00",
+      "endTime": "10:00",
+      "timezone": "CET"
+    }
+  },
+  {
+    "name": "[L/1CL] Low Altitude Problems",
+    "abbreviation": "LAP",
+    "group": "central",
+    "joinedDate": "2026-05-27",
+    "description": "",
+    "leader": "Composer321",
+    "inactive": false,
+    "tags": ["", "", ""],
+    "discord": "",
+    "logo": "1CLLogo.png",
+    "activityTime": {
+      "startTime": "16:00",
+      "endTime": "23:00",
+      "timezone": "CET"
+    }
+  },
+  {
     "name": "[9/1CL] Solution 9",
     "abbreviation": "S9",
     "group": "central",
@@ -138,23 +188,6 @@
     "activityTime": {
       "startTime": "18:00",
       "endTime": "02:00",
-      "timezone": "CET"
-    }
-  },
-  {
-    "name": "[I/1CL] 1st Trash Panda Regiment",
-    "abbreviation": "1TPR",
-    "group": "central",
-    "joinedDate": "2026-03-06",
-    "description": "1TPR is an elite intelligence and special operations unit dedicated to serving the Mesean Republic and its interests. We specialize in reconnaissance and sabotage missions, both close to the front and deep behind enemy lines. We use combined-arms tactics, employing light aircraft, watercraft and ground vehicles along with infantry to conduct reconnaissance, area denial, sabotage and other missions. We are no strangers to being surrounded, and death is treated more as an eventuality in our ranks, not just a risk.",
-    "leader": "Tactical Raccoon",
-    "inactive": true,
-    "tags": ["Intelligence", "Sabotage", "Combined Arms"],
-    "discord": "https://discord.gg/5UTYdKgcGe",
-    "logo": "1TPRLogo.png",
-    "activityTime": {
-      "startTime": "01:00",
-      "endTime": "10:00",
       "timezone": "CET"
     }
   }
