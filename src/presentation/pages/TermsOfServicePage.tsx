@@ -51,7 +51,7 @@ export function TermsOfServicePage() {
           <p>We may update these terms at any time. Continued use of the bot after changes means you accept the updated terms.</p>
 
           <h3>Contact</h3>
-          <p>For questions about these terms, contact contact eirishofficial@pm.me </p>
+          <p>For questions about these terms, contact eirishofficial@pm.me </p>
         </section>
       </main>
     </>
