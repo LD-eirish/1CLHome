@@ -4,7 +4,7 @@
     "abbreviation": "P.O.G.",
     "group": "central",
     "joinedDate": "2025-11-17",
-    "description": "P.O.G is a public-focused regiment open to all respectful players. We organize and host air operations, provide logistics and support for frontline flights, and frequently collaborate with other groups. From pilots and spotters to fuel crews and ground support. We cover every role needed to keep the skies active and deadly. Whether you're brand new or experienced P.O.G is a great introduction to Foxhole air operations.",
+    "description": "Public Operations Group started as an organised force of random players. It grew into a large fighting force in Charlie Shard before helping to form the 1CL with TCS. P.O.G focuses on many things and shifts its focus every war to keep things fresh. We currently focus on naval warfare and marine beach invasions.",
     "leader": "TomTheTank",
     "tags": ["Airborne", "Artillery", "Logistics"],
     "discord": "https://discord.gg/QFKvhnkbcb",
@@ -36,7 +36,7 @@
     "abbreviation": "33FAC",
     "group": "central",
     "joinedDate": "2026-05-12",
-    "description": "The 33rd Field Artillery Corps was founded on one belief: when the line begins to break, artillery decides the battle. Born as a rapid-response unit against Warden bombardments, the 33rd has stood where the fighting was fiercest—from the long defense of Treasury Bridge to the fire missions of Weephome and the armored assaults of Third Chapter. We are not just another artillery regiment. We are the force that answers when allies call for support. With precision 120mm fire, relentless bombardments, anti-armor operations, and naval landing support, the 33rd exists to turn chaos into victory. During a single mission at Third Chapter, over 300 rounds were fired in defense of the front, destroying enemy armor, infantry, and bunker positions. We fight beside our allies. We hold the line when others cannot. And when our guns begin to fire, the enemy already knows what comes next.",
+    "description": "The 33rd is an Artillery Corps who's foundation is on making the wardens fear the big guns and rockets. We always roll nat 20s on destruction, and will always answer the chance to blow things up.",
     "leader": "SovietBvando",
     "inactive": false,
     "tags": ["Artillery", "Infantry", "Combined Arms"],
@@ -61,11 +61,11 @@
     "activityTime": "UNKNOWN"
   },
   {
-    "name": "[4/1CL] Ultramar Auxilia",
+    "name": "[4/1CL] The Ultramarines",
     "abbreviation": "ULTRA",
     "group": "central",
     "joinedDate": "2026-02-17",
-    "description": "Ultra is an Infantry Regiment that focuses on using professional infantry tactics at a squad, platoon, and company level.",
+    "description": "The Ultramarines are a combined arms regiment organized in the manner of a space marine chapter from Warhammer 40K. We focus on coordination and building teamwork.",
     "leader": "Jeremiah",
     "tags": ["Infantry", "Logistics", "Transport"],
     "discord": "https://discord.gg/mEpeMtxafK",
@@ -96,7 +96,7 @@
     "name": "[B/1CL] Barrack Bunnies",
     "abbreviation": "BUNNI",
     "group": "central",
-    "joinedDate": "2025-05-27",
+    "joinedDate": "2026-05-27",
     "description": "The Barrack Bunnies focus on engaging each independent member of the regiment in other activities, ensuring they become as well-versed in different groups as possible. We maintain a lax rank structure (or none at all), with an emphasis on helping new players find roles where they can learn on the field and transition into proper regiments they find most enjoyable. The highlight of the regiment is our focus on squad-centric fire missions.",
     "leader": "Styx0rfer",
     "tags": ["Training", "Infantry", "Logistics"],
@@ -171,23 +171,6 @@
     "activityTime": {
       "startTime": "16:00",
       "endTime": "23:00",
-      "timezone": "CET"
-    }
-  },
-  {
-    "name": "[9/1CL] Solution 9",
-    "abbreviation": "S9",
-    "group": "central",
-    "joinedDate": "2025-11-17",
-    "description": "We focus on logistics and helping out our colleagues and friends. We do any type of logistics, either producing gear at a factory or transporting it to where it'll be used. We also do frontline stuff with whatever we manage to produce to help out more directly.",
-    "leader": "Dwight Do Pix",
-    "inactive": true,
-    "tags": ["Logistics", "Facility", "Frontline Support"],
-    "discord": "https://discord.gg/DsRZJ9ZnRQ",
-    "logo": "S9Logo.png",
-    "activityTime": {
-      "startTime": "18:00",
-      "endTime": "02:00",
       "timezone": "CET"
     }
   }
