@@ -83,7 +83,7 @@ export function MembersPage() {
   return (
     <>
       <Header subtitle="1CL Groups & Member Regiments" />
-      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Members' }]} />
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Member Groups' }]} />
 
       <button 
         id="Schmemil-toggle" 
@@ -117,7 +117,7 @@ export function MembersPage() {
             <div className="faction-icon">
               <img src={assetPath('1CLLogo.png')} alt="1CL Logo" style={{width: '140px', height: 'auto', filter: 'drop-shadow(0 4px 12px rgba(201,168,79,0.6))'}} />
             </div>
-            <h2 className="faction-title">Central Group</h2>
+            <h2 className="faction-title">Member Groups</h2>
             <p className="faction-description">
               Deeper integration regiments with centralized HR, shared logistics, and broader command responsibilities.
             </p>

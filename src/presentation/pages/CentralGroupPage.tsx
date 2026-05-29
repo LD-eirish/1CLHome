@@ -30,13 +30,13 @@ export function CentralGroupPage() {
 
   return (
     <>
-      <Header subtitle="Federated Regiments" />
-      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Central Group' }]} />
+      <Header subtitle="Member Groups" />
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Member Groups' }]} />
 
       <main className="container">
         <section className="hero card page-intro page-intro--split">
           <div className="page-intro-copy">
-            <p className="page-intro-kicker">Federated Regiment Directory</p>
+            <p className="page-intro-kicker">Member Groups</p>
             <h2 className="page-intro-title">1CL Member Regiments</h2>
             <p className="page-intro-lead">
               Regiments that opt into fuller integration: they participate in centralized HR/recruitment,
@@ -49,7 +49,7 @@ export function CentralGroupPage() {
         </section>
 
         <section className="card">
-          <h3>Central Group Regiments</h3>
+          <h3>Member Groups Regiments</h3>
           <div className="regiment-grid" id="regiment-list">
             {loading && <div className="loading">Loading regiments...</div>}
             {error && <p className="error">{error}</p>}

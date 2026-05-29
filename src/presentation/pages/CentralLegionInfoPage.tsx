@@ -4,12 +4,12 @@ import { PageBreadcrumb } from '../components/PageBreadcrumb';
 export function CentralLegionInfoPage() {
   return (
     <>
-      <Header subtitle="About the Central Group & 1CL Membership" />
-      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Central Group Info' }]} />
+      <Header subtitle="Membership Info" />
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Membership Info' }]} />
       <main className="container central-legion-info">
         <section className="card page-intro page-intro--stacked info-card">
           <p className="page-intro-kicker">Orientation & Membership</p>
-          <h2 className="page-intro-title">What is the Central Group?</h2>
+          <h2 className="page-intro-title">Membership Info</h2>
           <p className="page-intro-lead">Federation of regiments, shared systems, and independent command identity.</p>
           <p>
             <strong>The Central Group of 1CL</strong> is a federation of regiments working together to maximize efficiency and impact in the war effort.
@@ -19,7 +19,7 @@ export function CentralLegionInfoPage() {
         </section>
 
         <section className="card info-card">
-          <h3>Benefits of Central Group Membership</h3>
+          <h3>Benefits of Membership</h3>
           <ul className="benefits-list">
             <li>New players are offered a choice of member regiments when joining 1CL.</li>
             <li>Access to a large, shared pool of resources and equipment for all member regiments.</li>
