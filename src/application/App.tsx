@@ -29,8 +29,8 @@ export function App() {
       <Route path="/newspaper" element={<NewspaperPage />} />
       <Route path="/privacy" element={<PrivacyPolicyPage />} />
       <Route path="/terms" element={<TermsOfServicePage />} />
-      <Route path="*" element={<Navigate to="/hub" replace />} />
       <Route path="/high-commanders" element={<HighCommandersPage />} />
+      <Route path="*" element={<Navigate to="/hub" replace />} />
       </Routes>
       <Footer />
     </>

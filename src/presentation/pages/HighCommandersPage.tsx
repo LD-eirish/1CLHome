@@ -16,6 +16,11 @@ export function HighCommandersPage() {
         const resp = await fetch((await import('../../infrastructure/utils/asset.utils')).assetPath('src/data/high-commanders.json'));
         if (!resp.ok) throw new Error('Failed to load High Commanders');
         const data: HighCommanders[] = await resp.json();
+        setHighCommanders(
+          [...data].sort((left, right) => {
+            return new Date(`${left.officeStart}T00:00:00`).getTime() - new Date(`${right.officeStart}T00:00:00`).getTime();
+          })
+        );
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load High Commanders');
       } finally {
@@ -46,17 +51,14 @@ export function HighCommandersPage() {
 
         <section className="card">
           <h3>High Commanders</h3>
-          <div className="hc-grid" id="hc-list">
+          <div className="high-commander-list" id="hc-list">
             {loading && <div className="loading">Loading High Commanders...</div>}
             {error && <p className="error">{error}</p>}
             {!loading && !error && highCommanders.map((highCommander, index) => (
               <HighCommanderCard 
                 key={highCommander.name} 
-                regiment={highCommander.regiment} 
-                mandate={highCommander.mandate}
-                description={highCommander.description}
+                highCommander={highCommander}
                 index={index}
-                hideDetails={true}
               />
             ))}
           </div>
