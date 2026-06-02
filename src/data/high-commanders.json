@@ -2,7 +2,11 @@
     {
         "name": "eirish",
         "regiment": "None",
-        "mandate": "Oversee the strategic operations and long-term planning for the 1",
-        "description": "As the High Commander, eirish is responsible for the overall direction and success of the 1CL. They work closely with regimental commanders to ensure that all operations align with the organization's goals and values."
+        "war": "135",
+        "viceHighCommander": "None",
+        "viceRegiment": "None",
+        "officeStart": "2026-05-22",
+        "officeEnd": "2026-06-03",
+        "description": "The first elected High Commander of the 1CL and an integral part of steering the 1st Combined Legion's success. Due to personal matters, he decided to take a step back and call for new elections. Notably, he won his elections with 50% of the votes."
     }
 ]
