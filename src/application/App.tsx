@@ -10,6 +10,7 @@ import { NewspaperPage } from '../presentation/pages/NewspaperPage';
 import { PrivacyPolicyPage } from '../presentation/pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from '../presentation/pages/TermsOfServicePage';
 import { Footer } from '../presentation/components/Footer';
+import { HighCommandersPage } from '../presentation/pages/HighCommandersPage';
 
 export function App() {
   return (
@@ -29,6 +30,7 @@ export function App() {
       <Route path="/privacy" element={<PrivacyPolicyPage />} />
       <Route path="/terms" element={<TermsOfServicePage />} />
       <Route path="*" element={<Navigate to="/hub" replace />} />
+      <Route path="/high-commanders" element={<HighCommandersPage />} />
       </Routes>
       <Footer />
     </>
