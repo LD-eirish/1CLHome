@@ -8,5 +8,15 @@
         "officeStart": "2026-05-22",
         "officeEnd": "2026-06-03",
         "description": "The first elected High Commander of the 1CL and an integral part of steering the 1st Combined Legion's success. Due to personal matters, he decided to take a step back and call for new elections. Notably, he won his elections with 50% of the votes."
+    },
+    {
+        "name": "Goldenbarrel",
+        "regiment": "ETRNL",
+        "war": "135",
+        "viceHighCommander": "Jeremiah",
+        "viceRegiment": "ULTRA",
+        "officeStart": "2026-06-03",
+        "officeEnd": null,
+        "description": "Will be added after their term ends."
     }
 ]
