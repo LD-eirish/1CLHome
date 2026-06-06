@@ -92,22 +92,6 @@
       "timezone": "CET"
     }
   },
-  {
-    "name": "[B/1CL] Barrack Bunnies",
-    "abbreviation": "BUNNI",
-    "group": "central",
-    "joinedDate": "2026-05-27",
-    "description": "The Barrack Bunnies focus on engaging each independent member of the regiment in other activities, ensuring they become as well-versed in different groups as possible. We maintain a lax rank structure (or none at all), with an emphasis on helping new players find roles where they can learn on the field and transition into proper regiments they find most enjoyable. The highlight of the regiment is our focus on squad-centric fire missions.",
-    "leader": "Styx0rfer",
-    "tags": ["Training", "Infantry", "Logistics"],
-    "discord": "https://discord.gg/ZxfhxFmCX",
-    "logo": "1CLLogo.png",
-    "activityTime": {
-      "startTime": "14:00",
-      "endTime": "23:00",
-      "timezone": "CET"
-    }
-  },
     {
     "name": "[C/1CL] Colonial Air Team",
     "abbreviation": "CAT",
