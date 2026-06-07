@@ -9,7 +9,7 @@ export function HubPage() {
         <div
           className="hub-page-background"
           aria-hidden="true"
-          style={{backgroundImage: `url(${assetPath('1CLTrain.jpg')})`}}
+          style={{backgroundImage: `url(${assetPath('1CL_harbourCity.jpg')})`}}
         />
         <div className="hub-page-overlay" aria-hidden="true" />
         <section className="hub-masthead" style={{flexDirection: 'column', alignItems: 'flex-start', gap: '36px', paddingTop: '96px', position: 'relative', zIndex: 1}}>

@@ -323,8 +323,8 @@
   background-position:center center;
   background-repeat:no-repeat;
   background-size:cover;
-  filter:grayscale(1) contrast(0.78) brightness(0.66) blur(1px);
-  opacity:0.16;
+  filter:grayscale(0.86) contrast(0.84) brightness(0.76) blur(0.7px);
+  opacity:0.28;
   pointer-events:none;
 }
 
@@ -579,8 +579,8 @@
     /* enlarge and shift the background so key details remain visible on narrow viewports */
     background-size: 140% auto;
     background-position: center top;
-    opacity: 0.12;
-    filter: grayscale(1) contrast(0.85) brightness(0.6) blur(1px);
+    opacity: 0.21;
+    filter: grayscale(0.86) contrast(0.89) brightness(0.7) blur(0.7px);
   }
 }
 
@@ -589,8 +589,8 @@
     /* further enlarge for very small screens to avoid important content being cropped */
     background-size: 200% auto;
     background-position: center 20%;
-    opacity: 0.09;
-    filter: grayscale(1) contrast(0.9) brightness(0.56) blur(1px);
+    opacity: 0.17;
+    filter: grayscale(0.88) contrast(0.91) brightness(0.66) blur(0.7px);
   }
 }
 
