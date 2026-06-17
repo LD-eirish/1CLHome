@@ -6,6 +6,7 @@ import { LibraryPage } from '../presentation/pages/LibraryPage';
 import { CentralGroupPage } from '../presentation/pages/CentralGroupPage';
 import { AssociateGroupPage } from '../presentation/pages/AssociateGroupPage';
 import BotDocumentationPage from '../presentation/pages/BotDocumentationPage';
+import { EventFeatureDocsPage } from '../presentation/pages/EventFeatureDocsPage';
 import { NewspaperPage } from '../presentation/pages/NewspaperPage';
 import { PrivacyPolicyPage } from '../presentation/pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from '../presentation/pages/TermsOfServicePage';
@@ -26,6 +27,7 @@ export function App() {
       <Route path="/associate-group" element={<AssociateGroupPage />} />
       <Route path="/central-group-info" element={<CentralLegionInfoPage />} />
       <Route path="/bot-documentation" element={<BotDocumentationPage />} />
+      <Route path="/bot-documentation/event-feature" element={<EventFeatureDocsPage />} />
       <Route path="/newspaper" element={<NewspaperPage />} />
       <Route path="/privacy" element={<PrivacyPolicyPage />} />
       <Route path="/terms" element={<TermsOfServicePage />} />
