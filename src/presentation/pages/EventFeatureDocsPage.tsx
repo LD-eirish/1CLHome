@@ -235,7 +235,7 @@ export function EventFeatureDocsPage() {
         <h3>Role Limits</h3>
         <p>If a role limit is reached, signup is rejected with an error.</p>
         <h3>Signups After Event Closure</h3>
-        <p>Signup controls only function while event status is <code>open</code>. Closed/cancelled events disable effective signup changes.</p>
+        <p>Signup controls only function while event status is <code>open</code>. Closed/cancelled events disable any effective signup changes.</p>
       </section>
 
       <section className="docs-section" id="synced-events">
