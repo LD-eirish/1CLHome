@@ -13,6 +13,12 @@ const FEATURE_LINKS = [
     summary: 'Event V2 creation, draft review, live publication, signups, reminders, sync, and closure.',
     status: 'Documented',
   },
+  {
+    title: 'War Counter Feature',
+    path: '/bot-documentation/war-feature',
+    summary: 'The war counter is an internal requirement for tracking statistics, such as request history, stockpiles, etc.',
+    status: 'Doc in progress',
+  },
 ];
 
 export default function BotDocumentationPage() {
