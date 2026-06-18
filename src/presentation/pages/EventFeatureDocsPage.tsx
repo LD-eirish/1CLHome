@@ -42,9 +42,7 @@ export function EventFeatureDocsPage() {
     >
       <section className="docs-section" id="overview">
         <h2>Overview</h2>
-        <p>
-          This page tracks the current implementation in the event system. It is written to match behavior in production rather than intended behavior.
-        </p>
+        <p>This page explains the current implementation of the Event Feature. It covers the system's functionality, setup, and usage. It is always subject to change.</p>
       </section>
 
       <section className="docs-section" id="what-it-does">
@@ -126,7 +124,7 @@ export function EventFeatureDocsPage() {
           </thead>
           <tbody>
             <tr><td><code>Create With Defaults</code></td><td><code>pingRole = true</code>, <code>squadLeadEnabled = true</code>, <code>syncServers = false</code>, no explicit role limits.</td></tr>
-            <tr><td><code>Set Optional Settings</code></td><td>Optional modal fields: ping event role, squadlead enablement, share with other servers, and role limits.</td></tr>
+            <tr><td><code>Set Optional Settings</code></td><td>Optional modal fields: <code>pingRole</code>, <code>squadLeadEnabled</code>, <code>syncServers</code> and <code>roleLimits</code>.</td></tr>
           </tbody>
         </table>
         <p>
@@ -136,7 +134,7 @@ export function EventFeatureDocsPage() {
 
       <section className="docs-section" id="role-limit">
         <h2>Role Count Limit</h2>
-        <p>The Event V2 workflow enforces a maximum of 20 roles to stay compatible with current panel and modal design constraints.</p>
+        <p>The Event V2 workflow enforces a maximum of 20 roles to stay compatible with the Discord imposed panel and modal design constraints.</p>
       </section>
 
       <section className="docs-section" id="direct-publish">
@@ -305,7 +303,7 @@ export function EventFeatureDocsPage() {
           <tbody>
             <tr><td><code>Close Event</code></td><td>Primary Event V2 path: confirmation, summary, lock panel, cleanup roles/events, archive; sync mirrors close when applicable.</td></tr>
             <tr><td><code>/event-cancel</code></td><td>Legacy path: cancel without normal close summary, optional silent mode, cleanup, archive, and sync propagation.</td></tr>
-            <tr><td><code>/event-delete</code></td><td>Legacy path: remove thread and records entirely, cleanup artifacts, propagate deletion to mirrors.</td></tr>
+            <tr><td><code>/event-delete</code></td><td>Legacy path: remove thread and records entirely, cleanup artifacts, propagate deletion to mirrors. This is still the preferred way to delete events which are malformed or created for test purposes.</td></tr>
           </tbody>
         </table>
       </section>
@@ -321,7 +319,7 @@ export function EventFeatureDocsPage() {
           </thead>
           <tbody>
             <tr><td>Setup</td><td>Admins only</td></tr>
-            <tr><td>Draft creation</td><td>Controlled by <code>who_can_create</code></td></tr>
+            <tr><td>Draft / Event creation</td><td>Controlled by <code>who_can_create</code> event-setup parameter</td></tr>
             <tr><td>Draft review</td><td>Admins and configured manager roles</td></tr>
             <tr><td>Draft editing</td><td>Admins, configured manager roles, and the draft creator</td></tr>
             <tr><td>Live event management</td><td>Admins, configured manager roles, and the live event creator</td></tr>

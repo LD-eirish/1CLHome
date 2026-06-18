@@ -20,7 +20,7 @@ export default function BotDocumentationPage() {
     <BotDocsLayout
       subtitle="eirish's Foxhole Assistant - Documentation"
       title="eirish's Foxhole Assistant"
-      lead="eirish's Foxhole Assistant is a Discord bot for the Foxhole community. It handles logistics requests, events, awards, role workflows, moderation tools, and smaller operational workflows."
+      lead="eirish's Foxhole Assistant is a Discord bot for the Foxhole communities. It handles logistics requests, events, awards, role workflows, moderation tools, and smaller operational workflows."
       breadcrumbs={[{ label: 'Hub', to: '/hub' }, { label: 'Bot Documentation' }]}
       navItems={[
         { label: 'Overview', href: '#overview' },
