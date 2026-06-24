@@ -339,7 +339,8 @@ export function EventFeatureDocsPage() {
         </ul>
         <h3>Lifecycle Commands</h3>
         <ul>
-          <li>guide button to create draft/event</li>
+          <li><code>Create Event Draft</code> {'->'} Create Event Draft modal if Event Draft is enabled</li>
+          <li><code>Create Event</code> {'->'} Create Event modal if Event Draft is disabled</li>
           <li><code>Manage Event</code> {'->'} <code>Edit Event</code></li>
           <li><code>Manage Event</code> {'->'} <code>Close Event</code></li>
           <li><code>/event-cancel</code></li>
