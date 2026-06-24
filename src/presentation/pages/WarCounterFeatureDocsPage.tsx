@@ -27,26 +27,26 @@ const NAV_ITEMS = [
   { label: 'Quick Reference', href: '#quick-reference' },
 ];
 
-export function EventFeatureDocsPage() {
+export function WarCounterFeatureDocsPage() {
   return (
     <BotDocsLayout
-      subtitle="Event Feature Documentation"
-      title="Events"
-      lead="Reference documentation for eirish's Foxhole Assistant event system, from forum setup through live publication and closure."
+      subtitle="War Counter Feature Documentation"
+      title="War Counter"
+      lead="Reference documentation for eirish's Foxhole Assistant war counter system, from setup through live tracking and closure."
       breadcrumbs={[
         { label: 'Hub', to: '/hub' },
         { label: 'Bot Documentation', to: '/bot-documentation' },
-        { label: 'Event Feature' },
+        { label: 'War Counter Feature' },
       ]}
       navItems={NAV_ITEMS}
     >
       <section className="docs-section" id="overview">
         <h2>Overview</h2>
-        <p>This page explains the current implementation of the Event Feature. It covers the system's functionality, setup, and usage. It is always subject to change.</p>
+        <p>This page explains the current implementation of the War Counter Feature. It covers the system's functionality, setup, and usage. It is always subject to change.</p>
       </section>
 
       <section className="docs-section" id="what-it-does">
-        <h2>What the Event System Does</h2>
+        <h2>What the War Counter System Does</h2>
         <ul>
           <li>forum-level event configuration</li>
           <li>guide-post driven creation</li>
