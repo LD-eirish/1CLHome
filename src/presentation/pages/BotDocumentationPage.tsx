@@ -31,7 +31,7 @@ export default function BotDocumentationPage() {
       <section className="docs-section" id="overview">
         <h2>Overview</h2>
         <p>
-          This page is the documentation entry point. Detailed systems are split into dedicated pages so each feature reads like a reference document instead of one long mixed page.
+          This page is the documentation entry point. Detailed systems are split into dedicated pages so each feature reads like a reference document instead of one long mixed page. The Bot currently support many other features, such as Logistics Requests, Awards, Role Workflows, Moderation Tools, and Stockpile Management. These features are not yet documented, but will be in the future as soon as they have been updated to Version 2.0.
         </p>
       </section>
 
