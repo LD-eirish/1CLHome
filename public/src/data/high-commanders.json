@@ -16,7 +16,17 @@
         "viceHighCommander": "Jeremiah",
         "viceRegiment": "ULTRA",
         "officeStart": "2026-06-03",
-        "officeEnd": null,
+        "officeEnd": "2026-06-24",
+        "description": "GoldenBarrel stepped up and was elected as the second High Commander. He was a strong supporter of the 1CL federal system. Most notably, he was High Commander during the schism with the Penal regiment, where their leader got kicked due to their toxic actions."
+    },
+    {
+        "name": "Jeremiah",
+        "regiment": "ULTRA",
+        "war": "135",
+        "viceHighCommander": "None",
+        "viceRegiment": "None",
+        "officeStart": "2026-06-24",
+        "officeEnd": "2026-06-26",
         "description": "Will be added after their term ends."
     }
 ]
