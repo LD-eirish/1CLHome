@@ -28,5 +28,15 @@
         "officeStart": "2026-06-24",
         "officeEnd": "2026-06-27",
         "description": "He only remained High Commander for a short period of time, overseeing the end of the war and the next High Commander elections."
+    },
+    {
+        "name": "Edalyn Hanlyn",
+        "regiment": "POG",
+        "war": "136/137",
+        "viceHighCommander": "Daed",
+        "viceRegiment": "ETRNL",
+        "officeStart": "2026-06-27",
+        "officeEnd": null,
+        "description": "Will be added after their term ends."
     }
 ]
