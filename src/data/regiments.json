@@ -140,22 +140,5 @@
       "endTime": "10:00",
       "timezone": "CET"
     }
-  },
-  {
-    "name": "[L/1CL] Low Altitude Problems",
-    "abbreviation": "LAP",
-    "group": "central",
-    "joinedDate": "2026-05-27",
-    "description": "",
-    "leader": "Composer321",
-    "inactive": false,
-    "tags": ["", "", ""],
-    "discord": "",
-    "logo": "1CLLogo.png",
-    "activityTime": {
-      "startTime": "16:00",
-      "endTime": "23:00",
-      "timezone": "CET"
-    }
   }
 ]
