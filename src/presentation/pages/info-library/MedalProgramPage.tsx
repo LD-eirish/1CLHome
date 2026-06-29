@@ -155,6 +155,15 @@ const CATEGORIES: MedalCategory[] = [
         special: 'Elite pilot status with strict verification requirements.',
       },
       {
+        name: 'Skyhammer Medal',
+        prestige: '3 stars',
+        description:
+          'Awarded for sustained, effective bombing runs against Warden positions, clearing the way for the Legion.',
+        earnedBy: 'Nomination for sustained bombing impact; awarded to responsible pilot and bombardier crew.',
+        issuedBy: 'Commander Council',
+        special: 'Recognizes aerial team coordination and precision strike contribution.',
+      },
+      {
         name: 'Wings of the Legion',
         prestige: '2 stars',
         description:
@@ -163,15 +172,6 @@ const CATEGORIES: MedalCategory[] = [
           'One or more confirmed kills with video evidence. Scouts excluded except scout-on-scout kills.',
         issuedBy: 'Commander Council',
         special: 'First-blood combat aviation distinction and entry to aerial progression.',
-      },
-      {
-        name: 'Skyhammer Medal',
-        prestige: '3 stars',
-        description:
-          'Awarded for sustained, effective bombing runs against Warden positions, clearing the way for the Legion.',
-        earnedBy: 'Nomination for sustained bombing impact; awarded to responsible pilot and bombardier crew.',
-        issuedBy: 'Commander Council',
-        special: 'Recognizes aerial team coordination and precision strike contribution.',
       },
     ],
   },
@@ -294,6 +294,15 @@ const CATEGORIES: MedalCategory[] = [
     intro:
       'For long-term contributors who strengthen Legion foundations, continuity, and growth across wars.',
     medals: [
+        {
+        name: 'Rally Banner of the Legion',
+        prestige: '3 stars',
+        description:
+          'Awarded for outstanding recruitment, bringing in new members of our glorious Legion.',
+        earnedBy: 'Recruit 15 or more new members in a single war, verified by Commander Council.',
+        issuedBy: 'Commander Council',
+        special: 'Honors high-impact force growth and community expansion leadership.',
+      },
       {
         name: 'Pillar of the Legion',
         prestige: '2 stars',
@@ -302,15 +311,6 @@ const CATEGORIES: MedalCategory[] = [
         earnedBy: 'Reach Prestige 5 through verified war participation progression (+1 per verified war).',
         issuedBy: 'Commander Council',
         special: 'Recognizes sustained legacy-level commitment over multiple conflicts.',
-      },
-      {
-        name: 'Rally Banner of the Legion',
-        prestige: '3 stars',
-        description:
-          'Awarded for outstanding recruitment, bringing in new members of our glorious Legion.',
-        earnedBy: 'Recruit 15 or more new members in a single war, verified by Commander Council.',
-        issuedBy: 'Commander Council',
-        special: 'Honors high-impact force growth and community expansion leadership.',
       },
     ],
   },
