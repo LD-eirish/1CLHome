@@ -1739,7 +1739,7 @@ body.Derp-mode #Schmemil-toggle{
 .site-footer{
   padding:4px 0 6px;
   text-align:center;
-  margin-top:6px;
+  margin-top:auto;
   font-size:0.75rem;
 }
 .site-footer .legal-link{

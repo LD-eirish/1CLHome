@@ -15,6 +15,9 @@ interface BotDocsLayoutProps {
   readonly navItems: BotDocsNavItem[];
   readonly children: ReactNode;
   readonly versionNote?: string;
+  readonly sidebarKicker?: string;
+  readonly sidebarTitle?: string;
+  readonly contentKicker?: string;
 }
 
 export function BotDocsLayout({
@@ -25,6 +28,9 @@ export function BotDocsLayout({
   navItems,
   children,
   versionNote,
+  sidebarKicker = 'Documentation',
+  sidebarTitle = "eirish's Foxhole Assistant Docs",
+  contentKicker = 'Feature',
 }: Readonly<BotDocsLayoutProps>) {
   return (
     <>
@@ -34,8 +40,8 @@ export function BotDocsLayout({
         <section className="docs-page-shell">
           <aside className="docs-sidebar">
             <div className="docs-sidebar-header">
-              <p className="docs-sidebar-kicker">Documentation</p>
-              <h2 className="docs-sidebar-title">eirish's Foxhole Assistant Docs</h2>
+              <p className="docs-sidebar-kicker">{sidebarKicker}</p>
+              <h2 className="docs-sidebar-title">{sidebarTitle}</h2>
               <p className="docs-sidebar-lead">{lead}</p>
             </div>
             <nav className="docs-sidebar-nav" aria-label="Documentation sections">
@@ -52,7 +58,7 @@ export function BotDocsLayout({
 
           <article className="docs-main docs-content">
             <header className="docs-page-header">
-              <p className="docs-page-kicker">Feature</p>
+              <p className="docs-page-kicker">{contentKicker}</p>
               <h1 className="docs-page-title">{title}</h1>
               <p className="docs-page-summary">{lead}</p>
               {versionNote && <p className="docs-page-note">{versionNote}</p>}

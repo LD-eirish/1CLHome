@@ -1,17 +1,21 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { HubPage } from '../presentation/pages/HubPage';
-import { CentralLegionInfoPage } from '../presentation/pages/CentralLegionInfoPage';
 import { ResolutionViewPage } from '../presentation/pages/ResolutionViewPage';
 import { LibraryPage } from '../presentation/pages/LibraryPage';
 import { CentralGroupPage } from '../presentation/pages/CentralGroupPage';
 import { AssociateGroupPage } from '../presentation/pages/AssociateGroupPage';
 import BotDocumentationPage from '../presentation/pages/BotDocumentationPage';
-import { EventFeatureDocsPage } from '../presentation/pages/EventFeatureDocsPage';
+import { EventFeatureDocsPage } from '../presentation/pages/docs/EventFeatureDocsPage';
+import { WarCounterFeatureDocsPage } from '../presentation/pages/docs/WarCounterFeatureDocsPage';
+import { InfoLibraryPage } from '../presentation/pages/InfoLibraryPage';
+import { WhatIs1CLPage } from '../presentation/pages/info-library/WhatIs1CLPage';
+import { JoiningAsRegimentPage } from '../presentation/pages/info-library/JoiningAsRegimentPage';
+import { HighCommandersArticlePage } from '../presentation/pages/info-library/HighCommandersArticlePage';
+import { MedalProgramPage } from '../presentation/pages/info-library/MedalProgramPage';
 import { NewspaperPage } from '../presentation/pages/NewspaperPage';
 import { PrivacyPolicyPage } from '../presentation/pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from '../presentation/pages/TermsOfServicePage';
 import { Footer } from '../presentation/components/Footer';
-import { HighCommandersPage } from '../presentation/pages/HighCommandersPage';
 
 export function App() {
   return (
@@ -25,13 +29,19 @@ export function App() {
       <Route path="/members" element={<Navigate to="/central-group" replace />} />
       <Route path="/central-group" element={<CentralGroupPage />} />
       <Route path="/associate-group" element={<AssociateGroupPage />} />
-      <Route path="/central-group-info" element={<CentralLegionInfoPage />} />
+      <Route path="/central-group-info" element={<Navigate to="/info-library/joining-1cl-as-a-regiment" replace />} />
       <Route path="/bot-documentation" element={<BotDocumentationPage />} />
       <Route path="/bot-documentation/event-feature" element={<EventFeatureDocsPage />} />
+      <Route path="/bot-documentation/war-feature" element={<WarCounterFeatureDocsPage />} />
+      <Route path="/info-library" element={<InfoLibraryPage />} />
+      <Route path="/info-library/what-is-1cl" element={<WhatIs1CLPage />} />
+      <Route path="/info-library/joining-1cl-as-a-regiment" element={<JoiningAsRegimentPage />} />
+      <Route path="/info-library/high-commanders" element={<HighCommandersArticlePage />} />
+      <Route path="/info-library/medal-program" element={<MedalProgramPage />} />
       <Route path="/newspaper" element={<NewspaperPage />} />
       <Route path="/privacy" element={<PrivacyPolicyPage />} />
       <Route path="/terms" element={<TermsOfServicePage />} />
-      <Route path="/high-commanders" element={<HighCommandersPage />} />
+      <Route path="/high-commanders" element={<Navigate to="/info-library/high-commanders" replace />} />
       <Route path="*" element={<Navigate to="/hub" replace />} />
       </Routes>
       <Footer />

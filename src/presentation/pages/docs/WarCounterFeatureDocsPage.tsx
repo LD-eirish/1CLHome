@@ -1,6 +1,6 @@
-import '../styles/components.css';
-import '../styles/documentation.css';
-import { BotDocsLayout } from '../components/BotDocsLayout';
+import '../../styles/components.css';
+import '../../styles/documentation.css';
+import { BotDocsLayout } from '../../components/BotDocsLayout';
 
 const NAV_ITEMS = [
   { label: 'Overview', href: '#overview' },
