@@ -13,6 +13,7 @@ import { JoiningAsRegimentPage } from '../presentation/pages/info-library/Joinin
 import { HighCommandersArticlePage } from '../presentation/pages/info-library/HighCommandersArticlePage';
 import { MedalProgramPage } from '../presentation/pages/info-library/MedalProgramPage';
 import { RoleGuidePage } from '../presentation/pages/info-library/RoleGuidePage';
+import { SuggestedModsPage } from '../presentation/pages/info-library/SuggestedMods';
 import { NewspaperPage } from '../presentation/pages/NewspaperPage';
 import { PrivacyPolicyPage } from '../presentation/pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from '../presentation/pages/TermsOfServicePage';
@@ -40,7 +41,7 @@ export function App() {
       <Route path="/info-library/high-commanders" element={<HighCommandersArticlePage />} />
       <Route path="/info-library/medal-program" element={<MedalProgramPage />} />
       <Route path="/info-library/roles-overview" element={<RoleGuidePage />} />
-      <Route path="/info-library/suggested-mods" element={<Navigate to="/info-library/suggested-mods" replace />} />
+      <Route path="/info-library/suggested-mods" element={<SuggestedModsPage />} />
       <Route path="/newspaper" element={<NewspaperPage />} />
       <Route path="/privacy" element={<PrivacyPolicyPage />} />
       <Route path="/terms" element={<TermsOfServicePage />} />
