@@ -44,6 +44,12 @@ const CATEGORIES = [
         summary: 'Official medal categories, nomination flow, prestige tiers, and award governance.',
         keywords: ['medal', 'overview', 'award', 'nomination', 'prestige', 'honor', 'decorations'],
       },
+      {
+        title: '1CL Roles Overview',
+        path: '/info-library/roles-overview',
+        summary: 'Rank structure, officer responsibilities, branch roles, pings, verification, and group-specific roles.',
+        keywords: ['roles', 'rank', 'commander', 'officer', 'logistics', 'facility', 'verification', 'ping'],
+      },
     ],
   },
 ] as const satisfies readonly CategoryEntry[];
