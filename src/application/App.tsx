@@ -40,6 +40,7 @@ export function App() {
       <Route path="/info-library/high-commanders" element={<HighCommandersArticlePage />} />
       <Route path="/info-library/medal-program" element={<MedalProgramPage />} />
       <Route path="/info-library/roles-overview" element={<RoleGuidePage />} />
+      <Route path="/info-library/suggested-mods" element={<Navigate to="/info-library/suggested-mods" replace />} />
       <Route path="/newspaper" element={<NewspaperPage />} />
       <Route path="/privacy" element={<PrivacyPolicyPage />} />
       <Route path="/terms" element={<TermsOfServicePage />} />

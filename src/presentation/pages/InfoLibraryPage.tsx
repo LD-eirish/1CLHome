@@ -50,6 +50,12 @@ const CATEGORIES = [
         summary: 'Rank structure, officer responsibilities, branch roles, pings, verification, and group-specific roles.',
         keywords: ['roles', 'rank', 'commander', 'officer', 'logistics', 'facility', 'verification', 'ping'],
       },
+      {
+        title: 'Suggested Mods',
+        path: '/info-library/suggested-mods',
+        summary: 'A curated list of recommended mods to enhance your Foxhole gameplay experience.',
+        keywords: ['mods', 'suggested', 'recommended', 'foxhole', 'gameplay', 'enhancement'],
+      },
     ],
   },
 ] as const satisfies readonly CategoryEntry[];
