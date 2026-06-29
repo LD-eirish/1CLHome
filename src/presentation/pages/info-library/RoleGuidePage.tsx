@@ -1,9 +1,19 @@
 import { WikiArticleLayout } from '../../components/WikiArticleLayout';
 import { assetPath } from '../../../infrastructure/utils/asset.utils';
 
+interface RoleLinkDetail {
+  readonly kind: 'link';
+  readonly prefix: string;
+  readonly label: string;
+  readonly href: string;
+  readonly suffix?: string;
+}
+
+type RoleDetail = string | RoleLinkDetail;
+
 interface RoleEntry {
   readonly name: string;
-  readonly details: string[];
+  readonly details: RoleDetail[];
   readonly iconPaths?: string[];
 }
 
@@ -11,6 +21,7 @@ interface RoleSection {
   readonly id: string;
   readonly title: string;
   readonly intro: string;
+  readonly introLinkDetail?: RoleLinkDetail;
   readonly roles: RoleEntry[];
 }
 
@@ -204,8 +215,14 @@ const ROLE_SECTIONS: RoleSection[] = [
   {
     id: 'branch-roles',
     title: 'Branch Roles',
-    intro:
-      'These are selectable or obtainable roles through the role-selection channel and define branch participation.',
+    intro: '',
+    introLinkDetail: {
+      kind: 'link',
+      prefix: 'These are selectable or obtainable roles through the ',
+      label: 'role-selection channel',
+      href: 'https://discord.com/channels/1435400735247564883/1489210108687945809',
+      suffix: ' and define branch participation.',
+    },
     roles: [
       {
         name: 'Logistics',
@@ -249,7 +266,12 @@ const ROLE_SECTIONS: RoleSection[] = [
         name: 'LOA',
         details: [
           'Automatically assigned to members on leave of absence who intend to return later.',
-          'This role is obtained through the leave-of-absence channel.',
+          {
+            kind: 'link',
+            prefix: 'This role is obtained through the ',
+            label: 'leave-of-absence channel',
+            href: 'https://discord.com/channels/1435400735247564883/1490289694167007334',
+          },
         ],
       },
     ],
@@ -365,7 +387,15 @@ export function RoleGuidePage() {
       {ROLE_SECTIONS.map((section) => (
         <section className="wiki-section" id={section.id} key={section.id}>
           <h2 className="wiki-section-heading">{section.title}</h2>
-          <p className="medal-category-intro">{section.intro}</p>
+          {section.introLinkDetail ? (
+            <p className="medal-category-intro">
+              {section.introLinkDetail.prefix}
+              <a href={section.introLinkDetail.href} target="_blank" rel="noreferrer">{section.introLinkDetail.label}</a>
+              {section.introLinkDetail.suffix ?? ''}
+            </p>
+          ) : (
+            <p className="medal-category-intro">{section.intro}</p>
+          )}
 
           {section.roles.map((role) => (
             <details className="medal-entry" key={role.name}>
@@ -383,7 +413,14 @@ export function RoleGuidePage() {
               </summary>
               <div className="medal-details">
                 {role.details.map((detail) => (
-                  <p key={`${role.name}-${detail.slice(0, 24)}`}>{detail}</p>
+                  typeof detail === 'string' ? (
+                    <p key={`${role.name}-${detail.slice(0, 24)}`}>{detail}</p>
+                  ) : (
+                    <p key={`${role.name}-${detail.label}`}>
+                      {detail.prefix}
+                      <a href={detail.href} target="_blank" rel="noreferrer">{detail.label}</a>
+                    </p>
+                  )
                 ))}
               </div>
             </details>

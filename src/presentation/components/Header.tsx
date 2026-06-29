@@ -36,7 +36,6 @@ export function Header({ subtitle = 'Welcome — 1CL Hub' }: Readonly<HeaderProp
 
         <nav id="main-navigation" className={`header-actions ${menuOpen ? 'open' : ''}`} aria-label="Main navigation">
           <Link to="/central-group" className="compact-nav-item" onClick={() => setMenuOpen(false)}>Member Groups</Link>
-          <Link to="/newspaper" className="compact-nav-item" onClick={() => setMenuOpen(false)}>Newspaper</Link>
           <Link to="/info-library" className="compact-nav-item" onClick={() => setMenuOpen(false)}>1CL Wiki & Info</Link>
           <Link to="/bot-documentation" className="compact-nav-item" onClick={() => setMenuOpen(false)}>Bot Documentation</Link>
         </nav>
