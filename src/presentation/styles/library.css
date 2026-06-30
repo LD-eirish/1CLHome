@@ -560,6 +560,21 @@
   color: rgba(247, 208, 101, 0.85);
 }
 
+/* ── CnC ───────────────────────────────────────────── */
+
+.cnc-summary-image {
+  max-width: 30%;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1.5px solid rgba(201,168,79,0.8);
+  background: none;
+  margin: 1.5rem auto 3rem auto;
+  display: block;
+  padding: 6px;
+}
+
+
 /* ── Responsive ───────────────────────────────────────────── */
 
 @media (max-width: 900px) {

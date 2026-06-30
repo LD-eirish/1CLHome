@@ -217,7 +217,6 @@ export function SuggestedModsPage() {
           <code className="mod-path">War-WindowsNoEditor.pak</code> file.
         </p>
         <img
-          id="paks-directory-example"
           src="/paksexampledirectory.png"
           alt="Example of the Paks directory after installing mods"
           className="mod-preview-image"

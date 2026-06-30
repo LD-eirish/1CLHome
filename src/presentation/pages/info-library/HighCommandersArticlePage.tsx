@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { HighCommanderCard } from '../../components/HighCommanderCard';
-import type { HighCommanders } from '../../data/types/highCommander.types';
+import type { HighCommanders } from '../../../data/types/highCommander.types';
 import { WikiArticleLayout } from '../../components/WikiArticleLayout';
 
 const NAV_ITEMS = [

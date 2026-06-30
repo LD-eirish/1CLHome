@@ -106,6 +106,19 @@ const CATEGORIES = [
           "enhancement",
         ],
       },
+      {
+        title: "1CL Command and Control",
+        path: "/info-library/command-and-control",
+        summary:
+          "Overview of the 1CL Command and Control system, its purpose, and how it works.",
+        keywords: [
+          "command",
+          "control",
+          "1cl",
+          "communication",
+          "coordination",
+        ],
+      },
     ],
   },
 ] as const satisfies readonly CategoryEntry[];

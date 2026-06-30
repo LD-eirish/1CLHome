@@ -16,13 +16,13 @@
     }
   },
   {
-    "name": "[2/1CL] The Colonial Shadows",
+    "name": "[2/1CL] Terminus Cargo Solutions",
     "abbreviation": "TCS",
     "group": "central",
     "joinedDate": "2025-11-17",
-    "description": "TCS is a Reconnaissance and Partisan-focused regiment, specializing in Spec-Ops and deep backline operations.",
+    "description": "TCS is a former Reconnaissance and Partisan-focused regiment, formerly known as the Colonial Shadowns. Nowadays they focus on Logistics.",
     "leader": "The Derp Master",
-    "tags": ["Partisan", "Tomfoolery", "Naval"],
+    "tags": ["Logistics", "Tomfoolery", "Naval"],
     "discord": "https://discord.gg/JSnZUVqY6D",
     "logo": "TCSLogo.png",
     "activityTime": {
