@@ -1,8 +1,8 @@
-import { useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Header } from '../components/Header';
-import { PageBreadcrumb } from '../components/PageBreadcrumb';
-import '../styles/library.css';
+import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
+import { Header } from "../components/Header";
+import { PageBreadcrumb } from "../components/PageBreadcrumb";
+import "../styles/library.css";
 
 interface ArticleEntry {
   readonly title: string;
@@ -18,50 +18,104 @@ interface CategoryEntry {
 
 const CATEGORIES = [
   {
-    name: 'About 1CL',
+    name: "About 1CL",
     articles: [
       {
-        title: 'What is the 1st Combined Legion?',
-        path: '/info-library/what-is-1cl',
-        summary: 'History, values, structure, and how to join the 1CL community.',
-        keywords: ['1cl', 'combined legion', 'coalition', 'federation', 'overview', 'about'],
+        title: "What is the 1st Combined Legion?",
+        path: "/info-library/what-is-1cl",
+        summary:
+          "History, values, structure, and how to join the 1CL community.",
+        keywords: [
+          "1cl",
+          "combined legion",
+          "coalition",
+          "federation",
+          "overview",
+          "about",
+        ],
       },
       {
-        title: 'Joining 1CL as a Regiment',
-        path: '/info-library/joining-1cl-as-a-regiment',
-        summary: 'Membership requirements, expectations, and benefits for regiments joining the 1CL federation.',
-        keywords: ['join', 'joining', 'recruitment', 'requirements', 'membership', 'regiment'],
+        title: "Joining 1CL as a Regiment",
+        path: "/info-library/joining-1cl-as-a-regiment",
+        summary:
+          "Membership requirements, expectations, and benefits for regiments joining the 1CL federation.",
+        keywords: [
+          "join",
+          "joining",
+          "recruitment",
+          "requirements",
+          "membership",
+          "regiment",
+        ],
       },
       {
-        title: 'High Commanders of 1CL',
-        path: '/info-library/high-commanders',
-        summary: 'Historical and current records of 1CL High Commanders and their terms.',
-        keywords: ['high command', 'commander', 'leadership', 'history', 'office period'],
+        title: "High Commanders of 1CL",
+        path: "/info-library/high-commanders",
+        summary:
+          "Historical and current records of 1CL High Commanders and their terms.",
+        keywords: [
+          "high command",
+          "commander",
+          "leadership",
+          "history",
+          "office period",
+        ],
       },
       {
-        title: '1CL Medal Overview',
-        path: '/info-library/medal-program',
-        summary: 'Official medal categories, nomination flow, prestige tiers, and award governance.',
-        keywords: ['medal', 'overview', 'award', 'nomination', 'prestige', 'honor', 'decorations'],
+        title: "1CL Medal Overview",
+        path: "/info-library/medal-program",
+        summary:
+          "Official medal categories, nomination flow, prestige tiers, and award governance.",
+        keywords: [
+          "medal",
+          "overview",
+          "award",
+          "nomination",
+          "prestige",
+          "honor",
+          "decorations",
+        ],
       },
       {
-        title: '1CL Roles Overview',
-        path: '/info-library/roles-overview',
-        summary: 'Rank structure, officer responsibilities, branch roles, pings, verification, and group-specific roles.',
-        keywords: ['roles', 'rank', 'commander', 'officer', 'logistics', 'facility', 'verification', 'ping'],
+        title: "1CL Roles Overview",
+        path: "/info-library/roles-overview",
+        summary:
+          "Rank structure, officer responsibilities, branch roles, pings, verification, and group-specific roles.",
+        keywords: [
+          "roles",
+          "rank",
+          "commander",
+          "officer",
+          "logistics",
+          "facility",
+          "verification",
+          "ping",
+        ],
       },
       {
-        title: 'Suggested Mods',
-        path: '/info-library/suggested-mods',
-        summary: 'A curated list of recommended mods to enhance your Foxhole gameplay experience.',
-        keywords: ['mods', 'suggested', 'recommended', 'foxhole', 'gameplay', 'enhancement'],
+        title: "Suggested Mods",
+        path: "/info-library/suggested-mods",
+        summary:
+          "A curated list of recommended mods to enhance your Foxhole gameplay experience.",
+        keywords: [
+          "mods",
+          "suggested",
+          "recommended",
+          "foxhole",
+          "gameplay",
+          "enhancement",
+        ],
       },
     ],
   },
 ] as const satisfies readonly CategoryEntry[];
 
 function normalize(input: string): string {
-  return input.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
+  return input
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function toBigrams(word: string): Set<string> {
@@ -101,7 +155,7 @@ function scoreArticle(article: ArticleEntry, query: string): number {
 
   const title = normalize(article.title);
   const summary = normalize(article.summary);
-  const keywords = normalize(article.keywords.join(' '));
+  const keywords = normalize(article.keywords.join(" "));
   const haystack = `${title} ${summary} ${keywords}`;
 
   let score = 0;
@@ -109,14 +163,19 @@ function scoreArticle(article: ArticleEntry, query: string): number {
   if (summary.includes(normalizedQuery)) score += 10;
   if (keywords.includes(normalizedQuery)) score += 9;
 
-  const queryTokens = normalizedQuery.split(' ').filter((token) => token.length > 1);
-  const articleTokens = haystack.split(' ').filter((token) => token.length > 1);
-  const articleTitleTokens = title.split(' ').filter((token) => token.length > 1);
+  const queryTokens = normalizedQuery
+    .split(" ")
+    .filter((token) => token.length > 1);
+  const articleTokens = haystack.split(" ").filter((token) => token.length > 1);
+  const articleTitleTokens = title
+    .split(" ")
+    .filter((token) => token.length > 1);
 
   queryTokens.forEach((token) => {
     if (articleTitleTokens.includes(token)) score += 8;
     if (articleTokens.includes(token)) score += 5;
-    if (articleTokens.some((candidate) => candidate.startsWith(token))) score += 3;
+    if (articleTokens.some((candidate) => candidate.startsWith(token)))
+      score += 3;
     if (haystack.includes(token)) score += 1;
 
     const bestFuzzy = articleTokens.reduce((best, candidate) => {
@@ -133,7 +192,7 @@ function scoreArticle(article: ArticleEntry, query: string): number {
 }
 
 export function InfoLibraryPage() {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
 
   const allArticles = useMemo(
     () => CATEGORIES.flatMap((category) => category.articles),
@@ -161,18 +220,24 @@ export function InfoLibraryPage() {
   return (
     <>
       <Header subtitle="1CL Wiki & Info" />
-      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: '1CL Wiki & Info' }]} />
+      <PageBreadcrumb
+        items={[{ label: "Hub", to: "/hub" }, { label: "1CL Wiki & Info" }]}
+      />
       <main className="wiki-hub">
         <div className="wiki-hub-inner">
           <section className="wiki-hub-hero">
             <p className="wiki-hub-kicker">Wiki & Info</p>
             <h1 className="wiki-hub-title">1CL Wiki & Info</h1>
             <p className="wiki-hub-lead">
-              A community reference covering the 1st Combined Legion, guides for members and newcomers, and medal records. Search by topic, role, or keyword to quickly find relevant pages.
+              A community reference covering the 1st Combined Legion, guides for
+              members and newcomers, and medal records. Search by topic, role,
+              or keyword to quickly find relevant pages.
             </p>
 
             <div className="wiki-search-shell">
-              <label className="wiki-search-label" htmlFor="wiki-search-input">Search Wiki Pages</label>
+              <label className="wiki-search-label" htmlFor="wiki-search-input">
+                Search Wiki Pages
+              </label>
               <input
                 id="wiki-search-input"
                 className="wiki-search-input"
@@ -187,20 +252,26 @@ export function InfoLibraryPage() {
           {trimmedQuery ? (
             <div className="wiki-category-block">
               <div className="wiki-category-header">
-                <h2 className="wiki-category-name">Search Results ({searchResults.length})</h2>
+                <h2 className="wiki-category-name">
+                  Search Results ({searchResults.length})
+                </h2>
               </div>
               <div className="wiki-article-grid">
                 {searchResults.length > 0 ? (
                   searchResults.map((article) => (
                     <div key={article.path} className="wiki-article-card">
-                      <Link to={article.path} className="wiki-card-link">{article.title}</Link>
+                      <Link to={article.path} className="wiki-card-link">
+                        {article.title}
+                      </Link>
                       <p className="wiki-card-summary">{article.summary}</p>
                     </div>
                   ))
                 ) : (
                   <div className="wiki-article-card">
                     <p className="wiki-card-summary">
-                      No close matches found. Try broader words like <strong>join</strong>, <strong>command</strong>, <strong>medal</strong>, or <strong>federation</strong>.
+                      No close matches found. Try broader words like{" "}
+                      <strong>join</strong>, <strong>command</strong>,{" "}
+                      <strong>medal</strong>, or <strong>federation</strong>.
                     </p>
                   </div>
                 )}
@@ -215,7 +286,9 @@ export function InfoLibraryPage() {
                 <div className="wiki-article-grid">
                   {cat.articles.map((article) => (
                     <div key={article.path} className="wiki-article-card">
-                      <Link to={article.path} className="wiki-card-link">{article.title}</Link>
+                      <Link to={article.path} className="wiki-card-link">
+                        {article.title}
+                      </Link>
                       <p className="wiki-card-summary">{article.summary}</p>
                     </div>
                   ))}
