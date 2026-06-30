@@ -87,7 +87,7 @@ export function TermsOfServicePage() {
           <h3>Contact</h3>
           <p>
             For questions about these Terms, please email <a href="mailto:eirishofficial@pm.me?subject=[1CL Bot ToS Inquiry]">eirishofficial@pm.me</a>. 
-            Include your Discord username, server name (if applicable), and a detailed description of your inquiry. We aim to respond within 3-5 business days.
+            Include your Discord username, server name (if applicable), and a detailed description of your inquiry. We aim to respond within 5 business days.
           </p>
         </section>
       </main>
