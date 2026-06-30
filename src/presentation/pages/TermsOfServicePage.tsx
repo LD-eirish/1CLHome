@@ -9,49 +9,86 @@ export function TermsOfServicePage() {
 
       <main className="container">
         <section className="card content card">
-          <h2>Terms of Service</h2>
+          <h2>1CL Bot Terms of Service</h2>
           <p className="small"><strong>Effective date:</strong> May 28, 2026</p>
 
-          <h3>Acceptance</h3>
-          <p>By using the bot, you agree to these terms and to follow Discord’s rules and applicable laws.</p>
+          <h3>Introduction</h3>
+          <p>
+            eirish’s Foxhole Assistant Discord bot ("the Bot") provides community management features including logistics tracking, member verification, event coordination, and role assignments for our Foxhole gaming coalition. These Terms of Service govern your use of the Bot within Discord servers.
+          </p>
 
-          <h3>Use of the Bot</h3>
+          <h3>Acceptance of Terms</h3>
+          <p>
+            By inviting the Bot to your server or interacting with it in any Discord server, you agree to comply with these Terms, Discord’s <a href="https://discord.com/terms" target="_blank" rel="noreferrer">Terms of Service</a>, and all applicable laws. If you do not agree, do not use the Bot.
+          </p>
+
+          <h3>Permitted Use</h3>
+          <p>You may use the Bot solely for:</p>
           <ul>
-            <li>Use the bot only for lawful purposes</li>
-            <li>Do not attempt to break, bypass, or overload the bot</li>
-            <li>Do not use the bot to harass, spam, impersonate, or abuse others</li>
-            <li>Do not exploit bugs, permissions, or data access beyond what you are allowed to use</li>
+            <li>Managing community operations (logistics, events, applications)</li>
+            <li>Participating in approved activities within authorized servers</li>
+            <li>Lawful purposes that align with community guidelines</li>
+          </ul>
+          <p><strong>Prohibited actions include:</strong></p>
+          <ul>
+            <li>Exploiting Bot commands to disrupt operations or other servers</li>
+            <li>Using the Bot to harvest, scrape, or misuse member data</li>
+            <li>Impersonating staff or misrepresenting affiliation with the community</li>
+            <li>Bypassing Bot security measures or rate limits</li>
+            <li>Any activity violating Discord’s rules or the community’s code of conduct</li>
           </ul>
 
-          <h3>Server Administration</h3>
+          <h3>Server Administrator Responsibilities</h3>
           <p>
-            Server administrators are responsible for how the bot is configured in their servers. Some bot actions may create, modify, or delete data based on administrator commands. Administrators are responsible for permissions they grant to bot roles and channels.
+            Server administrators who invite the Bot are responsible for:
+          </p>
+          <ul>
+            <li>Configuring Bot permissions appropriately for their server’s needs</li>
+            <li>Ensuring Bot commands are used in compliance with these Terms</li>
+            <li>Understanding that Bot actions (e.g., role assignments, data logging) may affect server members</li>
+          </ul>
+          <p>
+            1CL reserves the right to modify or revoke Bot access in any server to maintain community standards.
           </p>
 
           <h3>Content and Data</h3>
           <p>
-            You are responsible for the content you submit through the bot. The bot may store and process server data to provide its features. We may remove or refuse to process content that violates these terms or Discord’s rules.
+            You retain ownership of content you submit through the Bot (e.g., logistics reports, applications). However, by using the Bot, you grant 1CL a license to store, process, and display this content solely for providing Bot services and maintaining community records.
+          </p>
+          <p>
+            The Bot may access Discord message content, member roles, and server metadata <em>only</em> when explicitly invoked by commands or configured by server administrators.
           </p>
 
-          <h3>Availability</h3>
+          <h3>Service Availability</h3>
           <p>
-            The bot is provided on an as-is and as-available basis. Features may change, break, or be removed at any time. We do not guarantee uninterrupted service.
+            The Bot is provided on an "as-is" and "as-available" basis. 1CL may modify, suspend, or discontinue Bot features at any time without notice. We do not guarantee uninterrupted service, and downtime may occur for maintenance or technical issues.
           </p>
 
           <h3>Termination</h3>
-          <p>We may restrict or stop access to the bot if needed to protect users, servers, or the service. Server administrators may remove the bot from their server at any time.</p>
+          <p>
+            1CL may restrict or terminate access to the Bot for any user or server that violates these Terms, Discord’s rules, or community standards. Server administrators may remove the Bot from their server at any time.
+          </p>
 
-          <h3>Disclaimer</h3>
-          <p>To the maximum extent allowed by law, we disclaim warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+          <h3>Disclaimer of Warranties</h3>
+          <p>
+            The Bot is provided without warranties of any kind, express or implied, including but not limited to merchantability, fitness for a particular purpose, or non-infringement. 1CL does not warrant that the Bot will meet your requirements or operate without error.
+          </p>
 
-          <h3>Liability</h3>
-          <p>To the maximum extent allowed by law, we are not liable for indirect, incidental, special, or consequential damages arising from use of the bot.</p>
+          <h3>Limitation of Liability</h3>
+          <p>
+            To the fullest extent permitted by law, 1CL shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the Bot, including but not limited to loss of data, server disruptions, or community conflicts.
+          </p>
 
-          <h3>Changes</h3>
-          <p>We may update these terms at any time. Continued use of the bot after changes means you accept the updated terms.</p>
+          <h3>Changes to These Terms</h3>
+          <p>
+            1CL may update these Terms at any time. We will notify server administrators of material changes via Discord announcements. Continued use of the Bot after changes constitutes acceptance of the new Terms.
+          </p>
 
           <h3>Contact</h3>
-          <p>For questions about these terms, contact eirishofficial@pm.me </p>
+          <p>
+            For questions about these Terms, please email <a href="mailto:eirishofficial@pm.me?subject=[1CL Bot ToS Inquiry]">eirishofficial@pm.me</a>. 
+            Include your Discord username, server name (if applicable), and a detailed description of your inquiry. We aim to respond within 3-5 business days.
+          </p>
         </section>
       </main>
     </>
