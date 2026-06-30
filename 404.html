@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <title>404 Not Found</title>
   <script>
-    // Save the full path so the SPA can restore it after redirect, then navigate
     try {
       sessionStorage.setItem('redirectPath', location.pathname + location.search + location.hash);
     } catch (e) {
@@ -12,7 +11,6 @@
     }
     (function(){
       try {
-        // Redirect to domain root so index.html can restore the original path
         location.replace('/');
       } catch(e) {
         console.warn('Redirect failed', e);
