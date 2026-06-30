@@ -532,15 +532,14 @@
 }
 
 .mod-author {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: rgba(212,206,186,0.8);
-  margin-left: 0.7rem;
+  margin-left: 0.3rem;
 }
 
 .mod-link-detail {
   display: inline-block;
-  margin-top: 0.4rem;
-  margin-bottom: 1rem;
+  margin: 0.4rem 0 1rem 1rem;
   font-weight: 600;
 }
 
@@ -551,12 +550,15 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border: 1.5px solid rgba(201,168,79,0.8);
   background: none;
-  margin-top: 1.5rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3rem;
+  margin: 1.5rem auto 3rem auto;
   display: block;
   padding: 6px;
+}
+
+.mod-path {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0 0.3rem;
+  color: rgba(247, 208, 101, 0.85);
 }
 
 /* ── Responsive ───────────────────────────────────────────── */
