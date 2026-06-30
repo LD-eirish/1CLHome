@@ -206,23 +206,23 @@ export function InfoLibraryPage() {
                 )}
               </div>
             </div>
-          ) : null}
-
-          {CATEGORIES.map((cat) => (
-            <div key={cat.name} className="wiki-category-block">
-              <div className="wiki-category-header">
-                <h2 className="wiki-category-name">{cat.name}</h2>
+          ) : (
+            CATEGORIES.map((cat) => (
+              <div key={cat.name} className="wiki-category-block">
+                <div className="wiki-category-header">
+                  <h2 className="wiki-category-name">{cat.name}</h2>
+                </div>
+                <div className="wiki-article-grid">
+                  {cat.articles.map((article) => (
+                    <div key={article.path} className="wiki-article-card">
+                      <Link to={article.path} className="wiki-card-link">{article.title}</Link>
+                      <p className="wiki-card-summary">{article.summary}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="wiki-article-grid">
-                {cat.articles.map((article) => (
-                  <div key={article.path} className="wiki-article-card">
-                    <Link to={article.path} className="wiki-card-link">{article.title}</Link>
-                    <p className="wiki-card-summary">{article.summary}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </main>
     </>
