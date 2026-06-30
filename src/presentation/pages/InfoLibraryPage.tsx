@@ -179,7 +179,7 @@ export function InfoLibraryPage() {
                 type="search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Try: commanders, recruitment, medal, logistics, federation"
+                placeholder="Search here by topic, role, or keyword..."
               />
             </div>
           </section>
