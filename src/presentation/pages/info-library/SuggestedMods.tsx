@@ -47,7 +47,7 @@ const MOD_SECTIONS: ModSection[] = [
             label: 'Clear Icons Essential mod',
         },
         details: [
-          'With Clean Icons Essential, instantly recognize your weapons, ammo, vehicles, and resources in Foxhole — for faster decisions and smoother gameplay.',
+          'With Clean Icons Essential, instantly recognize your weapons, ammo, vehicles, and resources in Foxhole — for faster decisions and smoother gameplay. We recommend you to install the full version of the mod, which colors all icons including map icons.',
         ],
       },
       {
@@ -60,7 +60,7 @@ const MOD_SECTIONS: ModSection[] = [
             label: 'Knight\'s Map Mod of Science',
         },
         details: [
-          'Foxhole map mod with better terrain and road colors, topography, etc.',
+          'Foxhole map mod with better terrain and road colors, topography, etc. We recommend the full version of the mod.',
         ],
       },
       {
@@ -175,19 +175,46 @@ export function SuggestedModsPage() {
           Please note that while these mods are suggested, they are not officially endorsed by the game developers. Always ensure that you download mods from trusted sources and follow any installation instructions provided by the mod creators.
         </p>
       </section>
+      <section className="wiki-section" id="how-to-install-mods">
+        <h2 className="wiki-section-heading">How to install mods in Foxhole</h2>
+        <p>
+          To install mods in Foxhole, you typically need to download the mod files from a trusted source and place them in the appropriate directory within your Foxhole installation folder. The exact location of your game files differs based on your operating system and where you installed the game. 
+        </p>
+        <p>
+          On Windows, the default installation path is usually: <code>[YOUR DRIVE]:\Program Files (x86)\Steam\steamapps\common\Foxhole</code>
+        </p>
+        <p>
+          From your Foxhole installation folder, you will need to go to the <code>War\Content\Paks</code> directory.
+        </p>
+        <p>
+          In the <code>Paks</code> directory, you will need to extract the downloaded mod files. It will typically be a <code>.pak</code> file that you will be placed in this directory.
+        </p>
+        <p>
+          After placing the mod files in the correct directory, you will need to restart the game for the changes to take effect.
+        </p>
+        <p>
+          Below you will find an example image of how your <code>Paks</code> directory should look after installing mods. The <code>.pak</code> files for the mods should be present alongside the <code>War-WindowsNoEditor.pak</code> file.
+        </p>
+        <img id="paks-directory-example"
+          src="/paksexampledirectory.png"
+          alt="Example of the Paks directory after installing mods"
+          className="mod-preview-image"
+          loading="lazy"
+        />
+      </section>
 
       {MOD_SECTIONS.map((section) => (
         <section className="wiki-section" id={section.id} key={section.id}>
           <h2 className="wiki-section-heading">{section.title}</h2>
           {section.mods.map((mod) => (
-            <details className="medal-entry" key={mod.name}>
-              <summary className="medal-summary role-summary">
-                <span className="medal-name role-name">
+            <details className="mod-entry" key={mod.name}>
+              <summary className="mod-summary">
+                <span className="mod-name">
                   {mod.name}
-                  {mod.author && <span className="medal-author"> by {mod.author}</span>}
+                  {mod.author && <span className="mod-author"> by {mod.author}</span>}
                 </span>
               </summary>
-              <div className="medal-details">
+              <div className="mod-details">
                 {mod.details.map((detail, index) => (
                   typeof detail === 'string' ? (
                     <p key={`${mod.name}-${index}`}>{detail}</p>
