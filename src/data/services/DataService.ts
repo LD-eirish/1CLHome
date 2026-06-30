@@ -27,7 +27,7 @@ export class DataService {
           const fallback = assetPath('src/data/framework-data.json');
           response = await fetch(fallback);
         } catch (e) {
-          // ignore
+          console.log('Fallback fetch failed', e);
         }
       }
       
@@ -59,7 +59,7 @@ export class DataService {
           const fallback = assetPath('src/data/resolutions.json');
           response = await fetch(fallback);
         } catch (e) {
-          // ignore
+          console.log('Fallback fetch failed', e);
         }
       }
       
