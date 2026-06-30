@@ -15,14 +15,15 @@ interface ModEntry {
   readonly details: ModDetail[];
   readonly author?: string;
   readonly modPreviewImage?: string;
+  readonly modLinkDetail?: ModLinkDetail;
 }
 
 interface ModSection {
   readonly id: string;
   readonly title: string;
   readonly intro: string;
-  readonly introLinkDetail?: ModLinkDetail;
   readonly mods: ModEntry[];
+  readonly modLinkDetail?: ModLinkDetail;
 }
 
 const NAV_ITEMS = [
@@ -39,6 +40,12 @@ const MOD_SECTIONS: ModSection[] = [
       {
         name: 'Clear Icons Essential',
         author: 'AshdeuzoFR',
+        modLinkDetail: {
+            kind: 'link',
+            prefix: 'Download the mod from here: ',
+            href: 'https://ashdeuzofr.itch.io/foxhole-clean-icons-essential',
+            label: 'Clear Icons Essential mod',
+        },
         details: [
           'With Clean Icons Essential, instantly recognize your weapons, ammo, vehicles, and resources in Foxhole — for faster decisions and smoother gameplay.',
         ],
@@ -46,6 +53,12 @@ const MOD_SECTIONS: ModSection[] = [
       {
         name: 'Knight\'s Map Mod of Science',
         author: 'Knight of Science',
+        modLinkDetail: {
+            kind: 'link',
+            prefix: 'Download the mod from here: ',
+            href: 'https://knight-of-science.itch.io/improved-map-mod-kos-edit',
+            label: 'Knight\'s Map Mod of Science',
+        },
         details: [
           'Foxhole map mod with better terrain and road colors, topography, etc.',
         ],
@@ -53,6 +66,12 @@ const MOD_SECTIONS: ModSection[] = [
       {
         name: 'High Visibility Railway Switch',
         author: 'FudgelFox',
+        modLinkDetail: {
+            kind: 'link',
+            prefix: 'Download the mod from here: ',
+            href: 'https://fudgelfox.itch.io/foxhole-high-visibility-railway-switch',
+            label: 'High Visibility Railway Switch mod',
+        },
         details: [
           'Designed to aid players in reducing eye strain at determining which direction the railway semaphore (switch) is pointed, from both the front and rear sides, at greater distances and zoom levels.',
         ],
@@ -60,6 +79,12 @@ const MOD_SECTIONS: ModSection[] = [
       {
         name: 'Better Container Colours',
         author: 'Dantello',
+        modLinkDetail: {
+            kind: 'link',
+            prefix: 'Download the mod from here: ',
+            href: 'https://danetello.itch.io/foxhole-better-container-colours',
+            label: 'Better Container Colours mod',
+        },
         details: [
           'This foxhole mod improves the clarity between all container colours(meaning it improves the resource and shipping container colours as well!).',
         ],
@@ -75,13 +100,25 @@ const MOD_SECTIONS: ModSection[] = [
       {
         name: 'skaj\'s super uber-fantastical Foxhole sound mod',
         author: 'skaj',
+        modLinkDetail: {
+            kind: 'link',
+            prefix: 'Download the mod from here: ',
+            href: 'https://skaj999.itch.io/super-uber-fantastical-foxhole-sound-mod',
+            label: 'skaj\'s super uber-fantastical Foxhole sound mod',
+        },
         details: [
-          'This is a sound mod for the MMO Foxhole. It completely overhauls nearly every sound in the game with new and improved counterparts, including guns, vehicles, and other various foley sounds (such as reloading).',
+          'This is an truly amazing sound mod for Foxhole. It completely overhauls nearly every sound in the game with new and improved counterparts, including guns, vehicles, and other various foley sounds (such as reloading).',
         ],
       },
       {
         name: 'Better Compass',
         author: 'KOCMOHABT',
+        modLinkDetail: {
+            kind: 'link',
+            prefix: 'Download the mod from here: ',
+            href: 'https://kocmodecaht.itch.io/foxhole-better-compass',
+            label: 'Better Compass mod',
+        },
         details: [
           'Changes the user interface of the compass by adding adjacent sides of the world, azimuth, and hourly direction.',
         ],
@@ -89,6 +126,12 @@ const MOD_SECTIONS: ModSection[] = [
       {
         name: 'Alternative Squad Leader & Officer icons',
         author: 'KoV',
+        modLinkDetail: {
+            kind: 'link',
+            prefix: 'Download the mod from here: ',
+            href: 'https://dkov.itch.io/foxhole-alternative-squad-leaderofficer-icon',
+            label: 'Alternative Squad Leader & Officer icons mod',
+            },
         details: [
           'This is pretty fast and simple to mod, so if you have simple requests (logos already made or with very few adjustments), contact me (discord) for custom versions.',
         ],
@@ -96,6 +139,12 @@ const MOD_SECTIONS: ModSection[] = [
       {
         name: 'Foxhole Vehicles Overhaul',
         author: 'WolfgangIX',
+        modLinkDetail: {
+          kind: 'link',
+          prefix: 'Download the mod from here: ',
+          href: 'https://www.nexusmods.com/foxhole/mods/10',
+          label: 'Foxhole Vehicles Overhaul mod',
+        },
         details: [
           'This mods focus on adding details on Foxhole vanilla vehicles, making them more realistic and immersive.',
         ],
@@ -103,7 +152,6 @@ const MOD_SECTIONS: ModSection[] = [
     ],
   },
 ];
-
 export function SuggestedModsPage() {
   return (
     <WikiArticleLayout
@@ -131,31 +179,12 @@ export function SuggestedModsPage() {
       {MOD_SECTIONS.map((section) => (
         <section className="wiki-section" id={section.id} key={section.id}>
           <h2 className="wiki-section-heading">{section.title}</h2>
-          {section.introLinkDetail ? (
-            <p className="medal-category-intro">
-              {section.introLinkDetail.prefix}
-              <a href={section.introLinkDetail.href} target="_blank" rel="noreferrer">{section.introLinkDetail.label}</a>
-              {section.introLinkDetail.suffix ?? ''}
-            </p>
-          ) : (
-            <p className="medal-category-intro">{section.intro}</p>
-          )}
-
           {section.mods.map((mod) => (
             <details className="medal-entry" key={mod.name}>
               <summary className="medal-summary role-summary">
                 <span className="medal-name role-name">
                   {mod.name}
                   {mod.author && <span className="medal-author"> by {mod.author}</span>}
-                  {mod.modPreviewImage && (
-                    <img
-                      src={mod.modPreviewImage}
-                      alt={`${mod.name} preview`}
-                      className="mod-preview-image"
-                      loading="lazy"
-                    />
-                  )}
-                  {mod.details.length > 0 && <span className="medal-details-indicator"> (click for details)</span>}
                 </span>
               </summary>
               <div className="medal-details">
@@ -170,6 +199,23 @@ export function SuggestedModsPage() {
                     </p>
                   )
                 ))}
+                {mod.modPreviewImage && (
+                    <img
+                      src={mod.modPreviewImage}
+                      alt={`${mod.name} preview`}
+                      className="mod-preview-image"
+                      loading="lazy"
+                    />
+                  )}
+                  {mod.modLinkDetail && (
+                    <span className="mod-link-detail">
+                      {mod.modLinkDetail.prefix}
+                      <a href={mod.modLinkDetail.href} target="_blank" rel="noreferrer">
+                        {mod.modLinkDetail.label}
+                      </a>
+                      {mod.modLinkDetail.suffix}
+                    </span>
+                  )}
               </div>
             </details>
           ))}
