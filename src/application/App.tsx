@@ -13,6 +13,7 @@ import { HighCommandersArticlePage } from '../presentation/pages/info-library/Hi
 import { MedalProgramPage } from '../presentation/pages/info-library/MedalProgramPage';
 import { RoleGuidePage } from '../presentation/pages/info-library/RoleGuidePage';
 import { SuggestedModsPage } from '../presentation/pages/info-library/SuggestedMods';
+import { TrainingCoursePage } from '../presentation/pages/info-library/TrainingCoursePage';
 import { NewspaperPage } from '../presentation/pages/NewspaperPage';
 import { PrivacyPolicyPage } from '../presentation/pages/PrivacyPolicyPage';
 import { TermsOfServicePage } from '../presentation/pages/TermsOfServicePage';
@@ -41,6 +42,7 @@ export function App() {
       <Route path="/info-library/medal-program" element={<MedalProgramPage />} />
       <Route path="/info-library/roles-overview" element={<RoleGuidePage />} />
       <Route path="/info-library/suggested-mods" element={<SuggestedModsPage />} />
+      <Route path="/info-library/training-course" element={<TrainingCoursePage />} />
       <Route path="/newspaper" element={<NewspaperPage />} />
       <Route path="/privacy" element={<PrivacyPolicyPage />} />
       <Route path="/terms" element={<TermsOfServicePage />} />

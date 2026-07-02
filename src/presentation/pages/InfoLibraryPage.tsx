@@ -134,6 +134,28 @@ const CATEGORIES: readonly CategoryEntry[] = [
       },
     ],
   },
+  {
+    name: "1CL Training Courses",
+    articles: [
+      {
+        title: "1CL Basic Infantry Training Course",
+        type: "guide",
+        path: "/info-library/training-course",
+        summary:
+          "Infantry-focused training presentation covering tips, tricks, tactics, and loadouts for successful frontline play.",
+        keywords: [
+          "training",
+          "course",
+          "infantry",
+          "tips",
+          "tricks",
+          "tactics",
+          "loadouts",
+          "onboarding",
+        ],
+      },
+    ],
+  },
 ];
 
 function normalize(input: string): string {
