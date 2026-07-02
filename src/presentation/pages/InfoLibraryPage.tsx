@@ -6,6 +6,7 @@ import "../styles/library.css";
 
 interface ArticleEntry {
   readonly title: string;
+  readonly type: "info" | "guide";
   readonly path: string;
   readonly summary: string;
   readonly keywords: string[];
@@ -16,12 +17,13 @@ interface CategoryEntry {
   readonly articles: ArticleEntry[];
 }
 
-const CATEGORIES = [
+const CATEGORIES: readonly CategoryEntry[] = [
   {
     name: "About 1CL",
     articles: [
       {
         title: "What is the 1st Combined Legion?",
+        type: "info",
         path: "/info-library/what-is-1cl",
         summary:
           "History, values, structure, and how to join the 1CL community.",
@@ -34,8 +36,9 @@ const CATEGORIES = [
           "about",
         ],
       },
-      {
+        {
         title: "Joining 1CL as a Regiment",
+        type: "info",
         path: "/info-library/joining-1cl-as-a-regiment",
         summary:
           "Membership requirements, expectations, and benefits for regiments joining the 1CL federation.",
@@ -50,6 +53,7 @@ const CATEGORIES = [
       },
       {
         title: "High Commanders of 1CL",
+        type: "info",
         path: "/info-library/high-commanders",
         summary:
           "Historical and current records of 1CL High Commanders and their terms.",
@@ -63,6 +67,7 @@ const CATEGORIES = [
       },
       {
         title: "1CL Medal Overview",
+        type: "info",
         path: "/info-library/medal-program",
         summary:
           "Official medal categories, nomination flow, prestige tiers, and award governance.",
@@ -78,6 +83,7 @@ const CATEGORIES = [
       },
       {
         title: "1CL Roles Overview",
+        type: "info",
         path: "/info-library/roles-overview",
         summary:
           "Rank structure, officer responsibilities, branch roles, pings, verification, and group-specific roles.",
@@ -92,8 +98,28 @@ const CATEGORIES = [
           "ping",
         ],
       },
+    ],
+  },
+  {
+    name: "Guides",
+    articles: [
+      {
+        title: "1CL Command and Control",
+        type: "guide",
+        path: "/info-library/command-and-control",
+        summary:
+          "Overview of the 1CL Command and Control system, its purpose, and how it works.",
+        keywords: [
+          "command",
+          "control",
+          "1cl",
+          "communication",
+          "coordination",
+        ],
+      },
       {
         title: "Suggested Mods",
+        type: "guide",
         path: "/info-library/suggested-mods",
         summary:
           "A curated list of recommended mods to enhance your Foxhole gameplay experience.",
@@ -106,22 +132,9 @@ const CATEGORIES = [
           "enhancement",
         ],
       },
-      {
-        title: "1CL Command and Control",
-        path: "/info-library/command-and-control",
-        summary:
-          "Overview of the 1CL Command and Control system, its purpose, and how it works.",
-        keywords: [
-          "command",
-          "control",
-          "1cl",
-          "communication",
-          "coordination",
-        ],
-      },
     ],
   },
-] as const satisfies readonly CategoryEntry[];
+];
 
 function normalize(input: string): string {
   return input
@@ -180,12 +193,12 @@ function scoreArticle(article: ArticleEntry, query: string): number {
     .split(" ")
     .filter((token) => token.length > 1);
   const articleTokens = haystack.split(" ").filter((token) => token.length > 1);
-  const articleTitleTokens = title
-    .split(" ")
-    .filter((token) => token.length > 1);
+  const articleTitleTokens = new Set(
+    title.split(" ").filter((token) => token.length > 1),
+  );
 
   queryTokens.forEach((token) => {
-    if (articleTitleTokens.includes(token)) score += 8;
+    if (articleTitleTokens.has(token)) score += 8;
     if (articleTokens.includes(token)) score += 5;
     if (articleTokens.some((candidate) => candidate.startsWith(token)))
       score += 3;
@@ -193,7 +206,7 @@ function scoreArticle(article: ArticleEntry, query: string): number {
 
     const bestFuzzy = articleTokens.reduce((best, candidate) => {
       const current = diceCoefficient(token, candidate);
-      return current > best ? current : best;
+      return Math.max(best, current);
     }, 0);
 
     if (bestFuzzy >= 0.8) score += 4;
