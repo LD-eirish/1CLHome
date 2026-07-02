@@ -140,7 +140,7 @@ const CATEGORIES: readonly CategoryEntry[] = [
       {
         title: "1CL Basic Infantry Training Course",
         type: "guide",
-        path: "/info-library/training-course",
+        path: "/info-library/basic-infantry-training-course",
         summary:
           "Infantry-focused training presentation covering tips, tricks, tactics, and loadouts for successful frontline play.",
         keywords: [
