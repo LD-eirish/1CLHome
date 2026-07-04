@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import type { Regiment } from '../../data/types/regiment.types';
 import { assetPath } from '../../infrastructure/utils/asset.utils';
 import { formatActivityTime } from '../../infrastructure/utils/path.utils';
@@ -9,7 +10,7 @@ interface RegimentCardProps {
   readonly hideDetails?: boolean;
 }
 
-export function RegimentCard({ regiment, index, onClick, hideDetails = false }: Readonly<RegimentCardProps>) {
+function RegimentCardComponent({ regiment, index, onClick, hideDetails = false }: Readonly<RegimentCardProps>) {
   const truncatedDescription = regiment.description.length > 120 
     ? `${regiment.description.substring(0, 120)}...` 
     : regiment.description;
@@ -24,31 +25,37 @@ export function RegimentCard({ regiment, index, onClick, hideDetails = false }: 
     onClick?.();
   };
 
+  // Use button element when clickable, article otherwise
+  const CardWrapper = onClick ? 'button' : 'article';
+  const cardProps = onClick ? {
+    className: `regiment-card ${isInactive ? 'regiment-card--inactive' : ''}`,
+    style: { animationDelay: `${index * 0.1}s` },
+    onClick: handleCardClick,
+    type: 'button' as const,
+    'aria-label': `View details for ${regiment.name}`
+  } : {
+    className: `regiment-card ${isInactive ? 'regiment-card--inactive' : ''}`,
+    style: { animationDelay: `${index * 0.1}s` }
+  };
+
   return (
-    <article 
-      className={`regiment-card ${isInactive ? 'regiment-card--inactive' : ''}`}
-      style={{ animationDelay: `${index * 0.1}s`, cursor: onClick ? 'pointer' : 'default' }}
-      onClick={handleCardClick}
-      role={onClick ? 'button' : undefined}
-      tabIndex={onClick ? 0 : undefined}
-      onKeyDown={onClick ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onClick(); } } : undefined}
-    >
+    <CardWrapper {...cardProps}>
       <div className="regiment-card-content">
-        <div className="regiment-header" style={{display: 'flex', alignItems: 'center', gap: '12px'}}>
-          <div className="regiment-logo-wrap" style={{width: 64, height: 64, flexShrink: 0}}>
+        <div className="regiment-header">
+          <div className="regiment-logo-wrap">
             {regiment.logo ? (
-              <img src={assetPath(regiment.logo)} alt={`${regiment.abbreviation} logo`} style={{width: '100%', height: '100%', objectFit: 'contain'}} />
+              <img src={assetPath(regiment.logo)} alt={`${regiment.abbreviation} logo`} loading="lazy" />
             ) : (
-              <img src={assetPath('1CLLogo.png')} alt="1CL" style={{width: '100%', height: '100%', objectFit: 'contain', opacity: 0.9}} />
+              <img src={assetPath('1CLLogo.png')} alt="1CL" style={{opacity: 0.9}} loading="lazy" />
             )}
           </div>
-          <div className="regiment-name-wrap" style={{flex: 1}}>
-            <h4 className="regiment-name" style={{margin: 0}}>{regiment.name} ({regiment.abbreviation})</h4>
+          <div className="regiment-name-wrap">
+            <h4 className="regiment-name">{regiment.name} ({regiment.abbreviation})</h4>
           </div>
           {regiment.group === 'central' && regiment.extraLogos && regiment.extraLogos.length > 0 && (
-            <div style={{display: 'flex', gap: '6px', alignItems: 'center'}}>
-              {regiment.extraLogos.map((logo, key) => (
-                <img key={key} src={assetPath(logo)} alt={`extra logo ${key}`} style={{width: 36, height: 36, objectFit: 'contain'}} />
+            <div className="regiment-extra-logos">
+              {regiment.extraLogos.map((logo) => (
+                <img key={logo} src={assetPath(logo)} alt={`${regiment.abbreviation} extra insignia`} loading="lazy" />
               ))}
             </div>
           )}
@@ -108,6 +115,7 @@ export function RegimentCard({ regiment, index, onClick, hideDetails = false }: 
           </span>
         )}
       </div>
-    </article>
+    </CardWrapper>
   );
 }
+export const RegimentCard = memo(RegimentCardComponent);

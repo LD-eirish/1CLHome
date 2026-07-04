@@ -37,6 +37,7 @@ html,body{
   background-attachment:fixed;
   color:#d4ceba;
   line-height:1.6;
+  overflow-x:hidden;
 }
 
 #root{

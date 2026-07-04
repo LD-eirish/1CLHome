@@ -1074,6 +1074,63 @@ body.Derp-mode #Schmemil-toggle{
   overflow:hidden;
 }
 
+/* Normalize button styling when used as regiment card */
+button.regiment-card{
+  all:revert;
+  padding:1.5rem;
+  background:rgba(0,0,0,0.3);
+  border-radius:2px;
+  border:1px solid rgba(201,168,79,0.15);
+  transition:all 0.3s ease;
+  animation:fadeInUp 0.6s ease-out backwards;
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+  font:inherit;
+  color:inherit;
+  text-align:left;
+}
+
+/* Regiment logo wrapper */
+.regiment-logo-wrap{
+  width:64px;
+  height:64px;
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.regiment-logo-wrap img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+/* Regiment name wrapper */
+.regiment-name-wrap{
+  flex:1;
+  min-width:0;
+}
+
+/* Extra logos for central group */
+.regiment-extra-logos{
+  display:flex;
+  gap:6px;
+  align-items:center;
+  flex-shrink:0;
+}
+
+.regiment-extra-logos img{
+  width:36px;
+  height:36px;
+  object-fit:contain;
+}
+
 /* Respect user's motion preferences */
 @media (prefers-reduced-motion: reduce) {
   .regiment-card {
@@ -1098,6 +1155,11 @@ body.Derp-mode #Schmemil-toggle{
 }
 
 .regiment-card:hover{
+  border-color:rgba(201,168,79,0.4);
+  box-shadow:0 4px 16px rgba(0,0,0,0.5);
+}
+
+button.regiment-card:hover{
   border-color:rgba(201,168,79,0.4);
   box-shadow:0 4px 16px rgba(0,0,0,0.5);
 }
@@ -1138,6 +1200,11 @@ body.Derp-mode #Schmemil-toggle{
   backdrop-filter:brightness(0.68) saturate(0.56);
   pointer-events:none;
   z-index:1;
+}
+
+button.regiment-card--inactive,
+button.regiment-card--inactive:hover{
+  cursor:not-allowed;
 }
 
 .regiment-card--inactive .regiment-card-content,
@@ -1653,6 +1720,182 @@ body.Derp-mode #Schmemil-toggle{
   border-bottom:none;
 }
 
+/* Modal styles */
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:1200;
+  padding:16px;
+}
+
+/* Normalize dialog element styling */
+dialog.modal-overlay{
+  all:revert;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.8);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:1200;
+  padding:16px;
+  border:none;
+  margin:0;
+  max-width:100%;
+  max-height:100vh;
+  width:100%;
+  height:100%;
+}
+
+/* Override default dialog ::backdrop */
+dialog.modal-overlay::backdrop{
+  display:none;
+}
+
+.modal-content{
+  background:var(--card);
+  color:var(--muted);
+  border:1px solid rgba(201,168,79,0.12);
+  border-radius:2px;
+  max-width:600px;
+  max-height:85vh;
+  overflow-y:auto;
+  box-shadow:0 20px 60px rgba(0,0,0,0.7);
+  position:relative;
+}
+
+.modal-close{
+  position:absolute;
+  top:12px;
+  right:12px;
+  width:40px;
+  height:40px;
+  border:none;
+  background:transparent;
+  color:var(--muted);
+  font-size:24px;
+  cursor:pointer;
+  z-index:1210;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:color 0.2s;
+}
+
+.modal-close:hover{
+  color:var(--gold);
+}
+
+.modal-header{
+  padding:20px;
+  border-bottom:1px solid rgba(201,168,79,0.12);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.modal-header-top{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.modal-header-logo{
+  width:80px;
+  height:80px;
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.modal-header-logo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.modal-header-text h2{
+  margin:0;
+  font-size:1.5rem;
+}
+
+.modal-header-text p{
+  margin:4px 0 0;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+.modal-extra-logos{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.modal-extra-logos img{
+  width:48px;
+  height:48px;
+  object-fit:contain;
+}
+
+.modal-body{
+  padding:20px;
+}
+
+.modal-section{
+  margin-bottom:20px;
+}
+
+.modal-section:last-child{
+  margin-bottom:0;
+}
+
+.modal-section h3{
+  margin-top:0;
+  margin-bottom:12px;
+  color:var(--gold);
+  font-size:1.1rem;
+}
+
+.modal-section p{
+  margin:0 0 12px;
+  line-height:1.65;
+}
+
+.modal-section p:last-child{
+  margin-bottom:0;
+}
+
+/* Definition list for modal details */
+.modal-details-list{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:8px 16px;
+  margin:0;
+  padding:0;
+}
+
+.modal-details-list dt{
+  font-weight:600;
+  color:var(--gold);
+  text-align:left;
+}
+
+.modal-details-list dd{
+  margin:0;
+}
+
+.modal-tags-wrapper{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+
 .benefits-list li:hover{
   background:none;
   transform:none;
@@ -1737,7 +1980,7 @@ body.Derp-mode #Schmemil-toggle{
 
 /* Site footer with small light-grey underscored legal links */
 .site-footer{
-  padding:4px 0 6px;
+  padding:4px 0 2px;
   text-align:center;
   margin-top:auto;
   font-size:0.75rem;
@@ -1915,60 +2158,6 @@ body.Derp-mode #Schmemil-toggle{
   .discord-btn--small{ width:100%; max-width:100%; }
   .regiment-grid{ grid-template-columns:1fr; }
   .back-btn{ font-size:12px; padding:6px 8px; }
-}
-
-/* Modal Overlay */
-.modal-overlay{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  bottom:0;
-  background:rgba(0,0,0,0.85);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
-  padding:20px;
-  backdrop-filter:blur(4px);
-}
-
-.modal-content{
-  background:var(--card);
-  border-radius:6px;
-  border:1px solid rgba(255,255,255,0.08);
-  box-shadow:0 12px 40px rgba(0,0,0,0.8);
-  max-width:700px;
-  width:100%;
-  max-height:90vh;
-  overflow-y:auto;
-  position:relative;
-}
-
-.modal-close{
-  position:absolute;
-  top:16px;
-  right:16px;
-  background:rgba(0,0,0,0.4);
-  border:1px solid rgba(255,255,255,0.1);
-  border-radius:4px;
-  width:32px;
-  height:32px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  color:var(--muted);
-  font-size:20px;
-  line-height:1;
-  transition:all 0.2s;
-  z-index:1;
-}
-
-.modal-close:hover{
-  background:rgba(255,255,255,0.1);
-  color:var(--gold);
-  border-color:var(--gold);
 }
 
 .regiment-modal .modal-header{

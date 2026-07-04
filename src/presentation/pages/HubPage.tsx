@@ -5,20 +5,20 @@ export function HubPage() {
   return (
     <>
       <Header subtitle="Welcome — 1CL Hub" />
-      <main className="container hub-page" style={{paddingTop: '72px'}}>
+      <main className="container hub-page">
         <div
           className="hub-page-background"
           aria-hidden="true"
-          style={{backgroundImage: `url(${assetPath('1CL_harbourCity.jpg')})`}}
+          style={{backgroundImage: `url(${assetPath('1CL_harbourCity.webp')}), url(${assetPath('1CL_harbourCity.jpg')})`}}
         />
         <div className="hub-page-overlay" aria-hidden="true" />
-        <section className="hub-masthead" style={{flexDirection: 'column', alignItems: 'flex-start', gap: '36px', paddingTop: '96px', position: 'relative', zIndex: 1}}>
+        <section className="hub-masthead">
           <div className="hub-masthead-text">
             <h2 className="hub-masthead-title">
               1st Combined Legion
             </h2>
             <p className="hub-masthead-sub">
-              1CL is a federation of Colonial regiments that work together to maximize efficiency and impact in the war effort. The core goals of 1CL are to embrace collaboration between Colonial regiments, provide public contributions, and help regiments grow together. 1CL doesn't just focus on its own; but on the wider Colonial community. Each regiment remains independent and may leave at any time; while they benefit from deep cooperation, shared resources and logistics, and a strong, unified presence on the battlefield.
+              1CL is a federation of Colonial regiments in the game called "Foxhole" that work together to maximize efficiency and impact in the war effort. The core goals of 1CL are to embrace collaboration between Colonial regiments, provide public contributions, and help regiments grow together. 1CL doesn't just focus on its own; but on the wider Colonial community. Each regiment remains independent and may leave at any time; while they benefit from deep cooperation, shared resources and logistics, and a strong, unified presence on the battlefield.
             </p>
           </div>
           <a

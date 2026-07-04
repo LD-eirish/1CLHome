@@ -41,7 +41,6 @@ export function TrainingCoursePage() {
           <iframe
             src={TRAINING_SLIDES_URL}
             title="1CL Basic Infantry Training Course"
-            frameBorder="0"
             allowFullScreen
             loading="lazy"
           />

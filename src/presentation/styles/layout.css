@@ -1,11 +1,10 @@
 /* Layout and Container Styles */
 
 .container{
-  max-width:1100px;
+  max-width:1080px;
   margin:0 auto;
   padding:18px 8px;
-  width:100%;
-}
+  width:100%;  overflow-x:hidden;}
 
 /* Header */
 .site-header{
@@ -27,11 +26,11 @@
   display:flex;
   align-items:center;
   justify-content:space-between;
-  max-width:1100px;
+  max-width:1080px;
   margin:0 auto;
   padding:0 8px;
-  padding-left:84px;
-  padding-right:140px;
+  width:100%;
+  box-sizing:border-box;
 }
 
 /* Pin brand (logo + title) to the viewport left and page actions to the viewport right */
@@ -119,7 +118,7 @@
 }
 
 .top-inner{
-  max-width:1100px;
+  max-width:1080px;
   margin:0 auto;
   padding:0 8px;
   display:flex;
@@ -127,6 +126,8 @@
   justify-content:space-between;
   gap:16px;
   flex-wrap:wrap;
+  width:100%;
+  box-sizing:border-box;
 }
 
 .top-inner .left{
@@ -146,8 +147,10 @@
 /* Main area for library */
 .main-area{
   padding:0 8px;
-  max-width:1100px;
+  max-width:1080px;
   margin:0 auto;
+  width:100%;
+  box-sizing:border-box;
 }
 
 .viewer{
@@ -320,9 +323,11 @@
 .hub-page-background{
   position:absolute;
   inset:0;
+  background-color:#1a1f1a;
   background-position:center center;
   background-repeat:no-repeat;
   background-size:cover;
+  background-attachment:fixed;
   filter:grayscale(0.86) contrast(0.84) brightness(0.76) blur(0.7px);
   opacity:0.28;
   pointer-events:none;
@@ -338,22 +343,56 @@
   pointer-events:none;
 }
 
-/* Hub page — masthead */
+/* Hub page masthead content */
 .hub-masthead{
   display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:24px;
-  padding:28px 0 24px 0;
-  margin-bottom:0;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:36px;
+  padding-top:96px;
+  position:relative;
+  z-index:1;
 }
 
+/* Hub page mobile responsiveness */
+@media (max-width:900px){
+  .hub-masthead{
+    gap:28px;
+    padding-top:72px;
+  }
+  
+  .hub-page.container{
+    padding:60px 0 0;
+  }
+}
+
+@media (max-width:560px){
+  .hub-masthead{
+    gap:20px;
+    padding-top:48px;
+  }
+  
+  .hub-page.container{
+    padding:40px 0 0;
+  }
+  
+  .hub-masthead-title{
+    font-size:clamp(2rem, 5vw, 3rem) !important;
+  }
+  
+  .hub-masthead-sub{
+    font-size:0.9rem;
+    max-width:100%;
+  }
+}
+
+/* Hub page — masthead text container */
 .hub-masthead-text{
   flex:1;
   display:flex;
   flex-direction:column;
   align-items:flex-start;
-  margin-left: 0;
+  margin-left:0;
 }
 
 .hub-eyebrow{
@@ -810,5 +849,18 @@
   .compact-nav-item{
     padding:6px 10px;
     font-size:14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hub-page-background{
+    background-attachment:scroll;
+  }
+}
+
+/* Optimize background for mobile - use fixed attachment only on desktop for performance */
+@media (max-width:900px){
+  .hub-page-background{
+    background-attachment:scroll;
   }
 }
