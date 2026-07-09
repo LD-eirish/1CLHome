@@ -262,7 +262,10 @@
 .regiment-card-footer .discord-btn,
 .regiment-card-footer .discord-btn--small{
   margin-top:0;
-  max-width:50%;
+  width:fit-content;
+  max-width:none;
+  white-space:nowrap;
+  flex-shrink:0;
   align-self:flex-start;
 }
 
