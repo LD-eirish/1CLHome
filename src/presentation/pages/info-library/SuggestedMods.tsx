@@ -134,7 +134,7 @@ const MOD_SECTIONS: ModSection[] = [
           label: "Alternative Squad Leader & Officer icons mod",
         },
         details: [
-          "This is pretty fast and simple to mod, so if you have simple requests (logos already made or with very few adjustments), contact me (discord) for custom versions.",
+          "This is pretty fast and simple to mod, it changes the squad leader and squad officer icons to look fancier.",
         ],
       },
       {
@@ -147,7 +147,7 @@ const MOD_SECTIONS: ModSection[] = [
           label: "Foxhole Vehicles Overhaul mod",
         },
         details: [
-          "This mods focus on adding details on Foxhole vanilla vehicles, making them more realistic and immersive.",
+          "This mod focuses on adding details to Foxhole's vanilla vehicles, making them more realistic and immersive.",
         ],
       },
     ],
