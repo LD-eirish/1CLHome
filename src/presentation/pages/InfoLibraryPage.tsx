@@ -138,6 +138,18 @@ const CATEGORIES: readonly CategoryEntry[] = [
     name: "1CL Training Courses",
     articles: [
       {
+        title: "1CL Introduction Course",
+        type: "guide",
+        path: "/info-library/1cl-introduction-course",
+        summary:
+          "This course is designed to provide an overview of the 1CL, its structure, and its various branches. ",
+        keywords: [
+          "training",
+          "course",
+          "onboarding",
+        ],
+      },
+      {
         title: "1CL Basic Infantry Training Course",
         type: "guide",
         path: "/info-library/basic-infantry-training-course",
@@ -151,7 +163,6 @@ const CATEGORIES: readonly CategoryEntry[] = [
           "tricks",
           "tactics",
           "loadouts",
-          "onboarding",
         ],
       },
     ],

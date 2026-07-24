@@ -6,18 +6,18 @@ const NAV_ITEMS = [
 ];
 
 const TRAINING_SLIDES_URL =
-  'https://docs.google.com/presentation/d/e/2PACX-1vSdiq-ifblhD5Q6YJ0AjRPuw7r-hzzJJNEKd_DXEsd6nrnHKm-D3cUbojWcKXVtJk1TQ54IjuRtreLq/pubembed?start=false&loop=false&delayms=60000';
+  'https://docs.google.com/presentation/d/e/2PACX-1vQMj3tfn_z1nf1yFUXl8DespakYrn2Fx6kSuC8N_TlLdkEHpywgPs0utyRTKJUxBP3vr40vQC1JoUPI/pubembed?start=false&loop=false&delayms=60000';
 
-export function BasicInfantryTrainingCoursePage() {
+export function IntroductionCoursePage() {
   return (
     <WikiArticleLayout
       subtitle="1CL Info Library"
-      title="1CL Basic Infantry Training Course"
-      lead="Infantry training presentation covering practical tips, tricks, tactics, and loadouts for successful frontline play."
+      title="1CL Introduction Course"
+      lead="Presentation on what 1CL is, how it works and what branches 1CL has."
       breadcrumbs={[
         { label: 'Hub', to: '/hub' },
         { label: 'Info Library', to: '/info-library' },
-        { label: '1CL Basic Infantry Training Course' },
+        { label: '1CL Introduction Course' },
       ]}
       navItems={NAV_ITEMS}
       lastUpdated="July 2026"
@@ -25,13 +25,11 @@ export function BasicInfantryTrainingCoursePage() {
       <section className="wiki-section" id="course-overview">
         <h2 className="wiki-section-heading">Course Overview</h2>
         <p>
-          The following presentation contains a variety of tips, tricks, tactics, and loadouts for running successful infantry.
+          This course is designed to provide an overview of the 1st Combined Legion (1CL), its structure, and its various branches. 
         </p>
         <p>
-          Infantry are the core of any push. They are a necessity to take space and win wars.
         </p>
         <p>
-          This page embeds the training presentation directly into the wiki.
         </p>
       </section>
 
@@ -40,7 +38,7 @@ export function BasicInfantryTrainingCoursePage() {
         <div className="wiki-embed-frame">
           <iframe
             src={TRAINING_SLIDES_URL}
-            title="1CL Basic Infantry Training Course"
+            title="1CL Introduction Course"
             allowFullScreen
             loading="lazy"
           />

@@ -20,7 +20,8 @@ const HighCommandersArticlePage = lazy(() => import('../presentation/pages/info-
 const MedalProgramPage = lazy(() => import('../presentation/pages/info-library/MedalProgramPage').then(m => ({ default: m.MedalProgramPage })));
 const RoleGuidePage = lazy(() => import('../presentation/pages/info-library/RoleGuidePage').then(m => ({ default: m.RoleGuidePage })));
 const SuggestedModsPage = lazy(() => import('../presentation/pages/info-library/SuggestedMods').then(m => ({ default: m.SuggestedModsPage })));
-const TrainingCoursePage = lazy(() => import('../presentation/pages/info-library/BasicInfantryTrainingCoursePage').then(m => ({ default: m.TrainingCoursePage })));
+const BasicInfantryTrainingCoursePage = lazy(() => import('../presentation/pages/info-library/BasicInfantryTrainingCoursePage').then(m => ({ default: m.BasicInfantryTrainingCoursePage })));
+const IntroductionCoursePage = lazy(() => import('../presentation/pages/info-library/1cl-introduction-course').then(m => ({ default: m.IntroductionCoursePage })));
 const CnCPage = lazy(() => import('../presentation/pages/info-library/CnCPage').then(m => ({ default: m.CnCPage })));
 
 // Loading fallback component
@@ -56,7 +57,8 @@ export function App() {
       <Route path="/info-library/medal-program" element={<Suspense fallback={<PageLoader />}><MedalProgramPage /></Suspense>} />
       <Route path="/info-library/roles-overview" element={<Suspense fallback={<PageLoader />}><RoleGuidePage /></Suspense>} />
       <Route path="/info-library/suggested-mods" element={<Suspense fallback={<PageLoader />}><SuggestedModsPage /></Suspense>} />
-      <Route path="/info-library/basic-infantry-training-course" element={<Suspense fallback={<PageLoader />}><TrainingCoursePage /></Suspense>} />
+      <Route path="/info-library/basic-infantry-training-course" element={<Suspense fallback={<PageLoader />}><BasicInfantryTrainingCoursePage /></Suspense>} />
+      <Route path="/info-library/1cl-introduction-course" element={<Suspense fallback={<PageLoader />}><IntroductionCoursePage /></Suspense>} />
       <Route path="/newspaper" element={<NewspaperPage />} />
       <Route path="/privacy" element={<PrivacyPolicyPage />} />
       <Route path="/terms" element={<TermsOfServicePage />} />
