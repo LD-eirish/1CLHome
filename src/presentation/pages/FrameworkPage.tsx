@@ -99,7 +99,7 @@ export function FrameworkPage() {
   return (
     <>
       <Header subtitle="Official command & operations framework" />
-      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Library', to: '/library' }, { label: 'Framework' }]} />
+      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Framework' }]} />
 
       <section className="hero card">
         <div className="hero-left">

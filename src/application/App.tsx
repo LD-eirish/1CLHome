@@ -4,6 +4,7 @@ import { HubPage } from '../presentation/pages/HubPage';
 import { ResolutionViewPage } from '../presentation/pages/ResolutionViewPage';
 import { CentralGroupPage } from '../presentation/pages/CentralGroupPage';
 import { AssociateGroupPage } from '../presentation/pages/AssociateGroupPage';
+import { FrameworkPage } from '../presentation/pages/FrameworkPage';
 import BotDocumentationPage from '../presentation/pages/BotDocumentationPage';
 import { EventFeatureDocsPage } from '../presentation/pages/docs/EventFeatureDocsPage';
 import { WarCounterFeatureDocsPage } from '../presentation/pages/docs/WarCounterFeatureDocsPage';
@@ -41,7 +42,7 @@ export function App() {
       <Routes>
       <Route path="/" element={<Navigate to="/hub" replace />} />
       <Route path="/hub" element={<HubPage />} />
-      <Route path="/framework" element={<Navigate to="/hub" replace />} />
+      <Route path="/framework" element={<FrameworkPage />} />
       <Route path="/resolution/:id" element={<ResolutionViewPage />} />
       <Route path="/members" element={<Navigate to="/central-group" replace />} />
       <Route path="/central-group" element={<CentralGroupPage />} />

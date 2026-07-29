@@ -12,6 +12,11 @@ import type { FrameworkData } from '../types/framework.types';
 import type { ResolutionData } from '../types/resolution.types';
 
 export class DataService {
+  private static isHtmlResponse(response: Response): boolean {
+    const contentType = response.headers.get('content-type')?.toLowerCase() ?? '';
+    return contentType.includes('text/html');
+  }
+
   /**
    * Fetch framework data from JSON file
    */
@@ -20,8 +25,8 @@ export class DataService {
       const path = PathUtils.resolvePath(API_ENDPOINTS.FRAMEWORK_DATA);
       let response = await fetch(path);
 
-      // Fallback: if the absolute path fails (GitHub Pages base mismatches), try assetPath-based resolve
-      if (!response.ok) {
+      // Fallback when path is missing OR SPA fallback returns HTML instead of JSON.
+      if (!response.ok || this.isHtmlResponse(response)) {
         try {
           const { assetPath } = await import('../../infrastructure/utils/asset.utils');
           const fallback = assetPath('src/data/framework-data.json');
@@ -52,8 +57,8 @@ export class DataService {
       const path = PathUtils.resolvePath(API_ENDPOINTS.RESOLUTIONS);
       let response = await fetch(path);
 
-      // Fallback for deployments where base path differs
-      if (!response.ok) {
+      // Fallback when path is missing OR SPA fallback returns HTML instead of JSON.
+      if (!response.ok || this.isHtmlResponse(response)) {
         try {
           const { assetPath } = await import('../../infrastructure/utils/asset.utils');
           const fallback = assetPath('src/data/resolutions.json');
