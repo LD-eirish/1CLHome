@@ -1,17 +1,14 @@
-import { Header } from '../components/Header';
-import { PageBreadcrumb } from '../components/PageBreadcrumb';
+import { EditorialPageLayout } from '../components/EditorialPageLayout';
 
 export function TermsOfServicePage() {
   return (
-    <>
-      <Header subtitle="Terms of Service" />
-      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Terms of Service' }]} />
-
-      <main className="container">
-        <section className="card content card">
-          <h2>1CL Bot Terms of Service</h2>
-          <p className="small"><strong>Effective date:</strong> May 28, 2026</p>
-
+    <EditorialPageLayout
+      subtitle="Terms of Service"
+      kicker="Official document"
+      title="1CL Bot Terms of Service"
+      meta={<><strong>Effective date:</strong> May 28, 2026</>}
+      breadcrumbs={[{ label: 'Hub', to: '/hub' }, { label: 'Terms of Service' }]}
+    >
           <h3>Introduction</h3>
           <p>
             eirish’s Foxhole Assistant Discord bot ("the Bot") provides community management features including logistics tracking, member verification, event coordination, and role assignments for our Foxhole gaming coalition. These Terms of Service govern your use of the Bot within Discord servers.
@@ -89,9 +86,7 @@ export function TermsOfServicePage() {
             For questions about these Terms, please email <a href="mailto:eirishofficial@pm.me?subject=[1CL Bot ToS Inquiry]">eirishofficial@pm.me</a>. 
             Include your Discord username, server name (if applicable), and a detailed description of your inquiry. We aim to respond within 5 business days.
           </p>
-        </section>
-      </main>
-    </>
+    </EditorialPageLayout>
   );
 }
 

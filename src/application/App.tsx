@@ -1,7 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import { HubPage } from '../presentation/pages/HubPage';
-import { ResolutionViewPage } from '../presentation/pages/ResolutionViewPage';
 import { CentralGroupPage } from '../presentation/pages/CentralGroupPage';
 import { AssociateGroupPage } from '../presentation/pages/AssociateGroupPage';
 import { FrameworkPage } from '../presentation/pages/FrameworkPage';
@@ -43,7 +42,6 @@ export function App() {
       <Route path="/" element={<Navigate to="/hub" replace />} />
       <Route path="/hub" element={<HubPage />} />
       <Route path="/framework" element={<FrameworkPage />} />
-      <Route path="/resolution/:id" element={<ResolutionViewPage />} />
       <Route path="/members" element={<Navigate to="/central-group" replace />} />
       <Route path="/central-group" element={<CentralGroupPage />} />
       <Route path="/associate-group" element={<AssociateGroupPage />} />

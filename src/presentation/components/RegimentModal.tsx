@@ -3,7 +3,7 @@
  * Displays full regiment details in a modal overlay
  */
 
-import { memo } from 'react';
+import { memo, useEffect, useRef } from 'react';
 import type { Regiment } from '../../data/types/regiment.types';
 import { assetPath } from '../../infrastructure/utils/asset.utils';
 import { formatActivityTime } from '../../infrastructure/utils/path.utils';
@@ -14,11 +14,40 @@ interface RegimentModalProps {
 }
 
 function RegimentModalComponent({ regiment, onClose }: Readonly<RegimentModalProps>) {
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    const handleCancel = (event: Event) => {
+      event.preventDefault();
+      onClose();
+    };
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        onClose();
+      }
+    };
+
+    dialog.addEventListener('cancel', handleCancel);
+    dialog.addEventListener('keydown', handleKeyDown);
+    dialog.showModal();
+    return () => {
+      dialog.removeEventListener('cancel', handleCancel);
+      dialog.removeEventListener('keydown', handleKeyDown);
+      if (dialog.open) dialog.close();
+    };
+  }, [onClose]);
+
   return (
     <dialog 
+      ref={dialogRef}
       className="modal-overlay" 
-      onCancel={onClose}
-      open
+      aria-modal="true"
+      aria-labelledby="regiment-modal-title"
     >
       <div className="modal-content regiment-modal">
         <button 

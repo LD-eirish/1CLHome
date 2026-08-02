@@ -70,6 +70,26 @@
   margin:8px 0;
 }
 
+.framework-editorial-page .content.card{
+  background:none;
+  border:0;
+  border-bottom:1px solid var(--editorial-line);
+  border-radius:0;
+  box-shadow:none;
+  margin:0;
+  padding:1.75rem 0;
+}
+
+.framework-editorial-page .content.card > h3{
+  color:var(--khaki);
+  font-family:'Jost', Helvetica, Arial, sans-serif;
+  font-weight:500;
+}
+
+.framework-editorial-page .content.card h4{
+  color:#b7bdaf;
+}
+
 /* Departments page */
 .dept-list{
   margin-top:4px;
@@ -91,7 +111,7 @@
 
 .dept-code{
   flex:0 0 72px;
-  font-family:'Rajdhani', sans-serif;
+  font-family:'Jost', Helvetica, Arial, sans-serif;
   font-size:0.8rem;
   font-weight:700;
   text-transform:uppercase;
@@ -109,7 +129,7 @@
   margin:0 0 5px;
   font-size:16px;
   color:var(--khaki);
-  font-family:'Rajdhani', sans-serif;
+  font-family:'Jost', Helvetica, Arial, sans-serif;
   font-weight:700;
   letter-spacing:0.02em;
 }
@@ -448,12 +468,6 @@
   margin:0;
 }
 
-/* Remove focus outline for the toggle to match design */
-.toc .toc-toggle:focus{
-  outline: none !important;
-  box-shadow: none !important;
-}
-
 /* Ensure toggle button has no border or outline inside the TOC */
 .toc .toggle-btn,
 .toc .toc-toggle{
@@ -469,24 +483,22 @@
 
 /* Mobile / small viewport behaviour */
 @media (max-width: 900px), (max-height: 700px) {
-  .toc{
-    position:fixed;
-    right:12px;
-    top:80px;
-    width:88%;
-    max-width:360px;
-    background:var(--card);
-    box-shadow:0 8px 30px rgba(0,0,0,0.6);
+  .framework-editorial-page .toc{
+    position:static;
+    width:100%;
+    max-width:none;
+    margin:0 0 2rem;
+    background:none;
+    box-shadow:none;
     border-radius:2px;
     padding:12px;
-    transform-origin:top right;
   }
 
-  .toc.collapsed{
+  .framework-editorial-page .toc.collapsed{
     width:56px;
     height:40px;
     padding:6px;
-    overflow:visible;
+    overflow:hidden;
   }
 
   .toc .toc-title{ display:none; }
@@ -498,18 +510,6 @@
   .toc.collapsed nav > ul {
     display: none !important;
   }
-
-/* Ensure all inner content is hidden when collapsed, but keep the toggle visible */
-.toc.collapsed * {
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-
-.toc.collapsed .toc-toggle,
-.toc.collapsed .toggle-icon {
-  visibility: visible !important;
-  pointer-events: auto !important;
-}
 }
 
 /* Badges */
@@ -1063,6 +1063,141 @@ body.Derp-mode #Schmemil-toggle{
   margin-top:1.5rem;
 }
 
+.regiment-directory{
+  margin-top:4rem;
+}
+
+.regiment-directory-header{
+  display:flex;
+  align-items:baseline;
+  justify-content:space-between;
+  gap:1rem;
+  margin-bottom:0.75rem;
+}
+
+.regiment-directory-header h3{
+  margin:0;
+  color:var(--khaki);
+  font-size:1.2rem;
+  font-weight:500;
+}
+
+.regiment-directory > h3{
+  color:var(--khaki);
+}
+
+.regiment-directory-header p{
+  margin:0;
+  color:var(--muted);
+  font-size:0.78rem;
+}
+
+.regiment-roster{
+  border-top:1px solid var(--editorial-line);
+}
+
+.regiment-roster-item{
+  all:unset;
+  box-sizing:border-box;
+  display:grid;
+  grid-template-columns:3rem minmax(0,1fr);
+  gap:1rem;
+  width:100%;
+  padding:1.5rem 0;
+  border-bottom:1px solid var(--editorial-line);
+  color:var(--text);
+  cursor:pointer;
+}
+
+.regiment-roster-item:hover{
+  background:rgba(255,255,255,0.018);
+}
+
+.regiment-roster-item:focus-visible{
+  outline:2px solid var(--editorial-line-strong);
+  outline-offset:4px;
+}
+
+.regiment-roster-number{
+  color:#777d75;
+  font-size:0.78rem;
+  letter-spacing:0.12em;
+}
+
+.regiment-roster-copy,
+.regiment-roster-heading,
+.regiment-roster-meta,
+.regiment-roster-tags{
+  display:flex;
+}
+
+.regiment-roster-copy{
+  min-width:0;
+  flex-direction:column;
+  gap:0.55rem;
+}
+
+.regiment-roster-heading{
+  align-items:baseline;
+  gap:0.75rem;
+  flex-wrap:wrap;
+}
+
+.regiment-roster-name{
+  font-size:1.15rem;
+  font-weight:500;
+}
+
+.regiment-roster-abbreviation,
+.regiment-roster-meta{
+  color:var(--muted);
+  font-size:0.82rem;
+}
+
+.regiment-roster-meta,
+.regiment-roster-tags{
+  gap:1rem;
+  flex-wrap:wrap;
+}
+
+.regiment-roster-tags span{
+  color:#b5b8b1;
+  font-size:0.72rem;
+  border-bottom:1px solid var(--editorial-line-strong);
+}
+
+.regiment-roster-status{
+  color:var(--muted);
+  font-size:0.72rem;
+  font-weight:500;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+}
+
+.regiment-roster-item--inactive{
+  cursor:not-allowed;
+  opacity:0.52;
+}
+
+@media (max-width:640px){
+  .regiment-roster-item{
+    grid-template-columns:2rem minmax(0,1fr);
+    gap:0.75rem;
+    padding:1.25rem 0;
+  }
+
+  .regiment-roster-meta{
+    flex-direction:column;
+    gap:0.2rem;
+  }
+
+  .regiment-directory-header{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:0.25rem;
+  }
+}
+
 .regiment-card{
   padding:1.5rem;
   background:rgba(0,0,0,0.3);
@@ -1182,7 +1317,7 @@ button.regiment-card:hover{
   border:none;
   border-radius:0;
   color:#070503;
-  font-family:'Rajdhani', sans-serif;
+  font-family:'Jost', Helvetica, Arial, sans-serif;
   font-size:0.92rem;
   font-weight:800;
   letter-spacing:0.16em;
@@ -1273,7 +1408,7 @@ button.regiment-card--inactive:hover{
 .high-commander-name{
   margin:0;
   color:var(--gold);
-  font-family:'Rajdhani', sans-serif;
+  font-family:'Jost', Helvetica, Arial, sans-serif;
   font-size:1.14rem;
   font-weight:700;
   letter-spacing:0.04em;
@@ -1465,7 +1600,7 @@ button.regiment-card--inactive:hover{
 }
 
 .viewer-empty-title{
-  font-family:'Rajdhani', sans-serif;
+  font-family:'Jost', Helvetica, Arial, sans-serif;
   font-size:1rem;
   font-weight:700;
   text-transform:uppercase;
@@ -1476,9 +1611,9 @@ button.regiment-card--inactive:hover{
 
 /* Newspaper page */
 .newspaper-upload-card{
-  margin-bottom:16px;
-  background:linear-gradient(135deg, rgba(201,168,79,0.06), rgba(201,168,79,0.02));
-  border:1px solid rgba(201,168,79,0.12);
+  margin-bottom:3rem;
+  background:none;
+  border:0;
 }
 
 .newspaper-board{
@@ -1486,17 +1621,9 @@ button.regiment-card--inactive:hover{
   grid-template-columns:repeat(auto-fill, minmax(240px, 1fr));
   gap:16px;
   padding:16px;
-  border:1px solid rgba(201,168,79,0.16);
-  background:
-    linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.18)),
-    repeating-linear-gradient(
-      90deg,
-      rgba(201,168,79,0.03) 0,
-      rgba(201,168,79,0.03) 1px,
-      transparent 1px,
-      transparent 18px
-    );
-  border-radius:2px;
+  border:0;
+  background:none;
+  border-radius:0;
 }
 
 .newspaper-empty{
@@ -1506,9 +1633,10 @@ button.regiment-card--inactive:hover{
 
 .newspaper-clipping{
   position:relative;
-  background:linear-gradient(180deg, rgba(15,19,15,0.98), rgba(9,12,10,0.98));
-  border:1px solid rgba(201,168,79,0.16);
-  box-shadow:0 8px 18px rgba(0,0,0,0.45);
+  background:none;
+  border:0;
+  border-bottom:1px solid var(--editorial-line);
+  box-shadow:none;
   padding:10px 10px 12px;
   display:flex;
   flex-direction:column;
@@ -1517,18 +1645,7 @@ button.regiment-card--inactive:hover{
 }
 
 .newspaper-clipping::before{
-  content:'PRESS';
-  position:absolute;
-  top:8px;
-  right:8px;
-  font-family:'Rajdhani', sans-serif;
-  font-size:0.58rem;
-  font-weight:700;
-  color:rgba(201,168,79,0.78);
-  letter-spacing:0.14em;
-  padding:2px 6px;
-  border:1px solid rgba(201,168,79,0.3);
-  background:rgba(0,0,0,0.35);
+  content:none;
 }
 
 .newspaper-clipping.clip-0{ transform:none; }
@@ -1537,9 +1654,9 @@ button.regiment-card--inactive:hover{
 .newspaper-clipping.clip-3{ transform:none; }
 
 .newspaper-clipping:hover{
-  border-color:rgba(201,168,79,0.36);
-  box-shadow:0 10px 24px rgba(0,0,0,0.52);
-  transform:translateY(-2px);
+  border-color:var(--editorial-line-strong);
+  box-shadow:none;
+  transform:none;
 }
 
 .newspaper-image-btn{
@@ -1566,13 +1683,27 @@ button.regiment-card--inactive:hover{
 
 .newspaper-title{
   margin:0;
-  font-family:'Rajdhani', sans-serif;
+  font-family:'Jost', Helvetica, Arial, sans-serif;
   font-size:0.9rem;
   font-weight:700;
   letter-spacing:0.08em;
   text-transform:uppercase;
   color:var(--khaki);
   line-height:1.28;
+}
+
+.associate-regiment-list .regiment-card{
+  background:none;
+  border:0;
+  border-bottom:1px solid var(--editorial-line);
+  border-radius:0;
+  box-shadow:none;
+}
+
+.associate-regiment-list .regiment-card:hover{
+  transform:none;
+  box-shadow:none;
+  border-color:var(--editorial-line-strong);
 }
 
 .newspaper-date{
@@ -1624,7 +1755,7 @@ button.regiment-card--inactive:hover{
   background:rgba(0,0,0,0.3);
   color:var(--khaki);
   padding:5px 10px;
-  font-family:'Rajdhani', sans-serif;
+  font-family:'Jost', Helvetica, Arial, sans-serif;
   font-size:0.78rem;
   font-weight:700;
   letter-spacing:0.08em;
@@ -1687,7 +1818,7 @@ button.regiment-card--inactive:hover{
 
 .newspaper-lightbox-title{
   margin:8px 0 0;
-  font-family:'Rajdhani', sans-serif;
+  font-family:'Jost', Helvetica, Arial, sans-serif;
   color:var(--khaki);
   font-size:0.92rem;
   text-transform:uppercase;
@@ -2163,9 +2294,32 @@ dialog.modal-overlay::backdrop{
   .back-btn{ font-size:12px; padding:6px 8px; }
 }
 
+.modal-content.regiment-modal{
+  width:min(100%,680px);
+  max-width:680px;
+  background:#141813;
+  border:1px solid var(--editorial-line-strong);
+  border-radius:0;
+  box-shadow:0 12px 32px rgba(0,0,0,0.38);
+  font-family:'Jost', Helvetica, Arial, sans-serif;
+}
+
+.regiment-modal .modal-close{
+  top:1rem;
+  right:1rem;
+  color:var(--muted);
+  border:1px solid transparent;
+}
+
+.regiment-modal .modal-close:hover,
+.regiment-modal .modal-close:focus-visible{
+  color:var(--gold);
+  border-color:var(--editorial-line-strong);
+}
+
 .regiment-modal .modal-header{
-  padding:24px 24px 16px;
-  border-bottom:1px solid rgba(255,255,255,0.05);
+  padding:2rem 4.5rem 1.5rem 2rem;
+  border-bottom:1px solid var(--editorial-line);
 }
 
 .regiment-modal .modal-title-row{
@@ -2175,22 +2329,23 @@ dialog.modal-overlay::backdrop{
   margin-bottom:12px;
 }
 
-.regiment-modal .modal-logo{
+.regiment-modal .modal-header-logo{
   width:64px;
   height:64px;
   object-fit:contain;
 }
 
-.regiment-modal .modal-title-text h2{
-  margin:0 0 4px;
+.regiment-modal #regiment-modal-title{
+  margin:0 0 0.25rem;
   color:var(--gold);
-  font-size:24px;
+  font-size:1.5rem;
+  font-weight:500;
 }
 
-.regiment-modal .modal-title-text .modal-subtitle{
+.regiment-modal .modal-header-text p{
   margin:0;
   color:var(--muted);
-  font-size:14px;
+  font-size:0.875rem;
 }
 
 .regiment-modal .modal-badges{
@@ -2200,50 +2355,71 @@ dialog.modal-overlay::backdrop{
 }
 
 .regiment-modal .modal-body{
-  padding:20px 24px;
+  padding:1.5rem 2rem 2rem;
 }
 
-.regiment-modal .modal-description{
-  color:var(--text);
+.regiment-modal .modal-section{
+  margin:0;
+  padding:0 0 1.5rem;
+}
+
+.regiment-modal .modal-section + .modal-section{
+  padding-top:1.5rem;
+  border-top:1px solid var(--editorial-line);
+}
+
+.regiment-modal .modal-section h3{
+  margin:0 0 0.75rem;
+  color:var(--khaki);
+  font-size:1.05rem;
+  font-weight:500;
+}
+
+.regiment-modal .modal-section p{
+  color:#c5c7c1;
   line-height:1.7;
-  margin-bottom:24px;
 }
 
-.regiment-modal .modal-details{
-  background:rgba(0,0,0,0.2);
-  border-radius:4px;
-  padding:16px;
-  margin-bottom:20px;
+.regiment-modal .modal-details-list{
+  grid-template-columns:minmax(7rem,auto) minmax(0,1fr);
+  gap:0 1.5rem;
 }
 
-.regiment-modal .modal-details dt{
-  color:var(--muted);
-  font-size:12px;
+.regiment-modal .modal-details-list dt,
+.regiment-modal .modal-details-list dd{
+  padding:0.75rem 0;
+  border-bottom:1px solid var(--editorial-line);
+}
+
+.regiment-modal .modal-details-list dt{
+  color:#b7bdaf;
+  font-size:0.72rem;
+  font-weight:500;
   text-transform:uppercase;
-  letter-spacing:0.5px;
-  margin:0 0 4px;
+  letter-spacing:0.1em;
 }
 
-.regiment-modal .modal-details dd{
-  color:var(--text);
-  margin:0 0 12px;
-  font-size:15px;
+.regiment-modal .modal-details-list dd{
+  min-width:0;
+  margin:0;
+  color:#c5c7c1;
+  font-size:0.9375rem;
 }
 
-.regiment-modal .modal-details dd:last-child{
-  margin-bottom:0;
+.regiment-modal .modal-details-list dt:nth-last-of-type(1),
+.regiment-modal .modal-details-list dd:last-child{
+  border-bottom:0;
 }
 
-.regiment-modal .modal-tags{
+.regiment-modal .modal-tags-wrapper{
   display:flex;
   gap:6px;
   flex-wrap:wrap;
 }
 
-.regiment-modal .modal-discord{
-  margin-top:24px;
-  padding-top:20px;
-  border-top:1px solid rgba(255,255,255,0.05);
+.regiment-modal .modal-tags-wrapper .tag{
+  border-color:var(--editorial-line-strong);
+  background:none;
 }
 
 .regiment-modal .modal-extra-logos{
@@ -2260,24 +2436,42 @@ dialog.modal-overlay::backdrop{
 }
 
 @media (max-width: 768px){
-  .modal-content{
+  .modal-content.regiment-modal{
+    width:100%;
     max-width:100%;
-    max-height:100vh;
+    max-height:calc(100dvh - 1rem);
     border-radius:0;
   }
 
-  .regiment-modal .modal-header,
-  .regiment-modal .modal-body{
-    padding:16px;
+  .regiment-modal .modal-header{
+    padding:1.5rem 3.75rem 1.25rem 1.25rem;
   }
 
-  .regiment-modal .modal-logo{
+  .regiment-modal .modal-body{
+    padding:1.25rem;
+  }
+
+  .regiment-modal .modal-header-logo{
     width:48px;
     height:48px;
   }
 
-  .regiment-modal .modal-title-text h2{
-    font-size:20px;
+  .regiment-modal #regiment-modal-title{
+    font-size:1.25rem;
+  }
+
+  .regiment-modal .modal-details-list{
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .regiment-modal .modal-details-list dt{
+    padding-bottom:0.2rem;
+    border-bottom:0;
+  }
+
+  .regiment-modal .modal-details-list dd{
+    padding-top:0;
   }
 }
 

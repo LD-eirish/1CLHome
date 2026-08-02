@@ -70,30 +70,32 @@ export function NewspaperPage() {
       <Header subtitle="1CL Newspaper Archive" />
       <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: '1CL Newspaper' }]} />
 
-      <main className="container">
-        <section className="card page-intro page-intro--stacked newspaper-upload-card no-export">
-          <p className="page-intro-kicker">Press Archive</p>
-          <h2 className="page-intro-title">1CL Newspaper</h2>
-          <p className="page-intro-lead">1CL sponsored news from the Charlie Shard frontlines.</p>
+      <main className="editorial-page collection-page newspaper-page">
+        <div className="editorial-page-shell">
+        <section className="editorial-title-block newspaper-upload-card no-export">
+          <p className="editorial-kicker">Press Archive</p>
+          <h1 className="editorial-title">1CL Newspaper</h1>
+          <p className="editorial-lead">1CL sponsored news from the Charlie Shard frontlines.</p>
+          <hr className="editorial-divider" />
         </section>
 
         <section className="newspaper-board" aria-label="Newspaper article board">
           {loading && (
-            <article className="newspaper-empty card">
+            <article className="newspaper-empty">
               <h3>Loading Archive</h3>
               <p className="lead">Fetching newspaper issues...</p>
             </article>
           )}
 
           {!loading && error && (
-            <article className="newspaper-empty card">
+            <article className="newspaper-empty">
               <h3>Archive Unavailable</h3>
               <p className="lead">{error}</p>
             </article>
           )}
 
           {!loading && !error && !sortedArticles.length && (
-            <article className="newspaper-empty card">
+            <article className="newspaper-empty">
               <h3>Press Board Empty</h3>
               <p className="lead">Add entries to <code>newspaper.json</code> to publish articles.</p>
             </article>
@@ -118,6 +120,7 @@ export function NewspaperPage() {
             </article>
           ))}
         </section>
+        </div>
       </main>
 
       {selected && (

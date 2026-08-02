@@ -1,17 +1,14 @@
-import { Header } from '../components/Header';
-import { PageBreadcrumb } from '../components/PageBreadcrumb';
+import { EditorialPageLayout } from '../components/EditorialPageLayout';
 
 export function PrivacyPolicyPage() {
   return (
-    <>
-      <Header subtitle="Privacy Policy" />
-      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Privacy Policy' }]} />
-
-      <main className="container">
-        <section className="card content card">
-          <h2>1CL Bot Privacy Policy</h2>
-          <p className="small"><strong>Effective date:</strong> May 28, 2026</p>
-
+    <EditorialPageLayout
+      subtitle="Privacy Policy"
+      kicker="Official document"
+      title="1CL Bot Privacy Policy"
+      meta={<><strong>Effective date:</strong> May 28, 2026</>}
+      breadcrumbs={[{ label: 'Hub', to: '/hub' }, { label: 'Privacy Policy' }]}
+    >
           <h3>Introduction</h3>
           <p>
             This Privacy Policy explains how eirish's Foxhole Assistant Discord bot ("the Bot") collects, uses, and protects data to support our Foxhole gaming community. By using the Bot in any server, you consent to the data practices described below.
@@ -93,9 +90,7 @@ export function PrivacyPolicyPage() {
           <p className="small">
             Include your Discord username (e.g., @username), the relevant server name, and a clear description of your request. We will respond within 5 business days.
           </p>
-        </section>
-      </main>
-    </>
+    </EditorialPageLayout>
   );
 }
 

@@ -282,12 +282,12 @@ export function InfoLibraryPage() {
       <PageBreadcrumb
         items={[{ label: "Hub", to: "/hub" }, { label: "1CL Wiki & Info" }]}
       />
-      <main className="wiki-hub">
+      <main className="wiki-hub collection-page">
         <div className="wiki-hub-inner">
-          <section className="wiki-hub-hero">
-            <p className="wiki-hub-kicker">Wiki & Info</p>
-            <h1 className="wiki-hub-title">1CL Wiki & Info</h1>
-            <p className="wiki-hub-lead">
+          <section className="wiki-hub-hero editorial-title-block">
+            <p className="wiki-hub-kicker editorial-kicker">Wiki & Info</p>
+            <h1 className="wiki-hub-title editorial-title">1CL Wiki & Info</h1>
+            <p className="wiki-hub-lead editorial-lead">
               A community reference covering the 1st Combined Legion, guides for
               members and newcomers, and medal records. Search by topic, role,
               or keyword to quickly find relevant pages.
@@ -306,6 +306,7 @@ export function InfoLibraryPage() {
                 placeholder="Search here by topic, role, or keyword..."
               />
             </div>
+            <hr className="editorial-divider" />
           </section>
 
           {trimmedQuery ? (

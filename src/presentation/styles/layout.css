@@ -6,6 +6,98 @@
   padding:18px 8px;
   width:100%;  overflow-x:hidden;}
 
+.editorial-page{
+  width:100%;
+  padding:3.5rem 1.5rem 6rem;
+}
+
+.editorial-page-shell{
+  width:min(100%,var(--editorial-wide));
+  margin:0 auto;
+}
+
+.editorial-title-block{
+  width:min(100%,var(--editorial-measure));
+  margin-bottom:3.25rem;
+}
+
+.editorial-kicker{
+  margin:0 0 0.75rem;
+  color:var(--muted);
+  font-size:0.72rem;
+  font-weight:500;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+}
+
+.editorial-title{
+  margin:0;
+  color:var(--gold);
+  font-size:clamp(2rem,4vw,3.4rem);
+  font-weight:500;
+}
+
+.editorial-lead{
+  margin:1.25rem 0 0;
+  color:var(--muted);
+  font-size:1.08rem;
+  font-weight:300;
+  line-height:1.7;
+}
+
+.editorial-divider{
+  width:7.5rem;
+  height:2px;
+  margin:2rem 0 0;
+  border:0;
+  background:var(--editorial-line-strong);
+}
+
+.editorial-content-measure{
+  width:min(100%,var(--editorial-measure));
+}
+
+.editorial-meta{
+  margin-top:1rem;
+  color:var(--muted);
+  font-size:0.85rem;
+}
+
+.editorial-prose h2,
+.editorial-prose h3{
+  margin:2.75rem 0 1rem;
+}
+
+.editorial-prose h2{
+  color:var(--khaki);
+}
+
+.editorial-prose h3{
+  color:#b7bdaf;
+}
+
+.editorial-prose p,
+.editorial-prose li{
+  color:#c5c7c1;
+}
+
+.editorial-prose ul,
+.editorial-prose ol{
+  margin:0 0 1.5rem;
+  padding-left:1.4rem;
+}
+
+.editorial-prose a{
+  color:var(--text);
+  text-decoration-color:var(--editorial-line-strong);
+  text-underline-offset:0.2em;
+}
+
+.editorial-prose a:hover{
+  color:#fff;
+  text-decoration-color:currentColor;
+}
+
 /* Header */
 .site-header{
   position:relative;
@@ -69,11 +161,11 @@
   display:block;
 }
 
-.brand-text h1{
+.brand-name{
   margin:0;
   font-size:18px;
   color:var(--gold);
-  font-family:'Rajdhani', sans-serif;
+  font-family:'Jost', Helvetica, Arial, sans-serif;
   text-transform:uppercase;
   letter-spacing:0.1em;
   line-height:1.1;
@@ -235,7 +327,7 @@
 
 .page-intro-kicker{
   margin:0 0 8px;
-  font-family:'Rajdhani', sans-serif;
+  font-family:'Jost', Helvetica, Arial, sans-serif;
   font-size:0.68rem;
   text-transform:uppercase;
   letter-spacing:0.2em;
@@ -245,7 +337,7 @@
 
 .page-intro-title{
   margin:0 0 8px;
-  font-family:'Rajdhani', sans-serif;
+  font-family:'Jost', Helvetica, Arial, sans-serif;
   font-size:clamp(2rem, 4vw, 3rem);
   font-weight:400;
   text-transform:uppercase;
@@ -405,7 +497,7 @@
 }
 
 .hub-masthead-title{
-  font-family:'Rajdhani', sans-serif;
+  font-family:'Jost', Helvetica, Arial, sans-serif;
   font-size:clamp(3.2rem, 7vw, 4.2rem);
   font-weight:400;
   text-transform:uppercase;
@@ -466,7 +558,7 @@
 }
 
 .hub-nav-label{
-  font-family:'Rajdhani', sans-serif;
+  font-family:'Jost', Helvetica, Arial, sans-serif;
   font-size:0.95rem;
   font-weight:700;
   text-transform:uppercase;

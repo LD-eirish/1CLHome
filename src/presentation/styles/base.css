@@ -1,11 +1,16 @@
 /* CSS Variables and Base Styles */
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap');
 
 :root{
-  --bg-1: #040504;
-  --bg-2: #0b0c0b;
-  --card: #0b0f0c;
-  --muted: #bfb9a1;
+  --bg-1:#090b09;
+  --bg-2:#111411;
+  --card:#111411;
+  --text:#e6e7e2;
+  --muted:#999d96;
+  --editorial-line:#353a34;
+  --editorial-line-strong:#596057;
+  --editorial-measure:720px;
+  --editorial-wide:1180px;
   --olive: #355031;
   --khaki: #c9b27a;
   --metal: #8f968f;
@@ -31,12 +36,13 @@
 html,body{
   height:100%;
   margin:0;
-  font-family:'Segoe UI',Inter,system-ui,Arial,sans-serif;
+  font-family:'Jost',Helvetica,Arial,sans-serif;
   background:linear-gradient(180deg,var(--bg-1) 0%, var(--bg-2) 100%);
   background-repeat:no-repeat;
   background-attachment:fixed;
-  color:#d4ceba;
-  line-height:1.6;
+  color:var(--text);
+  font-weight:300;
+  line-height:1.7;
   overflow-x:hidden;
 }
 
@@ -48,10 +54,10 @@ html,body{
 
 /* Typography */
 h1,h2,h3,h4,h5,h6{
-  font-family:'Rajdhani','Segoe UI',system-ui,sans-serif;
-  font-weight:700;
+  font-family:'Jost',Helvetica,Arial,sans-serif;
+  font-weight:500;
   line-height:1.2;
-  letter-spacing:0.025em;
+  letter-spacing:0;
 }
 
 h1{font-size:26px;}

@@ -148,7 +148,7 @@ export function TableOfContents({ contentId }: Readonly<TableOfContentsProps>) {
   if (sections.length === 0) return null;
 
   return (
-    <aside className={`toc card ${collapsed ? 'collapsed' : 'expanded'}`} aria-hidden={collapsed}>
+    <aside className={`toc card ${collapsed ? 'collapsed' : 'expanded'}`}>
       <div className="toc-header">
         <h3 className="toc-title">Contents</h3>
         <button
@@ -163,7 +163,7 @@ export function TableOfContents({ contentId }: Readonly<TableOfContentsProps>) {
           </span>
         </button>
       </div>
-      <nav id="framework-toc" aria-label="Framework sections">
+      <nav id="framework-toc" aria-label="Framework sections" aria-hidden={collapsed}>
         <ul className="toc-list">
           {sections.map((section) => (
             <li key={section.id}>

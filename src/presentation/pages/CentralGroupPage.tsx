@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Header } from '../components/Header';
-import { assetPath } from '../../infrastructure/utils/asset.utils';
-import { RegimentCard } from '../components/RegimentCard';
+import { RegimentRosterItem } from '../components/RegimentRosterItem';
 import { RegimentModal } from '../components/RegimentModal';
 import type { Regiment } from '../../data/types/regiment.types';
 import { PageBreadcrumb } from '../components/PageBreadcrumb';
@@ -33,36 +32,37 @@ export function CentralGroupPage() {
       <Header subtitle="Member Groups" />
       <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Member Groups' }]} />
 
-      <main className="container">
-        <section className="hero card page-intro page-intro--split">
-          <div className="page-intro-copy">
-            <p className="page-intro-kicker">Member Groups</p>
-            <h2 className="page-intro-title">1CL Member Regiments</h2>
-            <p className="page-intro-lead">
+      <main className="editorial-page central-group-page">
+        <div className="editorial-page-shell">
+          <section className="editorial-title-block">
+            <p className="editorial-kicker">Member Groups</p>
+            <h1 className="editorial-title">1CL Member Regiments</h1>
+            <p className="editorial-lead">
               Regiments that opt into fuller integration: they participate in centralized HR/recruitment,
               contribute to shared logistics, and take on broader command responsibilities.
             </p>
-          </div>
-          <div className="page-intro-visual">
-            <img src={assetPath('1CLLogo.png')} alt="1CL Logo" className="hero-logo" />
-          </div>
-        </section>
+            <hr className="editorial-divider" />
+          </section>
 
-        <section className="card">
-          <h3>Member Groups Regiments</h3>
-          <div className="regiment-grid" id="regiment-list">
+          <section className="regiment-directory" aria-labelledby="regiment-directory-title">
+            <div className="regiment-directory-header">
+              <h3 id="regiment-directory-title">Regiment roster</h3>
+              {!loading && !error && <p>{regiments.length} member regiments</p>}
+            </div>
+            <div className="regiment-roster" id="regiment-list">
             {loading && <div className="loading">Loading regiments...</div>}
             {error && <p className="error">{error}</p>}
             {!loading && !error && regiments.map((regiment, index) => (
-              <RegimentCard 
-                key={regiment.abbreviation} 
-                regiment={regiment} 
-                index={index} 
-                onClick={() => setSelectedRegiment(regiment)}
+              <RegimentRosterItem
+                key={regiment.abbreviation}
+                regiment={regiment}
+                index={index}
+                onSelect={setSelectedRegiment}
               />
             ))}
-          </div>
-        </section>
+            </div>
+          </section>
+        </div>
       </main>
 
       {selectedRegiment && (

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Header } from '../components/Header';
-import { assetPath } from '../../infrastructure/utils/asset.utils';
 import { RegimentCard } from '../components/RegimentCard';
 import { RegimentModal } from '../components/RegimentModal';
 import type { Regiment } from '../../data/types/regiment.types';
@@ -33,24 +32,21 @@ export function AssociateGroupPage() {
       <Header subtitle="Independent coordination regiments" />
       <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Associate Group' }]} />
 
-      <main className="container">
-        <section className="hero card page-intro page-intro--split">
-          <div className="page-intro-copy">
-            <p className="page-intro-kicker">Independent Regiments</p>
-            <h2 className="page-intro-title">Associate Group (LAG)</h2>
-            <p className="page-intro-lead">
+      <main className="editorial-page collection-page associate-group-page">
+        <div className="editorial-page-shell">
+          <section className="editorial-title-block">
+            <p className="editorial-kicker">Independent Regiments</p>
+            <h1 className="editorial-title">Associate Group (LAG)</h1>
+            <p className="editorial-lead">
               Regiments that maintain greater independence: they coordinate on joint operations and strategic objectives
               but may decline centralized HR participation and retain lighter command duties.
             </p>
-          </div>
-          <div className="page-intro-visual">
-            <img src={assetPath('1CLLogo.png')} alt="1CL Logo" className="hero-logo" />
-          </div>
-        </section>
+            <hr className="editorial-divider" />
+          </section>
 
-        <section className="card">
+        <section className="regiment-directory">
           <h3>Associate Group Regiments</h3>
-          <div className="regiment-grid" id="regiment-list">
+          <div className="regiment-grid associate-regiment-list" id="regiment-list">
             {loading && <div className="loading">Loading regiments...</div>}
             {error && <p className="error">{error}</p>}
             {!loading && !error && regiments.map((regiment, index) => (
@@ -64,6 +60,7 @@ export function AssociateGroupPage() {
             ))}
           </div>
         </section>
+        </div>
       </main>
 
       {selectedRegiment && (

@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Header } from '../components/Header';
-import { assetPath } from '../../infrastructure/utils/asset.utils';
 import { FrameworkService } from '../../business/services/FrameworkService';
 import { FrameworkRenderer } from '../components/FrameworkRenderer';
 import { TableOfContents } from '../components/TableOfContents';
-import { PageBreadcrumb } from '../components/PageBreadcrumb';
+import { EditorialPageLayout } from '../components/EditorialPageLayout';
 
 export function FrameworkPage() {
   const [content, setContent] = useState<string>('');
@@ -97,37 +95,28 @@ export function FrameworkPage() {
   }, []);
 
   return (
-    <>
-      <Header subtitle="Official command & operations framework" />
-      <PageBreadcrumb items={[{ label: 'Hub', to: '/hub' }, { label: 'Framework' }]} />
-
-      <section className="hero card">
-        <div className="hero-left">
-          <h2>Official Framework</h2>
-          <p className="lead">
-            Command structure, operational guidelines, and organization of the 1st Combined Legion.
-          </p>
-        </div>
-        <div className="hero-right">
-          <img src={assetPath('1CLLogo.png')} alt="1CL Logo" className="hero-logo" />
-        </div>
-      </section>
-
+    <EditorialPageLayout
+      subtitle="Official command & operations framework"
+      kicker="Governance"
+      title="Official Framework"
+      lead="Command structure, operational guidelines, and organization of the 1st Combined Legion."
+      breadcrumbs={[{ label: 'Hub', to: '/hub' }, { label: 'Framework' }]}
+      className="framework-editorial-page"
+    >
       {!loading && !error && <TableOfContents contentId="framework-content" />}
-
-      <main className="container" id="framework-content">
+      <div id="framework-content">
         {loading && <div className="loading">Loading framework...</div>}
-        {error && <section className="card"><p className="error">{error}</p></section>}
+        {error && <p className="error">{error}</p>}
         {!loading && !error && <div dangerouslySetInnerHTML={{ __html: content }} />}
-      </main>
+      </div>
 
       {!loading && !error && (
-        <div className="container page-export" style={{textAlign: 'center', marginTop: '3rem', padding: '2rem 0'}}>
+        <div className="page-export" style={{textAlign: 'center', marginTop: '3rem', padding: '2rem 0'}}>
           <button id="exportFw" className="no-export export-btn" style={{fontSize: '0.95rem'}}>
             Download as Image
           </button>
         </div>
       )}
-    </>
+    </EditorialPageLayout>
   );
 }

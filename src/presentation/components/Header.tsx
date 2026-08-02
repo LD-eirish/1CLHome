@@ -17,7 +17,7 @@ export function Header({ subtitle = 'Welcome — 1CL Hub' }: Readonly<HeaderProp
             <img src={assetPath('1CLLogo.png')} alt="1CL" className="brand-logo" />
           </Link>
           <div className="brand-text">
-            <h1>1st Combined Legion</h1>
+            <p className="brand-name">1st Combined Legion</p>
             <p className="subtitle">{subtitle}</p>
           </div>
         </div>
