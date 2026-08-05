@@ -433,8 +433,8 @@ export function LogiScoreValuesPage() {
         <h2>Overview</h2>
         <p>
           Score values are the points awarded for each submitted logistics item. Crate size
-          identifies how many items are contained in one crate; items marked as not crateable
-          are scored individually or through their applicable delivery unit.
+          identifies how many items are contained in one crate. Requests count the score value at the standard level. 
+          Items submitted through the contributions system count the score value at a multiplier. (Default Multiplier for Contributions: 0.5x)
         </p>
       </section>
 
