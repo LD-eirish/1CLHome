@@ -84,6 +84,7 @@
 }
 
 .docs-main {
+  min-width: 0;
   padding: 0;
   background: transparent;
 }
@@ -222,6 +223,72 @@
   background: rgba(201,168,79,0.06);
 }
 
+.docs-filter {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.docs-filter-label {
+  color: #b7bdaf;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.docs-filter-input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.65rem 0.8rem;
+  color: var(--text);
+  background: rgba(0,0,0,0.2);
+  border: 1px solid var(--editorial-line-strong);
+  border-radius: 2px;
+  font: inherit;
+}
+
+.docs-filter-input::placeholder {
+  color: var(--muted);
+  opacity: 0.72;
+}
+
+.docs-filter-input:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.docs-filter-summary {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.docs-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-gutter: stable;
+}
+
+.docs-score-table {
+  box-sizing: border-box;
+  min-width: 520px;
+}
+
+.docs-score-table-number {
+  width: 7.5rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.docs-score-table th:nth-child(n + 2) {
+  white-space: nowrap;
+}
+
+.docs-filter-empty {
+  padding: 1rem 0;
+  border-top: 1px solid var(--editorial-line);
+}
+
 @media (max-width: 960px) {
   .docs-page-shell {
     grid-template-columns: 1fr;
@@ -246,6 +313,41 @@
 
   .docs-page-header {
     padding-bottom: 0.85rem;
+  }
+
+  .docs-score-table {
+    width: calc(100% - 1px);
+    min-width: 0;
+    table-layout: fixed;
+    font-size: 0.82rem;
+  }
+
+  .docs-score-table th,
+  .docs-score-table td {
+    padding: 0.5rem 0.35rem;
+    overflow-wrap: anywhere;
+  }
+
+  .docs-score-table th {
+    padding-right: 0.15rem;
+    padding-left: 0.15rem;
+  }
+
+  .docs-score-table th:nth-child(2) {
+    width: 4.5rem;
+  }
+
+  .docs-score-table th:nth-child(3) {
+    width: 4.5rem;
+  }
+
+  .docs-score-table th:nth-child(n + 2) {
+    white-space: normal;
+  }
+
+  .docs-score-table-number {
+    width: auto;
+    white-space: normal;
   }
 }
 

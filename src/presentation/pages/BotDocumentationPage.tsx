@@ -19,6 +19,12 @@ const FEATURE_LINKS = [
     summary: 'The war counter is an internal requirement for tracking statistics, such as request history, stockpiles, etc.',
     status: 'Doc in progress',
   },
+  {
+    title: 'Logi Score Values',
+    path: '/bot-documentation/logi-score-values',
+    summary: 'Searchable item reference for logistics crate sizes and score values.',
+    status: 'Documented',
+  },
 ];
 
 export default function BotDocumentationPage() {
@@ -31,6 +37,7 @@ export default function BotDocumentationPage() {
       navItems={[
         { label: 'Overview', href: '#overview' },
         { label: 'Event Feature Docs', href: '/bot-documentation/event-feature' },
+        { label: 'Logi Score Values', href: '/bot-documentation/logi-score-values' },
       ]}
       versionNote={`Current release ${CURRENT_BOT_VERSION} | Docs last updated ${DOCS_LAST_UPDATED}`}
     >

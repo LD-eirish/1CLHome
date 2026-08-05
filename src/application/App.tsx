@@ -7,6 +7,7 @@ import { FrameworkPage } from '../presentation/pages/FrameworkPage';
 import BotDocumentationPage from '../presentation/pages/BotDocumentationPage';
 import { EventFeatureDocsPage } from '../presentation/pages/docs/EventFeatureDocsPage';
 import { WarCounterFeatureDocsPage } from '../presentation/pages/docs/WarCounterFeatureDocsPage';
+import { LogiScoreValuesPage } from '../presentation/pages/docs/LogiScoreValuesPage';
 import { InfoLibraryPage } from '../presentation/pages/InfoLibraryPage';
 import { NewspaperPage } from '../presentation/pages/NewspaperPage';
 import { PrivacyPolicyPage } from '../presentation/pages/PrivacyPolicyPage';
@@ -49,6 +50,7 @@ export function App() {
       <Route path="/bot-documentation" element={<BotDocumentationPage />} />
       <Route path="/bot-documentation/event-feature" element={<EventFeatureDocsPage />} />
       <Route path="/bot-documentation/war-feature" element={<WarCounterFeatureDocsPage />} />
+      <Route path="/bot-documentation/logi-score-values" element={<LogiScoreValuesPage />} />
       <Route path="/info-library" element={<InfoLibraryPage />} />
       <Route path="/info-library/what-is-1cl" element={<Suspense fallback={<PageLoader />}><WhatIs1CLPage /></Suspense>} />
       <Route path="/info-library/joining-1cl-as-a-regiment" element={<Suspense fallback={<PageLoader />}><JoiningAsRegimentPage /></Suspense>} />
