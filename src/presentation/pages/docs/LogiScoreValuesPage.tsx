@@ -46,7 +46,7 @@ export const FOXHOLE_ITEM_CATEGORIES = [
   'Gravel': { crateSize: 20, autocomplete: true, value: 1 },
   'Heavy Explosive Materials (HEMats / HEPowder)': { crateSize: 30, autocomplete: true, value: 1.65 },
   'Rare Materials': { crateSize: 0, autocomplete: true, value: 25 },
-  'Rare Alloys': { crateSize: 1, autocomplete: true, value: 477 },
+  'Rare Alloys': { crateSize: 1, autocomplete: true, value: 884 },
   'Processed Construction Materials (PCons)': { crateSize: 1, autocomplete: true, value: 12 },
   'Assembly Materials I (AMat I)': { crateSize: 1, autocomplete: true, value: 10 },
   'Assembly Materials II (AMat II)': { crateSize: 1, autocomplete: true, value: 10 },
