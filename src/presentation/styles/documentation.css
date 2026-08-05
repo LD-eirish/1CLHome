@@ -237,7 +237,7 @@
   text-transform: uppercase;
 }
 
-.docs-filter-input {
+.docs-filter-input[type="search"] {
   width: 100%;
   min-height: 2.75rem;
   padding: 0.65rem 0.8rem;
@@ -248,14 +248,9 @@
   font: inherit;
 }
 
-.docs-filter-input::placeholder {
+.docs-filter-input[type="search"]::placeholder {
   color: var(--muted);
   opacity: 0.72;
-}
-
-.docs-filter-input:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 2px;
 }
 
 .docs-filter-summary {
