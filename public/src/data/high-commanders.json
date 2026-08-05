@@ -10,14 +10,14 @@
         "description": "The first elected High Commander of the 1CL and an integral part of steering the 1st Combined Legion's success. Due to personal matters, he decided to take a step back and call for new elections. Notably, he won his elections with 50% of the votes."
     },
     {
-        "name": "Goldenbarrel",
+        "name": "Goldenbarrell",
         "regiment": "ETRNL",
         "war": "135",
         "viceHighCommander": "Jeremiah",
         "viceRegiment": "ULTRA",
         "officeStart": "2026-06-03",
         "officeEnd": "2026-06-24",
-        "description": "GoldenBarrel stepped up and was elected as the second High Commander. He was a strong supporter of the 1CL federal system. Most notably, he was High Commander during the schism with the Penal regiment, where their leader got kicked due to their toxic actions. He stepped down just before the war ended, giving the office to Jeremiah, his Vice."
+        "description": "Goldenbarrell stepped up and was elected as the second High Commander. He was a strong supporter of the 1CL federal system. Most notably, he was High Commander during the schism with the Penal regiment, where their leader got kicked due to their toxic actions. He stepped down just before the war ended, giving the office to Jeremiah, his Vice."
     },
     {
         "name": "Jeremiah",
