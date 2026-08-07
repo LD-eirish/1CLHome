@@ -56,7 +56,11 @@ export function WhatIs1CLPage() {
         <p>
           Our focus is on expanding, training, and recruiting sub-regiments that can plug directly into 1CL&apos;s command structure. The goal is long-term strength through cooperation: helping regiments grow, helping players find their place, and ensuring the legion can deliver organized, large-scale impact across the entire war.
         </p>
+        <p>
+          Furthermore, each war 1CL provides massive amounts of free resources to the public. This includes free BTs, massive amounts of tanks, etc. The goal is to help the public and other regiments to grow and become stronger.
+        </p>
       </section>
     </WikiArticleLayout>
+
   );
 }
