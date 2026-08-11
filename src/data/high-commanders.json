@@ -36,6 +36,16 @@
         "viceHighCommander": "Daed",
         "viceRegiment": "ETRNL",
         "officeStart": "2026-06-27",
+        "officeEnd": "2026-07-10",
+        "description": "Edalyn worked relentlessly to improve the 1CL's structure and operations. He introduced the Zero Legion to 1CL as a onboarding regiment."
+    },
+    {
+        "name": "eirish",
+        "regiment": "None",
+        "war": "138/139",
+        "viceHighCommander": "DrummingPanda",
+        "viceRegiment": "CAT",
+        "officeStart": "2026-07-10",
         "officeEnd": null,
         "description": "Will be added after their term ends."
     }
