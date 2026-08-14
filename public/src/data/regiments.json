@@ -1,17 +1,17 @@
 [
   {
-    "name": "[1/1CL] Public Operations Group",
-    "abbreviation": "P.O.G.",
+    "name": "[1/1CL] The Ultramarines, a Public Operations Group",
+    "abbreviation": "ULTRAPOG",
     "group": "central",
     "joinedDate": "2025-11-17",
-    "description": "Public Operations Group started as an organised force of random players. It grew into a large fighting force in Charlie Shard before helping to form the 1CL with TCS. P.O.G focuses on many things and shifts its focus every war to keep things fresh. We currently focus on naval warfare and marine beach invasions.",
-    "leader": "TomTheTank",
-    "tags": ["Airborne", "Artillery", "Logistics"],
-    "discord": "https://discord.gg/QFKvhnkbcb",
+    "description": "ULTRAPOG is the child of a merger between the Ultramarines and the Public Operations Group branches. With the same values, a infantry focus and a dedicated structure this branch is perfect for frontline players. Fight in a organised squads and follow strict communication rules that make you feel like a member of a team. Expect to be raiding trenches and using planned tactics to overcome enemy obstacles.​",
+    "leader": "Jeremiah",
+    "tags": ["Infantry", "Tanks", "Logistics"],
+    "discord": "https://discord.gg/mEpeMtxafK",
     "logo": "POGLogo.png",
     "activityTime": {
       "startTime": "16:00",
-      "endTime": "23:00",
+      "endTime": "03:00",
       "timezone": "CET"
     }
   },
@@ -59,22 +59,6 @@
     "tags": ["", "", ""],
     "logo": "1CLALogo.png",
     "activityTime": "UNKNOWN"
-  },
-  {
-    "name": "[4/1CL] The Ultramarines",
-    "abbreviation": "ULTRA",
-    "group": "central",
-    "joinedDate": "2026-02-17",
-    "description": "[ULTRA] is a Foxhole regiment modeled after the Ultramarines Chapter of Warhammer 40,000, organized according to the Codex Astartes with clear chains of command and a true combined-arms doctrine. We prioritize logistics, communication, and coordination over individual play, not as an aesthetic choice, but as our operational philosophy.",
-    "leader": "Jeremiah",
-    "tags": ["Infantry", "Logistics", "Transport"],
-    "discord": "https://discord.gg/mEpeMtxafK",
-    "logo": "UltraLogo.png",
-    "activityTime": {
-      "startTime": "18:00",
-      "endTime": "24:00",
-      "timezone": "CET"
-    }
   },
     {
     "name": "[5/1CL] War Machine",
