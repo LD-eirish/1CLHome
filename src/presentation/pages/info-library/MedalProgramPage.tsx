@@ -57,7 +57,7 @@ const CATEGORIES: MedalCategory[] = [
           'Awarded for extraordinary deeds in service of 1CL, demonstrating exceptional dedication and support for the Legion.',
         earnedBy:
           'Nomination for a major act or sustained contribution that significantly strengthens the Legion.',
-        issuedBy: 'Commander Council',
+        issuedBy: 'Commander Council or High Commander',
         special:
           'Represents formal recognition that the recipient made the Legion stronger through outstanding service.',
       },
@@ -67,7 +67,7 @@ const CATEGORIES: MedalCategory[] = [
         description:
           'Awarded to a single standout officer who carried the Legion through an entire war, sustaining leadership, organisation, and morale from the first push to the final stockpile.',
         earnedBy: 'Nomination; only one officer may receive it per war.',
-        issuedBy: 'Commander Council',
+        issuedBy: 'Commander Council or High Commander',
         special:
           'Recognizes war-long command resilience, organization under pressure, and sustained morale leadership.',
       },
@@ -78,9 +78,20 @@ const CATEGORIES: MedalCategory[] = [
           'Awarded for keeping the fighting spirit of 1CL alive through a losing or defeat-condition war, rallying members when the war is already lost.',
         earnedBy:
           'Nomination during or after a loss for visible, meaningful morale leadership and refusal to surrender to despair.',
-        issuedBy: 'Commander Council',
+        issuedBy: 'Commander Council or High Commander',
         special:
           'A somber and rare honor for defiance when circumstances are darkest.',
+      },
+      {
+        name: 'Colonial Medal of Fortitude',
+        prestige: '2 stars',
+        description:
+          'Awarded for distinguished service to the Legion, demonstrating exceptional dedication and support.',
+        earnedBy:
+          'Nomination for significant contributions that strengthen the Legion.',
+        issuedBy: 'Commander Council or High Commander',
+        special:
+          'Recognizes outstanding service and commitment to the Legion.',
       },
     ],
   },
