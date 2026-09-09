@@ -228,10 +228,10 @@ export function formatActivityTime(activityTime: string | ActivityTime | undefin
     return activityTime;
   }
   
-  const { startTime, endTime, timezone, description } = activityTime;
+  const { startTime, endTime, timezone} = activityTime;
   
-  if (description) {
-    return description;
+  if (startTime === 'UNKNOWN' || endTime === 'UNKNOWN') {
+    return 'UNKNOWN';
   }
 
   try {

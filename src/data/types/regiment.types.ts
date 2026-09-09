@@ -5,8 +5,7 @@
 export interface ActivityTime {
   startTime: string; // 24-hour format, e.g., "18:00"
   endTime: string;   // 24-hour format, e.g., "23:00"
-  timezone: string;  // IANA timezone or abbreviation, e.g., "CET" or "Europe/Berlin"
-  description?: string; // Optional custom description
+  timezone: string;  // IANA timezone, e.g., "CET"
 }
 
 export interface Regiment {
