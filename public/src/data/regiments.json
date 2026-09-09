@@ -61,7 +61,7 @@
     "activityTime": ["UNKNOWN"]
     }
   },
-    {
+  {
     "name": "[5/1CL] War Machine",
     "abbreviation": "WM",
     "group": "central",
@@ -78,7 +78,7 @@
       
     }
   },
-    {
+  {
     "name": "[B/1CL] Bamboo Supply Co.",
     "abbreviation": "BSC",
     "group": "central",
@@ -87,7 +87,7 @@
     "leader": "DrummingPanda & DAED",
     "tags": ["[Facility, public works, FOB Construction]"],
     "discord": ["https://discord.gg/NbEZvJBCd"],
-    "logo": ["https://github.com/LD-eirish/1CLHome/blob/main/public/1CL_BSC.png"],
+    "logo": "1CL_BSC.png",
     "activityTime": ["UNKNOWN"]
     }
   },
