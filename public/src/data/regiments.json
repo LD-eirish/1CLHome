@@ -76,22 +76,6 @@
       "timezone": "CET"
     }
   },
-    {
-    "name": "[C/1CL] Cadian Assault Team",
-    "abbreviation": "CAT",
-    "group": "central",
-    "joinedDate": "2025-05-17",
-    "description": "The Cadian Assault Team is a regiment of focused backline facility managers and precise logistics enjoyers with a veteran mix of high-end naval, armour, and air combat. Featuring a rock-solid command structure, optimized systems integration, and proven super-heavy production capacity, we just need dedicated players to help us deliver the firepower!",
-    "leader": "DonutBurger",
-    "tags": ["Facility", "Airborne", "Logistics"],
-    "discord": "https://discord.gg/FzCPHM7uew",
-    "logo": "1CLALogo.png",
-    "activityTime": {
-      "startTime": "14:00",
-      "endTime": "23:00",
-      "timezone": "CET"
-    }
-  },
   {
     "name": "[E/1CL] Eternal Division",
     "abbreviation": "ETRNL",
@@ -115,7 +99,7 @@
     "joinedDate": "2026-03-06",
     "description": "1TPR is an elite intelligence and special operations unit dedicated to serving the Mesean Republic and its interests. We specialize in reconnaissance and sabotage missions, both close to the front and deep behind enemy lines. We use combined-arms tactics, employing light aircraft, watercraft and ground vehicles along with infantry to conduct reconnaissance, area denial, sabotage and other missions. We are no strangers to being surrounded, and death is treated more as an eventuality in our ranks, not just a risk.",
     "leader": "Tactical Raccoon",
-    "inactive": false,
+    "inactive": true,
     "tags": ["Intelligence", "Sabotage", "Combined Arms"],
     "discord": "https://discord.gg/5UTYdKgcGe",
     "logo": "1TPRLogo.png",
