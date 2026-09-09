@@ -220,8 +220,9 @@ export class PathUtils {
  * @param activityTime - The activity time to format
  * @param showOriginal - Whether to show the original timezone in parentheses (default: true)
  */
-export function formatActivityTime(activityTime: string | ActivityTime | undefined, showOriginal: boolean = false): string {
+export function formatActivityTime(activityTime: string | ActivityTime | null | undefined, showOriginal: boolean = false): string {
   if (!activityTime) return '';
+  if (activityTime === null) return 'Unknown';
   
   // Legacy string format - return as-is
   if (typeof activityTime === 'string') {
@@ -231,7 +232,7 @@ export function formatActivityTime(activityTime: string | ActivityTime | undefin
   const { startTime, endTime, timezone} = activityTime;
   
   if (startTime === 'UNKNOWN' || endTime === 'UNKNOWN') {
-    return 'UNKNOWN';
+    return 'Unknown';
   }
 
   try {

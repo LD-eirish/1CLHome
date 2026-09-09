@@ -23,5 +23,5 @@ export interface Regiment {
   // Optional path to a primary logo asset (stored in public/), e.g. 'TCSLogo.png'
   logo?: string;
   // Optional activity time - supports both string and structured format
-  activityTime?: string | ActivityTime;
+  activityTime?: string | ActivityTime | null;
 }
