@@ -58,7 +58,7 @@
     "inactive": true,
     "tags": ["", "", ""],
     "logo": "1CLALogo.png",
-    "activityTime": "UNKNOWN"
+    "activityTime": ["UNKNOWN"]
   },
   {
     "name": "[5/1CL] War Machine",
@@ -83,10 +83,12 @@
     "joinedDate": "2026-1-31",
     "description": "Logi-focused Colonial regiment dedicated to keeping the war machine running, building, and maintaining FOBs. We believe good logistics win wars — and good people make it fun.",
     "leader": "DrummingPanda & DAED",
-    "tags": ["[Facility, public works, FOB Construction]"],
+    "tags": ["Facility", "Public Works", "FOB Construction"],
     "discord": ["https://discord.gg/NbEZvJBCd"],
-    "logo": "1CL_BSC.png",
-    "activityTime": "UNKNOWN"
+    "logo": [
+      "1CL_BSC.png"
+    ],
+    "activityTime": ["UNKNOWN"]
   },
   {
     "name": "[I/1CL] 1st Trash Panda Regiment",
