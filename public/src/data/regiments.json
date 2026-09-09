@@ -58,7 +58,7 @@
     "inactive": true,
     "tags": ["", "", ""],
     "logo": "1CLALogo.png",
-    "activityTime": ["UNKNOWN"]
+    "activityTime": "UNKNOWN"
     }
   },
   {
@@ -88,7 +88,7 @@
     "tags": ["[Facility, public works, FOB Construction]"],
     "discord": ["https://discord.gg/NbEZvJBCd"],
     "logo": "1CL_BSC.png",
-    "activityTime": ["UNKNOWN"]
+    "activityTime": "UNKNOWN"
     }
   },
   {
