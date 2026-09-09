@@ -76,6 +76,22 @@
       "timezone": "CET"
     }
   },
+{
+  {
+    "name": "[B/1CL] Bamboo Supply Co.",
+    "abbreviation": "BSC",
+    "group": "central",
+    "joinedDate": "2026-1-31",
+    "description": "Logi-focused Colonial regiment dedicated to keeping the war machine running, building, and maintaining FOBs. We believe good logistics win wars — and good people make it fun.",
+    "leader": "DrummingPanda & DAED",
+    "tags": ["[Facility, public works, FOB Construction]",
+    "discord": ["https://discord.gg/NbEZvJBCd"],
+    "logo": "",
+  
+    }
+  },
+ 
+}
   {
     "name": "[E/1CL] Eternal Division",
     "abbreviation": "ETRNL",
