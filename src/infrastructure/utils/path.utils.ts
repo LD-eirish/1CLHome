@@ -224,7 +224,7 @@ export function formatActivityTime(activityTime: string | ActivityTime | null | 
   if (!activityTime) return '';
   if (activityTime === null) return 'Unknown';
   
-  // Legacy string format - return as-is
+  // String format - return as-is
   if (typeof activityTime === 'string') {
     return activityTime;
   }
