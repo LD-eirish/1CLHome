@@ -221,20 +221,10 @@ export class PathUtils {
  * @param showOriginal - Whether to show the original timezone in parentheses (default: true)
  */
 export function formatActivityTime(activityTime: string | ActivityTime | null | undefined, showOriginal: boolean = false): string {
-  if (!activityTime) return '';
-  if (activityTime === null) return 'Unknown';
-  
-  // String format - return as-is
-  if (typeof activityTime === 'string') {
-    return activityTime;
-  }
+  if (typeof activityTime === 'string') return activityTime;
+  if (!activityTime || (typeof activityTime !== 'object')) return '';
   
   const { startTime, endTime, timezone} = activityTime;
-  
-  if (startTime === 'UNKNOWN' || endTime === 'UNKNOWN') {
-    return 'Unknown';
-  }
-
   try {
     const sourceTimezone = normalizeTimeZoneInput(timezone);
     const userTimezone = normalizeTimeZoneInput(Intl.DateTimeFormat().resolvedOptions().timeZone) || 'UTC';
