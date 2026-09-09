@@ -52,13 +52,6 @@ function RegimentCardComponent({ regiment, index, onClick, hideDetails = false }
           <div className="regiment-name-wrap">
             <h4 className="regiment-name">{regiment.name} ({regiment.abbreviation})</h4>
           </div>
-          {regiment.group === 'central' && regiment.extraLogos && regiment.extraLogos.length > 0 && (
-            <div className="regiment-extra-logos">
-              {regiment.extraLogos.map((logo) => (
-                <img key={logo} src={assetPath(logo)} alt={`${regiment.abbreviation} extra insignia`} loading="lazy" />
-              ))}
-            </div>
-          )}
         </div>
         <p className="regiment-joined">
           <strong>Joined:</strong> {new Date(regiment.joinedDate).toLocaleDateString('en-US', { 

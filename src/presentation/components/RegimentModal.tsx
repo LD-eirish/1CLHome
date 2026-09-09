@@ -85,18 +85,6 @@ function RegimentModalComponent({ regiment, onClose }: Readonly<RegimentModalPro
               </p>
             </div>
           </div>
-          {regiment.group === 'central' && regiment.extraLogos && regiment.extraLogos.length > 0 && (
-            <div className="modal-extra-logos">
-              {regiment.extraLogos.map((logo) => (
-                <img 
-                  key={logo} 
-                  src={assetPath(logo)} 
-                  alt={`${regiment.abbreviation} extra insignia`}
-                  loading="lazy"
-                />
-              ))}
-            </div>
-          )}
         </div>
 
         <div className="modal-body">
