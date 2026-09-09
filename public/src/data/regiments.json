@@ -86,7 +86,7 @@
     "tags": ["Facility", "Public Works", "FOB Construction"],
     "discord": ["https://discord.gg/NbEZvJBCd"],
     "logo": "1CL_BSC.png",
-    "activityTime": null
+    "activityTime": [test]
   },
   {
     "name": "[I/1CL] 1st Trash Panda Regiment",
