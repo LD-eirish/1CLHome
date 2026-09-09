@@ -76,8 +76,7 @@
       "timezone": "CET"
     }
   },
-{
-  {
+    {
     "name": "[B/1CL] Bamboo Supply Co.",
     "abbreviation": "BSC",
     "group": "central",
@@ -86,7 +85,7 @@
     "leader": "DrummingPanda & DAED",
     "tags": ["[Facility, public works, FOB Construction]",
     "discord": ["https://discord.gg/NbEZvJBCd"],
-    "logo": "",
+    "logo": ["https://github.com/LD-eirish/1CLHome/blob/main/public/1CL_BSC.png"],
   
     }
   },
