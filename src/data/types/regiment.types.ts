@@ -25,6 +25,6 @@ export interface Regiment {
   logo?: string;
   // Optional extra logos to display for central group regiments
   extraLogos?: string[];
-  // Optional activity time - supports both string (legacy) and structured format
+  // Optional activity time - supports both string and structured format
   activityTime?: string | ActivityTime;
 }
