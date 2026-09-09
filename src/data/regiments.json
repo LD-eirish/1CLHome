@@ -58,7 +58,8 @@
     "inactive": true,
     "tags": ["", "", ""],
     "logo": "1CLALogo.png",
-    "activityTime": "UNKNOWN"
+    "activityTime": ["UNKNOWN"]
+    
      }
   },
     {
