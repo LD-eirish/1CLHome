@@ -90,22 +90,6 @@
     "activityTime": ["UNKNOWN"]
     }
   },
-    {
-    "name": "[E/1CL] Eternal Division",
-    "abbreviation": "ETRNL",
-    "group": "central",
-    "joinedDate": "2026-02-06",
-    "description": "A naval and engineering focused regiment on the Colonial side, we seek to expand the glorious Colonial Fleet with large and medium ships, constant fleet operations and patrols, and build strong and reliable FOBs for the frontline. Join us today!",
-    "leader": "Daed",
-    "tags": ["Engineering", "Naval", "FOB Construction"],
-    "discord": "https://discord.gg/QZXYn5UAf5",
-    "logo": "ETRNLLogo.png",
-    "activityTime": {
-      "startTime": "16:00",
-      "endTime": "23:00",
-      "timezone": "CET"
-    }
-  },
   {
     "name": "[I/1CL] 1st Trash Panda Regiment",
     "abbreviation": "1TPR",
