@@ -58,7 +58,7 @@
     "inactive": true,
     "tags": ["", "", ""],
     "logo": "1CLALogo.png",
-    "activityTime": ["UNKNOWN"]
+    "activityTime": "UNKNOWN"
   },
   {
     "name": "[5/1CL] War Machine",
@@ -86,7 +86,7 @@
     "tags": ["Facility", "Public Works", "FOB Construction"],
     "discord": ["https://discord.gg/NbEZvJBCd"],
     "logo": "1CL_BSC.png",
-    "activityTime": ["UNKNOWN"]
+    "activityTime": "UNKNOWN"
   },
   {
     "name": "[I/1CL] 1st Trash Panda Regiment",
