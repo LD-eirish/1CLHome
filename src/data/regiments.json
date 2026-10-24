@@ -32,14 +32,14 @@
     }
   },
   {
-    "name": "[3/1CL] 33rd Field Artillery Corps",
+    "name": "[3/1CL] 33rd Siege Regiment",
     "abbreviation": "33FAC",
     "group": "central",
     "joinedDate": "2026-05-12",
-    "description": "The 33rd is an Artillery Corps who's foundation is on making the wardens fear the big guns and rockets. We always roll nat 20s on destruction, and will always answer the chance to blow things up.",
+    "description": "The 33rd is an Siege Regiment who's foundation is on making the wardens fear the big guns and rockets. We always roll nat 20s on destruction, and will always answer the chance to blow things up.",
     "leader": "SovietBvando",
     "inactive": false,
-    "tags": ["Artillery", "Infantry", "Combined Arms"],
+    "tags": ["Artillery", "Infantry", "Armor"],
     "discord": "https://discord.gg/aZywd66JZw",
     "logo": "1CL33FAC.png",
     "activityTime": {
